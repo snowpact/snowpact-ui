@@ -35,9 +35,6 @@ jobs:
       - name: 🕵 Lint the code
         run: yarn lint
 
-      - name: 💅 Run Prettier
-        run: yarn prettier
-
       - name: 🔬 Run unit tests
         run: yarn test:coverage
 
