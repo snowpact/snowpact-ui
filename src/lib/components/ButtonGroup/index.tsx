@@ -1,19 +1,12 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react';
 import { Children, cloneElement, useMemo } from 'react';
-import type { ButtonProps } from '.';
+import type { ButtonProps } from '../atoms/Button';
 import { excludeClassName } from '../../helpers/exclude';
 import { useTheme } from '../Flowbite/ThemeContext';
 
 export type ButtonGroupProps = PropsWithChildren<ComponentProps<'div'> & Pick<ButtonProps, 'outline' | 'pill'>>;
 
-export interface PositionInButtonGroup {
-  none: string;
-  start: string;
-  middle: string;
-  end: string;
-}
-
-const ButtonGroup: FC<ButtonGroupProps> = ({ children, outline, pill, ...props }): JSX.Element => {
+export const ButtonGroup: FC<ButtonGroupProps> = ({ children, outline, pill, ...props }): JSX.Element => {
   const theirProps = excludeClassName(props);
 
   const items = useMemo(
@@ -37,5 +30,3 @@ const ButtonGroup: FC<ButtonGroupProps> = ({ children, outline, pill, ...props }
   );
 };
 
-ButtonGroup.displayName = 'Button.Group';
-export default ButtonGroup;

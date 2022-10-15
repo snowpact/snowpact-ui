@@ -3,7 +3,7 @@ import type { Meta, Story } from '@storybook/react/types-6-0';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import type { ModalProps } from '.';
 import { Modal } from '.';
-import { Button } from '../Button';
+import { Button } from '../atoms/Button';
 import { Checkbox, Label, TextInput } from '../FormControls';
 
 export default {
@@ -64,7 +64,7 @@ PopUp.args = {
           Are you sure you want to delete this product?
         </h3>
         <div className="flex justify-center gap-4">
-          <Button color="red" onClick={action('close')}>
+          <Button color="failure" onClick={action('close')}>
             {"Yes, I'm sure"}
           </Button>
           <Button color="gray" onClick={action('close')}>

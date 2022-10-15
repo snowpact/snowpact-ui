@@ -2,7 +2,8 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import { Button } from '.';
-import { Flowbite } from '../Flowbite';
+import { Flowbite } from '../../Flowbite';
+      
 
 describe('Components / Button', () => {
   describe('A11y', () => {
@@ -122,7 +123,7 @@ describe('Components / Button', () => {
       expect(button()).toHaveClass('font-extralight');
     });
 
-    it('should use `color` classes', () => {
+    it('should use custom `color` classes', () => {
       const theme = {
         button: {
           color: {
@@ -132,7 +133,9 @@ describe('Components / Button', () => {
       };
 
       render(
+        // @ts-ignore
         <Flowbite theme={{ theme }}>
+          {/* @ts-ignore */} 
           <Button color="primary" />
         </Flowbite>,
       );
@@ -174,18 +177,20 @@ describe('Components / Button', () => {
       expect(button()).toHaveClass('font-extralight');
     });
 
-    it('should use `gradientDuoTone` classes', () => {
+    it('should use custom `gradientDuoTone` classes', () => {
       const theme = {
         button: {
           gradientDuoTone: {
-            yellowToPink: 'font-extralight',
+            cyanToYellow: 'font-extralight',
           },
         },
       };
 
       render(
+        // @ts-ignore
         <Flowbite theme={{ theme }}>
-          <Button gradientDuoTone="yellowToPink" />
+          {/* @ts-ignore */} 
+          <Button gradientDuoTone="cyanToYellow" />
         </Flowbite>,
       );
 
@@ -288,17 +293,19 @@ describe('Components / Button', () => {
     });
 
     it('should use `size` classes', () => {
+
       const theme = {
         button: {
           size: {
-            xxl: 'font-extrabold',
+            xl: 'font-extrabold',
           },
         },
       };
 
+
       render(
         <Flowbite theme={{ theme }}>
-          <Button size="xxl">Hello</Button>
+          <Button size="xl">Hello</Button>
         </Flowbite>,
       );
 

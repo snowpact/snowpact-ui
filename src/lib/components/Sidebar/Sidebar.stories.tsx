@@ -3,7 +3,7 @@ import { BiBuoy } from 'react-icons/bi';
 import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
 import { Sidebar } from '.';
 import { Badge } from '../Badge';
-import { Button } from '../Button';
+import { Button } from '../atoms/Button';
 
 export default {
   title: 'Components/Sidebar',

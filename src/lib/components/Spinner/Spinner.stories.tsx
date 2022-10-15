@@ -1,6 +1,5 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
 import { Spinner } from '.';
-import { Button } from '../Button';
 
 export default {
   title: 'Components/Spinner',
@@ -48,18 +47,5 @@ export const Sizes = (): JSX.Element => (
     <Spinner aria-label="Medium sized spinner example" size="md" />
     <Spinner aria-label="Large spinner example" size="lg" />
     <Spinner aria-label="Extra large spinner example" size="xl" />
-  </div>
-);
-
-export const Buttons = (): JSX.Element => (
-  <div className="flex flex-row gap-3">
-    <Button>
-      <Spinner aria-label="Spinner button example" />
-      <span className="pl-3">Loading...</span>
-    </Button>
-    <Button color="gray">
-      <Spinner aria-label="Alternate spinner button example" />
-      <span className="pl-3">Loading...</span>
-    </Button>
   </div>
 );

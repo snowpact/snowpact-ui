@@ -1,18 +1,18 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, ReactNode } from 'react';
-import { excludeClassName } from '../../helpers/exclude';
+import { excludeClassName } from '../../../helpers/exclude';
 import type {
   FlowbiteColors,
   FlowbiteGradientColors,
   FlowbiteGradientDuoToneColors,
   FlowbiteSizes,
-} from '../Flowbite/FlowbiteTheme';
-import { useTheme } from '../Flowbite/ThemeContext';
-import type { PositionInButtonGroup } from './ButtonGroup';
-import ButtonGroup from './ButtonGroup';
+} from '../../Flowbite/FlowbiteTheme';
+import { useTheme } from '../../Flowbite/ThemeContext';
+import { PositionInButtonGroup } from './Button.theme';
 
 export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color'> {
   color?: keyof ButtonColors;
+  outlineColor?: keyof ButtonOutlineColors;
   gradientDuoTone?: keyof ButtonGradientDuoToneColors;
   gradientMonochrome?: keyof ButtonGradientColors;
   href?: string;
@@ -23,30 +23,16 @@ export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' 
   size?: keyof ButtonSizes;
 }
 
-export interface ButtonColors
-  extends Pick<FlowbiteColors, 'dark' | 'failure' | 'gray' | 'info' | 'light' | 'purple' | 'success' | 'warning'> {
-  [key: string]: string;
-}
+export type ButtonColors = Pick<FlowbiteColors, 'dark' | 'failure' | 'gray' | 'info' | 'light' | 'purple' | 'success' | 'warning'>;
+export type ButtonOutlineColors = Pick<FlowbiteColors, 'gray' | 'default' | 'light'>;
+export type ButtonGradientColors = FlowbiteGradientColors;
+export type ButtonGradientDuoToneColors = FlowbiteGradientDuoToneColors;
+export type ButtonSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 
-export interface ButtonGradientColors extends FlowbiteGradientColors {
-  [key: string]: string;
-}
-
-export interface ButtonGradientDuoToneColors extends FlowbiteGradientDuoToneColors {
-  [key: string]: string;
-}
-
-export interface ButtonOutlineColors extends Pick<FlowbiteColors, 'gray'> {
-  [key: string]: string;
-}
-
-export interface ButtonSizes extends Pick<FlowbiteSizes, 'xs' | 'sm' | 'lg' | 'xl'> {
-  [key: string]: string;
-}
-
-const ButtonComponent: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   children,
   color = 'info',
+  outlineColor = 'light',
   disabled = false,
   gradientDuoTone,
   gradientMonochrome,
@@ -61,7 +47,7 @@ const ButtonComponent: FC<ButtonProps> = ({
   const isLink = typeof href !== 'undefined';
   const theirProps = excludeClassName(props);
 
-  const { buttonGroup: groupTheme, button: theme } = useTheme().theme;
+  const { button: theme } = useTheme().theme;
 
   const Component = isLink ? 'a' : 'button';
 
@@ -72,8 +58,8 @@ const ButtonComponent: FC<ButtonProps> = ({
         !gradientDuoTone && !gradientMonochrome && theme.color[color],
         gradientDuoTone && !gradientMonochrome && theme.gradientDuoTone[gradientDuoTone],
         !gradientDuoTone && gradientMonochrome && theme.gradient[gradientMonochrome],
-        groupTheme.position[positionInGroup],
-        outline && (theme.outline.color[color] ?? theme.outline.color.default),
+        theme.position.outer[positionInGroup],
+        outline && (theme.outline.color[outlineColor] ?? theme.outline.color.default),
         theme.base,
         theme.pill[pill ? 'on' : 'off'],
       )}
@@ -85,11 +71,11 @@ const ButtonComponent: FC<ButtonProps> = ({
       <span
         className={classNames(
           theme.inner.base,
-          theme.inner.position[positionInGroup],
+          theme.position.inner[positionInGroup],
           theme.outline[outline ? 'on' : 'off'],
           theme.outline.pill[outline && pill ? 'on' : 'off'],
           theme.size[size],
-          outline && !theme.outline.color[color] && theme.inner.outline,
+          outline && !theme.outline.color[outlineColor] && theme.inner.outline,
         )}
       >
         <>
@@ -104,8 +90,3 @@ const ButtonComponent: FC<ButtonProps> = ({
     </Component>
   );
 };
-
-ButtonComponent.displayName = 'Button';
-export const Button = Object.assign(ButtonComponent, {
-  Group: ButtonGroup,
-});

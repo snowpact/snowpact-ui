@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { describe, expect, it } from 'vitest';
 import type { ModalProps } from '.';
 import { Modal } from '.';
-import { Button } from '../Button';
+import { Button } from '../atoms/Button';
 
 describe('Components / Modal', () => {
   describe('A11y', () => {

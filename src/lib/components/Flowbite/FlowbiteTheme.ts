@@ -1,15 +1,8 @@
 import { DeepPartial } from '..';
 import type { AlertColors } from '../Alert';
+import type { ButtonTheme } from '../atoms/Button/Button.theme';
 import type { AvatarSizes } from '../Avatar';
 import type { BadgeColors, BadgeSizes } from '../Badge';
-import type {
-  ButtonColors,
-  ButtonGradientColors,
-  ButtonGradientDuoToneColors,
-  ButtonOutlineColors,
-  ButtonSizes,
-} from '../Button';
-import type { PositionInButtonGroup } from '../Button/ButtonGroup';
 import { FlowbiteDropdownTheme } from '../Dropdown';
 import type { FlowbiteFloatingTheme } from '../Floating';
 import type {
@@ -19,7 +12,7 @@ import type {
   SelectSizes,
   TextareaColors,
   TextInputColors,
-  TextInputSizes,
+  TextInputSizes
 } from '../FormControls';
 import type { ModalPositions, ModalSizes } from '../Modal';
 import type { ProgressColor, ProgressSizes } from '../Progress';
@@ -108,28 +101,9 @@ export interface FlowbiteTheme extends Record<string, unknown> {
     };
     list: string;
   };
-  button: {
-    base: string;
-    color: ButtonColors;
-    disabled: string;
-    gradient: ButtonGradientColors;
-    gradientDuoTone: ButtonGradientDuoToneColors;
-    inner: {
-      base: string;
-      position: PositionInButtonGroup;
-      outline: string;
-    };
-    label: string;
-    outline: FlowbiteBoolean & {
-      color: ButtonOutlineColors;
-      pill: FlowbiteBoolean;
-    };
-    pill: FlowbiteBoolean;
-    size: ButtonSizes;
-  };
+  button: ButtonTheme;
   buttonGroup: {
     base: string;
-    position: PositionInButtonGroup;
   };
   card: {
     base: string;

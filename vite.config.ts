@@ -7,16 +7,16 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    sourcemap: true,
+    sourcemap: true
   },
   plugins: [react()],
   test: {
     coverage: {
-      reporter: ['html', 'json', 'text'],
+      reporter: ['html', 'json', 'text']
     },
     environment: 'jsdom',
     exclude: ['lib', 'node_modules', 'docs'],
     globals: true,
-    setupFiles: 'src/setup-tests.ts',
-  },
+    setupFiles: 'src/setup-tests.ts'
+  }
 });
