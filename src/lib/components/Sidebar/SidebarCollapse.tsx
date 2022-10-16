@@ -3,7 +3,7 @@ import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useId, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { Tooltip } from '../Tooltip';
 import { useSidebarContext } from './SidebarContext';
 import type { SidebarItemProps } from './SidebarItem';

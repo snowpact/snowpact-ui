@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { Avatar } from '.';
-import { Flowbite } from '../Flowbite';
-import type { CustomFlowbiteTheme } from '../Flowbite/FlowbiteTheme';
+import { HelloInternet } from '../bosons/HelloInternet';
+import type { CustomHelloInternetTheme } from '../bosons/HelloInternet/HelloInternetTheme';
 
 describe('Components / Avatar', () => {
   describe('Theme', () => {
     it('should use custom classes', () => {
-      const theme: CustomFlowbiteTheme = {
+      const theme: CustomHelloInternetTheme = {
         avatar: {
           size: {
             xxl: 'h-64 w-64',
@@ -15,9 +15,9 @@ describe('Components / Avatar', () => {
         },
       };
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Avatar size="xxl" />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(img()).toHaveClass('h-64 w-64');
@@ -26,9 +26,9 @@ describe('Components / Avatar', () => {
   describe('Placeholder', () => {
     it('should display placeholder initials', () => {
       render(
-        <Flowbite>
+        <HelloInternet>
           <Avatar placeholderInitials="RR" />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(initialsPlaceholder()).toHaveTextContent('RR');

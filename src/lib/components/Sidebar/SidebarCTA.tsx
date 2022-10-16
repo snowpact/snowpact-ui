@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors } from '../Flowbite/FlowbiteTheme';
-import { useTheme } from '../Flowbite/ThemeContext';
+import type { FlowbiteColors } from '../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { useSidebarContext } from './SidebarContext';
 
 export interface SidebarCTAProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className' | 'color'>> {

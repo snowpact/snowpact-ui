@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, ReactNode } from 'react';
 import { forwardRef } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors, FlowbiteSizes } from '../Flowbite/FlowbiteTheme';
-import { useTheme } from '../Flowbite/ThemeContext';
+import type { FlowbiteColors, FlowbiteSizes } from '../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import HelperText from './HelperText';
 
 export interface TextInputColors extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {

@@ -6,8 +6,8 @@ import type {
   FlowbiteGradientColors,
   FlowbiteGradientDuoToneColors,
   FlowbiteSizes,
-} from '../../Flowbite/FlowbiteTheme';
-import { useTheme } from '../../Flowbite/ThemeContext';
+} from '../../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { PositionInButtonGroup } from './Button.theme';
 
 export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color'> {

@@ -6,7 +6,7 @@ import type { ButtonProps } from '../atoms/Button';
 import { Button } from '../atoms/Button';
 import type { FloatingProps } from '../Floating';
 import { Floating } from '../Floating';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { DropdownDivider } from './DropdownDivider';
 import { DropdownHeader } from './DropdownHeader';
 import { DropdownItem } from './DropdownItem';

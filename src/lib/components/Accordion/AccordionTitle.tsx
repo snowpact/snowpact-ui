@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteHeadingLevel } from '../Flowbite/FlowbiteTheme';
-import { useTheme } from '../Flowbite/ThemeContext';
+import type { FlowbiteHeadingLevel } from '../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { useAccordionContext } from './AccordionPanelContext';
 
 export interface AccordionTitleProps extends ComponentProps<'button'> {

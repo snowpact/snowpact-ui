@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteStateColors } from '../Flowbite/FlowbiteTheme';
-import { useTheme } from '../Flowbite/ThemeContext';
+import type { FlowbiteStateColors } from '../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export interface LabelColors extends FlowbiteStateColors {
   [key: string]: string;

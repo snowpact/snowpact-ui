@@ -1,7 +1,7 @@
 import type { ComponentProps } from 'react';
 import { forwardRef } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export type RadioProps = Omit<ComponentProps<'input'>, 'type' | 'className' | 'ref'>;
 

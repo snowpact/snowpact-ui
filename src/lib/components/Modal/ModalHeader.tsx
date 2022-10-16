@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { HiOutlineX } from 'react-icons/hi';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { useModalContext } from './ModalContext';
 
 export type ModalHeaderProps = PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>>;

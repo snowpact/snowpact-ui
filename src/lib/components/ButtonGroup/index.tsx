@@ -2,7 +2,7 @@ import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react'
 import { Children, cloneElement, useMemo } from 'react';
 import type { ButtonProps } from '../atoms/Button';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export type ButtonGroupProps = PropsWithChildren<ComponentProps<'div'> & Pick<ButtonProps, 'outline' | 'pill'>>;
 

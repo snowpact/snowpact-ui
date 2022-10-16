@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors, FlowbiteSizes } from '../Flowbite/FlowbiteTheme';
-import { useTheme } from '../Flowbite/ThemeContext';
+import type { FlowbiteColors, FlowbiteSizes } from '../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export interface SpinnerProps extends Omit<ComponentProps<'span'>, 'color'> {
   color?: keyof SpinnerColors;

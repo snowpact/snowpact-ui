@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import SidebarCollapse from './SidebarCollapse';
 import { SidebarContext } from './SidebarContext';
 import SidebarCTA from './SidebarCTA';

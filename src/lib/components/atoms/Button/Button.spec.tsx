@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import { Button } from '.';
-import { Flowbite } from '../../Flowbite';
+import { HelloInternet } from '../../bosons/HelloInternet';
       
 
 describe('Components / Button', () => {
@@ -115,9 +115,9 @@ describe('Components / Button', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Button />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -134,10 +134,10 @@ describe('Components / Button', () => {
 
       render(
         // @ts-ignore
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           {/* @ts-ignore */} 
           <Button color="primary" />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -151,9 +151,9 @@ describe('Components / Button', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Button disabled />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -169,9 +169,9 @@ describe('Components / Button', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Button gradientMonochrome="yellowToPink" />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -188,10 +188,10 @@ describe('Components / Button', () => {
 
       render(
         // @ts-ignore
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           {/* @ts-ignore */} 
           <Button gradientDuoTone="cyanToYellow" />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -207,9 +207,9 @@ describe('Components / Button', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Button>Hi there</Button>
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       const buttonInnerContent = screen.getByText('Hi there');
@@ -225,9 +225,9 @@ describe('Components / Button', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Button label="Hi there" />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       const buttonLabel = screen.getByText('Hi there');
@@ -250,13 +250,13 @@ describe('Components / Button', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Button>Normal button</Button>
           <Button outline>Outline button</Button>
           <Button outline pill>
             Outline pill button
           </Button>
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       const normalButton = screen.getByText('Normal button');
@@ -279,10 +279,10 @@ describe('Components / Button', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Button label="Normal button" />
           <Button label="Pill" pill />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       const normalButton = buttons()[0];
@@ -304,9 +304,9 @@ describe('Components / Button', () => {
 
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Button size="xl">Hello</Button>
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       const button = screen.getByText('Hello');

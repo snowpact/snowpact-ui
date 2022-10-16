@@ -2,7 +2,7 @@ import type { ComponentProps, FC } from 'react';
 import { useContext } from 'react';
 import { HiMoon, HiSun } from 'react-icons/hi';
 import { excludeClassName } from '../../helpers/exclude';
-import { ThemeContext, useTheme } from '../Flowbite/ThemeContext';
+import { ThemeContext, useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export type DarkThemeToggleProps = Omit<ComponentProps<'button'>, 'className'>;
 

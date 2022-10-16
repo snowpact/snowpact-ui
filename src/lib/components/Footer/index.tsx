@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC } from 'react';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { FooterBrand } from './FooterBrand';
 import { FooterCopyright } from './FooterCopyright';
 import { FooterDivider } from './FooterDivider';

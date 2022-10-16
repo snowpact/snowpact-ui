@@ -2,7 +2,7 @@ import type { RenderResult } from '@testing-library/react';
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { Spinner } from '.';
-import { Flowbite } from '../Flowbite';
+import { HelloInternet } from '../bosons/HelloInternet';
 
 describe('Components / Spinner', () => {
   describe('A11y', () => {
@@ -31,9 +31,9 @@ describe('Components / Spinner', () => {
 
       const spinner = getSpinner(
         render(
-          <Flowbite theme={{ theme }}>
+          <HelloInternet theme={{ theme }}>
             <Spinner />
-          </Flowbite>,
+          </HelloInternet>,
         ),
       );
 
@@ -51,9 +51,9 @@ describe('Components / Spinner', () => {
 
       const spinner = getSpinner(
         render(
-          <Flowbite theme={{ theme }}>
+          <HelloInternet theme={{ theme }}>
             <Spinner color="primary" />
-          </Flowbite>,
+          </HelloInternet>,
         ),
       );
 
@@ -75,9 +75,9 @@ describe('Components / Spinner', () => {
 
       const spinner = getSpinner(
         render(
-          <Flowbite theme={{ theme }}>
+          <HelloInternet theme={{ theme }}>
             <Spinner color="success" light />
-          </Flowbite>,
+          </HelloInternet>,
         ),
       );
 

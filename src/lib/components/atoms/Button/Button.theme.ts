@@ -1,5 +1,5 @@
 import { ButtonColors, ButtonGradientColors, ButtonGradientDuoToneColors, ButtonOutlineColors, ButtonSizes } from '.';
-import { FlowbiteBoolean } from '../../Flowbite/FlowbiteTheme';
+import { FlowbiteBoolean } from '../../bosons/HelloInternet/HelloInternetTheme';
 
 export interface PositionInButtonGroup {
   none: string;

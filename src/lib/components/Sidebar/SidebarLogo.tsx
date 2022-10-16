@@ -1,7 +1,7 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useId } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { useSidebarContext } from './SidebarContext';
 
 export interface SidebarLogoProps extends PropsWithChildren<Omit<ComponentProps<'a'>, 'className'>> {

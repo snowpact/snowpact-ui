@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { HiCheck } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import { Badge } from '.';
-import { Flowbite } from '../Flowbite';
+import { HelloInternet } from '../bosons/HelloInternet';
 
 describe('Components / Badge', () => {
   describe('Rendering', () => {
@@ -29,11 +29,11 @@ describe('Components / Badge', () => {
         },
       };
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Badge color="primary" href="/" icon={HiCheck}>
             A badge
           </Badge>
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(badge()).toHaveClass(
@@ -57,10 +57,10 @@ describe('Components / Badge', () => {
         },
       };
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <Badge size="xxl">A badge</Badge>
           <Badge icon={HiCheck} size="xxl" />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       const badges = screen.getAllByTestId('flowbite-badge');

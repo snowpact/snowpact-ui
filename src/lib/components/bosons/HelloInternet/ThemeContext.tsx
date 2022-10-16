@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { FC, ReactNode } from 'react';
 import { createContext, useContext, useEffect, useState } from 'react';
-import windowExists from '../../helpers/window-exists';
-import defaultTheme from '../../theme/default';
-import type { FlowbiteTheme } from './FlowbiteTheme';
+import windowExists from '../../../helpers/window-exists';
+import defaultTheme from '../../../theme/default';
+import type { HelloInternetTheme } from './HelloInternetTheme';
 
 export type Mode = string | undefined | 'light' | 'dark';
 
 interface ThemeContextProps {
-  theme: FlowbiteTheme;
+  theme: HelloInternetTheme;
   mode?: Mode;
   toggleMode?: () => void | null;
 }

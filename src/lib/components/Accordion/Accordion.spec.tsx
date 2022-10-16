@@ -5,7 +5,7 @@ import { HiOutlineArrowCircleDown } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import type { AccordionProps } from '.';
 import { Accordion } from '.';
-import { Flowbite } from '../Flowbite';
+import { HelloInternet } from '../bosons/HelloInternet';
 
 describe('Components / Accordion', () => {
   describe('A11y', () => {
@@ -120,9 +120,9 @@ describe('Components / Accordion', () => {
         };
 
         render(
-          <Flowbite theme={{ theme }}>
+          <HelloInternet theme={{ theme }}>
             <TestAccordion />
-          </Flowbite>,
+          </HelloInternet>,
         );
 
         expect(accordion()).toHaveClass('text-4xl');
@@ -139,10 +139,10 @@ describe('Components / Accordion', () => {
         };
 
         render(
-          <Flowbite theme={{ theme }}>
+          <HelloInternet theme={{ theme }}>
             <TestAccordion />
             <TestAccordion flush />
-          </Flowbite>,
+          </HelloInternet>,
         );
 
         const accordions = screen.getAllByTestId('flowbite-accordion');
@@ -165,9 +165,9 @@ describe('Components / Accordion', () => {
         };
 
         render(
-          <Flowbite theme={{ theme }}>
+          <HelloInternet theme={{ theme }}>
             <TestAccordion />
-          </Flowbite>,
+          </HelloInternet>,
         );
 
         content().forEach((content) => {
@@ -202,10 +202,10 @@ describe('Components / Accordion', () => {
         };
 
         render(
-          <Flowbite theme={{ theme }}>
+          <HelloInternet theme={{ theme }}>
             <TestAccordion alwaysOpen />
             <TestAccordion alwaysOpen flush />
-          </Flowbite>,
+          </HelloInternet>,
         );
 
         const normalTitles = [titles()[0], titles()[1]];

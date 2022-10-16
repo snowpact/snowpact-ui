@@ -5,7 +5,7 @@ import { HiChartPie, HiInbox, HiShoppingBag } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import type { SidebarProps } from '.';
 import { Sidebar } from '.';
-import { Flowbite } from '../Flowbite';
+import { HelloInternet } from '../bosons/HelloInternet';
 
 describe('Components / Sidebar', () => {
   describe('A11y', () => {
@@ -134,10 +134,10 @@ describe('Theme', () => {
     };
 
     const { getByLabelText } = render(
-      <Flowbite theme={{ theme }}>
+      <HelloInternet theme={{ theme }}>
         <TestSidebar aria-label="not-collapsed" />
         <TestSidebar aria-label="collapsed" collapsed />
-      </Flowbite>,
+      </HelloInternet>,
     );
     const sidebar = getByLabelText('not-collapsed');
     const inner = sidebar.firstElementChild;
@@ -173,9 +173,9 @@ describe('Theme', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </HelloInternet>,
       );
       const labelIcons = collapseLabels().map((label) => label.nextElementSibling);
 
@@ -206,9 +206,9 @@ describe('Theme', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(cta()).toHaveClass('bg-gray-100 text-gray-100');
@@ -238,9 +238,9 @@ describe('Theme', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestSidebar collapsed />
-        </Flowbite>,
+        </HelloInternet>,
       );
       const theItems = items()
         .map((item) => item.firstElementChild)
@@ -270,9 +270,9 @@ describe('Theme', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       itemsContainers().forEach((container) => expect(container).toHaveClass('text-gray-100'));
@@ -288,9 +288,9 @@ describe('Theme', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </HelloInternet>,
       ),
         itemGroups().forEach((group) => expect(group).toHaveClass('text-gray-100'));
     });
@@ -312,9 +312,9 @@ describe('Theme', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </HelloInternet>,
       ),
         expect(logo()).toHaveClass('text-gray-100');
     });

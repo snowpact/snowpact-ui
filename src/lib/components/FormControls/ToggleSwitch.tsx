@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, KeyboardEvent, MouseEvent } from 'react';
 import { useId } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export type ToggleSwitchProps = Omit<ComponentProps<'button'>, 'onChange' | 'className'> & {
   checked: boolean;

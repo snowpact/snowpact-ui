@@ -4,7 +4,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { Button } from '../atoms/Button';
 import { ButtonGroup } from '.';
 import defaultTheme from '../../theme/default';
-import { Flowbite } from '../Flowbite';
+import { HelloInternet } from '../bosons/HelloInternet';
 
 describe('Components / ButtonGroup', () => {
   describe('A11y', () => {
@@ -100,13 +100,13 @@ describe('Components / ButtonGroup', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <ButtonGroup>
             <Button>One</Button>
             <Button>Two</Button>
             <Button>Three</Button>
           </ButtonGroup>
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(group()).toHaveClass('text-gray-400');
@@ -120,13 +120,13 @@ describe('Components / ButtonGroup', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <ButtonGroup>
             <Button>One</Button>
             <Button>Two</Button>
             <Button>Three</Button>
           </ButtonGroup>
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(group()).toHaveClass('text-gray-400');

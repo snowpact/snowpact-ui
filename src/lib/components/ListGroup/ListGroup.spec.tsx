@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { HiCloudDownload } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import { ListGroup } from '.';
-import { Flowbite } from '../Flowbite';
+import { HelloInternet } from '../bosons/HelloInternet';
 
 describe('Components / List group', () => {
   describe('Keyboard interactions', () => {
@@ -61,9 +61,9 @@ describe('Components / List group', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestListGroup />
-        </Flowbite>,
+        </HelloInternet>,
       ),
         expect(listGroup()).toHaveClass('text-gray-100');
     });
@@ -87,9 +87,9 @@ describe('Components / List group', () => {
       };
 
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestListGroup />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       icons().forEach((icon) => expect(icon).toHaveClass('text-gray-300'));

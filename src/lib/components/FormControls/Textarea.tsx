@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import type { ComponentProps, ReactNode } from 'react';
 import { forwardRef } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors } from '../Flowbite/FlowbiteTheme';
-import { useTheme } from '../Flowbite/ThemeContext';
+import type { FlowbiteColors } from '../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import HelperText from './HelperText';
 
 export interface TextareaColors extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {

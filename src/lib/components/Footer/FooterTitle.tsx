@@ -1,5 +1,5 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export interface FooterTitleProps extends Omit<PropsWithChildren<ComponentProps<'h2'>>, 'className'> {
   title: string;

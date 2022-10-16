@@ -3,7 +3,7 @@ import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react'
 import { Children, cloneElement, useMemo, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { AccordionContent } from './AccordionContent';
 import type { AccordionPanelProps } from './AccordionPanel';
 import { AccordionPanel } from './AccordionPanel';

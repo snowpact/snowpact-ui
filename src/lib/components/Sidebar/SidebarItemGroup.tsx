@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { SidebarItemContext } from './SidebarItemContext';
 
 const SidebarItemGroup: FC<PropsWithChildren<Omit<ComponentProps<'ul'>, 'className'>>> = ({ children, ...props }) => {

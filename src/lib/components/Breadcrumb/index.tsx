@@ -1,5 +1,5 @@
 import type { ComponentProps, FC } from 'react';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import BreadcrumbItem from './BreadcrumbItem';
 
 const BreadcrumbComponent: FC<ComponentProps<'nav'>> = ({ children, ...props }) => {

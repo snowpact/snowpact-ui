@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useState } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import type { Duration } from './ToastContext';
 import { ToastContext } from './ToastContext';
 import { ToastToggle } from './ToastToggle';

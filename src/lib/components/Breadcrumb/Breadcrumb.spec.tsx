@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { HiHome } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import { Breadcrumb } from '.';
-import { Flowbite } from '../Flowbite';
+import { HelloInternet } from '../bosons/HelloInternet';
 
 describe('Components / Breadcrumb', () => {
   describe('A11y', () => {
@@ -49,9 +49,9 @@ describe('Components / Breadcrumb', () => {
         },
       };
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestBreadcrumb />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(breadcrumbList()).toHaveClass('gap-6');
@@ -72,9 +72,9 @@ describe('Components / Breadcrumb', () => {
         },
       };
       render(
-        <Flowbite theme={{ theme }}>
+        <HelloInternet theme={{ theme }}>
           <TestBreadcrumb />
-        </Flowbite>,
+        </HelloInternet>,
       );
 
       expect(items()[0]).toHaveClass('justify-center');

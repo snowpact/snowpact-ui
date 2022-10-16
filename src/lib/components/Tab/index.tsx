@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, KeyboardEvent, PropsWithChildren, ReactElement } from 'react';
 import { Children, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteBoolean } from '../Flowbite/FlowbiteTheme';
-import { useTheme } from '../Flowbite/ThemeContext';
+import type { FlowbiteBoolean } from '../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import type { TabProps } from './TabItem';
 import { TabItem } from './TabItem';
 

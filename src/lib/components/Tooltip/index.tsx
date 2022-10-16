@@ -2,7 +2,7 @@ import type { Placement } from '@floating-ui/core';
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
 import { Floating } from '../Floating';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export interface TooltipProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className' | 'style'>> {
   content: ReactNode;

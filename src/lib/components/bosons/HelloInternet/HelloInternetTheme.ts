@@ -1,10 +1,10 @@
-import { DeepPartial } from '..';
-import type { AlertColors } from '../Alert';
-import type { ButtonTheme } from '../atoms/Button/Button.theme';
-import type { AvatarSizes } from '../Avatar';
-import type { BadgeColors, BadgeSizes } from '../Badge';
-import { FlowbiteDropdownTheme } from '../Dropdown';
-import type { FlowbiteFloatingTheme } from '../Floating';
+import { DeepPartial } from '../..';
+import type { AlertColors } from '../../Alert';
+import type { ButtonTheme } from '../../atoms/Button/Button.theme';
+import type { AvatarSizes } from '../../Avatar';
+import type { BadgeColors, BadgeSizes } from '../../Badge';
+import { FlowbiteDropdownTheme } from '../../Dropdown';
+import type { FlowbiteFloatingTheme } from '../../Floating';
 import type {
   HelperColors,
   LabelColors,
@@ -13,17 +13,17 @@ import type {
   TextareaColors,
   TextInputColors,
   TextInputSizes
-} from '../FormControls';
-import type { ModalPositions, ModalSizes } from '../Modal';
-import type { ProgressColor, ProgressSizes } from '../Progress';
-import type { StarSizes } from '../Rating';
-import type { SidebarCTAColors } from '../Sidebar/SidebarCTA';
-import type { SpinnerColors, SpinnerSizes } from '../Spinner';
-import type { TabStyleItem, TabStyles } from '../Tab';
+} from '../../FormControls';
+import type { ModalPositions, ModalSizes } from '../../Modal';
+import type { ProgressColor, ProgressSizes } from '../../Progress';
+import type { StarSizes } from '../../Rating';
+import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
+import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
+import type { TabStyleItem, TabStyles } from '../../Tab';
 
-export type CustomFlowbiteTheme = DeepPartial<FlowbiteTheme>;
+export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
-export interface FlowbiteTheme extends Record<string, unknown> {
+export interface HelloInternetTheme extends Record<string, unknown> {
   accordion: {
     base: string;
     content: {

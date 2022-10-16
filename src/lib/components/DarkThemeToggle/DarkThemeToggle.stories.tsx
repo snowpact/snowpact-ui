@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
 import { DarkThemeToggle } from '.';
-import { Flowbite } from '../Flowbite';
+import { HelloInternet } from '../bosons/HelloInternet';
 
 export default {
   title: 'Components/DarkThemeToggle',
@@ -8,9 +8,9 @@ export default {
 } as Meta;
 
 const Template: Story = (args) => (
-  <Flowbite>
+  <HelloInternet>
     <DarkThemeToggle {...args} />
-  </Flowbite>
+  </HelloInternet>
 );
 
 export const DefaultDarkThemeToggle = Template.bind({});

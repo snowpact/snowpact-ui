@@ -2,15 +2,15 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 import { DarkThemeToggle } from '.';
-import { Flowbite } from '../Flowbite';
+import { HelloInternet } from '../bosons/HelloInternet';
 
 describe.concurrent('Dark theme toggle', () => {
   it('should toggle the theme when `Space` is pressed', async () => {
     const user = userEvent.setup();
     render(
-      <Flowbite>
+      <HelloInternet>
         <DarkThemeToggle />
-      </Flowbite>,
+      </HelloInternet>,
     );
 
     await user.tab();

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export interface ListGroupItemProps extends PropsWithChildren<Omit<ComponentProps<'a' | 'button'>, 'className'>> {
   active?: boolean;

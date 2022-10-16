@@ -1,7 +1,7 @@
-import type { FlowbiteTheme } from '../components';
+import type { HelloInternetTheme } from '../components';
 import { BUTTON_THEME } from '../components/atoms/Button/Button.theme';
 
-const theme: FlowbiteTheme = {
+const theme: HelloInternetTheme = {
   accordion: {
     base: 'divide-y divide-gray-200 border-gray-200 dark:divide-gray-700 dark:border-gray-700',
     content: {
@@ -141,7 +141,7 @@ const theme: FlowbiteTheme = {
   },
   button: BUTTON_THEME,
   buttonGroup: {
-    base: 'inline-flex',
+    base: 'inline-flex'
   },
   card: {
     base: 'flex rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800',

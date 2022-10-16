@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { useTheme } from '../Flowbite/ThemeContext';
+import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export interface FooterLinkGroupProps extends PropsWithChildren<Omit<ComponentProps<'ul'>, 'className'>> {
   col?: boolean;

@@ -1,28 +1,28 @@
 import type { FC, HTMLAttributes } from 'react';
 import { useEffect, useMemo } from 'react';
-import type { DeepPartial } from '..';
-import { mergeDeep } from '../../helpers/mergeDeep';
-import windowExists from '../../helpers/window-exists';
-import defaultTheme from '../../theme/default';
-import type { FlowbiteTheme } from './FlowbiteTheme';
+import type { DeepPartial } from '../../';
+import { mergeDeep } from '../../../helpers/mergeDeep';
+import windowExists from '../../../helpers/window-exists';
+import defaultTheme from '../../../theme/default';
+import type { HelloInternetTheme } from './HelloInternetTheme';
 import { ThemeContext, useThemeMode } from './ThemeContext';
 
 export interface ThemeProps {
   dark?: boolean;
-  theme?: DeepPartial<FlowbiteTheme>;
+  theme?: DeepPartial<HelloInternetTheme>;
   usePreferences?: boolean;
 }
 
-interface FlowbiteProps extends HTMLAttributes<HTMLDivElement> {
+interface HelloInternetProps extends HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   theme?: ThemeProps;
 }
 
-export const Flowbite: FC<FlowbiteProps> = ({ children, theme = {} }) => {
+export const HelloInternet: FC<HelloInternetProps> = ({ children, theme = {} }) => {
   const { theme: customTheme = {}, dark, usePreferences = true } = theme;
   const [mode, setMode, toggleMode] = useThemeMode(usePreferences);
 
-  const mergedTheme = mergeDeep<FlowbiteTheme>(defaultTheme, customTheme);
+  const mergedTheme = mergeDeep<HelloInternetTheme>(defaultTheme, customTheme);
 
   useEffect(() => {
     if (dark) {
@@ -48,4 +48,3 @@ export const Flowbite: FC<FlowbiteProps> = ({ children, theme = {} }) => {
   return <ThemeContext.Provider value={themeContextValue}>{children}</ThemeContext.Provider>;
 };
 
-export type { FlowbiteTheme } from './FlowbiteTheme';
