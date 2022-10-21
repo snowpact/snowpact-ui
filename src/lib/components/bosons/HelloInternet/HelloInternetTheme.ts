@@ -2,24 +2,24 @@ import { DeepPartial } from '../..';
 import type { AlertColors } from '../../Alert';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
 import type { AvatarSizes } from '../../Avatar';
-import type { BadgeColors, BadgeSizes } from '../../Badge';
+import type { BadgeColors,BadgeSizes } from '../../Badge';
 import { FlowbiteDropdownTheme } from '../../Dropdown';
 import type { FlowbiteFloatingTheme } from '../../Floating';
 import type {
-  HelperColors,
-  LabelColors,
-  SelectColors,
-  SelectSizes,
-  TextareaColors,
-  TextInputColors,
-  TextInputSizes
+HelperColors,
+LabelColors,
+SelectColors,
+SelectSizes,
+TextareaColors,
+TextInputColors,
+TextInputSizes
 } from '../../FormControls';
-import type { ModalPositions, ModalSizes } from '../../Modal';
-import type { ProgressColor, ProgressSizes } from '../../Progress';
+import type { ModalPositions,ModalSizes } from '../../Modal';
+import type { ProgressColor,ProgressSizes } from '../../Progress';
 import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
-import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
-import type { TabStyleItem, TabStyles } from '../../Tab';
+import type { SpinnerColors,SpinnerSizes } from '../../Spinner';
+import type { TabStyleItem,TabStyles } from '../../Tab';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
@@ -473,7 +473,14 @@ export interface FlowbiteStateColors {
   warning: string;
 }
 
-export interface FlowbiteColors extends FlowbiteStateColors {
+export interface HIThemeColors {
+  primary: string;
+  secondary: string;
+  tertiary: string;
+  quaternary: string;
+}
+
+export interface FlowbiteColors extends FlowbiteStateColors, HIThemeColors {
   [key: string]: string;
   blue: string;
   cyan: string;
@@ -491,22 +498,11 @@ export interface FlowbiteColors extends FlowbiteStateColors {
 }
 
 export interface FlowbiteGradientColors extends Omit<FlowbiteStateColors, 'warning'> {
-  [key: string]: string;
   cyan: string;
   lime: string;
   pink: string;
   purple: string;
   teal: string;
-}
-
-export interface FlowbiteGradientDuoToneColors {
-  cyanToBlue: string;
-  greenToBlue: string;
-  pinkToOrange: string;
-  purpleToBlue: string;
-  purpleToPink: string;
-  redToYellow: string;
-  tealToLime: string;
 }
 
 export type FlowbiteHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -535,6 +531,11 @@ export interface FlowbiteSizes {
   '5xl': string;
   '6xl': string;
   '7xl': string;
+}
+
+export interface HIButtonWidth extends FlowbiteSizes {
+  compact: string;
+  full: string;
 }
 
 export interface FlowbiteContentPositions {

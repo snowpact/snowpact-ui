@@ -169,7 +169,9 @@ describe('Components / Button', () => {
       };
 
       render(
+        // @ts-ignore
         <HelloInternet theme={{ theme }}>
+          {/* @ts-ignore */} 
           <Button gradientMonochrome="yellowToPink" />
         </HelloInternet>,
       );
@@ -197,26 +199,6 @@ describe('Components / Button', () => {
       expect(button()).toHaveClass('font-extralight');
     });
 
-    it('should use `inner` classes', () => {
-      const theme = {
-        button: {
-          inner: {
-            base: 'font-extralight',
-          },
-        },
-      };
-
-      render(
-        <HelloInternet theme={{ theme }}>
-          <Button>Hi there</Button>
-        </HelloInternet>,
-      );
-
-      const buttonInnerContent = screen.getByText('Hi there');
-
-      expect(buttonInnerContent).toHaveClass('font-extralight');
-    });
-
     it('should use `label` classes', () => {
       const theme = {
         button: {
@@ -235,39 +217,7 @@ describe('Components / Button', () => {
       expect(buttonLabel).toHaveClass('font-extralight');
     });
 
-    it('should use `outline` classes', () => {
-      const theme = {
-        button: {
-          outline: {
-            off: 'font-extralight',
-            on: 'font-extrabold',
-            pill: {
-              off: 'text-purple-300',
-              on: 'text-purple-600',
-            },
-          },
-        },
-      };
-
-      render(
-        <HelloInternet theme={{ theme }}>
-          <Button>Normal button</Button>
-          <Button outline>Outline button</Button>
-          <Button outline pill>
-            Outline pill button
-          </Button>
-        </HelloInternet>,
-      );
-
-      const normalButton = screen.getByText('Normal button');
-      const outlineButton = screen.getByText('Outline button');
-      const outlinePillButton = screen.getByText('Outline pill button');
-
-      expect(normalButton).toHaveClass('font-extralight text-purple-300');
-      expect(outlineButton).toHaveClass('font-extrabold text-purple-300');
-      expect(outlinePillButton).toHaveClass('font-extrabold text-purple-600');
-    });
-
+    
     it('should use `pill` classes', () => {
       const theme = {
         button: {
@@ -312,6 +262,27 @@ describe('Components / Button', () => {
       const button = screen.getByText('Hello');
 
       expect(button).toHaveClass('font-extrabold');
+    });
+
+
+    it('should use `width` classes', () => {
+      const theme = {
+        button: {
+          widths: {
+            'xs': 'w-80',
+          },
+        },
+      };
+
+      render(
+        <HelloInternet theme={{ theme }}>
+          <Button label="Normal button" width='xs' />
+        </HelloInternet>,
+      );
+
+      const normalButton = screen.getByRole('button');
+
+      expect(normalButton).toHaveClass('w-80');
     });
   });
 });
