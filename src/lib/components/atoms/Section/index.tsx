@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classNames from 'classnames';
-import { SECTION_THEME } from './Section.theme';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export type SectionProps = {
   children: React.ReactNode;
@@ -11,8 +11,9 @@ export type SectionProps = {
 };
 
 const SectionComponent: React.FC<SectionProps> = ({ id, children, innerClassName, innerProps }) => {
+
   return (
-    <section id={id} className="">
+    <section data-testid="hi-section" id={id} className="">
       <div
         className={classNames('relative', innerClassName)}
         {...innerProps}
@@ -31,8 +32,10 @@ type SectionContainerProps = {
 };
 
 const SectionContainer: React.FC<SectionContainerProps> = ({ children, className, spaced, ...props }) => {
+
+  const { section: theme } = useTheme().theme;
     return (
-        <div className={classNames('relative', SECTION_THEME.container, className, spaced && SECTION_THEME.spaced)} {...props}>
+        <div data-testid="hi-section-container"  className={classNames('relative', theme.container, className, spaced && theme.spaced)} {...props}>
       {children}
     </div>
   );

@@ -1,25 +1,26 @@
 import { DeepPartial } from '../..';
 import type { AlertColors } from '../../Alert';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
+import type { SectionTheme } from '../../atoms/Section/Section.theme';
 import type { AvatarSizes } from '../../Avatar';
-import type { BadgeColors,BadgeSizes } from '../../Badge';
+import type { BadgeColors, BadgeSizes } from '../../Badge';
 import { FlowbiteDropdownTheme } from '../../Dropdown';
 import type { FlowbiteFloatingTheme } from '../../Floating';
 import type {
-HelperColors,
-LabelColors,
-SelectColors,
-SelectSizes,
-TextareaColors,
-TextInputColors,
-TextInputSizes
+  HelperColors,
+  LabelColors,
+  SelectColors,
+  SelectSizes,
+  TextareaColors,
+  TextInputColors,
+  TextInputSizes
 } from '../../FormControls';
-import type { ModalPositions,ModalSizes } from '../../Modal';
-import type { ProgressColor,ProgressSizes } from '../../Progress';
+import type { ModalPositions, ModalSizes } from '../../Modal';
+import type { ProgressColor, ProgressSizes } from '../../Progress';
 import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
-import type { SpinnerColors,SpinnerSizes } from '../../Spinner';
-import type { TabStyleItem,TabStyles } from '../../Tab';
+import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
+import type { TabStyleItem, TabStyles } from '../../Tab';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
@@ -415,6 +416,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
     color: ProgressColor;
     size: ProgressSizes;
   };
+  section: SectionTheme;
   spinner: {
     base: string;
     color: SpinnerColors;

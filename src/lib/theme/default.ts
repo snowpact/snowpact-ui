@@ -1,3 +1,4 @@
+import { SECTION_THEME } from '../../../lib/cjs/components/atoms/Section/Section.theme';
 import type { HelloInternetTheme } from '../components';
 import { BUTTON_THEME } from '../components/atoms/Button/Button.theme';
 
@@ -663,6 +664,7 @@ const theme: HelloInternetTheme = {
       xl: 'h-6'
     }
   },
+  section: SECTION_THEME,
   spinner: {
     base: 'inline animate-spin text-gray-200',
     color: {
