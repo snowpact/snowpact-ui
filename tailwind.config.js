@@ -37,5 +37,7 @@ module.exports = {
       backgroundColor: ['active'],
     },
   },
-  plugins: [require('./tailwind.plugin')],
+  plugins: [
+    require('./tailwind.plugin'),
+  ],
 };
