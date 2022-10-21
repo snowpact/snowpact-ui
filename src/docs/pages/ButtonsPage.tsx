@@ -14,13 +14,19 @@ const ButtonsPage: FC = () => {
             <Button>Default</Button>
           </div>
           <div>
-            <Button color="gray">Gray</Button>
+            <Button color="primary">Primary</Button>
           </div>
           <div>
-            <Button color="dark">Dark</Button>
+            <Button color="secondary">Secondary</Button>
           </div>
           <div>
-            <Button color="light">Light</Button>
+            <Button color="tertiary">Tertiary</Button>
+          </div>
+          <div>
+            <Button color="quaternary">Quaternary</Button>
+          </div>
+          <div>
+            <Button color="info">Info</Button>
           </div>
           <div>
             <Button color="success">Success</Button>
@@ -31,9 +37,6 @@ const ButtonsPage: FC = () => {
           <div>
             <Button color="warning">Warning</Button>
           </div>
-          <div>
-            <Button color="purple">Purple</Button>
-          </div>
         </div>
       ),
       codeClassName: 'dark:!bg-gray-900',
@@ -43,100 +46,14 @@ const ButtonsPage: FC = () => {
       code: (
         <div className="flex flex-wrap gap-2">
           <div>
-            <Button color="gray" pill>
+            <Button color="primary" pill>
               Gray
             </Button>
           </div>
           <div>
-            <Button color="dark" pill>
+            <Button color="secondary" pill>
               Dark
             </Button>
-          </div>
-          <div>
-            <Button color="light" pill>
-              Light
-            </Button>
-          </div>
-          <div>
-            <Button color="success" pill>
-              Success
-            </Button>
-          </div>
-          <div>
-            <Button color="failure" pill>
-              Failure
-            </Button>
-          </div>
-          <div>
-            <Button color="warning" pill>
-              Warning
-            </Button>
-          </div>
-          <div>
-            <Button color="purple" pill>
-              Purple
-            </Button>
-          </div>
-        </div>
-      ),
-      codeClassName: 'dark:!bg-gray-900',
-    },
-    {
-      title: 'Gradient Monochrome',
-      code: (
-        <div className="flex flex-wrap gap-2">
-          <div>
-            <Button gradientMonochrome="info">Info</Button>
-          </div>
-          <div>
-            <Button gradientMonochrome="success">Success</Button>
-          </div>
-          <div>
-            <Button gradientMonochrome="cyan">Cyan</Button>
-          </div>
-          <div>
-            <Button gradientMonochrome="teal">Teal</Button>
-          </div>
-          <div>
-            <Button gradientMonochrome="lime">Lime</Button>
-          </div>
-          <div>
-            <Button gradientMonochrome="failure">Failure</Button>
-          </div>
-          <div>
-            <Button gradientMonochrome="pink">Pink</Button>
-          </div>
-          <div>
-            <Button gradientMonochrome="purple">Purple</Button>
-          </div>
-        </div>
-      ),
-      codeClassName: 'dark:!bg-gray-900',
-    },
-    {
-      title: 'Gradient duo-tone',
-      code: (
-        <div className="flex flex-wrap gap-2">
-          <div>
-            <Button gradientDuoTone="purpleToBlue">Purple to Blue</Button>
-          </div>
-          <div>
-            <Button gradientDuoTone="cyanToBlue">Cyan to Blue</Button>
-          </div>
-          <div>
-            <Button gradientDuoTone="greenToBlue">Green to Blue</Button>
-          </div>
-          <div>
-            <Button gradientDuoTone="purpleToPink">Purple to Pink</Button>
-          </div>
-          <div>
-            <Button gradientDuoTone="pinkToOrange">Pink to Orange</Button>
-          </div>
-          <div>
-            <Button gradientDuoTone="tealToLime">Teal to Lime</Button>
-          </div>
-          <div>
-            <Button gradientDuoTone="redToYellow">Red to Yellow</Button>
           </div>
         </div>
       ),
@@ -147,38 +64,13 @@ const ButtonsPage: FC = () => {
       code: (
         <div className="flex flex-wrap items-center gap-2">
           <div>
-            <Button outline gradientDuoTone="purpleToBlue">
+            <Button outline color="primary">
               Purple to Blue
             </Button>
           </div>
           <div>
-            <Button outline gradientDuoTone="cyanToBlue">
+            <Button outline color="secondary">
               Cyan to Blue
-            </Button>
-          </div>
-          <div>
-            <Button outline gradientDuoTone="greenToBlue">
-              Green to Blue
-            </Button>
-          </div>
-          <div>
-            <Button outline gradientDuoTone="purpleToPink">
-              Purple to Pink
-            </Button>
-          </div>
-          <div>
-            <Button outline gradientDuoTone="pinkToOrange">
-              Pink to Orange
-            </Button>
-          </div>
-          <div>
-            <Button outline gradientDuoTone="tealToLime">
-              Teal to Lime
-            </Button>
-          </div>
-          <div>
-            <Button outline gradientDuoTone="redToYellow">
-              Red to Yellow
             </Button>
           </div>
         </div>

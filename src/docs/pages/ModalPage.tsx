@@ -33,7 +33,7 @@ const ModalPage: FC = () => {
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={() => setOpenModal(undefined)}>I accept</Button>
-              <Button color="gray" onClick={() => setOpenModal(undefined)}>
+              <Button color="primary" onClick={() => setOpenModal(undefined)}>
                 Decline
               </Button>
             </Modal.Footer>
@@ -58,7 +58,7 @@ const ModalPage: FC = () => {
                   <Button color="failure" onClick={() => setOpenModal(undefined)}>
                     {"Yes, I'm sure"}
                   </Button>
-                  <Button color="gray" onClick={() => setOpenModal(undefined)}>
+                  <Button color="primary" onClick={() => setOpenModal(undefined)}>
                     No, cancel
                   </Button>
                 </div>
@@ -152,7 +152,7 @@ const ModalPage: FC = () => {
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={() => setOpenModal(undefined)}>I accept</Button>
-              <Button color="gray" onClick={() => setOpenModal(undefined)}>
+              <Button color="primary" onClick={() => setOpenModal(undefined)}>
                 Decline
               </Button>
             </Modal.Footer>
@@ -197,7 +197,7 @@ const ModalPage: FC = () => {
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={() => setOpenModal(undefined)}>I accept</Button>
-              <Button color="gray" onClick={() => setOpenModal(undefined)}>
+              <Button color="primary" onClick={() => setOpenModal(undefined)}>
                 Decline
               </Button>
             </Modal.Footer>

@@ -2,46 +2,41 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, ReactNode } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
 import type {
-  FlowbiteColors,
-  FlowbiteGradientColors,
-  FlowbiteGradientDuoToneColors,
   FlowbiteSizes,
+  FlowbiteStateColors,
+  HIButtonWidth,
+  HIThemeColors,
 } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { PositionInButtonGroup } from './Button.theme';
 
+export type ButtonColors = HIThemeColors & FlowbiteStateColors;
+export type ButtonSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
+export type ButtonWidths = Pick<HIButtonWidth, 'compact' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full'>;
+
 export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color'> {
   color?: keyof ButtonColors;
-  outlineColor?: keyof ButtonOutlineColors;
-  gradientDuoTone?: keyof ButtonGradientDuoToneColors;
-  gradientMonochrome?: keyof ButtonGradientColors;
   href?: string;
   label?: ReactNode;
-  outline?: boolean;
   pill?: boolean;
   positionInGroup?: keyof PositionInButtonGroup;
   size?: keyof ButtonSizes;
+  width?: keyof ButtonWidths;
+  disabled?: boolean;
+  outline?: boolean;
 }
-
-export type ButtonColors = Pick<FlowbiteColors, 'dark' | 'failure' | 'gray' | 'info' | 'light' | 'purple' | 'success' | 'warning'>;
-export type ButtonOutlineColors = Pick<FlowbiteColors, 'gray' | 'default' | 'light'>;
-export type ButtonGradientColors = FlowbiteGradientColors;
-export type ButtonGradientDuoToneColors = FlowbiteGradientDuoToneColors;
-export type ButtonSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 
 export const Button: FC<ButtonProps> = ({
   children,
-  color = 'info',
-  outlineColor = 'light',
+  color = 'primary',
   disabled = false,
-  gradientDuoTone,
-  gradientMonochrome,
+  outline = false,
   href,
   label,
-  outline = false,
   pill = false,
   positionInGroup = 'none',
   size = 'md',
+  width = 'md',
   ...props
 }): JSX.Element => {
   const isLink = typeof href !== 'undefined';
@@ -55,13 +50,13 @@ export const Button: FC<ButtonProps> = ({
     <Component
       className={classNames(
         disabled && theme.disabled,
-        !gradientDuoTone && !gradientMonochrome && theme.color[color],
-        gradientDuoTone && !gradientMonochrome && theme.gradientDuoTone[gradientDuoTone],
-        !gradientDuoTone && gradientMonochrome && theme.gradient[gradientMonochrome],
+        theme.color[color],
         theme.position.outer[positionInGroup],
-        outline && (theme.outline.color[outlineColor] ?? theme.outline.color.default),
         theme.base,
         theme.pill[pill ? 'on' : 'off'],
+        theme.outline[outline ? 'on' : 'off'],
+        theme.widths[width],
+        
       )}
       disabled={disabled}
       href={href}
@@ -70,12 +65,8 @@ export const Button: FC<ButtonProps> = ({
     >
       <span
         className={classNames(
-          theme.inner.base,
           theme.position.inner[positionInGroup],
-          theme.outline[outline ? 'on' : 'off'],
-          theme.outline.pill[outline && pill ? 'on' : 'off'],
           theme.size[size],
-          outline && !theme.outline.color[outlineColor] && theme.inner.outline,
         )}
       >
         <>

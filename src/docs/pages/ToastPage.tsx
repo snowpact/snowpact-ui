@@ -96,7 +96,7 @@ const ToastPage: FC = () => {
                   <Button size="xs">Update</Button>
                 </div>
                 <div className="w-full">
-                  <Button color="light" size="xs">
+                  <Button color="primary" size="xs">
                     Not now
                   </Button>
                 </div>

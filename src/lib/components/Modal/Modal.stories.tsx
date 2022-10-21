@@ -45,7 +45,7 @@ Default.args = {
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={action('close')}>I accept</Button>
-        <Button color="gray" onClick={action('close')}>
+        <Button color="primary" onClick={action('close')}>
           Decline
         </Button>
       </Modal.Footer>
@@ -67,7 +67,7 @@ PopUp.args = {
           <Button color="failure" onClick={action('close')}>
             {"Yes, I'm sure"}
           </Button>
-          <Button color="gray" onClick={action('close')}>
+          <Button color="primary" onClick={action('close')}>
             No, cancel
           </Button>
         </div>
