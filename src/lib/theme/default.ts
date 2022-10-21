@@ -1,4 +1,4 @@
-import { SECTION_THEME } from '../../../lib/cjs/components/atoms/Section/Section.theme';
+import { SECTION_THEME } from '../components/atoms/Section/Section.theme';
 import type { HelloInternetTheme } from '../components';
 import { BUTTON_THEME } from '../components/atoms/Button/Button.theme';
 
