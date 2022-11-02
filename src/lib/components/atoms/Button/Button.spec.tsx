@@ -127,7 +127,7 @@ describe('Components / Button', () => {
       const theme = {
         button: {
           color: {
-            primary: 'font-extralight',
+            primary: 'bg-blue-500',
           },
         },
       };

@@ -2,10 +2,10 @@ import { DeepPartial } from '../..';
 import type { AlertColors } from '../../Alert';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
 import type { SectionTheme } from '../../atoms/Section/Section.theme';
+import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
 import type { AvatarSizes } from '../../Avatar';
 import type { BadgeColors, BadgeSizes } from '../../Badge';
 import { FlowbiteDropdownTheme } from '../../Dropdown';
-import type { FlowbiteFloatingTheme } from '../../Floating';
 import type {
   HelperColors,
   LabelColors,
@@ -454,7 +454,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       icon: string;
     };
   };
-  tooltip: FlowbiteFloatingTheme;
+  tooltip: TooltipTheme;
   dropdown: {
     floating: FlowbiteDropdownTheme;
     content: string;

@@ -17,6 +17,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      color: {
+        'blue-100': '#E6F6FF',
+      },
       // sidebar mobile fix
       maxWidth: {
         '2xs': '16rem',
