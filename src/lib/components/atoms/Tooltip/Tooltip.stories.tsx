@@ -1,10 +1,10 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
 import type { TooltipProps } from '.';
 import { Tooltip } from '.';
-import { Button } from '../atoms/Button';
+import { Button } from '../Button';
 
 export default {
-  title: 'Components/Tooltip',
+  title: 'Components/atoms/Tooltip',
   component: Tooltip,
 } as Meta;
 

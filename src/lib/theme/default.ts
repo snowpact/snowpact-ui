@@ -1,6 +1,7 @@
-import { SECTION_THEME } from '../components/atoms/Section/Section.theme';
 import type { HelloInternetTheme } from '../components';
 import { BUTTON_THEME } from '../components/atoms/Button/Button.theme';
+import { SECTION_THEME } from '../components/atoms/Section/Section.theme';
+import { TOOLTIP_THEME } from '../components/atoms/Tooltip/Tooltip.theme';
 
 const theme: HelloInternetTheme = {
   accordion: {
@@ -767,27 +768,7 @@ const theme: HelloInternetTheme = {
       icon: 'h-5 w-5 shrink-0'
     }
   },
-  tooltip: {
-    target: 'w-fit',
-    base: 'absolute inline-block rounded-lg py-2 px-3 text-sm font-medium shadow-sm',
-    animation: 'transition-opacity',
-    hidden: 'invisible opacity-0',
-    style: {
-      dark: 'bg-gray-900 text-white dark:bg-gray-700',
-      light: 'border border-gray-200 bg-white text-gray-900',
-      auto: 'border border-gray-200 bg-white text-gray-900 dark:border-none dark:bg-gray-700 dark:text-white'
-    },
-    content: 'relative z-20',
-    arrow: {
-      base: 'absolute z-10 h-2 w-2 rotate-45',
-      style: {
-        dark: 'bg-gray-900 dark:bg-gray-700',
-        light: 'bg-white',
-        auto: 'bg-white dark:bg-gray-700'
-      },
-      placement: '-4px'
-    }
-  }
+  tooltip: TOOLTIP_THEME
 };
 
 export default theme;

@@ -4,8 +4,8 @@ import { HiOutlineChevronDown, HiOutlineChevronLeft, HiOutlineChevronRight, HiOu
 import { excludeClassName } from '../../helpers/exclude';
 import type { ButtonProps } from '../atoms/Button';
 import { Button } from '../atoms/Button';
-import type { FloatingProps } from '../Floating';
-import { Floating } from '../Floating';
+import type { FloatingProps } from '../bosons/Floating';
+import { Floating } from '../bosons/Floating';
 import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { DropdownDivider } from './DropdownDivider';
 import { DropdownHeader } from './DropdownHeader';

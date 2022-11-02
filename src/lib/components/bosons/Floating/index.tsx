@@ -11,9 +11,10 @@ import {
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
-import { excludeClassName } from '../../helpers/exclude';
-import { getArrowPlacement, getMiddleware, getPlacement } from '../../helpers/floating';
-import { FlowbiteDropdownTheme } from '../Dropdown';
+import { excludeClassName } from '../../../helpers/exclude';
+import { getArrowPlacement, getMiddleware, getPlacement } from '../../../helpers/floating';
+// TODO This should not use a theme from dropdown
+import { FlowbiteDropdownTheme } from '../../Dropdown';
 
 export interface FlowbiteFloatingTheme {
   target: string;
