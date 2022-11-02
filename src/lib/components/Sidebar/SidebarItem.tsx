@@ -5,7 +5,7 @@ import { excludeClassName } from '../../helpers/exclude';
 import { Badge } from '../Badge';
 import type { FlowbiteColors } from '../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../bosons/HelloInternet/ThemeContext';
-import { Tooltip } from '../Tooltip';
+import { Tooltip } from '../atoms/Tooltip';
 import { useSidebarContext } from './SidebarContext';
 import { useSidebarItemContext } from './SidebarItemContext';
 
