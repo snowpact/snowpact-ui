@@ -17,7 +17,8 @@ import type {
   TextInputColors,
   TextInputSizes
 } from '../../FormControls';
-import type { ModalPositions, ModalSizes } from '../../Modal';
+
+import { ModalTheme } from '../../molecules/Modal/Modal.theme';
 import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
@@ -264,33 +265,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       icon: string;
     };
   };
-  modal: {
-    base: string;
-    show: FlowbiteBoolean;
-    content: {
-      base: string;
-      inner: string;
-    };
-    body: {
-      base: string;
-      popup: string;
-    };
-    header: {
-      base: string;
-      popup: string;
-      title: string;
-      close: {
-        base: string;
-        icon: string;
-      };
-    };
-    footer: {
-      base: string;
-      popup: string;
-    };
-    sizes: ModalSizes;
-    positions: ModalPositions;
-  };
+  modal: ModalTheme,
   navbar: {
     base: string;
     rounded: FlowbiteBoolean;

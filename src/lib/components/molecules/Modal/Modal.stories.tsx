@@ -3,11 +3,11 @@ import type { Meta, Story } from '@storybook/react/types-6-0';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import type { ModalProps } from '.';
 import { Modal } from '.';
-import { Button } from '../atoms/Button';
-import { Checkbox, Label, TextInput } from '../FormControls';
+import { Button } from '../../atoms/Button';
+import { Checkbox, Label, TextInput } from '../../FormControls';
 
 export default {
-  title: 'Components/Modal',
+  title: 'Components/molecules/Modal',
   component: Modal,
   args: {
     show: false,

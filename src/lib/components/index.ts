@@ -12,7 +12,6 @@ export * from './Dropdown';
 export * from './Footer';
 export * from './FormControls';
 export * from './ListGroup';
-export * from './Modal';
 export * from './Navbar';
 export * from './Pagination';
 export * from './Rating';
