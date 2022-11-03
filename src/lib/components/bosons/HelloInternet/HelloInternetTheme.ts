@@ -1,6 +1,7 @@
 import { DeepPartial } from '../..';
 import type { AlertColors } from '../../Alert';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
+import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
 import type { SectionTheme } from '../../atoms/Section/Section.theme';
 import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
 import type { AvatarSizes } from '../../Avatar';
@@ -16,7 +17,6 @@ import type {
   TextInputSizes
 } from '../../FormControls';
 import type { ModalPositions, ModalSizes } from '../../Modal';
-import type { ProgressColor, ProgressSizes } from '../../Progress';
 import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
@@ -413,7 +413,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
     base: string;
     label: string;
     bar: string;
-    color: ProgressColor;
+    color: ProgressColors;
     size: ProgressSizes;
   };
   section: SectionTheme;
@@ -479,7 +479,6 @@ export interface HIThemeColors {
   primary: string;
   secondary: string;
   tertiary: string;
-  quaternary: string;
 }
 
 export interface FlowbiteColors extends FlowbiteStateColors, HIThemeColors {

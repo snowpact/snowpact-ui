@@ -1,27 +1,24 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useId } from 'react';
-import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors, FlowbiteSizes } from '../bosons/HelloInternet/HelloInternetTheme';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import type { FlowbiteSizes, FlowbiteStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export interface ProgressProps extends PropsWithChildren<ComponentProps<'div'>> {
+  color?: keyof ProgressColors;
   size?: keyof ProgressSizes;
   label?: string;
   labelPosition?: 'inside' | 'outside' | 'none';
   labelProgress?: boolean;
   progress: number;
 }
-export interface ProgressColor
-  extends Pick<FlowbiteColors, 'dark' | 'blue' | 'red' | 'green' | 'yellow' | 'indigo' | 'purple'> {
-  [key: string]: string;
-}
-export interface ProgressSizes extends Pick<FlowbiteSizes, 'sm' | 'md' | 'lg' | 'xl'> {
-  [key: string]: string;
-}
+export type ProgressColors = HIThemeColors & FlowbiteStateColors;
+
+export type ProgressSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 
 export const Progress: FC<ProgressProps> = ({
-  color = 'blue',
+  color = 'primary',
   label = 'progressbar',
   labelPosition = 'none',
   labelProgress = false,
