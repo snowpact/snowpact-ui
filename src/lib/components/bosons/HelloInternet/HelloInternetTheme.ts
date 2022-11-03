@@ -1,5 +1,5 @@
 import { DeepPartial } from '../..';
-import type { AlertColors } from '../../Alert';
+import { AlertTheme } from '../../atoms/Alert/Alert.theme';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
 import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
 import type { SectionTheme } from '../../atoms/Section/Section.theme';
@@ -45,17 +45,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       open: FlowbiteBoolean;
     };
   };
-  alert: {
-    base: string;
-    borderAccent: string;
-    closeButton: {
-      base: string;
-      color: AlertColors;
-    };
-    color: AlertColors;
-    icon: string;
-    rounded: string;
-  };
+  alert: AlertTheme;
   avatar: {
     base: string;
     bordered: string;

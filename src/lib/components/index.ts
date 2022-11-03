@@ -1,5 +1,4 @@
 export * from './Accordion';
-export * from './Alert';
 export * from './atoms';
 export * from './Avatar';
 export * from './Badge';

@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 import { HiX } from 'react-icons/hi';
-import type { FlowbiteColors } from '../bosons/HelloInternet/HelloInternetTheme';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import type { FlowbiteStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
   additionalContent?: ReactNode;
@@ -13,9 +13,7 @@ export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>
   withBorderAccent?: boolean;
 }
 
-export interface AlertColors extends Pick<FlowbiteColors, 'failure' | 'gray' | 'info' | 'success' | 'warning'> {
-  [key: string]: string;
-}
+export type AlertColors = HIThemeColors & FlowbiteStateColors;
 
 export const Alert: FC<AlertProps> = ({
   additionalContent,
