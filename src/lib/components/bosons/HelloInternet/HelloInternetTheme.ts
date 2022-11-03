@@ -3,6 +3,7 @@ import { AlertTheme } from '../../atoms/Alert/Alert.theme';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
 import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
 import type { SectionTheme } from '../../atoms/Section/Section.theme';
+import { ToastTheme } from '../../atoms/Toast/Toast.theme';
 import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
 import type { AvatarSizes } from '../../Avatar';
 import type { BadgeColors, BadgeSizes } from '../../Badge';
@@ -435,15 +436,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
     };
     tabpanel: string;
   };
-  toast: {
-    base: string;
-    closed: string;
-    removed: string;
-    toggle: {
-      base: string;
-      icon: string;
-    };
-  };
+  toast: ToastTheme;
   tooltip: TooltipTheme;
   dropdown: {
     floating: FlowbiteDropdownTheme;

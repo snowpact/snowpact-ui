@@ -1,6 +1,6 @@
 import type { ComponentProps, FC } from 'react';
 import { HiX } from 'react-icons/hi';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { useToastContext } from './ToastContext';
 
 type ToastToggleProps = ComponentProps<'button'> & {
