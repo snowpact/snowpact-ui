@@ -2,13 +2,13 @@ import type { FC } from 'react';
 import { useState } from 'react';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { Button, Checkbox, Label, Select, TextInput } from '../../lib';
-import { Modal } from '../../lib/components/molecules';
+import { Modal, ModalSizes } from '../../lib/components/molecules';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 
 const ModalPage: FC = () => {
   const [openModal, setOpenModal] = useState<string | undefined>();
-  const [modalSize, setModalSize] = useState<string>('md');
+  const [modalSize, setModalSize] = useState<keyof ModalSizes>('sm');
   const [modalPlacement, setModalPlacement] = useState<string>('center');
 
   const examples: CodeExample[] = [
@@ -121,17 +121,12 @@ const ModalPage: FC = () => {
         <>
           <div className="flex flex-wrap gap-4">
             <div className="w-40">
-              <Select defaultValue="md" onChange={(event) => setModalSize(event.target.value)}>
+              <Select defaultValue="md" onChange={(event) => setModalSize(event.target.value as keyof ModalSizes)}>
+                <option value="xs">xs</option>
                 <option value="sm">sm</option>
                 <option value="md">md</option>
                 <option value="lg">lg</option>
                 <option value="xl">xl</option>
-                <option value="2xl">2xl</option>
-                <option value="3xl">3xl</option>
-                <option value="4xl">4xl</option>
-                <option value="5xl">5xl</option>
-                <option value="6xl">6xl</option>
-                <option value="7xl">7xl</option>
               </Select>
             </div>
             <Button onClick={() => setOpenModal('size')}>Toggle modal</Button>
