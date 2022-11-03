@@ -2,9 +2,10 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbitePositions, FlowbiteSizes } from '../bosons/HelloInternet/HelloInternetTheme';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import { FlowbitePositions, FlowbiteSizes } from '../../bosons/HelloInternet/HelloInternetTheme';
+
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { ModalBody } from './ModalBody';
 import { ModalContext } from './ModalContext';
 import { ModalFooter } from './ModalFooter';
@@ -14,9 +15,8 @@ export interface ModalPositions extends FlowbitePositions {
   [key: string]: string;
 }
 
-export interface ModalSizes extends Omit<FlowbiteSizes, 'xs'> {
-  [key: string]: string;
-}
+export type ModalSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
+
 
 export interface ModalProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
   onClose?: () => void;
@@ -32,7 +32,7 @@ const ModalComponent: FC<ModalProps> = ({
   show,
   root,
   popup,
-  size = '2xl',
+  size = 'sm',
   position = 'center',
   onClose,
   ...props

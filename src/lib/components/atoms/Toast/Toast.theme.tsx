@@ -1,5 +1,3 @@
-
-
 export type ToastTheme = {
     base: string;
     closed: string;
