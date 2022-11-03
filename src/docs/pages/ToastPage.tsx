@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { HiCheck, HiExclamation, HiFire, HiX } from 'react-icons/hi';
 import { MdLoop } from 'react-icons/md';
-import { Button, Toast } from '../../lib';
+import { Button, Toast } from '../../lib/components/atoms';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 

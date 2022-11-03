@@ -4,7 +4,7 @@ import type { AlertProps } from '.';
 import { Alert } from '.';
 
 export default {
-  title: 'Components/Alert',
+  title: 'Components/atoms/Alert',
   component: Alert,
 } as Meta;
 

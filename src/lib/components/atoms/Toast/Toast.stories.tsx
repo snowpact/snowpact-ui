@@ -4,7 +4,7 @@ import type { ToastProps } from '.';
 import { Toast } from '.';
 
 export default {
-  title: 'Components/Toast',
+  title: 'Components/atoms/Toast',
   component: Toast,
 } as Meta;
 

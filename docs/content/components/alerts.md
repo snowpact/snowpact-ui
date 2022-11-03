@@ -180,7 +180,7 @@ Use the following examples of alert components to show messages as feedback to y
   <span class="font-medium">Warning alert!</span>
   Change a few things up and try submitting again.
 </div>
-<Alert color="gray">
+<Alert color="primary">
   <span class="font-medium">Dark alert!</span>
   Change a few things up and try submitting again.
 </Alert>
