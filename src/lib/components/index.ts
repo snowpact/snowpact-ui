@@ -16,7 +16,6 @@ export * from './ListGroup';
 export * from './Modal';
 export * from './Navbar';
 export * from './Pagination';
-export * from './Progress';
 export * from './Rating';
 export * from './Sidebar';
 export * from './Spinner';
