@@ -23,9 +23,6 @@ const ButtonsPage: FC = () => {
             <Button color="tertiary">Tertiary</Button>
           </div>
           <div>
-            <Button color="quaternary">Quaternary</Button>
-          </div>
-          <div>
             <Button color="info">Info</Button>
           </div>
           <div>
@@ -39,7 +36,7 @@ const ButtonsPage: FC = () => {
           </div>
         </div>
       ),
-      codeClassName: 'dark:!bg-gray-900',
+      codeClassName: 'dark:!bg-gray-900'
     },
     {
       title: 'Button pills',
@@ -57,7 +54,7 @@ const ButtonsPage: FC = () => {
           </div>
         </div>
       ),
-      codeClassName: 'dark:!bg-gray-900',
+      codeClassName: 'dark:!bg-gray-900'
     },
     {
       title: 'Outline',
@@ -75,7 +72,7 @@ const ButtonsPage: FC = () => {
           </div>
         </div>
       ),
-      codeClassName: 'dark:!bg-gray-900',
+      codeClassName: 'dark:!bg-gray-900'
     },
     {
       title: 'Button sizes',
@@ -98,7 +95,7 @@ const ButtonsPage: FC = () => {
           </div>
         </div>
       ),
-      codeClassName: 'dark:!bg-gray-900',
+      codeClassName: 'dark:!bg-gray-900'
     },
     {
       title: 'Buttons with icon',
@@ -106,19 +103,19 @@ const ButtonsPage: FC = () => {
         <div className="flex flex-wrap items-center gap-2">
           <div>
             <Button>
-              <HiShoppingCart className="mr-2 h-5 w-5" />
+              <HiShoppingCart className="w-5 h-5 mr-2" />
               Buy now
             </Button>
           </div>
           <div>
             <Button>
               Choose plan
-              <HiOutlineArrowRight className="ml-2 h-5 w-5" />
+              <HiOutlineArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
         </div>
       ),
-      codeClassName: 'dark:!bg-gray-900',
+      codeClassName: 'dark:!bg-gray-900'
     },
     {
       title: 'Button with label',
@@ -127,7 +124,7 @@ const ButtonsPage: FC = () => {
           <Button label="2">Messages</Button>
         </div>
       ),
-      codeClassName: 'dark:!bg-gray-900',
+      codeClassName: 'dark:!bg-gray-900'
     },
     {
       title: 'Icon buttons',
@@ -135,27 +132,27 @@ const ButtonsPage: FC = () => {
         <div className="flex flex-wrap items-center gap-2">
           <div>
             <Button>
-              <HiOutlineArrowRight className="h-6 w-6" />
+              <HiOutlineArrowRight className="w-6 h-6" />
             </Button>
           </div>
           <div>
             <Button pill>
-              <HiOutlineArrowRight className="h-6 w-6" />
+              <HiOutlineArrowRight className="w-6 h-6" />
             </Button>
           </div>
           <div>
             <Button outline>
-              <HiOutlineArrowRight className="h-6 w-6" />
+              <HiOutlineArrowRight className="w-6 h-6" />
             </Button>
           </div>
           <div>
             <Button outline pill>
-              <HiOutlineArrowRight className="h-6 w-6" />
+              <HiOutlineArrowRight className="w-6 h-6" />
             </Button>
           </div>
         </div>
       ),
-      codeClassName: 'dark:!bg-gray-900',
+      codeClassName: 'dark:!bg-gray-900'
     },
     {
       title: 'Loader',
@@ -179,7 +176,7 @@ const ButtonsPage: FC = () => {
           </div>
         </div>
       ),
-      codeClassName: 'dark:!bg-gray-900',
+      codeClassName: 'dark:!bg-gray-900'
     },
     {
       title: 'Disabled',
@@ -188,8 +185,8 @@ const ButtonsPage: FC = () => {
           <Button disabled>Disabled button</Button>
         </div>
       ),
-      codeClassName: 'dark:!bg-gray-900',
-    },
+      codeClassName: 'dark:!bg-gray-900'
+    }
   ];
 
   return <DemoPage examples={examples} />;
