@@ -1,23 +1,16 @@
 import { ALERT_THEME } from '../components/atoms/Alert/Alert.theme';
-<<<<<<< HEAD
 import { AVATAR_THEME } from '../components/atoms/Avatar/Avatar.theme';
-=======
 import { BREADCRUMB_THEME } from '../components/atoms/Breadcrumb/Breadcrumb.theme';
->>>>>>> 9cabc49 (Move Breadcrumb component)
 import { BUTTON_THEME } from '../components/atoms/Button/Button.theme';
 import { DARK_THEME_TOGGLE_THEME } from '../components/atoms/DarkThemeToggle/DarkThemeToggle.theme';
 import { PROGRESS_THEME } from '../components/atoms/Progress/Progress.theme';
 import { SECTION_THEME } from '../components/atoms/Section/Section.theme';
 import { TOAST_THEME } from '../components/atoms/Toast/Toast.theme';
 import { TOOLTIP_THEME } from '../components/atoms/Tooltip/Tooltip.theme';
-<<<<<<< HEAD
-import { LIST_GROUP_THEME } from '../components/molecules/ListGroup/ListGroup.theme';
-=======
 import { HelloInternetTheme } from '../components/bosons';
->>>>>>> 9cabc49 (Move Breadcrumb component)
+import { LIST_GROUP_THEME } from '../components/molecules/ListGroup/ListGroup.theme';
 import { MODAL_THEME } from '../components/molecules/Modal/Modal.theme';
 import { TABS_THEME } from '../components/molecules/Tab/Tabs.theme';
-
 
 const theme: HelloInternetTheme = {
   accordion: {
