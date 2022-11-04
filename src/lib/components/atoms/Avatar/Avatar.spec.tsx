@@ -10,17 +10,17 @@ describe('Components / Avatar', () => {
       const theme: CustomHelloInternetTheme = {
         avatar: {
           size: {
-            xxl: 'h-64 w-64',
+            xl: 'h-40'
           },
         },
       };
       render(
         <HelloInternet theme={{ theme }}>
-          <Avatar size="xxl" />
+          <Avatar size="xl" />
         </HelloInternet>,
       );
 
-      expect(img()).toHaveClass('h-64 w-64');
+      expect(img()).toHaveClass('h-40');
     });
   });
   describe('Placeholder', () => {
