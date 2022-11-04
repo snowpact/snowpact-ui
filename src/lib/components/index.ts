@@ -8,8 +8,6 @@ export * from './Card';
 export * from './Carousel';
 export * from './Dropdown';
 export * from './Footer';
-export * from './FormControls';
-export * from './ListGroup';
 export * from './Navbar';
 export * from './Pagination';
 export * from './Rating';
