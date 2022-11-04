@@ -1,5 +1,7 @@
 import type { FC } from 'react';
-import { Avatar, Dropdown } from '../../lib';
+import { Dropdown } from '../../lib';
+import { Avatar } from '../../lib/components/atoms';
+
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 

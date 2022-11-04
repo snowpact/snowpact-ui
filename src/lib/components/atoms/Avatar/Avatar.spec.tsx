@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { Avatar } from '.';
-import { HelloInternet } from '../bosons/HelloInternet';
-import type { CustomHelloInternetTheme } from '../bosons/HelloInternet/HelloInternetTheme';
+import { HelloInternet } from '../../bosons/HelloInternet';
+import type { CustomHelloInternetTheme } from '../../bosons/HelloInternet/HelloInternetTheme';
 
 describe('Components / Avatar', () => {
   describe('Theme', () => {

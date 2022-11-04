@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import { Avatar } from '../Avatar';
+import { Avatar } from '../atoms/Avatar';
 import { Button } from '../atoms/Button';
 import { Dropdown } from '../Dropdown';
 import type { NavbarComponentProps } from '../Navbar';
