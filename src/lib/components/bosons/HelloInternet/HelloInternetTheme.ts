@@ -18,13 +18,12 @@ import type {
   TextInputSizes
 } from '../../FormControls';
 
+import { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
 import { ModalTheme } from '../../molecules/Modal/Modal.theme';
+import { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
-import type { TabStyleItem, TabStyles } from '../../Tab';
-import { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
-import { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
@@ -119,7 +118,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       snap: string;
     };
   };
-  darkThemeToggle: DarkThemeToggleTheme,
+  darkThemeToggle: DarkThemeToggleTheme;
   footer: {
     base: string;
     container: string;
@@ -242,7 +241,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       icon: string;
     };
   };
-  modal: ModalTheme,
+  modal: ModalTheme;
   navbar: {
     base: string;
     rounded: FlowbiteBoolean;
