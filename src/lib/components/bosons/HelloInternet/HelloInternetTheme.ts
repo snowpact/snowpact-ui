@@ -6,7 +6,6 @@ import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
 import type { SectionTheme } from '../../atoms/Section/Section.theme';
 import { ToastTheme } from '../../atoms/Toast/Toast.theme';
 import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
-import type { AvatarSizes } from '../../Avatar';
 import type { BadgeColors, BadgeSizes } from '../../Badge';
 import { FlowbiteDropdownTheme } from '../../Dropdown';
 import type {
@@ -23,6 +22,8 @@ import { ModalTheme } from '../../molecules/Modal/Modal.theme';
 import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
+import type { TabStyleItem, TabStyles } from '../../Tab';
+import { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
 import { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
@@ -49,29 +50,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
     };
   };
   alert: AlertTheme;
-  avatar: {
-    base: string;
-    bordered: string;
-    img: {
-      off: string;
-      on: string;
-    };
-    rounded: string;
-    size: AvatarSizes;
-    stacked: string;
-    status: {
-      away: string;
-      base: string;
-      busy: string;
-      offline: string;
-      online: string;
-    };
-    statusPosition: FlowbitePositions;
-    initials: {
-      base: string;
-      text: string;
-    };
-  };
+  avatar: AvatarTheme;
   badge: {
     base: string;
     color: BadgeColors;

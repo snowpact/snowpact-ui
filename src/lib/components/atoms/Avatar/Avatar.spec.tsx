@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { Avatar } from '.';
-import { HelloInternet } from '../bosons/HelloInternet';
-import type { CustomHelloInternetTheme } from '../bosons/HelloInternet/HelloInternetTheme';
+import { HelloInternet } from '../../bosons/HelloInternet';
+import type { CustomHelloInternetTheme } from '../../bosons/HelloInternet/HelloInternetTheme';
 
 describe('Components / Avatar', () => {
   describe('Theme', () => {
@@ -10,17 +10,17 @@ describe('Components / Avatar', () => {
       const theme: CustomHelloInternetTheme = {
         avatar: {
           size: {
-            xxl: 'h-64 w-64',
+            xl: 'h-40'
           },
         },
       };
       render(
         <HelloInternet theme={{ theme }}>
-          <Avatar size="xxl" />
+          <Avatar size="xl" />
         </HelloInternet>,
       );
 
-      expect(img()).toHaveClass('h-64 w-64');
+      expect(img()).toHaveClass('h-40');
     });
   });
   describe('Placeholder', () => {

@@ -1,6 +1,5 @@
 export * from './Accordion';
 export * from './atoms';
-export * from './Avatar';
 export * from './Badge';
 export * from './bosons';
 export * from './Breadcrumb';

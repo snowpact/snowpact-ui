@@ -3,7 +3,7 @@ import { Avatar } from '.';
 import type { AvatarGroupProps } from './AvatarGroup';
 
 export default {
-  title: 'Components/Avatar',
+  title: 'Components/atoms/Avatar',
   component: Avatar.Group,
 } as Meta;
 
