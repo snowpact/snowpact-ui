@@ -12,7 +12,6 @@ export * from './Rating';
 export * from './Sidebar';
 export * from './Spinner';
 export * from './Table';
-export * from './Timeline';
 
 
 export type DeepPartial<T> = T extends object
