@@ -1,13 +1,20 @@
-import type { HelloInternetTheme } from '../components';
 import { ALERT_THEME } from '../components/atoms/Alert/Alert.theme';
+<<<<<<< HEAD
 import { AVATAR_THEME } from '../components/atoms/Avatar/Avatar.theme';
+=======
+import { BREADCRUMB_THEME } from '../components/atoms/Breadcrumb/Breadcrumb.theme';
+>>>>>>> 9cabc49 (Move Breadcrumb component)
 import { BUTTON_THEME } from '../components/atoms/Button/Button.theme';
 import { DARK_THEME_TOGGLE_THEME } from '../components/atoms/DarkThemeToggle/DarkThemeToggle.theme';
 import { PROGRESS_THEME } from '../components/atoms/Progress/Progress.theme';
 import { SECTION_THEME } from '../components/atoms/Section/Section.theme';
 import { TOAST_THEME } from '../components/atoms/Toast/Toast.theme';
 import { TOOLTIP_THEME } from '../components/atoms/Tooltip/Tooltip.theme';
+<<<<<<< HEAD
 import { LIST_GROUP_THEME } from '../components/molecules/ListGroup/ListGroup.theme';
+=======
+import { HelloInternetTheme } from '../components/bosons';
+>>>>>>> 9cabc49 (Move Breadcrumb component)
 import { MODAL_THEME } from '../components/molecules/Modal/Modal.theme';
 import { TABS_THEME } from '../components/molecules/Tab/Tabs.theme';
 
@@ -75,18 +82,7 @@ const theme: HelloInternetTheme = {
       sm: 'p-1.5 text-sm'
     }
   },
-  breadcrumb: {
-    item: {
-      base: 'group flex items-center',
-      chevron: 'mx-1 h-6 w-6 text-gray-400 group-first:hidden md:mx-2',
-      href: {
-        off: 'flex items-center text-sm font-medium text-gray-500 dark:text-gray-400',
-        on: 'flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
-      },
-      icon: 'mr-2 h-4 w-4'
-    },
-    list: 'flex items-center'
-  },
+  breadcrumb: BREADCRUMB_THEME,
   button: BUTTON_THEME,
   buttonGroup: {
     base: 'inline-flex'

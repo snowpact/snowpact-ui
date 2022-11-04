@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { HiHome } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import { Breadcrumb } from '.';
-import { HelloInternet } from '../bosons/HelloInternet';
+import { HelloInternet } from '../../bosons/HelloInternet';
 
 describe('Components / Breadcrumb', () => {
   describe('A11y', () => {

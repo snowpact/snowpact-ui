@@ -1,5 +1,6 @@
 import { DeepPartial } from '../..';
 import { AlertTheme } from '../../atoms/Alert/Alert.theme';
+import { BreadcrumbTheme } from '../../atoms/Breadcrumb/Breadcrumb.theme';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
 import { DarkThemeToggleTheme } from '../../atoms/DarkThemeToggle/DarkThemeToggle.theme';
 import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
@@ -62,18 +63,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
     };
     size: BadgeSizes;
   };
-  breadcrumb: {
-    item: {
-      base: string;
-      chevron: string;
-      href: {
-        off: string;
-        on: string;
-      };
-      icon: string;
-    };
-    list: string;
-  };
+  breadcrumb: BreadcrumbTheme;
   button: ButtonTheme;
   buttonGroup: {
     base: string;

@@ -3,7 +3,7 @@ import { HiHome } from 'react-icons/hi';
 import { Breadcrumb } from '.';
 
 export default {
-  title: 'Components/Breadcrumb',
+  title: 'Components/atoms/Breadcrumb',
   component: Breadcrumb,
 } as Meta;
 
