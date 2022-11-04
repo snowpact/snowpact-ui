@@ -1,7 +1,8 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
-import { Button, Checkbox, Label, Select, TextInput } from '../../lib';
+import { Button } from '../../lib';
+import { Checkbox, Label, Select, TextInput } from '../../lib/components/FormControls';
 import { Modal, ModalSizes } from '../../lib/components/molecules';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
