@@ -1,5 +1,6 @@
 import { DeepPartial } from '../..';
 import { AlertTheme } from '../../atoms/Alert/Alert.theme';
+import { BreadcrumbTheme } from '../../atoms/Breadcrumb/Breadcrumb.theme';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
 import { DarkThemeToggleTheme } from '../../atoms/DarkThemeToggle/DarkThemeToggle.theme';
 import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
@@ -18,13 +19,12 @@ import type {
   TextInputSizes
 } from '../../FormControls';
 
+import { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
 import { ModalTheme } from '../../molecules/Modal/Modal.theme';
+import { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
-import type { TabStyleItem, TabStyles } from '../../Tab';
-import { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
-import { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
@@ -62,18 +62,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
     };
     size: BadgeSizes;
   };
-  breadcrumb: {
-    item: {
-      base: string;
-      chevron: string;
-      href: {
-        off: string;
-        on: string;
-      };
-      icon: string;
-    };
-    list: string;
-  };
+  breadcrumb: BreadcrumbTheme;
   button: ButtonTheme;
   buttonGroup: {
     base: string;
@@ -119,7 +108,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       snap: string;
     };
   };
-  darkThemeToggle: DarkThemeToggleTheme,
+  darkThemeToggle: DarkThemeToggleTheme;
   footer: {
     base: string;
     container: string;
@@ -242,7 +231,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       icon: string;
     };
   };
-  modal: ModalTheme,
+  modal: ModalTheme;
   navbar: {
     base: string;
     rounded: FlowbiteBoolean;

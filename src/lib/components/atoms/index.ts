@@ -1,5 +1,6 @@
 export * from './Alert';
 export * from './Avatar';
+export * from './Breadcrumb';
 export * from './Button';
 export * from './DarkThemeToggle';
 export * from './Progress';

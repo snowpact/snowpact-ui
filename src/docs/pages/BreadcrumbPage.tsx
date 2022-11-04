@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { HiHome } from 'react-icons/hi';
-import { Breadcrumb } from '../../lib';
+import { Breadcrumb } from '../../lib/components/atoms';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 

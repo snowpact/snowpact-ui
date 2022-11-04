@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Root } from './docs/Root';
 import './index.css';
-import { HelloInternet } from './lib/components';
+import { HelloInternet } from './lib/components/bosons';
 
 const container = document.getElementById('root');
 
