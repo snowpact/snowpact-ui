@@ -1,6 +1,7 @@
 import { DeepPartial } from '../..';
 import { AlertTheme } from '../../atoms/Alert/Alert.theme';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
+import { DarkThemeToggleTheme } from '../../atoms/DarkThemeToggle/DarkThemeToggle.theme';
 import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
 import type { SectionTheme } from '../../atoms/Section/Section.theme';
 import { ToastTheme } from '../../atoms/Toast/Toast.theme';
@@ -23,6 +24,7 @@ import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
 import type { TabStyleItem, TabStyles } from '../../Tab';
 import { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
+import { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
@@ -117,10 +119,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       snap: string;
     };
   };
-  darkThemeToggle: {
-    base: string;
-    icon: string;
-  };
+  darkThemeToggle: DarkThemeToggleTheme,
   footer: {
     base: string;
     container: string;
@@ -376,19 +375,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
     };
     size: SpinnerSizes;
   };
-  tab: {
-    base: string;
-    tablist: {
-      base: string;
-      styles: TabStyles;
-      tabitem: {
-        base: string;
-        styles: TabStyleItem<TabStyles>;
-        icon: string;
-      };
-    };
-    tabpanel: string;
-  };
+  tab: TabsTheme;
   toast: ToastTheme;
   tooltip: TooltipTheme;
   dropdown: {
