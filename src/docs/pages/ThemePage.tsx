@@ -3,8 +3,8 @@ import reactElementToJSXString from 'react-element-to-jsx-string';
 import { HiInformationCircle } from 'react-icons/hi';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { Alert, Card, DarkThemeToggle } from '../../lib';
-import { HelloInternet } from '../../lib/components';
+import { Alert, Card } from '../../lib';
+import { DarkThemeToggle, HelloInternet } from '../../lib/components';
 import type { CustomHelloInternetTheme } from '../../lib/components';
 
 const ThemePage: FC = () => {
