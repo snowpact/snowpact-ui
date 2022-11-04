@@ -1,9 +1,9 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
 import { DarkThemeToggle } from '.';
-import { HelloInternet } from '../bosons/HelloInternet';
+import { HelloInternet } from '../../bosons/HelloInternet';
 
 export default {
-  title: 'Components/DarkThemeToggle',
+  title: 'Components/atoms/DarkThemeToggle',
   component: DarkThemeToggle,
 } as Meta;
 

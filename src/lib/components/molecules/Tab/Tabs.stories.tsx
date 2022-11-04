@@ -5,7 +5,7 @@ import type { TabsProps } from '.';
 import { Tabs, TabsComponent } from '.';
 
 export default {
-  title: 'Components/Tabs',
+  title: 'Components/molecules/Tabs',
   component: TabsComponent,
   args: {
     className: 'bg-white rounded-lg dark:bg-gray-800 dark:text-white',
