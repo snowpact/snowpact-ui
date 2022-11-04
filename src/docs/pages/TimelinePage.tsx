@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { HiArrowNarrowRight, HiCalendar } from 'react-icons/hi';
-import { Button, Timeline } from '../../lib';
+import { Button } from '../../lib';
+import { Timeline } from '../../lib/components/molecules';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 

@@ -3,7 +3,7 @@ import type { TimelineProps } from '.';
 import { Timeline } from '.';
 
 export default {
-  title: 'Components/Timeline',
+  title: 'Components/molecules/Timeline',
   component: Timeline,
 } as Meta;
 
