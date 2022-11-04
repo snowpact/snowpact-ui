@@ -4,7 +4,7 @@ import type { ListGroupProps } from '.';
 import { ListGroup } from '.';
 
 export default {
-  title: 'Components/ListGroup',
+  title: 'Components/molecules/ListGroup',
   component: ListGroup,
 } as Meta;
 
