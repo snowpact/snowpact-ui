@@ -1,15 +1,14 @@
 import type { FC, HTMLAttributes } from 'react';
 import { useEffect, useMemo } from 'react';
-import type { DeepPartial } from '../../';
 import { mergeDeep } from '../../../helpers/mergeDeep';
 import windowExists from '../../../helpers/window-exists';
 import defaultTheme from '../../../theme/default';
-import type { HelloInternetTheme } from './HelloInternetTheme';
+import type { CustomHelloInternetTheme, HelloInternetTheme } from './HelloInternetTheme';
 import { ThemeContext, useThemeMode } from './ThemeContext';
 
 export interface ThemeProps {
   dark?: boolean;
-  theme?: DeepPartial<HelloInternetTheme>;
+  theme?: CustomHelloInternetTheme;
   usePreferences?: boolean;
 }
 

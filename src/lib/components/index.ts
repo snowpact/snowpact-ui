@@ -1,6 +1,7 @@
 export * from './Accordion';
 export * from './atoms';
 export * from './Badge';
+export * from './bosons';
 export * from './ButtonGroup';
 export * from './Card';
 export * from './Carousel';
