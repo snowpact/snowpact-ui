@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors } from '../bosons/HelloInternet/HelloInternetTheme';
+import type { HIColors } from '../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
-export interface HelperColors extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
+export interface HelperColors extends Pick<HIColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
   [key: string]: string;
 }
 

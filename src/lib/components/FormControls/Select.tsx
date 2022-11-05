@@ -2,15 +2,15 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, ReactNode } from 'react';
 import { forwardRef } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors, FlowbiteSizes } from '../bosons/HelloInternet/HelloInternetTheme';
+import type { HIColors, HISizes } from '../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import HelperText from './HelperText';
 
-export interface SelectColors extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
+export interface SelectColors extends Pick<HIColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
   [key: string]: string;
 }
 
-export interface SelectSizes extends Pick<FlowbiteSizes, 'sm' | 'md' | 'lg'> {
+export interface SelectSizes extends Pick<HISizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string;
 }
 

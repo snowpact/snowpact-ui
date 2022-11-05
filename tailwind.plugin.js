@@ -421,7 +421,6 @@ module.exports = plugin(
     });
   },
   {
-    darkMode: 'class', // or 'media' or 'class',
     theme: {
       extend: {
         height: {

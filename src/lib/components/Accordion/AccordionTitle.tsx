@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteHeadingLevel } from '../bosons/HelloInternet/HelloInternetTheme';
+import type { HIHeadingLevel } from '../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { useAccordionContext } from './AccordionPanelContext';
 
 export interface AccordionTitleProps extends ComponentProps<'button'> {
   arrowIcon?: FC<ComponentProps<'svg'>>;
-  as?: FlowbiteHeadingLevel;
+  as?: HIHeadingLevel;
 }
 
 export const AccordionTitle: FC<AccordionTitleProps> = ({ as: Heading = 'h2', children, ...props }): JSX.Element => {

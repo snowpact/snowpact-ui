@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors, FlowbiteSizes } from '../bosons/HelloInternet/HelloInternetTheme';
+import type { HIColors, HISizes } from '../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'>, 'className' | 'color'>> {
@@ -12,11 +12,11 @@ export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'
 }
 
 export interface BadgeColors
-  extends Pick<FlowbiteColors, 'failure' | 'gray' | 'indigo' | 'info' | 'pink' | 'purple' | 'success'> {
+  extends Pick<HIColors, 'failure' | 'gray' | 'indigo' | 'info' | 'pink' | 'purple' | 'success'> {
   [key: string]: string;
 }
 
-export interface BadgeSizes extends Pick<FlowbiteSizes, 'xs' | 'sm'> {
+export interface BadgeSizes extends Pick<HISizes, 'xs' | 'sm'> {
   [key: string]: string;
 }
 

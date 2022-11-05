@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors, FlowbiteSizes } from '../bosons/HelloInternet/HelloInternetTheme';
+import type { HIColors, HISizes } from '../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 
 export interface SpinnerProps extends Omit<ComponentProps<'span'>, 'color'> {
@@ -11,11 +11,11 @@ export interface SpinnerProps extends Omit<ComponentProps<'span'>, 'color'> {
 }
 
 export interface SpinnerColors
-  extends Pick<FlowbiteColors, 'failure' | 'gray' | 'info' | 'pink' | 'purple' | 'success' | 'warning'> {
+  extends Pick<HIColors, 'failure' | 'gray' | 'info' | 'pink' | 'purple' | 'success' | 'warning'> {
   [key: string]: string;
 }
 
-export interface SpinnerSizes extends Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> {
+export interface SpinnerSizes extends Pick<HISizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> {
   [key: string]: string;
 }
 

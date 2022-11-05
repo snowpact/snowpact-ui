@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useId } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
-import type { FlowbiteSizes, FlowbiteStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
+import type { HISizes, HIStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export interface ProgressProps extends PropsWithChildren<ComponentProps<'div'>> {
@@ -13,9 +13,9 @@ export interface ProgressProps extends PropsWithChildren<ComponentProps<'div'>> 
   labelProgress?: boolean;
   progress: number;
 }
-export type ProgressColors = HIThemeColors & FlowbiteStateColors;
+export type ProgressColors = HIThemeColors & HIStateColors;
 
-export type ProgressSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
+export type ProgressSizes = Pick<HISizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 
 export const Progress: FC<ProgressProps> = ({
   color = 'primary',

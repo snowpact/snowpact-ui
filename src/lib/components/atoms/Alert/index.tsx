@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 import { HiX } from 'react-icons/hi';
-import type { FlowbiteStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
+import type { HIStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
@@ -13,7 +13,7 @@ export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>
   withBorderAccent?: boolean;
 }
 
-export type AlertColors = HIThemeColors & FlowbiteStateColors;
+export type AlertColors = HIThemeColors & HIStateColors;
 
 export const Alert: FC<AlertProps> = ({
   additionalContent,

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
-import type { FlowbitePositions, FlowbiteSizes } from '../../bosons/HelloInternet/HelloInternetTheme';
+import type { HIPositions, HISizes } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import AvatarGroup from './AvatarGroup';
 import AvatarGroupCounter from './AvatarGroupCounter';
@@ -14,11 +14,11 @@ export interface AvatarProps extends PropsWithChildren<Omit<ComponentProps<'div'
   size?: keyof AvatarSizes;
   stacked?: boolean;
   status?: 'away' | 'busy' | 'offline' | 'online';
-  statusPosition?: keyof FlowbitePositions;
+  statusPosition?: keyof HIPositions;
   placeholderInitials?: string;
 }
 
-export type AvatarSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
+export type AvatarSizes = Pick<HISizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 
 const AvatarComponent: FC<AvatarProps> = ({
   alt = '',

@@ -17,7 +17,7 @@ export const Default = (): JSX.Element => (
   </Breadcrumb>
 );
 
-export const SolidBackground = (): JSX.Element => (
+export const WithCustomClasses = (): JSX.Element => (
   <Breadcrumb className="bg-gray-50 py-3 px-5 dark:bg-gray-800">
     <Breadcrumb.Item href="#" icon={HiHome}>
       Home
@@ -26,4 +26,3 @@ export const SolidBackground = (): JSX.Element => (
     <Breadcrumb.Item>Flowbite React</Breadcrumb.Item>
   </Breadcrumb>
 );
-SolidBackground.storyName = 'Solid background';

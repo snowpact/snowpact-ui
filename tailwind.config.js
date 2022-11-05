@@ -14,7 +14,6 @@ module.exports = {
     'leading-9',
     'shadow-lg'
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       // sidebar mobile fix

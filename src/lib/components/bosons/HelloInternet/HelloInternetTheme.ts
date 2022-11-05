@@ -380,7 +380,7 @@ export interface FlowbiteBoolean {
   on: string;
 }
 
-export interface FlowbiteStateColors {
+export interface HIStateColors {
   info: string;
   failure: string;
   success: string;
@@ -393,7 +393,7 @@ export interface HIThemeColors {
   tertiary: string;
 }
 
-export interface FlowbiteColors extends FlowbiteStateColors, HIThemeColors {
+export interface HIColors extends HIStateColors, HIThemeColors {
   [key: string]: string;
   blue: string;
   cyan: string;
@@ -403,6 +403,7 @@ export interface FlowbiteColors extends FlowbiteStateColors, HIThemeColors {
   indigo: string;
   light: string;
   lime: string;
+  orange: string;
   pink: string;
   purple: string;
   red: string;
@@ -410,17 +411,9 @@ export interface FlowbiteColors extends FlowbiteStateColors, HIThemeColors {
   yellow: string;
 }
 
-export interface FlowbiteGradientColors extends Omit<FlowbiteStateColors, 'warning'> {
-  cyan: string;
-  lime: string;
-  pink: string;
-  purple: string;
-  teal: string;
-}
+export type HIHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-export type FlowbiteHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-
-export interface FlowbitePositions {
+export interface HIPositions {
   'bottom-left': string;
   'bottom-right': string;
   'bottom-center': string;
@@ -432,7 +425,7 @@ export interface FlowbitePositions {
   'center-right': string;
 }
 
-export interface FlowbiteSizes {
+export interface HISizes {
   xs: string;
   sm: string;
   md: string;
@@ -446,11 +439,7 @@ export interface FlowbiteSizes {
   '7xl': string;
 }
 
-export interface HIButtonWidth extends FlowbiteSizes {
+export interface HIButtonWidth extends HISizes {
   compact: string;
   full: string;
-}
-
-export interface FlowbiteContentPositions {
-  center: string;
 }

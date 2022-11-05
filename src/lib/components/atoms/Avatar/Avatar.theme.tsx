@@ -1,5 +1,5 @@
 import { AvatarSizes } from ".";
-import { FlowbitePositions } from "../../bosons/HelloInternet/HelloInternetTheme";
+import { HIPositions } from "../../bosons/HelloInternet/HelloInternetTheme";
 
 export type AvatarTheme = {
     base: string;
@@ -18,7 +18,7 @@ export type AvatarTheme = {
       offline: string;
       online: string;
     };
-    statusPosition: FlowbitePositions;
+    statusPosition: HIPositions;
     initials: {
       base: string;
       text: string;

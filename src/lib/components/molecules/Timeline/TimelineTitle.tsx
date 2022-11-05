@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { FlowbiteHeadingLevel } from '../../bosons/HelloInternet/HelloInternetTheme';
+import { HIHeadingLevel } from '../../bosons/HelloInternet/HelloInternetTheme';
 
 
 export type TimelineTitleProps = PropsWithChildren<
-  ComponentProps<FlowbiteHeadingLevel> & {
+  ComponentProps<HIHeadingLevel> & {
     className?: string;
-    as?: FlowbiteHeadingLevel;
+    as?: HIHeadingLevel;
   }
 >;
 

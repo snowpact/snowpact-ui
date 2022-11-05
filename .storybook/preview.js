@@ -17,10 +17,5 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
-  },
-  darkMode: {
-    current: 'dark',
-    darkClass: 'dark',
-    stylePreview: true,
-  },
+  }
 };

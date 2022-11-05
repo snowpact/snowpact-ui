@@ -41,9 +41,6 @@ module.exports = {
     'shadow-lg'
   ],
 
-  // enable dark mode via class strategy
-  darkMode: 'class',
-
   theme: {
     extend: {
       // extend base Tailwind CSS utility classes

@@ -2,16 +2,16 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, ReactNode } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
 import type {
-  FlowbiteSizes,
-  FlowbiteStateColors,
+  HISizes,
+  HIStateColors,
   HIButtonWidth,
   HIThemeColors,
 } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { PositionInButtonGroup } from './Button.theme';
 
-export type ButtonColors = HIThemeColors & FlowbiteStateColors;
-export type ButtonSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
+export type ButtonColors = HIThemeColors & HIStateColors;
+export type ButtonSizes = Pick<HISizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 export type ButtonWidths = Pick<HIButtonWidth, 'compact' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full'>;
 
 export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color'> {

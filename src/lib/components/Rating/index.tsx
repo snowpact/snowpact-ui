@@ -1,12 +1,12 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteSizes } from '../bosons/HelloInternet/HelloInternetTheme';
+import type { HISizes } from '../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../bosons/HelloInternet/ThemeContext';
 import { RatingAdvanced } from './RatingAdvanced';
 import { RatingContext } from './RatingContext';
 import { RatingStar } from './RatingStar';
 
-export interface StarSizes extends Pick<FlowbiteSizes, 'sm' | 'md' | 'lg'> {
+export interface StarSizes extends Pick<HISizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string;
 }
 

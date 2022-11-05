@@ -3,7 +3,7 @@ import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { excludeClassName } from '../../../helpers/exclude';
-import { FlowbitePositions, FlowbiteSizes } from '../../bosons/HelloInternet/HelloInternetTheme';
+import { HIPositions, HISizes } from '../../bosons/HelloInternet/HelloInternetTheme';
 
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { ModalBody } from './ModalBody';
@@ -11,11 +11,11 @@ import { ModalContext } from './ModalContext';
 import { ModalFooter } from './ModalFooter';
 import { ModalHeader } from './ModalHeader';
 
-export interface ModalPositions extends FlowbitePositions {
+export interface ModalPositions extends HIPositions {
   [key: string]: string;
 }
 
-export type ModalSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
+export type ModalSizes = Pick<HISizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 
 
 export interface ModalProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
