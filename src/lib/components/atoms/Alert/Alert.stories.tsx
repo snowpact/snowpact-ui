@@ -70,21 +70,21 @@ AlertWithAdditionalContent.args = {
   withBorderAccent: true,
   additionalContent: (
     <>
-      <div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">
+      <div className="mt-2 mb-4 text-sm text-blue-700">
         More info about this info alert goes here. This example text is going to run a bit longer so that you can see
         how spacing within an alert works with this kind of content.
       </div>
       <div className="flex">
         <button
           type="button"
-          className="mr-2 inline-flex items-center rounded-lg bg-blue-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-800 dark:hover:bg-blue-900"
+          className="mr-2 inline-flex items-center rounded-lg bg-blue-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300:bg-blue-900"
         >
           <HiEye className="-ml-0.5 mr-2 h-4 w-4" />
           View more
         </button>
         <button
           type="button"
-          className="rounded-lg border border-blue-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-blue-700 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 dark:border-blue-800 dark:text-blue-800 dark:hover:text-white"
+          className="rounded-lg border border-blue-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-blue-700 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300:text-white"
         >
           Dismiss
         </button>
@@ -93,7 +93,7 @@ AlertWithAdditionalContent.args = {
   ),
   children: (
     <>
-      <h3 className="text-lg font-medium text-blue-700 dark:text-blue-800">This is a info alert</h3>
+      <h3 className="text-lg font-medium text-blue-700">This is a info alert</h3>
     </>
   ),
 };
@@ -108,21 +108,21 @@ AlertWithAllOptions.args = {
   icon: HiInformationCircle,
   additionalContent: (
     <>
-      <div className="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">
+      <div className="mt-2 mb-4 text-sm text-green-700">
         More info about this info alert goes here. This example text is going to run a bit longer so that you can see
         how spacing within an alert works with this kind of content.
       </div>
       <div className="flex">
         <button
           type="button"
-          className="mr-2 inline-flex items-center rounded-lg bg-green-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:bg-green-800 dark:hover:bg-green-900"
+          className="mr-2 inline-flex items-center rounded-lg bg-green-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-green-800 focus:ring-4 focus:ring-green-300:bg-green-900"
         >
           <HiEye className="-ml-0.5 mr-2 h-4 w-4" />
           View more
         </button>
         <button
           type="button"
-          className="rounded-lg border border-green-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-green-700 hover:bg-green-800 hover:text-white focus:ring-4 focus:ring-green-300 dark:border-green-800 dark:text-green-800 dark:hover:text-white"
+          className="rounded-lg border border-green-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-green-700 hover:bg-green-800 hover:text-white focus:ring-4 focus:ring-green-300:text-white"
         >
           Dismiss
         </button>

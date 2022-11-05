@@ -8,17 +8,17 @@ export const TOOLTIP_THEME: TooltipTheme = {
     animation: 'transition-opacity',
     hidden: 'invisible opacity-0',
     style: {
-        dark: 'bg-gray-900 text-white dark:bg-gray-700',
+        dark: 'bg-gray-900 text-white',
         light: 'border border-gray-200 bg-white text-gray-900',
-        auto: 'border border-gray-200 bg-white text-gray-900 dark:border-none dark:bg-gray-700 dark:text-white'
+        auto: 'border border-gray-200 bg-white text-gray-900'
     },
     content: 'relative z-20',
     arrow: {
         base: 'absolute z-10 h-2 w-2 rotate-45',
         style: {
-            dark: 'bg-gray-900 dark:bg-gray-700',
+            dark: 'bg-gray-900',
             light: 'bg-white',
-            auto: 'bg-white dark:bg-gray-700'
+            auto: 'bg-white'
         },
         placement: '-4px'
     }

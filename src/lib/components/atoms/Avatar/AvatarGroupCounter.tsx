@@ -9,7 +9,7 @@ export type AvatarGroupdCounterProps = PropsWithChildren<{
 const AvatarGroupCounter: React.FC<AvatarGroupdCounterProps> = ({ total, href }) => {
   return (
     <a
-      className="relative flex h-16 w-16 items-center justify-center rounded-full bg-gray-700 text-xs font-medium text-white ring-2 ring-gray-300 hover:bg-gray-600  dark:ring-gray-500 "
+      className="relative flex h-16 w-16 items-center justify-center rounded-full bg-gray-700 text-xs font-medium text-white ring-2 ring-gray-300 hover:bg-gray-600  "
       href={href}
     >
       +{total}

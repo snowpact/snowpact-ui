@@ -32,11 +32,11 @@ Default.args = {
       <Modal.Header>Terms of Service</Modal.Header>
       <Modal.Body>
         <div className="space-y-6">
-          <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+          <p className="text-base leading-relaxed text-gray-500">
             With less than a month to go before the European Union enacts new consumer privacy laws for its citizens,
             companies around the world are updating their terms of service agreements to comply.
           </p>
-          <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+          <p className="text-base leading-relaxed text-gray-500">
             The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant
             to ensure a common set of data rights in the European Union. It requires organizations to notify users as
             soon as possible of high-risk data breaches that could personally affect them.
@@ -59,8 +59,8 @@ PopUp.args = {
   children: (
     <Modal.Body>
       <div className="text-center">
-        <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-        <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+        <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400" />
+        <h3 className="mb-5 text-lg font-normal text-gray-500">
           Are you sure you want to delete this product?
         </h3>
         <div className="flex justify-center gap-4">
@@ -84,7 +84,7 @@ FormElements.args = {
       <Modal.Header />
       <Modal.Body>
         <div className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8">
-          <h3 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
+          <h3 className="text-xl font-medium text-gray-900">Sign in to our platform</h3>
           <div>
             <div className="mb-2 block">
               <Label htmlFor="email" value="Your email" />
@@ -102,16 +102,16 @@ FormElements.args = {
               <Checkbox id="remember" />
               <Label htmlFor="remember">Remember me</Label>
             </div>
-            <a href="/modal" className="text-sm text-blue-700 hover:underline dark:text-blue-500">
+            <a href="/modal" className="text-sm text-blue-700 hover:underline">
               Lost Password?
             </a>
           </div>
           <div className="w-full">
             <Button>Log in to your account</Button>
           </div>
-          <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+          <div className="text-sm font-medium text-gray-500">
             Not registered?{' '}
-            <a href="/modal" className="text-blue-700 hover:underline dark:text-blue-500">
+            <a href="/modal" className="text-blue-700 hover:underline">
               Create account
             </a>
           </div>

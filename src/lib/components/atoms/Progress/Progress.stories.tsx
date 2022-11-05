@@ -23,15 +23,15 @@ Default.args = {
 
 export const Sizes = (): JSX.Element => (
   <>
-    <div className="text-base font-medium dark:text-white">Extra Small</div>
+    <div className="text-base font-medium">Extra Small</div>
     <Progress progress={45} size="xs" />
-    <div className="mt-3 text-base font-medium dark:text-white">Small</div>
+    <div className="mt-3 text-base font-medium">Small</div>
     <Progress progress={45} size="sm" />
-    <div className="mt-3 text-base font-medium dark:text-white">Default</div>
+    <div className="mt-3 text-base font-medium">Default</div>
     <Progress progress={45} size="md" />
-    <div className="mt-3 text-lg font-medium dark:text-white">Large</div>
+    <div className="mt-3 text-lg font-medium">Large</div>
     <Progress progress={45} size="lg" />
-    <div className="mt-3 text-lg font-medium dark:text-white">Extra Large</div>
+    <div className="mt-3 text-lg font-medium">Extra Large</div>
     <Progress progress={45} size="xl" />
   </>
 );

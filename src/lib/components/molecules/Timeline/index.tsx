@@ -19,7 +19,7 @@ const TimelineComponent: FC<TimelineProps> = ({ children, horizontal }) => {
       <ol
         data-testid="timeline-component"
         className={classNames({
-          'relative border-l border-gray-200 dark:border-gray-700': !horizontal,
+          'relative border-l border-gray-200': !horizontal,
           'items-center sm:flex': horizontal,
         })}
       >

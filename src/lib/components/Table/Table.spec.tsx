@@ -17,7 +17,7 @@ describe.concurrent('Components / Table', () => {
     const rows = screen.getAllByTestId('table-row-element');
 
     expect(rows.length).toEqual(5);
-    expect(rows[0].className).toContain('odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700');
+    expect(rows[0].className).toContain('odd:bg-white even:bg-gray-50');
   });
 
   it('should be able to render a hoverable table', () => {
@@ -26,7 +26,7 @@ describe.concurrent('Components / Table', () => {
     const rows = screen.getAllByTestId('table-row-element');
 
     expect(rows.length).toEqual(5);
-    expect(rows[0].className).toContain('hover:bg-gray-50 dark:hover:bg-gray-600');
+    expect(rows[0].className).toContain('hover:bg-gray-50:bg-gray-600');
   });
 });
 
@@ -42,63 +42,63 @@ const TestTable: FC<TableProps> = (props) => (
       </Table.HeadCell>
     </Table.Head>
     <Table.Body className="divide-y">
-      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-        <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+      <Table.Row className="bg-white">
+        <Table.Cell className="whitespace-nowrap font-medium text-gray-900">
           {'Apple MacBook Pro 17"'}
         </Table.Cell>
         <Table.Cell>Sliver</Table.Cell>
         <Table.Cell>Laptop</Table.Cell>
         <Table.Cell>$2999</Table.Cell>
         <Table.Cell>
-          <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+          <a href="/tables" className="font-medium text-blue-600 hover:underline">
             Edit
           </a>
         </Table.Cell>
       </Table.Row>
-      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-        <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+      <Table.Row className="bg-white">
+        <Table.Cell className="whitespace-nowrap font-medium text-gray-900">
           Microsoft Surface Pro
         </Table.Cell>
         <Table.Cell>White</Table.Cell>
         <Table.Cell>Laptop PC</Table.Cell>
         <Table.Cell>$1999</Table.Cell>
         <Table.Cell>
-          <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+          <a href="/tables" className="font-medium text-blue-600 hover:underline">
             Edit
           </a>
         </Table.Cell>
       </Table.Row>
-      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-        <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">Magic Mouse 2</Table.Cell>
+      <Table.Row className="bg-white">
+        <Table.Cell className="whitespace-nowrap font-medium text-gray-900">Magic Mouse 2</Table.Cell>
         <Table.Cell>Black</Table.Cell>
         <Table.Cell>Accessories</Table.Cell>
         <Table.Cell>$99</Table.Cell>
         <Table.Cell>
-          <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+          <a href="/tables" className="font-medium text-blue-600 hover:underline">
             Edit
           </a>
         </Table.Cell>
       </Table.Row>
-      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-        <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+      <Table.Row className="bg-white">
+        <Table.Cell className="whitespace-nowrap font-medium text-gray-900">
           Google Pixel Phone
         </Table.Cell>
         <Table.Cell>Gray</Table.Cell>
         <Table.Cell>Phone</Table.Cell>
         <Table.Cell>$799</Table.Cell>
         <Table.Cell>
-          <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+          <a href="/tables" className="font-medium text-blue-600 hover:underline">
             Edit
           </a>
         </Table.Cell>
       </Table.Row>
-      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-        <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">Apple Watch 5</Table.Cell>
+      <Table.Row className="bg-white">
+        <Table.Cell className="whitespace-nowrap font-medium text-gray-900">Apple Watch 5</Table.Cell>
         <Table.Cell>Red</Table.Cell>
         <Table.Cell>Wearables</Table.Cell>
         <Table.Cell>$999</Table.Cell>
         <Table.Cell>
-          <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+          <a href="/tables" className="font-medium text-blue-600 hover:underline">
             Edit
           </a>
         </Table.Cell>

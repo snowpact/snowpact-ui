@@ -27,9 +27,9 @@ export type AvatarTheme = {
 
 export const AVATAR_THEME: AvatarTheme = {
     base: 'flex items-center space-x-4',
-    bordered: 'p-1 ring-2 ring-gray-300 dark:ring-gray-500',
+    bordered: 'p-1 ring-2 ring-gray-300',
     img: {
-      off: 'rounded relative overflow-hidden bg-gray-100 dark:bg-gray-600',
+      off: 'rounded relative overflow-hidden bg-gray-100',
       on: 'rounded'
     },
     rounded: '!rounded-full',
@@ -40,10 +40,10 @@ export const AVATAR_THEME: AvatarTheme = {
         lg: 'h-36',
         xl: 'h-40'
       },
-    stacked: 'ring-2 ring-gray-300 dark:ring-gray-500',
+    stacked: 'ring-2 ring-gray-300',
     status: {
       away: 'bg-yellow-400',
-      base: 'absolute h-3.5 w-3.5 rounded-full border-2 border-white dark:border-gray-800',
+      base: 'absolute h-3.5 w-3.5 rounded-full border-2 border-white',
       busy: 'bg-red-400',
       offline: 'bg-gray-400',
       online: 'bg-green-400'
@@ -60,7 +60,7 @@ export const AVATAR_THEME: AvatarTheme = {
       'center-left': 'center -left-1'
     },
     initials: {
-      text: 'font-medium text-gray-600 dark:text-gray-300',
-      base: 'inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 dark:bg-gray-600'
+      text: 'font-medium text-gray-600',
+      base: 'inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100'
     }
   }

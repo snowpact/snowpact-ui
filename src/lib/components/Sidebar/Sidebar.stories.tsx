@@ -197,12 +197,12 @@ CTAButton.args = {
             </Button>
           </div>
         </div>
-        <p className="mb-3 text-sm text-blue-900 dark:text-blue-400">
+        <p className="mb-3 text-sm text-blue-900">
           Preview the new Flowbite dashboard navigation! You can turn the new navigation off for a limited time in your
           profile.
         </p>
         <a
-          className="text-sm text-blue-900 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+          className="text-sm text-blue-900 underline hover:text-blue-800:text-blue-300"
           href="#"
         >
           Turn new navigation off

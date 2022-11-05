@@ -14,7 +14,7 @@ const TableComponent: FC<TableProps> = ({ children, striped, hoverable, classNam
     <div data-testid="table-element" className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <TableContext.Provider value={{ striped, hoverable }}>
         <table
-          className={classNames('w-full text-left text-sm text-gray-500 dark:text-gray-400', className)}
+          className={classNames('w-full text-left text-sm text-gray-500', className)}
           {...props}
         >
           {children}

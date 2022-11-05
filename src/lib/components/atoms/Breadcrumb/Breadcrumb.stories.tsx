@@ -18,7 +18,7 @@ export const Default = (): JSX.Element => (
 );
 
 export const WithCustomClasses = (): JSX.Element => (
-  <Breadcrumb className="bg-gray-50 py-3 px-5 dark:bg-gray-800">
+  <Breadcrumb className="bg-gray-50 py-3 px-5">
     <Breadcrumb.Item href="#" icon={HiHome}>
       Home
     </Breadcrumb.Item>

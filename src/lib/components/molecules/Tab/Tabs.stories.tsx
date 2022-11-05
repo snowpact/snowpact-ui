@@ -8,7 +8,7 @@ export default {
   title: 'Components/molecules/Tabs',
   component: TabsComponent,
   args: {
-    className: 'bg-white rounded-lg dark:bg-gray-800 dark:text-white',
+    className: 'bg-white rounded-lg',
   },
   argTypes: {
     className: {

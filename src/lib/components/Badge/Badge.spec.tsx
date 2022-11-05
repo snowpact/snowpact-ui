@@ -24,7 +24,7 @@ describe('Components / Badge', () => {
         badge: {
           color: {
             primary:
-              'bg-blue-100 text-blue-800 dark:bg-blue-200 dark:text-blue-800 group-hover:bg-blue-200 dark:group-hover:bg-blue-300',
+              'bg-blue-100 text-blue-800 group-hover:bg-blue-200:bg-blue-300',
           },
         },
       };
@@ -37,7 +37,7 @@ describe('Components / Badge', () => {
       );
 
       expect(badge()).toHaveClass(
-        'bg-blue-100 text-blue-800 dark:bg-blue-200 dark:text-blue-800 group-hover:bg-blue-200 dark:group-hover:bg-blue-300',
+        'bg-blue-100 text-blue-800 group-hover:bg-blue-200:bg-blue-300',
       );
     });
 
