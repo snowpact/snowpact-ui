@@ -54,7 +54,7 @@ WithoutIcons.args = {
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           <Sidebar.Item href="#">Dashboard</Sidebar.Item>
-          <Sidebar.Item href="#" label="Pro" labelColor="alternative">
+          <Sidebar.Item href="#" label="Pro" labelColor="secondary">
             Kanban
           </Sidebar.Item>
           <Sidebar.Item href="#" label="3">
