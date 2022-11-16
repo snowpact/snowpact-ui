@@ -4,7 +4,7 @@ import type { BadgeProps } from '.';
 import { Badge } from '.';
 
 export default {
-  title: 'Components/Badge',
+  title: 'Components/atoms/Badge',
   component: Badge,
 } as Meta;
 
@@ -23,7 +23,7 @@ DefaultBadge.args = {
 export const BadgeWithIcon = Template.bind({});
 BadgeWithIcon.storyName = 'With icon';
 BadgeWithIcon.args = {
-  color: 'indigo',
+  color: 'primary',
   icon: HiCheck,
   children: '2 minutes ago',
 };
@@ -31,7 +31,7 @@ BadgeWithIcon.args = {
 export const BadgeOnlyIcon = Template.bind({});
 BadgeOnlyIcon.storyName = 'Only icon';
 BadgeOnlyIcon.args = {
-  color: 'green',
+  color: 'secondary',
   icon: HiCheck,
 };
 

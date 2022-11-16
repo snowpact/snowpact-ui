@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { HiCheck, HiClock } from 'react-icons/hi';
-import { Badge } from '../../lib';
+import { Badge } from '../../lib/components/atoms';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 

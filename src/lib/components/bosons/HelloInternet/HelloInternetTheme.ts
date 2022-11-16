@@ -7,7 +7,6 @@ import type { SectionTheme } from '../../atoms/Section/Section.theme';
 import { ToastTheme } from '../../atoms/Toast/Toast.theme';
 import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
 import type { AvatarSizes } from '../../Avatar';
-import type { BadgeColors, BadgeSizes } from '../../Badge';
 import { FlowbiteDropdownTheme } from '../../Dropdown';
 import type {
   HelperColors,
@@ -24,6 +23,7 @@ import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
 import { TabsTheme } from '../../molecules/Tab/Tabs.theme';
+import { BadgeTheme } from '../../atoms/Badge/Badge.theme';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
@@ -72,17 +72,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       text: string;
     };
   };
-  badge: {
-    base: string;
-    color: BadgeColors;
-    href: string;
-    icon: {
-      off: string;
-      on: string;
-      size: BadgeSizes;
-    };
-    size: BadgeSizes;
-  };
+  badge: BadgeTheme;
   breadcrumb: {
     item: {
       base: string;

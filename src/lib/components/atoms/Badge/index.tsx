@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { excludeClassName } from '../../helpers/exclude';
-import type { FlowbiteColors, FlowbiteSizes } from '../bosons/HelloInternet/HelloInternetTheme';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import { FlowbiteSizes, FlowbiteStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
+
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'>, 'className' | 'color'>> {
   color?: keyof BadgeColors;
@@ -11,21 +12,16 @@ export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'
   size?: keyof BadgeSizes;
 }
 
-export interface BadgeColors
-  extends Pick<FlowbiteColors, 'failure' | 'gray' | 'indigo' | 'info' | 'pink' | 'purple' | 'success'> {
-  [key: string]: string;
-}
+export type BadgeColors = HIThemeColors & FlowbiteStateColors;
 
-export interface BadgeSizes extends Pick<FlowbiteSizes, 'xs' | 'sm'> {
-  [key: string]: string;
-}
+export type BadgeSizes = Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 
 export const Badge: FC<BadgeProps> = ({
   children,
   color = 'info',
   href,
   icon: Icon,
-  size = 'xs',
+  size = 'sm',
   ...props
 }): JSX.Element => {
   const theirProps = excludeClassName(props);

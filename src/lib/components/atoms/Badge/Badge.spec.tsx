@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { HiCheck } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import { Badge } from '.';
-import { HelloInternet } from '../bosons/HelloInternet';
+import { HelloInternet } from '../../bosons/HelloInternet';
 
 describe('Components / Badge', () => {
   describe('Rendering', () => {
@@ -48,18 +48,18 @@ describe('Components / Badge', () => {
             off: 'rounded-lg p-1',
             on: 'rounded-full p-5',
             size: {
-              xxl: 'w-6 h-6',
+              xl: 'w-6 h-6',
             },
           },
           size: {
-            xxl: 'text-2xl',
+            xl: 'text-2xl',
           },
         },
       };
       render(
         <HelloInternet theme={{ theme }}>
-          <Badge size="xxl">A badge</Badge>
-          <Badge icon={HiCheck} size="xxl" />
+          <Badge size="xl">A badge</Badge>
+          <Badge icon={HiCheck} size="xl" />
         </HelloInternet>,
       );
 
