@@ -10,6 +10,7 @@ import { TOOLTIP_THEME } from '../components/atoms/Tooltip/Tooltip.theme';
 import { HelloInternetTheme } from '../components/bosons';
 import { LIST_GROUP_THEME } from '../components/molecules/ListGroup/ListGroup.theme';
 import { MODAL_THEME } from '../components/molecules/Modal/Modal.theme';
+import { PRESENTATIONAL_BLOCK_THEME } from '../components/molecules/PresentationalBlock/PresentationalBlock.theme';
 import { TABS_THEME } from '../components/molecules/Tab/Tabs.theme';
 
 const theme: HelloInternetTheme = {
@@ -507,6 +508,7 @@ const theme: HelloInternetTheme = {
     }
   },
   progress: PROGRESS_THEME,
+  presentationalBlock: PRESENTATIONAL_BLOCK_THEME,
   section: SECTION_THEME,
   spinner: {
     base: 'inline animate-spin text-gray-200',
