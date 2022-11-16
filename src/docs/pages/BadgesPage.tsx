@@ -11,13 +11,12 @@ const BadgesPage: FC = () => {
       code: (
         <div className="flex flex-wrap gap-2">
           <Badge color="info">Default</Badge>
-          <Badge color="gray">Dark</Badge>
+          <Badge color="primary">Primary</Badge>
+          <Badge color="secondary">Secondary</Badge>
+          <Badge color="tertiary">Tertiary</Badge>
           <Badge color="failure">Failure</Badge>
           <Badge color="success">Success</Badge>
           <Badge color="warning">Warning</Badge>
-          <Badge color="indigo">Indigo</Badge>
-          <Badge color="purple">Purple</Badge>
-          <Badge color="pink">Pink</Badge>
         </div>
       ),
     },
@@ -28,8 +27,8 @@ const BadgesPage: FC = () => {
           <Badge color="info" size="sm">
             Default
           </Badge>
-          <Badge color="gray" size="sm">
-            Dark
+          <Badge color="primary" size="sm">
+            Primary
           </Badge>
           <Badge color="failure" size="sm">
             Failure
@@ -40,14 +39,11 @@ const BadgesPage: FC = () => {
           <Badge color="warning" size="sm">
             Warning
           </Badge>
-          <Badge color="indigo" size="sm">
-            Indigo
+          <Badge color="secondary" size="sm">
+            Secondary
           </Badge>
-          <Badge color="purple" size="sm">
-            Purple
-          </Badge>
-          <Badge color="pink" size="sm">
-            Pink
+          <Badge color="tertiary" size="sm">
+            Tertiary
           </Badge>
         </div>
       ),
@@ -68,7 +64,7 @@ const BadgesPage: FC = () => {
       code: (
         <div className="flex flex-wrap gap-2">
           <Badge icon={HiCheck}>2 minutes ago</Badge>
-          <Badge color="gray" icon={HiClock}>
+          <Badge color="primary" icon={HiClock}>
             3 days ago
           </Badge>
         </div>
@@ -79,9 +75,9 @@ const BadgesPage: FC = () => {
       code: (
         <div className="flex flex-wrap items-center gap-2">
           <Badge icon={HiCheck} />
-          <Badge color="gray" icon={HiCheck} />
+          <Badge color="primary" icon={HiCheck} />
           <Badge size="sm" icon={HiCheck} />
-          <Badge color="gray" size="sm" icon={HiCheck} />
+          <Badge color="primary" size="sm" icon={HiCheck} />
         </div>
       ),
     },
