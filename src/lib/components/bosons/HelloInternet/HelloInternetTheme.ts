@@ -298,6 +298,12 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       };
     };
   };
+  presentationalBlock: {
+    base: string;
+    icon: string;
+    header: string;
+    description: string;
+  };
   sidebar: {
     base: string;
     collapsed: FlowbiteBoolean;

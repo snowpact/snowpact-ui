@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import type { PresentationalBlockComponentProps } from '.';
+import { HiCreditCard } from 'react-icons/hi';
 import { PresentationalBlock } from '.';
 
 export default {
@@ -7,10 +7,12 @@ export default {
   component: PresentationalBlock,
 } as Meta;
 
-const Template: Story<PresentationalBlockComponentProps> = (args) => (
+const Template: Story = () => (
   <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-    <PresentationalBlock {...args}>
-      <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." />
+    <PresentationalBlock >
+      <PresentationalBlock.Icon icon={<HiCreditCard />} />
+      <PresentationalBlock.Title>Test</PresentationalBlock.Title> 
+      <PresentationalBlock.Line>Test</PresentationalBlock.Line>
     </PresentationalBlock>
   </div>
 );
