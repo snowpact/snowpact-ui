@@ -39,7 +39,8 @@
     "start:storybook": "start-storybook -p 6006",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
-    "test:open": "vitest --ui"
+    "test:open": "vitest --ui",
+    "release:minor": "npm version minor && npm publish"
   },
   "dependencies": {
     "@floating-ui/react-dom": "^1.0.0",
