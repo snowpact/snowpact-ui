@@ -29,11 +29,11 @@ export const BADGE_THEME: BadgeTheme =   {
     off: 'rounded px-2 py-0.5',
     on: 'rounded-full p-1.5',
     size: {
-      xs: 'text-xs px-2 py-1',
-      sm: 'text-sm px-3 py-1.5',
-      md: 'text-sm px-4 py-2',
-      lg: 'text-base px-5 py-2.5',
-      xl: 'text-base px-6 py-3'
+      xs: 'w-2 h-2',
+      sm: 'w-3.5 h-3.5',
+      md: 'w-4 h-4',
+      lg: 'w-5 h-5',
+      xl: 'w-6 h-6',
     },
   },
   size: {
