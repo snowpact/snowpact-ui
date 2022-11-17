@@ -7,7 +7,7 @@ export interface PresentationalIconProps extends Omit<PropsWithChildren<Componen
 }
 
 export const PresentationalIcon: FC<PresentationalIconProps> = ({ icon }) => {
-  const theme = useTheme().theme.presentationalBlock;
+  const theme = useTheme().theme.presentational;
 
   return (
     <div className={classNames(theme.icon)}>{icon}</div>

@@ -9,7 +9,7 @@ export interface PresentationalTitleProps extends Omit<PropsWithChildren<Compone
 }
 
 export const PresentationalTitle: FC<PresentationalTitleProps> = ({ children,  tag = 'h3' }) => {
-    const theme = useTheme().theme.presentationalBlock;
+    const theme = useTheme().theme.presentational;
     const Tag = tag;
 
     return (

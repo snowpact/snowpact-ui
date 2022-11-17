@@ -8,6 +8,7 @@ import { SECTION_THEME } from '../components/atoms/Section/Section.theme';
 import { TOAST_THEME } from '../components/atoms/Toast/Toast.theme';
 import { TOOLTIP_THEME } from '../components/atoms/Tooltip/Tooltip.theme';
 import { HelloInternetTheme } from '../components/bosons';
+import { CAMERA_ROLL_THEME } from '../components/molecules/CameraRoll/CameraRoll.theme';
 import { LIST_GROUP_THEME } from '../components/molecules/ListGroup/ListGroup.theme';
 import { MODAL_THEME } from '../components/molecules/Modal/Modal.theme';
 import { PRESENTATIONAL_THEME } from '../components/molecules/Presentational/Presentational.theme';
@@ -76,6 +77,7 @@ const theme: HelloInternetTheme = {
   buttonGroup: {
     base: 'inline-flex'
   },
+  cameraRoll: CAMERA_ROLL_THEME,
   card: {
     base: 'flex rounded-lg border border-gray-200 bg-white shadow-md',
     children: 'flex h-full flex-col justify-center gap-4 p-6',
@@ -508,7 +510,7 @@ const theme: HelloInternetTheme = {
     }
   },
   progress: PROGRESS_THEME,
-  presentationalBlock: PRESENTATIONAL_THEME,
+  presentational: PRESENTATIONAL_THEME,
   section: SECTION_THEME,
   spinner: {
     base: 'inline animate-spin text-gray-200',

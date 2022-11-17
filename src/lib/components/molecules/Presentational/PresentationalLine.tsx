@@ -6,7 +6,7 @@ import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 export interface PresentationalLineProps extends Omit<PropsWithChildren, 'className'> {}
 
 export const PresentationalLine: FC<PresentationalLineProps> = ({ children }) => {
-  const theme = useTheme().theme.presentationalBlock;
+  const theme = useTheme().theme.presentational;
 
   return (
     <p className={classNames(theme.description)}>

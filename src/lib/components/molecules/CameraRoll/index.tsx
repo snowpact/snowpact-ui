@@ -1,11 +1,15 @@
 import { ComponentProps, FC, PropsWithChildren } from 'react';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { CameraRollImage } from './CameraRollImage';
 
 export interface CameraRollProps extends Omit<PropsWithChildren<ComponentProps<'div'>>, 'className'> {}
 
 const CameraRollComponent: FC<CameraRollProps> = ({ children }) => {
+
+  const theme = useTheme().theme.cameraRoll;
+
   return (
-    <div className="grid gap-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+    <div className={theme.base}>
       {children}
     </div>
   );
