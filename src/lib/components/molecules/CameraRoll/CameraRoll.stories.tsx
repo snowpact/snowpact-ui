@@ -1,5 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { CameraPhoto } from './CameraRoll';
+import { ComponentMeta, Story } from '@storybook/react';
 
 import { CameraRoll } from './index';
 
@@ -8,7 +7,7 @@ export default {
   component: CameraRoll
 } as ComponentMeta<typeof CameraRoll>;
 
-const ITEMS: CameraPhoto[] = [
+const ITEMS = [
   {
     src:
       'https://images.unsplash.com/photo-1664784805210-9fa665e2b7e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80'
@@ -35,10 +34,11 @@ const ITEMS: CameraPhoto[] = [
   }
 ];
 
-const Template: ComponentStory<typeof CameraRoll> = (args: JSX.IntrinsicAttributes & { images: CameraPhoto[] }) => (
-  <CameraRoll {...args} />
+const Template: Story = () => (
+    <CameraRoll >
+      <CameraRoll.Image src="https://images.unsplash.com/photo-1664784805210-9fa665e2b7e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" alt="Une image" />
+    </CameraRoll>
 );
-
 export const Base = Template.bind({});
 
 Base.args = { images: ITEMS };

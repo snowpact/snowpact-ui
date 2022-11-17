@@ -4,7 +4,7 @@ import { HIHeadingLevel } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 
-export interface PresentationalTitleProps extends Omit<PropsWithChildren<ComponentProps<'a'>>, 'className'> {
+export interface PresentationalTitleProps extends Omit<PropsWithChildren<ComponentProps<'h3'>>, 'className'> {
   tag?: HIHeadingLevel;
 }
 

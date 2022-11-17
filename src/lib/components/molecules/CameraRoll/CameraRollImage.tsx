@@ -1,18 +1,19 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { HiOutlineArrowsExpand } from 'react-icons/hi';
 import { Modal } from '../Modal';
 
-export type PhotoProps = {
-  image: string;
+export interface CameraRollImageProps {
+  src: string;
   alt?: string;
-};
+}
 
-export const Photo = ({ image, alt }: PhotoProps) => {
+export const CameraRollImage: FC<CameraRollImageProps> = ({ src, alt }) => {
   const [open, setOpen] = useState<boolean>();
+
   return (
     <>
       <div className="relative flex flex-col">
-        <img src={image} alt={alt} className="duration:1300 h-full object-cover transition " />
+        <img src={src} alt={alt} className="duration:1300 h-full object-cover transition " />
         <button
           className="absolute flex h-full w-full items-center justify-center bg-white opacity-0 hover:opacity-60  "
           onClick={() => setOpen(true)}
@@ -23,7 +24,7 @@ export const Photo = ({ image, alt }: PhotoProps) => {
         </button>
       </div>
       <Modal show={open} onClose={() => setOpen(false)} onClick={() => setOpen(false)}>
-        <img src={image} alt="" className="rounded-lg " />
+        <img src={src} alt="" className="rounded-lg " />
       </Modal>
     </>
   );

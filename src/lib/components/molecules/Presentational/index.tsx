@@ -7,7 +7,7 @@ import { PresentationalTitle } from './PresentationTitle';
 
 export interface PresentationalBlockComponentProps extends Omit<PropsWithChildren<ComponentProps<'div'>>, 'className'> {}
 
-export const PresentationalBlockComponent: FC<PresentationalBlockComponentProps> = ({ children }) => {
+const PresentationalComponent: FC<PresentationalBlockComponentProps> = ({ children }) => {
   const theme = useTheme().theme.presentationalBlock;
 
   return (
@@ -16,12 +16,12 @@ export const PresentationalBlockComponent: FC<PresentationalBlockComponentProps>
     </div>);
 };
 
-PresentationalBlockComponent.displayName = 'PresentationalBlock.Component';
+PresentationalComponent.displayName = 'Presentational';
 PresentationalIcon.displayName = 'Presentational.Icon';
 PresentationalTitle.displayName = 'Presentational.Title';
 PresentationalLine.displayName = 'Presentational.Line';
 
-export const PresentationalBlock = Object.assign(PresentationalBlockComponent, {
+export const PresentationalBlock = Object.assign(PresentationalComponent, {
   Icon: PresentationalIcon,
   Title: PresentationalTitle,
   Line: PresentationalLine

@@ -1,1 +1,0 @@
-export { CameraRoll } from './CameraRoll';
