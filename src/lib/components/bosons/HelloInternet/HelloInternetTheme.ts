@@ -25,6 +25,7 @@ import { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
+import { CameraRollTheme } from '../../molecules/CameraRoll/CameraRoll.theme';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
@@ -67,6 +68,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   buttonGroup: {
     base: string;
   };
+  cameraRoll: CameraRollTheme,
   card: {
     base: string;
     children: string;
@@ -298,7 +300,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
       };
     };
   };
-  presentationalBlock: {
+  presentational: {
     base: string;
     icon: string;
     header: string;
