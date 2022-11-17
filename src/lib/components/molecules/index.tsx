@@ -1,3 +1,4 @@
+export * from './CameraRoll';
 export * from './ListGroup';
 export * from './Modal';
 export * from './PresentationalBlock';

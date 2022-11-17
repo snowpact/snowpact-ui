@@ -10,9 +10,10 @@ export interface PresentationalBlockComponentProps extends Omit<PropsWithChildre
 export const PresentationalBlockComponent: FC<PresentationalBlockComponentProps> = ({ children }) => {
   const theme = useTheme().theme.presentationalBlock;
 
-  return <div className={classNames(theme.base)}>
-  {children}
-</div>;
+  return (
+    <div className={classNames(theme.base)}>
+      {children}
+    </div>);
 };
 
 PresentationalBlockComponent.displayName = 'PresentationalBlock.Component';
