@@ -1,4 +1,17 @@
-# Snowflake Library for React
+<div align="center">
+
+<p>
+  <a href="https://snowpact.com">
+    <img alt="snowflakes-ui - Tailwind react UI components" width="400" src=".github/assets/snowflakes-ui.jpg">
+  </a>
+</p>
+<p>Free and open-source Tailwind react UI library</p>
+
+[ [See all components](https://daisyui.com/components/) ]
+
+</div>
+
+# snowflakes-UI
 
 Welcome to Snowflake, your easy-to-use React component library!
 This is our internal library at [snowpact](https://snowpact.com/). It was first forked from [Flowbite](https://flowbite.com/).
@@ -8,7 +21,7 @@ This is our internal library at [snowpact](https://snowpact.com/). It was first 
 To install Snowflake, use the following command:
 
 ````
-yarn add snowflake
+yarn add snowflakes-ui
 ````
 
 ## Usage
@@ -20,7 +33,7 @@ Example usage:
 ```javascript
 
 import React from 'react';
-import { Button } from 'snowflake';
+import { Button } from 'snowflakes-ui';
 
 function App() {
   return (

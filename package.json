@@ -1,6 +1,6 @@
 {
-  "name": "snowflake",
-  "version": "1.1.0",
+  "name": "snowflakes-ui",
+  "version": "0.5.0",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
@@ -8,15 +8,12 @@
     "lib",
     "tailwind.plugin.js"
   ],
-  "author": {
-    "name": "Murat Avcı",
-    "email": "murat.avci@snowpact.com"
-  },
+  "author": "Murat Avcı <murat.avci@snowpact.com>",
   "bugs": {
-    "url": "https://github.com/snowpact/snowflake/issues"
+    "url": "https://github.com/snowpact/snowflakes-ui/issues"
   },
   "repository": {
-    "url": "https://github.com/snowpact/snowflake",
+    "url": "git+https://github.com/snowpact/snowflakes-ui.git",
     "type": "git"
   },
   "license": "MIT",
@@ -158,5 +155,10 @@
   "resolutions": {
     "@base2/pretty-print-object": "^1.0.2",
     "react-element-to-jsx-string": "^15.0.0"
+  },
+  "description": "Welcome to Snowflake, your easy-to-use React component library! This is our internal library at [snowpact](https://snowpact.com/). It was first forked from [Flowbite](https://flowbite.com/).",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
   }
 }
