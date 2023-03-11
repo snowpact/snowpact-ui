@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/snowpact/snowflakes-ui/compare/v0.5.0...v0.5.1) (2023-03-11)
+
+
+### Bug Fixes
+
+* **semantic:** testing semantic release flow ([9418658](https://github.com/snowpact/snowflakes-ui/commit/941865802a2f47e36e490f007695763a0c6da27f))
+
 # 0.5.0 (2023-03-11)
 
 ### Features
