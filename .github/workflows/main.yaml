@@ -28,6 +28,6 @@ jobs:
         run: yarn test:coverage
 
       - name: 💿 Semantic Release
-        run: npx semantic-release
+        uses: cycjimmy/semantic-release-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
