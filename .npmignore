@@ -1,0 +1,17 @@
+.prettierrc
+.prettierignore
+.gitignore
+.github
+.idea
+.storybook
+.husky
+.eslintignore
+.editorconfig
+CNAME
+codecov.yaml
+tsconfig.json
+
+node_modules
+src
+build
+docs

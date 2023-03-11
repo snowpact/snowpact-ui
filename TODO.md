@@ -1,0 +1,13 @@
+- [ ] Migrate all components into architecture :
+  - [ ] atomic archi
+  - [ ] uses themes
+  - [ ] check stories and tests
+  - [ ] update all other imports
+- [ ] Add new components
+- [ ] Try to do the hugo docs with gatsby
+- [ ] Eslint from snowpact
+- [ ] Commit citizen (see github)
+- [ ] Lint staged
+- [ ] Github ci to release and publish (upgrading version)
+- [ ] Cypress
+- [ ] Chromaui ? For testing purposes

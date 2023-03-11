@@ -1,0 +1,59 @@
+name: Release npm
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+concurrency: ${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Check out the code
+        uses: actions/checkout@v3
+
+      - name: 💿 Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 🧰 Build code
+        run: yarn build
+
+      - name: 🚀📦 Deploy the library to npm
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: 💿 Getting the npm version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@main
+
+      - name: 🔔 Notify slack success
+        uses: rtCamp/action-slack-notify@v2.2.0
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_TITLE: ✅ Deploy successful
+          SLACK_MESSAGE: Version ${{ steps.package-version.outputs.current-version}} deployed successfully
+          MSG_MINIMAL: actions url,commit
+          SLACK_USERNAME: Snowflake Bot
+          SLACK_ICON_EMOJI: ':snowflake:'
+          SLACK_FOOTER: ''
+
+      - name: ❌ Notify slack error
+        if: ${{ failure() }}
+        uses: rtCamp/action-slack-notify@v2.2.0
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_TITLE: ❌ Deploy error
+          SLACK_MESSAGE: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SLACK_COLOR: '#ED0000'
+          MSG_MINIMAL: actions url,commit
+          SLACK_USERNAME: Snowflake Bot
+          SLACK_ICON_EMOJI: ':snowflake:'
+          SLACK_FOOTER: ''

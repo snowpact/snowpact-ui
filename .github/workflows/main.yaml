@@ -1,0 +1,33 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+
+concurrency: ${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Check out the code
+        uses: actions/checkout@v3
+
+      - name: 💿 Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 🕵 Lint the code
+        run: yarn lint
+
+      - name: 🔬 Run unit tests
+        run: yarn test:coverage
+
+      - name: 💿 Semantic Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

@@ -1,0 +1,12 @@
+*.md
+.gitignore
+build/
+coverage/
+lib/
+docs/
+
+commitlint.config.js
+lint-staged.config.js
+
+!src/docs/
+!src/lib/
