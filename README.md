@@ -11,10 +11,13 @@
 
 </div>
 
-# snowflakes-UI
+# snowflake UI
 
-Welcome to Snowflake, your easy-to-use React component library!
-This is our internal library at [snowpact](https://snowpact.com/). It was first forked from [Flowbite](https://flowbite.com/).
+## Preamble
+
+The reason of the existance of this repository is because we needed a way to speed up the website creation on our team.
+We used [Flowbite](https://flowbite.com/), but we needed some different features, so we forked this repository into a new one.
+We have a lot of works to do, migrating all components and adding others.
 
 ## Installation
 
