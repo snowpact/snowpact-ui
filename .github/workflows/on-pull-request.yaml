@@ -1,19 +1,20 @@
-name: Main
+name: On merge request
 
 on:
-  push:
-    branches: [main]
+  pull_request:
+    branches:
+      - main
 
 concurrency: ${{ github.ref }}
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Check out the code
         uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          fetch-depth: 0
 
       - name: 💿 Setup NodeJS
         uses: actions/setup-node@v3
@@ -23,13 +24,14 @@ jobs:
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
 
+      - name: 👮‍♂️ Validate commits semantic
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
       - name: 🕵 Lint the code
         run: yarn lint
 
       - name: 🔬 Run unit tests
         run: yarn test:coverage
 
-      - name: 💿 Semantic Release
-        run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: 🧰 Build code
+        run: yarn build

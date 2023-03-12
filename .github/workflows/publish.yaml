@@ -1,4 +1,4 @@
-name: Release npm
+name: Publish to npm
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
 concurrency: ${{ github.ref }}
 
 jobs:
-  build:
+  publish-npm:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Check out the code

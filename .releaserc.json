@@ -41,7 +41,7 @@
       "@semantic-release/git",
       {
         "assets": ["CHANGELOG.md", "package.json"],
-        "message": "docs(core): update changelog for version ${nextRelease.version}"
+        "message": "docs(release): :rocket: release ${nextRelease.version}"
       }
     ]
   ]
