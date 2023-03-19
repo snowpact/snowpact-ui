@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/snowpact/snowflakes-ui/compare/v0.5.1...v0.6.0) (2023-03-19)
+
+
+### Features
+
+* **hero:** hero is now more customizable ([49ccd77](https://github.com/snowpact/snowflakes-ui/commit/49ccd77fa80b5c9551860939dd210480a43a1b63))
+
 ## [0.5.1](https://github.com/snowpact/snowflakes-ui/compare/v0.5.0...v0.5.1) (2023-03-11)
 
 
