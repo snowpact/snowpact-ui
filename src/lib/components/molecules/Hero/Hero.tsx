@@ -1,56 +1,52 @@
 import classNames from 'classnames';
 import React from 'react';
-
-import { DefaultForeground } from './DefaultForeground';
-import { createBackgroundStyle } from './utils';
-
-export interface HeroBackground {
-  image?: string;
-  color?: string;
-  position?: 'top' | 'center' | 'bottom' | 'left' | 'right' | string;
-  size?: 'auto' | 'cover' | 'contain' | string;
-  repeat?: 'no-repeat' | 'repeat' | 'repeat-x' | 'repeat-y' | 'round' | 'space';
-}
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export type ForeGroundPosition =
   | 'top-left'
   | 'top-center'
   | 'top-right'
   | 'center-left'
-  | 'center-center'
+  | 'center'
   | 'center-right'
   | 'bottom-left'
   | 'bottom-center'
   | 'bottom-right';
 
 export interface HeroProps {
-  background?: HeroBackground;
+  backgroundImage?: string;
+  backgroundPosition?: 'top' | 'center' | 'bottom' | 'left' | 'right' | string;
+  backgroundSize?: 'auto' | 'cover' | 'contain' | string;
+  backgroundRepeat?: 'repeat' | 'repeat-x' | 'repeat-y' | 'no-repeat' | string;
+  backgroundClassName?: string;
   position?: ForeGroundPosition;
-  title: string;
-  subtitle?: string;
-  cta?: React.ReactNode;
   height?: string;
-  customForeground?: (defaultTitle: JSX.Element) => JSX.Element;
+  foregroundMaxWidth?: string;
+  children: React.ReactNode;
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  background,
+  children,
+  backgroundImage,
+  backgroundPosition,
+  backgroundSize,
+  backgroundRepeat,
+  backgroundClassName,
   position,
-  title,
-  subtitle,
-  cta,
   height = '600px',
-  customForeground
+  foregroundMaxWidth
 }) => {
-  const defaultElement = <DefaultForeground title={title} subtitle={subtitle} cta={cta} />;
+  const { hero: theme } = useTheme().theme;
 
   return (
     <div className="relative">
       <div
-        className={classNames('absolute w-full h-full top-0 left-0 opacity-100')}
+        className={classNames('absolute w-full h-full top-0 left-0 opacity-100', backgroundClassName)}
         style={{
-          background: createBackgroundStyle(background),
-          backgroundSize: background?.size || 'auto'
+          background: backgroundImage ? `url('${backgroundImage}')` : undefined,
+          backgroundPosition: backgroundPosition,
+          backgroundSize: backgroundSize,
+          backgroundRepeat: backgroundRepeat
         }}
       />
       <div
@@ -59,24 +55,30 @@ export const Hero: React.FC<HeroProps> = ({
           height: height
         }}
       >
-        <section className="container">
+        <section className={'container grid w-full'}>
           <div
-            className={classNames('flex flex-col py-6 max-h-screen h-7', [
-              position === 'top-left' && 'justify-start items-start text-left',
-              position === 'top-center' && 'justify-start items-center text-center',
-              position === 'top-right' && 'justify-start items-end text-right',
-              position === 'center-left' && 'justify-center items-start text-left',
-              position === 'center-center' && 'justify-center items-center text-center',
-              position === 'center-right' && 'justify-center items-end text-right',
-              position === 'bottom-left' && 'justify-end items-start text-left',
-              position === 'bottom-center' && 'justify-end items-center text-center',
-              position === 'bottom-right' && 'justify-end items-end text-right'
-            ])}
+            className={classNames(
+              'flex flex-col py-6 max-h-screen h-7',
+              theme.foregroundMaxWidth,
+              theme.foregroundWrapper,
+              [
+                position === 'top-left' && 'justify-start items-start text-left',
+                position === 'top-center' && 'justify-start items-center text-center justify-self-center',
+                position === 'top-right' && 'justify-start items-end text-right justify-self-end',
+                position === 'center-left' && 'justify-center items-start text-left',
+                position === 'center' && 'justify-center items-center text-center justify-self-center',
+                position === 'center-right' && 'justify-center items-end text-right justify-self-end',
+                position === 'bottom-left' && 'justify-end items-start text-left',
+                position === 'bottom-center' && 'justify-end items-center text-center justify-self-center',
+                position === 'bottom-right' && 'justify-end items-end text-right justify-self-end'
+              ]
+            )}
             style={{
-              height: height
+              height: height,
+              maxWidth: foregroundMaxWidth
             }}
           >
-            {customForeground ? customForeground(defaultElement) : defaultElement}
+            {children}
           </div>
         </section>
       </div>
