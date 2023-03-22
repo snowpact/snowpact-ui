@@ -1,5 +1,5 @@
 {
-  "name": "snowflakes-ui",
+  "name": "snowpact-ui",
   "version": "0.6.0",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -10,10 +10,10 @@
   ],
   "author": "Murat Avcı <murat.avci@snowpact.com>",
   "bugs": {
-    "url": "https://github.com/snowpact/snowflakes-ui/issues"
+    "url": "https://github.com/snowpact/snowpact-ui/issues"
   },
   "repository": {
-    "url": "git+https://github.com/snowpact/snowflakes-ui.git",
+    "url": "git+https://github.com/snowpact/snowpact-ui.git",
     "type": "git"
   },
   "license": "MIT",

@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://snowpact.com">
-    <img alt="snowflakes-ui - Tailwind react UI components" width="400" src=".github/assets/snowflakes-ui.jpg">
+    <img alt="snowpact-ui - Tailwind react UI components" width="400" src=".github/assets/snowpact-ui.jpg">
   </a>
 </p>
 <p>Free and open-source Tailwind react UI library</p>
@@ -24,7 +24,7 @@ We have a lot of works to do, migrating all components and adding others.
 To install Snowflake, use the following command:
 
 ````
-yarn add snowflakes-ui
+yarn add snowpact-ui
 ````
 
 ## Usage
@@ -36,7 +36,7 @@ Example usage:
 ```javascript
 
 import React from 'react';
-import { Button } from 'snowflakes-ui';
+import { Button } from 'snowpact-ui';
 
 function App() {
   return (
