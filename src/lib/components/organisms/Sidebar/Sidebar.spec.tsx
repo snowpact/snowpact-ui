@@ -5,7 +5,7 @@ import { HiChartPie, HiInbox, HiShoppingBag } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import type { SidebarProps } from '.';
 import { Sidebar } from '.';
-import { HelloInternet } from '../bosons/HelloInternet';
+import { HelloInternet } from '../../bosons/HelloInternet';
 
 describe('Components / Sidebar', () => {
   describe('A11y', () => {

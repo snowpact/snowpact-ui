@@ -2,7 +2,7 @@ import type { RenderResult } from '@testing-library/react';
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { Spinner } from '.';
-import { HelloInternet } from '../bosons/HelloInternet';
+import { HelloInternet } from '../../bosons/HelloInternet';
 
 describe('Components / Spinner', () => {
   describe('A11y', () => {

@@ -4,28 +4,30 @@ import type { BreadcrumbTheme } from '../../atoms/Breadcrumb/Breadcrumb.theme';
 import type { ButtonTheme } from '../../atoms/Button/Button.theme';
 import type { DarkThemeToggleTheme } from '../../atoms/DarkThemeToggle/DarkThemeToggle.theme';
 import type { MainContainerTheme } from '../../atoms/MainContainer/MainContainer.theme';
-import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
 import type { ToastTheme } from '../../atoms/Toast/Toast.theme';
 import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
 
 import type { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
 import type { BadgeTheme } from '../../atoms/Badge/Badge.theme';
+import type { ProgressTheme } from '../../atoms/Progress/Progress.theme';
 import type { RatingTheme } from '../../atoms/Rating/Rating.theme';
+import type { SpinnerTheme } from '../../atoms/Spinner/Spinner.theme';
 import type { AccordionTheme } from '../../molecules/Accordion/Accordion.theme';
 import type { ButtonGroupTheme } from '../../molecules/ButtonGroup/ButtonGroup.theme';
 import type { CameraRollTheme } from '../../molecules/CameraRoll/CameraRoll.theme';
 import type { CardTheme } from '../../molecules/Card/Card.theme';
 import type { DropdownTheme } from '../../molecules/Dropdown/Dropdown.theme';
 import type { HeroTheme } from '../../molecules/Hero/Hero.theme';
+import type { ListGroupTheme } from '../../molecules/ListGroup/ListGroup.theme';
 import type { ModalTheme } from '../../molecules/Modal/Modal.theme';
 import type { PaginationTheme } from '../../molecules/Pagination/Pagination.theme';
+import type { PresentationTheme } from '../../molecules/Presentational/Presentational.theme';
 import type { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 import type { CarouselTheme } from '../../organisms/Carousel/Carousel.theme';
 import type { FooterTheme } from '../../organisms/Footer/Footer.theme';
 import type { FormControlsTheme } from '../../organisms/FormControls/FormControls.theme';
 import type { NavBarTheme } from '../../organisms/Navbar/Navbar.theme';
-import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
-import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
+import type { SidebarTheme } from '../../organisms/Sidebar/Sidebar.theme';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
@@ -45,91 +47,16 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   footer: FooterTheme;
   formControls: FormControlsTheme;
   hero: HeroTheme;
-  listGroup: {
-    base: string;
-    item: {
-      active: FlowbiteBoolean;
-      base: string;
-      href: FlowbiteBoolean;
-      icon: string;
-    };
-  };
+  listGroup: ListGroupTheme;
   modal: ModalTheme;
   navbar: NavBarTheme;
   rating: RatingTheme;
   pagination: PaginationTheme;
-  presentational: {
-    base: string;
-    icon: string;
-    header: string;
-    description: string;
-  };
-  sidebar: {
-    base: string;
-    collapsed: FlowbiteBoolean;
-    inner: string;
-    collapse: {
-      button: string;
-      icon: {
-        base: string;
-        open: FlowbiteBoolean;
-      };
-      label: {
-        base: string;
-        icon: string;
-      };
-      list: string;
-    };
-    cta: {
-      base: string;
-      color: SidebarCTAColors;
-    };
-    item: {
-      active: string;
-      base: string;
-      collapsed: {
-        insideCollapse: string;
-        noIcon: string;
-      };
-      content: {
-        base: string;
-      };
-      icon: {
-        base: string;
-        active: string;
-      };
-    };
-    items: string;
-    itemGroup: string;
-    logo: {
-      base: string;
-      collapsed: FlowbiteBoolean;
-      img: string;
-    };
-  };
-  progress: {
-    base: string;
-    label: string;
-    bar: string;
-    color: ProgressColors;
-    size: ProgressSizes;
-  };
+  presentational: PresentationTheme;
+  sidebar: SidebarTheme;
+  progress: ProgressTheme;
   mainContainer: MainContainerTheme;
-  spinner: {
-    base: string;
-    color: SpinnerColors;
-    light: {
-      off: {
-        base: string;
-        color: SpinnerColors;
-      };
-      on: {
-        base: string;
-        color: SpinnerColors;
-      };
-    };
-    size: SpinnerSizes;
-  };
+  spinner: SpinnerTheme;
   tab: TabsTheme;
   toast: ToastTheme;
   tooltip: TooltipTheme;
