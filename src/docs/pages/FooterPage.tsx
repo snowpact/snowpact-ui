@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
-import { Footer } from '../../lib/components/Footer';
+import { Footer } from '../../lib/components/organisms/Footer';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 

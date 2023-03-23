@@ -1,5 +1,5 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export interface FooterIconProps extends Omit<PropsWithChildren<ComponentProps<'a'>>, 'className'> {
   ariaLabel?: string;

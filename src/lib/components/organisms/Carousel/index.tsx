@@ -3,9 +3,9 @@ import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } f
 import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 import ScrollContainer from 'react-indiana-drag-scroll';
-import { excludeClassName } from '../../helpers/exclude';
-import windowExists from '../../helpers/window-exists';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import windowExists from '../../../helpers/window-exists';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export interface CarouselProps extends PropsWithChildren<ComponentProps<'div'>> {
   indicators?: boolean;
