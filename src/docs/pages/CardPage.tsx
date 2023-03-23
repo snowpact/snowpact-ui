@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { Button, Card, Dropdown } from '../../lib';
-import { Checkbox, Label, TextInput } from '../../lib/components/FormControls';
+import { Checkbox, Label, TextInput } from '../../lib/components/organisms/FormControls';
 
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';

@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import type { ComponentProps, ReactNode } from 'react';
 import { forwardRef } from 'react';
-import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import HelperText from './HelperText';
 import type { TextInputColors, TextInputSizes } from './TextInput';
 
