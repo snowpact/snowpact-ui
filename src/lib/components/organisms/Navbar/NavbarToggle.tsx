@@ -1,7 +1,7 @@
 import type { ComponentProps, FC } from 'react';
 import { GoThreeBars } from 'react-icons/go';
-import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { useNavbarContext } from './NavbarContext';
 
 export interface NavbarToggleProps extends Omit<ComponentProps<'button'>, 'className'> {

@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { excludeClassName } from '../../helpers/exclude';
-import range from '../../helpers/range';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import range from '../../../helpers/range';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export type PaginationProps = PropsWithChildren<Pagination>;
 interface Pagination extends Omit<ComponentProps<'nav'>, 'className'> {

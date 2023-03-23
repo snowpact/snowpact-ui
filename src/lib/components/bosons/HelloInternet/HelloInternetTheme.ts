@@ -10,6 +10,7 @@ import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
 
 import type { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
 import type { BadgeTheme } from '../../atoms/Badge/Badge.theme';
+import type { RatingTheme } from '../../atoms/Rating/Rating.theme';
 import type { AccordionTheme } from '../../molecules/Accordion/Accordion.theme';
 import type { ButtonGroupTheme } from '../../molecules/ButtonGroup/ButtonGroup.theme';
 import type { CameraRollTheme } from '../../molecules/CameraRoll/CameraRoll.theme';
@@ -17,11 +18,12 @@ import type { CardTheme } from '../../molecules/Card/Card.theme';
 import type { DropdownTheme } from '../../molecules/Dropdown/Dropdown.theme';
 import type { HeroTheme } from '../../molecules/Hero/Hero.theme';
 import type { ModalTheme } from '../../molecules/Modal/Modal.theme';
+import type { PaginationTheme } from '../../molecules/Pagination/Pagination.theme';
 import type { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 import type { CarouselTheme } from '../../organisms/Carousel/Carousel.theme';
 import type { FooterTheme } from '../../organisms/Footer/Footer.theme';
 import type { FormControlsTheme } from '../../organisms/FormControls/FormControls.theme';
-import type { StarSizes } from '../../Rating';
+import type { NavBarTheme } from '../../organisms/Navbar/Navbar.theme';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
 
@@ -53,72 +55,9 @@ export interface HelloInternetTheme extends Record<string, unknown> {
     };
   };
   modal: ModalTheme;
-  navbar: {
-    base: string;
-    rounded: FlowbiteBoolean;
-    bordered: FlowbiteBoolean;
-    inner: {
-      base: string;
-      fluid: FlowbiteBoolean;
-    };
-    brand: string;
-    collapse: {
-      base: string;
-      list: string;
-      hidden: FlowbiteBoolean;
-    };
-    link: {
-      base: string;
-      active: FlowbiteBoolean;
-      disabled: FlowbiteBoolean;
-    };
-    toggle: {
-      base: string;
-      icon: string;
-    };
-  };
-  rating: {
-    base: string;
-    star: {
-      sizes: StarSizes;
-      filled: string;
-      empty: string;
-    };
-    advanced: {
-      base: string;
-      label: string;
-      progress: {
-        base: string;
-        fill: string;
-        label: string;
-      };
-    };
-  };
-  pagination: {
-    base: string;
-    layout: {
-      table: {
-        base: string;
-        span: string;
-      };
-    };
-    pages: {
-      base: string;
-      showIcon: string;
-      previous: {
-        base: string;
-        icon: string;
-      };
-      next: {
-        base: string;
-        icon: string;
-      };
-      selector: {
-        base: string;
-        active: string;
-      };
-    };
-  };
+  navbar: NavBarTheme;
+  rating: RatingTheme;
+  pagination: PaginationTheme;
   presentational: {
     base: string;
     icon: string;
