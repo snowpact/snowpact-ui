@@ -1,7 +1,7 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
 import type { ButtonGroupProps } from '.';
 import { ButtonGroup } from '.';
-import { Button } from '../atoms/Button';
+import { Button } from '../../atoms/Button';
 
 export default {
   title: 'Components/Molecules/ButtonGroup',

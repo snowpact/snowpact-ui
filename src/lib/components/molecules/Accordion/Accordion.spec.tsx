@@ -5,7 +5,7 @@ import { HiOutlineArrowCircleDown } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import type { AccordionProps } from '.';
 import { Accordion } from '.';
-import { HelloInternet } from '../bosons/HelloInternet';
+import { HelloInternet } from '../../bosons/HelloInternet';
 
 describe('Components / Accordion', () => {
   describe('A11y', () => {

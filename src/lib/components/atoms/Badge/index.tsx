@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { excludeClassName } from '../../helpers/exclude';
-import type { HIColors, HISizes } from '../bosons/HelloInternet/HelloInternetTheme';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import type { HIColors, HISizes } from '../../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'>, 'className' | 'color'>> {
   color?: keyof BadgeColors;
