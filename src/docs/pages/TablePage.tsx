@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { Table } from '../../lib';
-import { Checkbox } from '../../lib/components/FormControls';
+import { Checkbox } from '../../lib/components/organisms/FormControls';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 

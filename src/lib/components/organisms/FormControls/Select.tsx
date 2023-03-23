@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, ReactNode } from 'react';
 import { forwardRef } from 'react';
-import { excludeClassName } from '../../helpers/exclude';
-import type { HIColors, HISizes } from '../bosons/HelloInternet/HelloInternetTheme';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import type { HIColors, HISizes } from '../../bosons/HelloInternet/HelloInternetTheme';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import HelperText from './HelperText';
 
 export interface SelectColors extends Pick<HIColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {

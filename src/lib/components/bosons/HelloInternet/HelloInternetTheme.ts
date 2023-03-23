@@ -7,16 +7,6 @@ import type { MainContainerTheme } from '../../atoms/MainContainer/MainContainer
 import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
 import type { ToastTheme } from '../../atoms/Toast/Toast.theme';
 import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
-import type { FlowbiteDropdownTheme } from '../../Dropdown';
-import type {
-  HelperColors,
-  LabelColors,
-  SelectColors,
-  SelectSizes,
-  TextareaColors,
-  TextInputColors,
-  TextInputSizes
-} from '../../FormControls';
 
 import type { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
 import type { BadgeTheme } from '../../atoms/Badge/Badge.theme';
@@ -24,9 +14,13 @@ import type { AccordionTheme } from '../../molecules/Accordion/Accordion.theme';
 import type { ButtonGroupTheme } from '../../molecules/ButtonGroup/ButtonGroup.theme';
 import type { CameraRollTheme } from '../../molecules/CameraRoll/CameraRoll.theme';
 import type { CardTheme } from '../../molecules/Card/Card.theme';
+import type { DropdownTheme } from '../../molecules/Dropdown/Dropdown.theme';
 import type { HeroTheme } from '../../molecules/Hero/Hero.theme';
 import type { ModalTheme } from '../../molecules/Modal/Modal.theme';
 import type { TabsTheme } from '../../molecules/Tab/Tabs.theme';
+import type { CarouselTheme } from '../../organisms/Carousel/Carousel.theme';
+import type { FooterTheme } from '../../organisms/Footer/Footer.theme';
+import type { FormControlsTheme } from '../../organisms/FormControls/FormControls.theme';
 import type { StarSizes } from '../../Rating';
 import type { SidebarCTAColors } from '../../Sidebar/SidebarCTA';
 import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
@@ -43,145 +37,11 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   buttonGroup: ButtonGroupTheme;
   cameraRoll: CameraRollTheme;
   card: CardTheme;
-  carousel: {
-    base: string;
-    indicators: {
-      active: {
-        off: string;
-        on: string;
-      };
-      base: string;
-      wrapper: string;
-    };
-    item: {
-      base: string;
-      wrapper: string;
-    };
-    control: {
-      base: string;
-      icon: string;
-    };
-    leftControl: string;
-    rightControl: string;
-    scrollContainer: {
-      base: string;
-      snap: string;
-    };
-  };
+  carousel: CarouselTheme;
   darkThemeToggle: DarkThemeToggleTheme;
-  footer: {
-    base: string;
-    container: string;
-    bgDark: string;
-    groupLink: {
-      base: string;
-      link: {
-        base: string;
-        href: string;
-      };
-      col: string;
-    };
-    icon: {
-      base: string;
-      size: string;
-    };
-    title: {
-      base: string;
-    };
-    divider: {
-      base: string;
-    };
-    copyright: {
-      base: string;
-      href: string;
-      span: string;
-    };
-    brand: {
-      base: string;
-      img: string;
-      span: string;
-    };
-  };
-  formControls: {
-    helperText: {
-      base: string;
-      colors: HelperColors;
-    };
-    label: {
-      base: string;
-      colors: LabelColors;
-      disabled: string;
-    };
-    radio: {
-      base: string;
-    };
-    checkbox: {
-      base: string;
-    };
-    textInput: {
-      base: string;
-      addon: string;
-      field: {
-        base: string;
-        icon: {
-          base: string;
-          svg: string;
-        };
-        input: {
-          base: string;
-          sizes: TextInputSizes;
-          colors: TextInputColors;
-          withIcon: FlowbiteBoolean;
-          withAddon: FlowbiteBoolean;
-          withShadow: FlowbiteBoolean;
-        };
-      };
-    };
-    fileInput: {
-      base: string;
-      field: {
-        base: string;
-        input: {
-          base: string;
-          sizes: TextInputSizes;
-          colors: TextInputColors;
-        };
-      };
-    };
-    toggleSwitch: {
-      base: string;
-      active: FlowbiteBoolean;
-      toggle: {
-        base: string;
-        checked: FlowbiteBoolean;
-      };
-      label: string;
-    };
-    textarea: {
-      base: string;
-      colors: TextareaColors;
-      withShadow: FlowbiteBoolean;
-    };
-    select: {
-      base: string;
-      addon: string;
-      field: {
-        base: string;
-        icon: {
-          base: string;
-          svg: string;
-        };
-        select: {
-          base: string;
-          withIcon: FlowbiteBoolean;
-          withAddon: FlowbiteBoolean;
-          withShadow: FlowbiteBoolean;
-          sizes: SelectSizes;
-          colors: SelectColors;
-        };
-      };
-    };
-  };
+  dropdown: DropdownTheme;
+  footer: FooterTheme;
+  formControls: FormControlsTheme;
   hero: HeroTheme;
   listGroup: {
     base: string;
@@ -334,12 +194,6 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   tab: TabsTheme;
   toast: ToastTheme;
   tooltip: TooltipTheme;
-  dropdown: {
-    floating: FlowbiteDropdownTheme;
-    content: string;
-    inlineWrapper: string;
-    arrowIcon: string;
-  };
 }
 
 export interface FlowbiteBoolean {

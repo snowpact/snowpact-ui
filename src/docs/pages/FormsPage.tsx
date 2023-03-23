@@ -11,7 +11,7 @@ import {
   Textarea,
   TextInput,
   ToggleSwitch
-} from '../../lib/components/FormControls';
+} from '../../lib/components/organisms/FormControls';
 
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';

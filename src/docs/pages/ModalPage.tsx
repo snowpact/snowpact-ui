@@ -2,9 +2,9 @@ import type { FC } from 'react';
 import { useState } from 'react';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { Button } from '../../lib';
-import { Checkbox, Label, Select, TextInput } from '../../lib/components/FormControls';
 import type { ModalSizes } from '../../lib/components/molecules';
 import { Modal } from '../../lib/components/molecules';
+import { Checkbox, Label, Select, TextInput } from '../../lib/components/organisms/FormControls';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 
