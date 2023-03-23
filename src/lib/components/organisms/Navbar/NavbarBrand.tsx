@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export type NavbarBrandProps = Omit<PropsWithChildren<ComponentProps<'a'>>, 'className'> & {
   as?: React.ElementType;

@@ -6,6 +6,7 @@ import { BUTTON_THEME } from '../components/atoms/Button/Button.theme';
 import { DARK_THEME_TOGGLE_THEME } from '../components/atoms/DarkThemeToggle/DarkThemeToggle.theme';
 import { MAIN_CONTAINER_THEME } from '../components/atoms/MainContainer/MainContainer.theme';
 import { PROGRESS_THEME } from '../components/atoms/Progress/Progress.theme';
+import { RATING_THEME } from '../components/atoms/Rating/Rating.theme';
 import { TOAST_THEME } from '../components/atoms/Toast/Toast.theme';
 import { TOOLTIP_THEME } from '../components/atoms/Tooltip/Tooltip.theme';
 import type { HelloInternetTheme } from '../components/bosons';
@@ -17,11 +18,13 @@ import { DROPDOWN_THEME } from '../components/molecules/Dropdown/Dropdown.theme'
 import { HERO_THEME } from '../components/molecules/Hero/Hero.theme';
 import { LIST_GROUP_THEME } from '../components/molecules/ListGroup/ListGroup.theme';
 import { MODAL_THEME } from '../components/molecules/Modal/Modal.theme';
+import { PAGINATION_THEME } from '../components/molecules/Pagination/Pagination.theme';
 import { PRESENTATIONAL_THEME } from '../components/molecules/Presentational/Presentational.theme';
 import { TABS_THEME } from '../components/molecules/Tab/Tabs.theme';
 import { CAROUSEL_THEME } from '../components/organisms/Carousel/Carousel.theme';
 import { FOOTER_THEME } from '../components/organisms/Footer/Footer.theme';
 import { FORM_CONTROLS_THEME } from '../components/organisms/FormControls/FormControls.theme';
+import { NAV_BAR_THEME } from '../components/organisms/Navbar/Navbar.theme';
 
 const theme: HelloInternetTheme = {
   accordion: ACCORDION_THEME,
@@ -41,94 +44,9 @@ const theme: HelloInternetTheme = {
   hero: HERO_THEME,
   listGroup: LIST_GROUP_THEME,
   modal: MODAL_THEME,
-  navbar: {
-    base: 'border-gray-200 bg-white px-2 py-2.5 sm:px-4',
-    rounded: {
-      on: 'rounded',
-      off: ''
-    },
-    bordered: {
-      on: 'border',
-      off: ''
-    },
-    inner: {
-      base: 'mx-auto flex flex-wrap items-center justify-between',
-      fluid: {
-        on: '',
-        off: 'container'
-      }
-    },
-    brand: 'flex items-center',
-    collapse: {
-      base: 'w-full md:block md:w-auto',
-      list: 'mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium',
-      hidden: {
-        on: 'hidden',
-        off: ''
-      }
-    },
-    link: {
-      base: 'block py-2 pr-4 pl-3 md:p-0',
-      active: {
-        on: 'bg-blue-700 text-white md:bg-transparent md:text-blue-700',
-        off: 'border-b border-gray-100  text-gray-700 hover:bg-gray-50:bg-gray-700:text-white md:border-0 md:hover:bg-transparent md:hover:text-blue-700'
-      },
-      disabled: {
-        on: 'text-gray-400 hover:cursor-not-allowed',
-        off: ''
-      }
-    },
-    toggle: {
-      base: 'inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200:bg-gray-700:ring-gray-600 md:hidden',
-      icon: 'h-6 w-6 shrink-0'
-    }
-  },
-  rating: {
-    base: 'flex items-center',
-    star: {
-      sizes: {
-        sm: 'w-5 h-5',
-        md: 'w-7 h-7',
-        lg: 'w-10 h-10'
-      },
-      filled: 'text-yellow-400',
-      empty: 'text-gray-300'
-    },
-    advanced: {
-      base: 'flex items-center',
-      label: 'text-sm font-medium text-blue-600',
-      progress: {
-        base: 'mx-4 h-5 w-2/4 rounded bg-gray-200',
-        fill: 'h-5 rounded bg-yellow-400',
-        label: 'text-sm font-medium text-blue-600'
-      }
-    }
-  },
-  pagination: {
-    base: '',
-    layout: {
-      table: {
-        base: 'text-sm text-gray-700',
-        span: 'font-semibold text-gray-900'
-      }
-    },
-    pages: {
-      base: 'xs:mt-0 mt-2 inline-flex items-center -space-x-px',
-      showIcon: 'inline-flex',
-      previous: {
-        base: 'ml-0 rounded-l-lg border border-gray-300 bg-white py-2 px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700:bg-gray-700:text-white',
-        icon: 'h-5 w-5'
-      },
-      next: {
-        base: 'rounded-r-lg border border-gray-300 bg-white py-2 px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700:bg-gray-700:text-white',
-        icon: 'h-5 w-5'
-      },
-      selector: {
-        base: 'w-12 border border-gray-300 bg-white py-2 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700:bg-gray-700:text-white',
-        active: 'bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700'
-      }
-    }
-  },
+  navbar: NAV_BAR_THEME,
+  rating: RATING_THEME,
+  pagination: PAGINATION_THEME,
   sidebar: {
     base: 'h-full',
     inner: 'h-full overflow-y-auto overflow-x-hidden rounded bg-white py-4 px-3',

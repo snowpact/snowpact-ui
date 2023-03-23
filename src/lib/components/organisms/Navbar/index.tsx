@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useState } from 'react';
-import { excludeClassName } from '../../helpers/exclude';
-import { useTheme } from '../bosons/HelloInternet/ThemeContext';
+import { excludeClassName } from '../../../helpers/exclude';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { NavbarBrand } from './NavbarBrand';
 import { NavbarCollapse } from './NavbarCollapse';
 import { NavbarContext } from './NavbarContext';
