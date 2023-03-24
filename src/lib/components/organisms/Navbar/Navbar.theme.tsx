@@ -2,12 +2,7 @@ import type { FlowbiteBoolean } from '../../bosons/HelloInternet/HelloInternetTh
 
 export type NavBarTheme = {
   base: string;
-  rounded: FlowbiteBoolean;
-  bordered: FlowbiteBoolean;
-  inner: {
-    base: string;
-    fluid: FlowbiteBoolean;
-  };
+  innerBase: string;
   brand: string;
   collapse: {
     base: string;
@@ -26,22 +21,8 @@ export type NavBarTheme = {
 };
 
 export const NAV_BAR_THEME: NavBarTheme = {
-  base: 'border-gray-200 bg-white px-2 py-2.5 sm:px-4',
-  rounded: {
-    on: 'rounded',
-    off: ''
-  },
-  bordered: {
-    on: 'border',
-    off: ''
-  },
-  inner: {
-    base: 'mx-auto flex flex-wrap items-center justify-between',
-    fluid: {
-      on: '',
-      off: 'container'
-    }
-  },
+  base: 'border-gray-200 py-2.5 z-[1000]',
+  innerBase: 'mx-auto flex flex-wrap items-center justify-between',
   brand: 'flex items-center',
   collapse: {
     base: 'w-full md:block md:w-auto',
@@ -54,8 +35,8 @@ export const NAV_BAR_THEME: NavBarTheme = {
   link: {
     base: 'block py-2 pr-4 pl-3 md:p-0',
     active: {
-      on: 'bg-blue-700 text-white md:bg-transparent md:text-blue-700',
-      off: 'border-b border-gray-100  text-gray-700 hover:bg-gray-50:bg-gray-700:text-white md:border-0 md:hover:bg-transparent md:hover:text-blue-700'
+      on: 'bg-primary-700 text-white md:bg-transparent md:text-primary-700',
+      off: 'border-b border-gray-100  text-gray-700 hover:bg-gray-50:bg-gray-700:text-white md:border-0 md:hover:bg-transparent md:hover:text-primary-700'
     },
     disabled: {
       on: 'text-gray-400 hover:cursor-not-allowed',

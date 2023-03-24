@@ -1,12 +1,14 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import type { NavbarComponentProps } from '.';
 import { Navbar } from '.';
+import { ProgressBar } from '../../atoms';
 import { Avatar } from '../../atoms/Avatar';
 import { Button } from '../../atoms/Button';
+import { Hero } from '../../molecules';
 import { Dropdown } from '../../molecules/Dropdown';
+import type { NavbarComponentProps } from './Navbar';
 
 export default {
-  title: 'Components/Navbar',
+  title: 'Components/molecules/Navbar',
   component: Navbar
 } as Meta;
 
@@ -104,4 +106,87 @@ WithDropdown.args = {
       </Navbar.Collapse>
     </>
   )
+};
+
+export const RealCaseExample = () => {
+  return (
+    <div>
+      <ProgressBar color="#ff00ff" />
+      <Navbar fixed>
+        <Navbar.Brand href="https://flowbite.com/">
+          <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+          <span className="self-center whitespace-nowrap text-xl font-semibold">Flowbite</span>
+        </Navbar.Brand>
+        <Navbar.Collapse>
+          <Navbar.Link href="/navbars" active>
+            Home
+          </Navbar.Link>
+          <Navbar.Link href="/navbars">About</Navbar.Link>
+          <Navbar.Link href="/navbars">Services</Navbar.Link>
+          <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+          <Navbar.Link href="/navbars">Contact</Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
+      <main className="container">
+        <section>
+          <Hero
+            backgroundImage="https://snowpact.com/static/ed537a24f8aeaeaad12559d85dc3baad/a66ad/page-home.jpg"
+            position="center-left"
+            backgroundPosition="right center"
+            foregroundMaxWidth="45%"
+          >
+            <Hero.Foreground
+              title="Votre équipe de développement agile nodejs et react"
+              subtitle="Chez Snowpact, nous vous accompagnons sur la conception, le développement et la mise en production de votre projet web et mobile."
+            />
+            <Hero.CallToActions>
+              <Button type="button">Contactez-nous</Button>
+              <Button type="button">Action 2</Button>
+            </Hero.CallToActions>
+          </Hero>
+          <h1 className="text-4xl font-bold">Navbar</h1>
+          <p className="text-lg text-gray-500">
+            A responsive navigation bar that can be used for navigation, search, or anything else.
+          </p>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod,
+          </p>
+        </section>
+      </main>
+    </div>
+  );
 };

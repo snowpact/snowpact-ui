@@ -5,5 +5,8 @@ export * from './Button';
 export * from './DarkThemeToggle';
 export * from './MainContainer';
 export * from './Progress';
+export * from './ProgressBar';
+export * from './Rating';
+export * from './Spinner';
 export * from './Toast';
 export * from './Tooltip';

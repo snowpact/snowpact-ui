@@ -25,6 +25,18 @@ module.exports = {
       center: true,
     },
     extend: {
+      primary: {
+        50: '#f2f2fc',
+        100: '#ececfe',
+        200: '#e3e3fd',
+        300: '#cacafb',
+        400: '#8585f6',
+        500: '#6a6af4',
+        600: '#1212ff',
+        700: '#000091',
+        800: '#313178',
+        900: '#1b1b35'
+      },
       // sidebar mobile fix
       maxWidth: {
         '2xs': '16rem',
@@ -37,7 +49,8 @@ module.exports = {
       },
       fontSize: {
         '2xs': '0.625rem'
-      }
+      },
+
     }
   },
   variants: {
