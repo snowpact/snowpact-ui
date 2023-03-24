@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/snowpact/snowpact-ui/compare/v0.7.0...v0.8.0) (2023-03-24)
+
+
+### Features
+
+* **navbar:** add fixed props to navbar and progress bar ([313966b](https://github.com/snowpact/snowpact-ui/commit/313966b07130d4317728fe64cdf87cb3fc41c884))
+
 # [0.7.0](https://github.com/snowpact/snowpact-ui/compare/v0.6.0...v0.7.0) (2023-03-24)
 
 
