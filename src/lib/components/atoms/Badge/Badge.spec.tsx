@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { HiCheck } from 'react-icons/hi';
 import { describe, expect, it } from 'vitest';
 import { Badge } from '.';
-import { HelloInternet } from '../bosons/HelloInternet';
+import { HelloInternet } from '../../bosons/HelloInternet';
 
 describe('Components / Badge', () => {
   describe('Rendering', () => {

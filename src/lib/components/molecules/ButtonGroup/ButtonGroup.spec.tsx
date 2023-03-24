@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import { ButtonGroup } from '.';
-import defaultTheme from '../../theme/default';
-import { Button } from '../atoms/Button';
-import { HelloInternet } from '../bosons/HelloInternet';
+import defaultTheme from '../../../theme/default';
+import { Button } from '../../atoms/Button';
+import { HelloInternet } from '../../bosons/HelloInternet';
 
 describe('Components / ButtonGroup', () => {
   describe('A11y', () => {

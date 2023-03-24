@@ -7,7 +7,6 @@ import type { MainContainerTheme } from '../../atoms/MainContainer/MainContainer
 import type { ProgressColors, ProgressSizes } from '../../atoms/Progress';
 import type { ToastTheme } from '../../atoms/Toast/Toast.theme';
 import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
-import type { BadgeColors, BadgeSizes } from '../../Badge';
 import type { FlowbiteDropdownTheme } from '../../Dropdown';
 import type {
   HelperColors,
@@ -20,7 +19,11 @@ import type {
 } from '../../FormControls';
 
 import type { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
+import type { BadgeTheme } from '../../atoms/Badge/Badge.theme';
+import type { AccordionTheme } from '../../molecules/Accordion/Accordion.theme';
+import type { ButtonGroupTheme } from '../../molecules/ButtonGroup/ButtonGroup.theme';
 import type { CameraRollTheme } from '../../molecules/CameraRoll/CameraRoll.theme';
+import type { CardTheme } from '../../molecules/Card/Card.theme';
 import type { HeroTheme } from '../../molecules/Hero/Hero.theme';
 import type { ModalTheme } from '../../molecules/Modal/Modal.theme';
 import type { TabsTheme } from '../../molecules/Tab/Tabs.theme';
@@ -31,61 +34,15 @@ import type { SpinnerColors, SpinnerSizes } from '../../Spinner';
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
 
 export interface HelloInternetTheme extends Record<string, unknown> {
-  accordion: {
-    base: string;
-    content: {
-      base: string;
-    };
-    flush: FlowbiteBoolean;
-    title: {
-      arrow: {
-        base: string;
-        open: {
-          off: string;
-          on: string;
-        };
-      };
-      base: string;
-      flush: FlowbiteBoolean;
-      heading: string;
-      open: FlowbiteBoolean;
-    };
-  };
+  accordion: AccordionTheme;
   alert: AlertTheme;
   avatar: AvatarTheme;
-  badge: {
-    base: string;
-    color: BadgeColors;
-    href: string;
-    icon: {
-      off: string;
-      on: string;
-      size: BadgeSizes;
-    };
-    size: BadgeSizes;
-  };
+  badge: BadgeTheme;
   breadcrumb: BreadcrumbTheme;
   button: ButtonTheme;
-  buttonGroup: {
-    base: string;
-  };
+  buttonGroup: ButtonGroupTheme;
   cameraRoll: CameraRollTheme;
-  card: {
-    base: string;
-    children: string;
-    horizontal: {
-      off: string;
-      on: string;
-    };
-    href: string;
-    img: {
-      base: string;
-      horizontal: {
-        off: string;
-        on: string;
-      };
-    };
-  };
+  card: CardTheme;
   carousel: {
     base: string;
     indicators: {
