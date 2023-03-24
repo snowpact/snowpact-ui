@@ -4,7 +4,7 @@ import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import type { ModalProps } from '.';
 import { Modal } from '.';
 import { Button } from '../../atoms/Button';
-import { Checkbox, Label, TextInput } from '../../FormControls';
+import { Checkbox, Label, TextInput } from '../../organisms/FormControls';
 
 export default {
   title: 'Components/molecules/Modal',

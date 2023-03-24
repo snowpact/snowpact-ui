@@ -14,7 +14,7 @@ import { useEffect, useRef, useState } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
 import { getArrowPlacement, getMiddleware, getPlacement } from '../../../helpers/floating';
 // TODO This should not use a theme from dropdown
-import type { FlowbiteDropdownTheme } from '../../Dropdown';
+import type { FlowbiteDropdownTheme } from '../../molecules/Dropdown';
 
 export interface FlowbiteFloatingTheme {
   target: string;
