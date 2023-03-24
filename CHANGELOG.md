@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/snowpact/snowpact-ui/compare/v0.6.0...v0.7.0) (2023-03-24)
+
+
+### Features
+
+* **#43:** migrate accordion, badge, button group and card ([#44](https://github.com/snowpact/snowpact-ui/issues/44)) ([d07afa4](https://github.com/snowpact/snowpact-ui/commit/d07afa47e2c43f5c1e4a6aee8dd3939970ee495c)), closes [#43](https://github.com/snowpact/snowpact-ui/issues/43)
+
 <<<<<<< HEAD
 # [0.6.0](https://github.com/snowpact/snowflakes-ui/compare/v0.5.1...v0.6.0) (2023-03-19)
 
