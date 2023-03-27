@@ -4,7 +4,7 @@ import { Dropdown } from '.';
 import type { DropdownProps } from './Dropdown';
 
 export default {
-  title: 'Components/Dropdown',
+  title: 'Components/molecules/Dropdown',
   component: Dropdown,
   args: {
     title: 'Dropdown example',

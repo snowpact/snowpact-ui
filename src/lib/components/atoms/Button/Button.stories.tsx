@@ -4,7 +4,7 @@ import theme from '../../../theme/default';
 import type { ButtonProps } from './Button';
 
 export default {
-  title: 'Components/Atoms/Button',
+  title: 'Components/atoms/Button',
   component: Button,
   argTypes: {
     color: {

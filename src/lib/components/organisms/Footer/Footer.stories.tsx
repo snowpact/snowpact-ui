@@ -3,7 +3,7 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-
 import { Footer } from '.';
 
 export default {
-  title: 'Components/Footer',
+  title: 'Components/organisms/Footer',
   component: Footer
 } as Meta;
 

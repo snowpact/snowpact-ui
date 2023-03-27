@@ -8,7 +8,7 @@ import { Dropdown } from '../../molecules/Dropdown';
 import type { NavbarComponentProps } from './Navbar';
 
 export default {
-  title: 'Components/molecules/Navbar',
+  title: 'Components/organisms/Navbar',
   component: Navbar
 } as Meta;
 

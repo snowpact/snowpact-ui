@@ -3,7 +3,7 @@ import { Rating } from '.';
 import type { RatingProps } from './Rating';
 
 export default {
-  title: 'Components/Rating',
+  title: 'Components/atoms/Rating',
   component: Rating
 } as Meta;
 

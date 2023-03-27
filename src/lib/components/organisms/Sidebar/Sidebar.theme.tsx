@@ -85,7 +85,7 @@ export const SIDEBAR_THEME: SidebarTheme = {
     }
   },
   item: {
-    base: 'flex items-center justify-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100:bg-gray-700',
+    base: 'flex items-center justify-center rounded-lg p-2 text-base font-normal group-hover:text-gray-900:text-white hover:bg-gray-100:bg-gray-700',
     active: 'bg-gray-100',
     collapsed: {
       insideCollapse: 'group w-full pl-8 transition duration-75',

@@ -4,7 +4,7 @@ import { Pagination } from '.';
 import type { PaginationProps } from './Pagination';
 
 export default {
-  title: 'Components/Pagination',
+  title: 'Components/molecules/Pagination',
   component: Pagination,
   decorators: [
     (Story): JSX.Element => (

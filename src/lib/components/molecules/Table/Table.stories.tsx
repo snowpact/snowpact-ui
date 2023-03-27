@@ -3,7 +3,7 @@ import { Table } from '.';
 import type { TableProps } from './Table';
 
 export default {
-  title: 'Components/Tables',
+  title: 'Components/molecules/Tables',
   component: Table
 } as Meta;
 

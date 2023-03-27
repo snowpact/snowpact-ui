@@ -3,7 +3,7 @@ import type { LabelProps } from './Label';
 import { Label } from './Label';
 
 export default {
-  title: 'Components/FormControls',
+  title: 'Components/organisms/FormControls',
   component: Label
 } as Meta;
 

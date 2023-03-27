@@ -5,7 +5,7 @@ import { Accordion } from '.';
 import type { AccordionProps } from './Accordion';
 
 export default {
-  title: 'Components/Accordion',
+  title: 'Components/molecules/Accordion',
   component: Accordion,
   args: {
     alwaysOpen: false,
