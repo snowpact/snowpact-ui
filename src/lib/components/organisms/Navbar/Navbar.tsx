@@ -23,7 +23,7 @@ export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fixed, fl
         className={classNames(theme.base, [
           fixedEffect !== NavbarFixed.FIXED_OFF && 'fixed top-0 left-0 right-0 transition linear delay-150',
           fixedEffect === NavbarFixed.FIXED_TOP && 'bg-transparent',
-          fixedEffect === NavbarFixed.FIXED_ACTIVE && 'bg-white'
+          fixedEffect === NavbarFixed.FIXED_ACTIVE && theme.navbarBackground
         ])}
       >
         <div className={classNames(theme.innerBase, [!fluid && 'container', fluid && 'px-2 sm:px-4'])}>{children}</div>
