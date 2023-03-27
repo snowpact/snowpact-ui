@@ -1,4 +1,4 @@
-import type { ProgressColors, ProgressSizes } from '.';
+import type { ProgressColors, ProgressSizes } from './Progress';
 
 export type ProgressTheme = {
   base: string;

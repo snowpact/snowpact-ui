@@ -2,14 +2,11 @@ import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 import { useMemo } from 'react';
 import { HiOutlineChevronDown, HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlineChevronUp } from 'react-icons/hi';
 import { excludeClassName } from '../../../helpers/exclude';
-import type { ButtonProps } from '../../atoms/Button';
-import { Button } from '../../atoms/Button';
+import type { ButtonProps } from '../../atoms/Button/Button';
+import { Button } from '../../atoms/Button/Button';
 import type { FloatingProps } from '../../bosons/Floating';
 import { Floating } from '../../bosons/Floating';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import { DropdownDivider } from './DropdownDivider';
-import { DropdownHeader } from './DropdownHeader';
-import { DropdownItem } from './DropdownItem';
 
 export interface FlowbiteDropdownTheme {
   target: string;
@@ -53,7 +50,7 @@ const icons: Record<string, FC<ComponentProps<'svg'>>> = {
   left: HiOutlineChevronLeft
 };
 
-const DropdownComponent: FC<DropdownProps> = ({ children, ...props }) => {
+export const Dropdown: FC<DropdownProps> = ({ children, ...props }) => {
   const theme = useTheme().theme.dropdown;
   const theirProps = excludeClassName(props) as DropdownProps;
   const {
@@ -93,14 +90,3 @@ const DropdownComponent: FC<DropdownProps> = ({ children, ...props }) => {
     </Floating>
   );
 };
-
-DropdownComponent.displayName = 'Dropdown';
-DropdownItem.displayName = 'Dropdown.Item';
-DropdownHeader.displayName = 'Dropdown.Header';
-DropdownDivider.displayName = 'Dropdown.Divider';
-
-export const Dropdown = Object.assign(DropdownComponent, {
-  Item: DropdownItem,
-  Header: DropdownHeader,
-  Divider: DropdownDivider
-});

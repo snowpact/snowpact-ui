@@ -3,7 +3,7 @@ import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useId, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { excludeClassName } from '../../../helpers/exclude';
-import { Tooltip } from '../../atoms/Tooltip';
+import { Tooltip } from '../../atoms/Tooltip/Tooltip';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { useSidebarContext } from './SidebarContext';
 import type { SidebarItemProps } from './SidebarItem';
@@ -11,7 +11,7 @@ import { SidebarItemContext } from './SidebarItemContext';
 
 export type SidebarCollapseProps = PropsWithChildren<ComponentProps<'button'> & SidebarItemProps>;
 
-const SidebarCollapse: FC<SidebarCollapseProps> = ({ children, icon: Icon, label, ...props }): JSX.Element => {
+export const SidebarCollapse: FC<SidebarCollapseProps> = ({ children, icon: Icon, label, ...props }): JSX.Element => {
   const theirProps = excludeClassName(props);
 
   const id = useId();
@@ -64,6 +64,3 @@ const SidebarCollapse: FC<SidebarCollapseProps> = ({ children, icon: Icon, label
     </Wrapper>
   );
 };
-
-SidebarCollapse.displayName = 'Sidebar.Collapse';
-export default SidebarCollapse;

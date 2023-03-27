@@ -1,4 +1,4 @@
-import type { SpinnerColors, SpinnerSizes } from '.';
+import type { SpinnerColors, SpinnerSizes } from './Spinner';
 
 export type SpinnerTheme = {
   base: string;

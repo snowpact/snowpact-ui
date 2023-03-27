@@ -8,7 +8,7 @@ export interface BreadcrumbItemProps extends PropsWithChildren<Omit<ComponentPro
   icon?: FC<ComponentProps<'svg'>>;
 }
 
-const BreadcrumbItem: FC<BreadcrumbItemProps> = ({ children, href, icon: Icon, ...props }): JSX.Element => {
+export const BreadcrumbItem: FC<BreadcrumbItemProps> = ({ children, href, icon: Icon, ...props }): JSX.Element => {
   const isLink = typeof href !== 'undefined';
   const theirProps = excludeClassName(props);
   const theme = useTheme().theme.breadcrumb.item;
@@ -25,6 +25,3 @@ const BreadcrumbItem: FC<BreadcrumbItemProps> = ({ children, href, icon: Icon, .
     </li>
   );
 };
-
-BreadcrumbItem.displayName = 'Breadcrumb.Item';
-export default BreadcrumbItem;

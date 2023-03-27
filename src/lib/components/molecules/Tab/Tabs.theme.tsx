@@ -1,4 +1,4 @@
-import type { TabStyleItem, TabStyles } from '.';
+import type { TabStyleItem, TabStyles } from './Tabs';
 
 export type TabsTheme = {
   base: string;

@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import type { FC } from 'react';
 import { describe, expect, it } from 'vitest';
-import type { TableProps } from '.';
 import { Table } from '.';
+import type { TableProps } from './Table';
 
 describe.concurrent('Components / Table', () => {
   it('should be able to render a table', () => {

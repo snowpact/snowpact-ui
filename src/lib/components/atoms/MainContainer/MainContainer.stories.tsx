@@ -1,7 +1,7 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import type { MainContainerProps } from '.';
 import { MainContainer } from '.';
-import { Button } from '../Button';
+import { Button } from '../Button/Button';
+import type { MainContainerProps } from './MainContainer';
 
 export default {
   title: 'Components/Atoms/MainContainer',

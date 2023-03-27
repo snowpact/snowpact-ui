@@ -1,7 +1,7 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
 import { HiCheck } from 'react-icons/hi';
-import type { BadgeProps } from '.';
 import { Badge } from '.';
+import type { BadgeProps } from './Badge';
 
 export default {
   title: 'Components/Badge',

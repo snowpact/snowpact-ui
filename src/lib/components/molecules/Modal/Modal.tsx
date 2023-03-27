@@ -6,10 +6,7 @@ import { excludeClassName } from '../../../helpers/exclude';
 import type { HIPositions, HISizes } from '../../bosons/HelloInternet/HelloInternetTheme';
 
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import { ModalBody } from './ModalBody';
 import { ModalContext } from './ModalContext';
-import { ModalFooter } from './ModalFooter';
-import { ModalHeader } from './ModalHeader';
 
 export interface ModalPositions extends HIPositions {
   [key: string]: string;
@@ -26,7 +23,7 @@ export interface ModalProps extends PropsWithChildren<Omit<ComponentProps<'div'>
   size?: keyof ModalSizes;
 }
 
-const ModalComponent: FC<ModalProps> = ({
+export const Modal: FC<ModalProps> = ({
   children,
   show,
   root,
@@ -79,10 +76,3 @@ const ModalComponent: FC<ModalProps> = ({
       )
     : null;
 };
-
-ModalComponent.displayName = 'Modal';
-ModalHeader.displayName = 'Modal.Header';
-ModalBody.displayName = 'Modal.Body';
-ModalFooter.displayName = 'Modal.Footer';
-
-export const Modal = Object.assign(ModalComponent, { Header: ModalHeader, Body: ModalBody, Footer: ModalFooter });

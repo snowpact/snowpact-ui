@@ -2,7 +2,7 @@ import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
-const SidebarItems: FC<PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>>> = ({
+export const SidebarItems: FC<PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>>> = ({
   children,
   ...props
 }): JSX.Element => {
@@ -16,6 +16,3 @@ const SidebarItems: FC<PropsWithChildren<Omit<ComponentProps<'div'>, 'className'
     </div>
   );
 };
-
-SidebarItems.displayName = 'Sidebar.Items';
-export default SidebarItems;

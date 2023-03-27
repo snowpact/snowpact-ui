@@ -4,10 +4,7 @@ import { Children, cloneElement, useMemo, useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 import { excludeClassName } from '../../../helpers/exclude';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import { AccordionContent } from './AccordionContent';
 import type { AccordionPanelProps } from './AccordionPanel';
-import { AccordionPanel } from './AccordionPanel';
-import { AccordionTitle } from './AccordionTitle';
 
 export interface AccordionProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
   alwaysOpen?: boolean;
@@ -16,7 +13,7 @@ export interface AccordionProps extends PropsWithChildren<Omit<ComponentProps<'d
   flush?: boolean;
 }
 
-const AccordionComponent: FC<AccordionProps> = ({
+export const Accordion: FC<AccordionProps> = ({
   alwaysOpen = false,
   arrowIcon = HiChevronDown,
   children,
@@ -45,14 +42,3 @@ const AccordionComponent: FC<AccordionProps> = ({
     </div>
   );
 };
-
-AccordionComponent.displayName = 'Accordion';
-AccordionPanel.displayName = 'Accordion.Panel';
-AccordionTitle.displayName = 'Accordion.Title';
-AccordionContent.displayName = 'Accordion.Content';
-
-export const Accordion = Object.assign(AccordionComponent, {
-  Panel: AccordionPanel,
-  Title: AccordionTitle,
-  Content: AccordionContent
-});

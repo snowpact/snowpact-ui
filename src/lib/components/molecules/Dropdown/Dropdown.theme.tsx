@@ -1,4 +1,4 @@
-import type { FlowbiteDropdownTheme } from '.';
+import type { FlowbiteDropdownTheme } from './Dropdown';
 
 export type DropdownTheme = {
   floating: FlowbiteDropdownTheme;

@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import type { ComponentProps, ElementType, FC, PropsWithChildren } from 'react';
 import { useId } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
-import { Badge } from '../../atoms/Badge';
-import { Tooltip } from '../../atoms/Tooltip';
+import { Badge } from '../../atoms/Badge/Badge';
+import { Tooltip } from '../../atoms/Tooltip/Tooltip';
 import type { HIColors } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { useSidebarContext } from './SidebarContext';
@@ -23,7 +23,7 @@ export interface SidebarItemLabelColors extends Pick<HIColors, 'gray'> {
   [key: string]: string;
 }
 
-const SidebarItem: FC<SidebarItemProps> = ({
+export const SidebarItem: FC<SidebarItemProps> = ({
   as: Component = 'a',
   children,
   icon: Icon,
@@ -94,6 +94,3 @@ const SidebarItem: FC<SidebarItemProps> = ({
     </ListItem>
   );
 };
-
-SidebarItem.displayName = 'Sidebar.Item';
-export default SidebarItem;

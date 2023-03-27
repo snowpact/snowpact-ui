@@ -1,5 +1,5 @@
-import type { ButtonColors, ButtonSizes, ButtonWidths } from '.';
 import type { FlowbiteBoolean } from '../../bosons/HelloInternet/HelloInternetTheme';
+import type { ButtonColors, ButtonSizes, ButtonWidths } from './Button';
 
 export interface PositionInButtonGroup {
   none: string;

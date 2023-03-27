@@ -1,4 +1,4 @@
-import type { BadgeColors, BadgeSizes } from '.';
+import type { BadgeColors, BadgeSizes } from './Badge';
 
 export type BadgeTheme = {
   base: string;

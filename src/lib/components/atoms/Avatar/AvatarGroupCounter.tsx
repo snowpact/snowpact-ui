@@ -6,7 +6,7 @@ export type AvatarGroupdCounterProps = PropsWithChildren<{
   href: string;
 }>;
 
-const AvatarGroupCounter: React.FC<AvatarGroupdCounterProps> = ({ total, href }) => {
+export const AvatarGroupCounter: React.FC<AvatarGroupdCounterProps> = ({ total, href }) => {
   return (
     <a
       className="relative flex h-16 w-16 items-center justify-center rounded-full bg-gray-700 text-xs font-medium text-white ring-2 ring-gray-300 hover:bg-gray-600  "
@@ -16,6 +16,3 @@ const AvatarGroupCounter: React.FC<AvatarGroupdCounterProps> = ({ total, href })
     </a>
   );
 };
-
-AvatarGroupCounter.displayName = 'Avatar.GroupCounter';
-export default AvatarGroupCounter;

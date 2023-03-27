@@ -1,10 +1,10 @@
 import { action } from '@storybook/addon-actions';
 import type { Meta, Story } from '@storybook/react/types-6-0';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
-import type { ModalProps } from '.';
 import { Modal } from '.';
-import { Button } from '../../atoms/Button';
+import { Button } from '../../atoms/Button/Button';
 import { Checkbox, Label, TextInput } from '../../organisms/FormControls';
+import type { ModalProps } from './Modal';
 
 export default {
   title: 'Components/molecules/Modal',

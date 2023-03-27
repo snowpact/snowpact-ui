@@ -17,7 +17,7 @@ export interface SidebarCTAColors
   [key: string]: string;
 }
 
-const SidebarCTA: FC<SidebarCTAProps> = ({ children, color = 'info', ...props }): JSX.Element => {
+export const SidebarCTA: FC<SidebarCTAProps> = ({ children, color = 'info', ...props }): JSX.Element => {
   const theirProps = excludeClassName(props);
 
   const { isCollapsed } = useSidebarContext();
@@ -34,6 +34,3 @@ const SidebarCTA: FC<SidebarCTAProps> = ({ children, color = 'info', ...props })
     </div>
   );
 };
-
-SidebarCTA.displayName = 'Sidebar.CTA';
-export default SidebarCTA;

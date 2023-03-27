@@ -1,4 +1,4 @@
-import type { AlertColors } from '.';
+import type { AlertColors } from './Alert';
 
 export type AlertTheme = {
   base: string;

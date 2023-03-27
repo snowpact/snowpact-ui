@@ -3,8 +3,6 @@ import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
 import type { HIPositions, HISizes } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import AvatarGroup from './AvatarGroup';
-import AvatarGroupCounter from './AvatarGroupCounter';
 
 export interface AvatarProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
   alt?: string;
@@ -20,7 +18,7 @@ export interface AvatarProps extends PropsWithChildren<Omit<ComponentProps<'div'
 
 export type AvatarSizes = Pick<HISizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 
-const AvatarComponent: FC<AvatarProps> = ({
+export const Avatar: FC<AvatarProps> = ({
   alt = '',
   bordered = false,
   children,
@@ -95,9 +93,3 @@ const AvatarComponent: FC<AvatarProps> = ({
     </div>
   );
 };
-
-AvatarComponent.displayName = 'Avatar';
-export const Avatar = Object.assign(AvatarComponent, {
-  Group: AvatarGroup,
-  Counter: AvatarGroupCounter
-});

@@ -1,4 +1,4 @@
-import type { StarSizes } from '.';
+import type { StarSizes } from './Rating';
 
 export type RatingTheme = {
   base: string;
