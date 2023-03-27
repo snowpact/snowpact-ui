@@ -1,3 +1,10 @@
+## [0.8.1](https://github.com/snowpact/snowpact-ui/compare/v0.8.0...v0.8.1) (2023-03-27)
+
+
+### Bug Fixes
+
+* **navbar:** uses theme for navbar color ([11e3abb](https://github.com/snowpact/snowpact-ui/commit/11e3abb0b0765dc4c1c4ee7062cdf2222ee2655d))
+
 # [0.8.0](https://github.com/snowpact/snowpact-ui/compare/v0.7.0...v0.8.0) (2023-03-24)
 
 
