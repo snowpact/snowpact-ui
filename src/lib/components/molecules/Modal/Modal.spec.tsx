@@ -2,9 +2,9 @@ import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 import { describe, expect, it } from 'vitest';
-import type { ModalProps } from '.';
 import { Modal } from '.';
-import { Button } from '../../atoms/Button';
+import { Button } from '../../atoms/Button/Button';
+import type { ModalProps } from './Modal';
 
 describe('Components / Modal', () => {
   describe('A11y', () => {

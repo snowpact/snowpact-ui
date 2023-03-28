@@ -1,11 +1,10 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import { ListGroupItem } from './ListGroupItem';
 
 export type ListGroupProps = PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>>;
 
-const ListGroupComponent: FC<ListGroupProps> = ({ children, ...props }): JSX.Element => {
+export const ListGroup: FC<ListGroupProps> = ({ children, ...props }): JSX.Element => {
   const theirProps = excludeClassName(props);
 
   const theme = useTheme().theme.listGroup.base;
@@ -16,8 +15,3 @@ const ListGroupComponent: FC<ListGroupProps> = ({ children, ...props }): JSX.Ele
     </ul>
   );
 };
-
-ListGroupComponent.displayName = 'ListGroup';
-ListGroupItem.displayName = 'ListGroup.Item';
-
-export const ListGroup = Object.assign(ListGroupComponent, { Item: ListGroupItem });

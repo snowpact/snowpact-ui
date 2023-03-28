@@ -11,7 +11,7 @@ export interface SidebarLogoProps extends PropsWithChildren<Omit<ComponentProps<
   imgAlt?: string;
 }
 
-const SidebarLogo: FC<SidebarLogoProps> = ({ children, href, img, imgAlt = '', ...props }) => {
+export const SidebarLogo: FC<SidebarLogoProps> = ({ children, href, img, imgAlt = '', ...props }) => {
   const theirProps = excludeClassName(props);
 
   const id = useId();
@@ -27,6 +27,3 @@ const SidebarLogo: FC<SidebarLogoProps> = ({ children, href, img, imgAlt = '', .
     </a>
   );
 };
-
-SidebarLogo.displayName = 'Sidebar.Logo';
-export default SidebarLogo;

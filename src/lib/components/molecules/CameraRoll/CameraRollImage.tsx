@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { useState } from 'react';
 import { HiOutlineArrowsExpand } from 'react-icons/hi';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import { Modal } from '../Modal';
+import { Modal } from '../Modal/Modal';
 
 export interface CameraRollImageProps {
   src: string;

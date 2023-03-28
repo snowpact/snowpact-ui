@@ -3,7 +3,10 @@ import { excludeClassName } from '../../../helpers/exclude';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { SidebarItemContext } from './SidebarItemContext';
 
-const SidebarItemGroup: FC<PropsWithChildren<Omit<ComponentProps<'ul'>, 'className'>>> = ({ children, ...props }) => {
+export const SidebarItemGroup: FC<PropsWithChildren<Omit<ComponentProps<'ul'>, 'className'>>> = ({
+  children,
+  ...props
+}) => {
   const theirProps = excludeClassName(props);
 
   const theme = useTheme().theme.sidebar.itemGroup;
@@ -14,6 +17,3 @@ const SidebarItemGroup: FC<PropsWithChildren<Omit<ComponentProps<'ul'>, 'classNa
     </ul>
   );
 };
-
-SidebarItemGroup.displayName = 'Sidebar.ItemGroup';
-export default SidebarItemGroup;

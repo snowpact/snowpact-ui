@@ -1,8 +1,7 @@
 import type { ComponentProps, FC } from 'react';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import BreadcrumbItem from './BreadcrumbItem';
 
-const BreadcrumbComponent: FC<ComponentProps<'nav'>> = ({ children, ...props }) => {
+export const Breadcrumb: FC<ComponentProps<'nav'>> = ({ children, ...props }) => {
   const theme = useTheme().theme.breadcrumb;
 
   return (
@@ -11,6 +10,3 @@ const BreadcrumbComponent: FC<ComponentProps<'nav'>> = ({ children, ...props }) 
     </nav>
   );
 };
-
-BreadcrumbComponent.displayName = 'Breadcrumb';
-export const Breadcrumb = Object.assign(BreadcrumbComponent, { Item: BreadcrumbItem });

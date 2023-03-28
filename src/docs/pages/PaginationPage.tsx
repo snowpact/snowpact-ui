@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { useState } from 'react';
-import { Pagination } from '../../lib/components/molecules/Pagination';
+import { Pagination } from '../../lib/components/molecules/Pagination/Pagination';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 

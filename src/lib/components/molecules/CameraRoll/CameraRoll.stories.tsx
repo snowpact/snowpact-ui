@@ -1,6 +1,6 @@
 import type { ComponentMeta, Story } from '@storybook/react';
 
-import { CameraRoll } from './index';
+import { CameraRoll } from '.';
 
 export default {
   title: 'Components/molecules/CameraRoll',

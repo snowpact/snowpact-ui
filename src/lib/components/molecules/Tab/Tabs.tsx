@@ -5,7 +5,6 @@ import { excludeClassName } from '../../../helpers/exclude';
 import type { FlowbiteBoolean } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import type { TabProps } from './TabItem';
-import { TabItem } from './TabItem';
 
 export interface TabStyles {
   default: string;
@@ -37,7 +36,7 @@ interface TabKeyboardEventProps extends TabEventProps {
   event: KeyboardEvent<HTMLButtonElement>;
 }
 
-export const TabsComponent: FC<TabsProps> = ({ children, style = 'default', ...rest }) => {
+export const Tabs: FC<TabsProps> = ({ children, style = 'default', ...rest }) => {
   const theme = useTheme().theme.tab;
   const theirProps = excludeClassName(rest);
 
@@ -133,7 +132,3 @@ export const TabsComponent: FC<TabsProps> = ({ children, style = 'default', ...r
     </div>
   );
 };
-
-TabsComponent.displayName = 'Tabs.Group';
-TabItem.displayName = 'Tabs.Item';
-export const Tabs = { Group: TabsComponent, Item: TabItem };

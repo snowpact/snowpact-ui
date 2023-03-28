@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import type { TimelineProps } from '.';
 import { Timeline } from '.';
+import type { TimelineProps } from './Timeline';
 
 export default {
   title: 'Components/molecules/Timeline',

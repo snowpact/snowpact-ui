@@ -1,5 +1,5 @@
-import type { ModalPositions, ModalSizes } from '.';
 import type { FlowbiteBoolean } from '../../bosons/HelloInternet/HelloInternetTheme';
+import type { ModalPositions, ModalSizes } from './Modal';
 
 export type ModalTheme = {
   base: string;

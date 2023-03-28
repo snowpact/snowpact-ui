@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import type { TableProps } from '.';
 import { Table } from '.';
+import type { TableProps } from './Table';
 
 export default {
   title: 'Components/Tables',

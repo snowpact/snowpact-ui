@@ -1,5 +1,5 @@
-import type { AvatarSizes } from '.';
 import type { HIPositions } from '../../bosons/HelloInternet/HelloInternetTheme';
+import type { AvatarSizes } from './Avatar';
 
 export type AvatarTheme = {
   base: string;

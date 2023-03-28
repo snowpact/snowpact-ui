@@ -5,7 +5,6 @@ import { excludeClassName } from '../../../helpers/exclude';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import type { Duration } from './ToastContext';
 import { ToastContext } from './ToastContext';
-import { ToastToggle } from './ToastToggle';
 
 export interface ToastProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
   duration?: Duration;
@@ -22,7 +21,7 @@ const durationClasses: Record<Duration, string> = {
   1000: 'duration-1000'
 };
 
-const ToastComponent: FC<ToastProps> = ({ children, duration = 300, ...props }) => {
+export const Toast: FC<ToastProps> = ({ children, duration = 300, ...props }) => {
   const [isClosed, setIsClosed] = useState(false);
   const [isRemoved, setIsRemoved] = useState(false);
 
@@ -46,10 +45,3 @@ const ToastComponent: FC<ToastProps> = ({ children, duration = 300, ...props }) 
     </ToastContext.Provider>
   );
 };
-
-ToastComponent.displayName = 'Toast';
-ToastToggle.displayName = 'Toast.Toggle';
-
-export const Toast = Object.assign(ToastComponent, {
-  Toggle: ToastToggle
-});
