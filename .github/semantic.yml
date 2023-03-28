@@ -1,0 +1,13 @@
+# Always validate the PR title
+titleOnly: true
+
+# https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format
+types:
+  - build
+  - ci
+  - docs
+  - feat
+  - fix
+  - perf
+  - refactor
+  - test
