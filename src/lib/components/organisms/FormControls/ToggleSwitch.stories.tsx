@@ -3,7 +3,7 @@ import type { ToggleSwitchProps } from './ToggleSwitch';
 import { ToggleSwitch } from './ToggleSwitch';
 
 export default {
-  title: 'Components/FormControls',
+  title: 'Components/organisms/FormControls',
   component: ToggleSwitch
 } as Meta;
 

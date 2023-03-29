@@ -6,7 +6,7 @@ import { Badge } from '../../atoms/Badge';
 import { Button } from '../../atoms/Button';
 
 export default {
-  title: 'Components/Sidebar',
+  title: 'Components/organisms/Sidebar',
   component: Sidebar
 } as ComponentMeta<typeof Sidebar>;
 

@@ -3,7 +3,7 @@ import type { CarouselProps } from './Carousel';
 import { Carousel } from './Carousel';
 
 export default {
-  title: 'Components/Carousel',
+  title: 'Components/organisms/Carousel',
   component: Carousel
 } as Meta;
 

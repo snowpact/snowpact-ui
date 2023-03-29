@@ -3,7 +3,7 @@ import { Card } from '.';
 import type { CardProps } from './Card';
 
 export default {
-  title: 'Components/Card',
+  title: 'Components/molecules/Card',
   component: Card,
   decorators: [
     (Story): JSX.Element => (
