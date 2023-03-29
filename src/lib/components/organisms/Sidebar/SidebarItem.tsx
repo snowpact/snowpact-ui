@@ -84,7 +84,7 @@ export const SidebarItem: FC<SidebarItemProps> = ({
         {isCollapsed && !Icon && (
           <span className={theme.collapsed.noIcon}>{(children as string).charAt(0).toLocaleUpperCase() ?? '?'}</span>
         )}
-        {!isCollapsed && <Children data-testid>{children}</Children>}
+        {!isCollapsed && <Children>{children}</Children>}
         {!isCollapsed && label && (
           <Badge color={labelColor} data-testid="flowbite-sidebar-label" hidden={isCollapsed}>
             {label}
