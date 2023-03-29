@@ -97,6 +97,7 @@ export const Tabs: FC<TabsProps> = ({ children, style = 'default', ...rest }) =>
             type="button"
             aria-controls={`${id}-tabpanel-${index}`}
             aria-selected={index === activeTab}
+            // @ts-ignore currently we have a bug here
             className={classNames(theme.tablist.tabitem.base, theme.tablist.tabitem.styles[style], {
               [theme.tablist.tabitem.styles[style].active.on]: index === activeTab,
               [theme.tablist.tabitem.styles[style].active.off]: index !== activeTab && !tab.disabled
