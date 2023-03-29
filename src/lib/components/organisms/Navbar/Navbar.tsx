@@ -24,7 +24,7 @@ export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = f
         className={twMerge(
           classNames(theme.base, theme.background, [
             sticky === 'transparent' && 'fixed top-0 left-0 right-0 transition linear delay-150',
-            sticky === 'solid' && 'sticky',
+            sticky === 'solid' && 'sticky top-0',
             fixedEffect === NavbarSticky.STICKY_TOP && 'bg-transparent',
             fixedEffect === NavbarSticky.STICKY_TOP && theme.fixedTransparentStyle,
             fixedEffect === NavbarSticky.STICKY_STICKED

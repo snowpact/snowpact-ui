@@ -27,7 +27,7 @@ export const NAV_BAR_THEME: NavBarTheme = {
   innerBase: 'mx-auto flex flex-wrap items-center justify-between',
   brand: 'flex items-center',
   fixedTransparentStyle: '',
-  background: 'bg-red-500',
+  background: 'bg-primary-500',
   collapse: {
     base: 'w-full md:block md:w-auto',
     list: 'mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium',
