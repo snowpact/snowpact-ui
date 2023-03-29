@@ -3,9 +3,9 @@ import { AVATAR_THEME } from '../components/atoms/Avatar/Avatar.theme';
 import { BADGE_THEME } from '../components/atoms/Badge/Badge.theme';
 import { BREADCRUMB_THEME } from '../components/atoms/Breadcrumb/Breadcrumb.theme';
 import { BUTTON_THEME } from '../components/atoms/Button/Button.theme';
-import { DARK_THEME_TOGGLE_THEME } from '../components/atoms/DarkThemeToggle/DarkThemeToggle.theme';
 import { MAIN_CONTAINER_THEME } from '../components/atoms/MainContainer/MainContainer.theme';
 import { PROGRESS_THEME } from '../components/atoms/Progress/Progress.theme';
+import { PROGRESS_BAR_THEME } from '../components/atoms/ProgressBar/ProgressBar.theme';
 import { RATING_THEME } from '../components/atoms/Rating/Rating.theme';
 import { SPINNER_THEME } from '../components/atoms/Spinner/Spinner.theme';
 import { TOAST_THEME } from '../components/atoms/Toast/Toast.theme';
@@ -39,7 +39,6 @@ const theme: HelloInternetTheme = {
   cameraRoll: CAMERA_ROLL_THEME,
   card: CARD_THEME,
   carousel: CAROUSEL_THEME,
-  darkThemeToggle: DARK_THEME_TOGGLE_THEME,
   dropdown: DROPDOWN_THEME,
   footer: FOOTER_THEME,
   formControls: FORM_CONTROLS_THEME,
@@ -49,6 +48,7 @@ const theme: HelloInternetTheme = {
   navbar: NAV_BAR_THEME,
   rating: RATING_THEME,
   pagination: PAGINATION_THEME,
+  progressBar: PROGRESS_BAR_THEME,
   sidebar: SIDEBAR_THEME,
   progress: PROGRESS_THEME,
   presentational: PRESENTATIONAL_THEME,

@@ -4,7 +4,6 @@ import { HiInformationCircle } from 'react-icons/hi';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Alert, Card } from '../../lib';
-import { DarkThemeToggle } from '../../lib/components';
 import type { CustomHelloInternetTheme } from '../../lib/components/bosons';
 import { HelloInternet } from '../../lib/components/bosons';
 
@@ -38,27 +37,6 @@ const ThemePage: FC = () => {
           </SyntaxHighlighter>
         </Card>
       </div>
-      <span className="text-xl font-bold">Switch to dark theme</span>
-      <p>
-        Since the Flowbite component creates and context to manage the theme, it also enables your application to use
-        the <strong>DarkThemeToggle</strong> component.
-      </p>
-      <Card>
-        <SyntaxHighlighter language="tsx" style={dracula}>
-          {reactElementToJSXString(
-            <HelloInternet>
-              <DarkThemeToggle />
-            </HelloInternet>,
-            {
-              showFunctions: true,
-              functionValue: (fn) => fn.name,
-              sortProps: false,
-              useBooleanShorthandSyntax: false,
-              useFragmentShortSyntax: false
-            }
-          )}
-        </SyntaxHighlighter>
-      </Card>
     </div>
   );
 };

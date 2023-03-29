@@ -1,17 +1,16 @@
 import type { DeepPartial } from '../..';
 import type { AlertTheme } from '../../atoms/Alert/Alert.theme';
-import type { BreadcrumbTheme } from '../../atoms/Breadcrumb/Breadcrumb.theme';
-import type { ButtonTheme } from '../../atoms/Button/Button.theme';
-import type { DarkThemeToggleTheme } from '../../atoms/DarkThemeToggle/DarkThemeToggle.theme';
-import type { MainContainerTheme } from '../../atoms/MainContainer/MainContainer.theme';
-import type { ToastTheme } from '../../atoms/Toast/Toast.theme';
-import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
-
 import type { AvatarTheme } from '../../atoms/Avatar/Avatar.theme';
 import type { BadgeTheme } from '../../atoms/Badge/Badge.theme';
+import type { BreadcrumbTheme } from '../../atoms/Breadcrumb/Breadcrumb.theme';
+import type { ButtonTheme } from '../../atoms/Button/Button.theme';
+import type { MainContainerTheme } from '../../atoms/MainContainer/MainContainer.theme';
 import type { ProgressTheme } from '../../atoms/Progress/Progress.theme';
+import type { ProgressBarTheme } from '../../atoms/ProgressBar/ProgressBar.theme';
 import type { RatingTheme } from '../../atoms/Rating/Rating.theme';
 import type { SpinnerTheme } from '../../atoms/Spinner/Spinner.theme';
+import type { ToastTheme } from '../../atoms/Toast/Toast.theme';
+import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
 import type { AccordionTheme } from '../../molecules/Accordion/Accordion.theme';
 import type { ButtonGroupTheme } from '../../molecules/ButtonGroup/ButtonGroup.theme';
 import type { CameraRollTheme } from '../../molecules/CameraRoll/CameraRoll.theme';
@@ -42,7 +41,6 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   cameraRoll: CameraRollTheme;
   card: CardTheme;
   carousel: CarouselTheme;
-  darkThemeToggle: DarkThemeToggleTheme;
   dropdown: DropdownTheme;
   footer: FooterTheme;
   formControls: FormControlsTheme;
@@ -53,6 +51,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   rating: RatingTheme;
   pagination: PaginationTheme;
   presentational: PresentationTheme;
+  progressBar: ProgressBarTheme;
   sidebar: SidebarTheme;
   progress: ProgressTheme;
   mainContainer: MainContainerTheme;

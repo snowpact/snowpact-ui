@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <div className="relative">
       <div
-        className={classNames('absolute w-full h-full top-0 left-0 opacity-100', backgroundClassName)}
+        className={classNames('absolute w-full h-full top-0 left-0 opacity-100 bg-no-repeat', backgroundClassName)}
         style={{
           background: backgroundImage ? `url('${backgroundImage}')` : undefined,
           backgroundPosition: backgroundPosition,

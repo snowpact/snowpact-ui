@@ -1,4 +1,6 @@
+import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
+import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 function getDocHeight(document: Document) {
   return Math.max(
@@ -19,6 +21,7 @@ interface ProgressBarProps {
 
 export const ProgressBar: React.FC<ProgressBarProps> = ({ color }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const theme = useTheme().theme.progressBar;
 
   useEffect(() => {
     function calculateScrollDistance() {
@@ -42,7 +45,10 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ color }) => {
 
   return (
     <div
-      className="fixed top-0 z-[1001] h-[4px] bg-blue-100 transition-all duration-300 ease-out"
+      className={classNames(
+        'fixed top-0 z-[1001] h-[4px] bg-blue-100 transition-all duration-300 ease-out',
+        theme.color
+      )}
       style={{
         width: `${scrollPosition}%`,
         backgroundColor: color

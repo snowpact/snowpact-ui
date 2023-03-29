@@ -3,7 +3,6 @@ export * from './Avatar';
 export * from './Badge';
 export * from './Breadcrumb';
 export * from './Button';
-export * from './DarkThemeToggle';
 export * from './MainContainer';
 export * from './Progress';
 export * from './ProgressBar';

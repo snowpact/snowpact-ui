@@ -4,7 +4,7 @@ import { BsGithub } from 'react-icons/bs';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { SiStorybook } from 'react-icons/si';
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
-import { DarkThemeToggle, Navbar, Sidebar, Spinner } from '../lib';
+import { Navbar, Sidebar, Spinner } from '../lib';
 import { routes } from './routes';
 
 export const Root: FC = () => {
@@ -41,7 +41,6 @@ export const Root: FC = () => {
           >
             <BsGithub className="h-5 w-5" />
           </a>
-          <DarkThemeToggle />
         </div>
       </Navbar>
       <div className="flex h-full overflow-hidden bg-white dark:bg-gray-900">

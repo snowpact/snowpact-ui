@@ -46,6 +46,7 @@
     "mini-svg-data-uri": "^1.4.4",
     "react-icons": "^4.4.0",
     "react-indiana-drag-scroll": "^2.2.0",
+    "tailwind-merge": "^1.11.0",
     "yup": "^0.32.11"
   },
   "peerDependencies": {

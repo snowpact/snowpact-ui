@@ -4,7 +4,8 @@ export type NavBarTheme = {
   base: string;
   innerBase: string;
   brand: string;
-  navbarBackground: string;
+  background: string;
+  fixedTransparentStyle: string;
   collapse: {
     base: string;
     list: string;
@@ -24,8 +25,9 @@ export type NavBarTheme = {
 export const NAV_BAR_THEME: NavBarTheme = {
   base: 'border-gray-200 py-2.5 z-[1000]',
   innerBase: 'mx-auto flex flex-wrap items-center justify-between',
-  navbarBackground: 'bg-primary-500',
   brand: 'flex items-center',
+  fixedTransparentStyle: '',
+  background: 'bg-red-500',
   collapse: {
     base: 'w-full md:block md:w-auto',
     list: 'mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium',
