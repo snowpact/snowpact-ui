@@ -1,3 +1,10 @@
+## [0.9.2](https://github.com/snowpact/snowpact-ui/compare/v0.9.1...v0.9.2) (2023-03-29)
+
+
+### Bug Fixes
+
+* **navbar:** fix sticky behaviour ([46de0c5](https://github.com/snowpact/snowpact-ui/commit/46de0c5a61deb0f6593f74220fa1600b18a99942))
+
 ## [0.9.1](https://github.com/snowpact/snowpact-ui/compare/v0.9.0...v0.9.1) (2023-03-29)
 
 
