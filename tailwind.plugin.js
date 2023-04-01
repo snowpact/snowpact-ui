@@ -8,7 +8,8 @@ const [baseFontSize, { lineHeight: baseLineHeight }] = defaultTheme.fontSize.bas
 const { spacing, borderWidth, borderRadius } = defaultTheme;
 
 module.exports = plugin(
-  function ({ addBase, theme }) {
+  function ({ addBase, theme, addVariant }) {
+    addVariant('mobile-only', "@media screen and (max-width: theme('screens.sm'))");
     addBase({
       [[
         "[type='text']",

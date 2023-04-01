@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 export type ForeGroundPosition =
@@ -20,6 +21,7 @@ export interface HeroProps {
   backgroundRepeat?: 'repeat' | 'repeat-x' | 'repeat-y' | 'no-repeat' | string;
   backgroundClassName?: string;
   position?: ForeGroundPosition;
+  centerPositionOnMobile?: boolean;
   height?: string;
   foregroundMaxWidth?: string;
   children: React.ReactNode;
@@ -33,6 +35,7 @@ export const Hero: React.FC<HeroProps> = ({
   backgroundRepeat,
   backgroundClassName,
   position,
+  centerPositionOnMobile,
   height = '600px',
   foregroundMaxWidth
 }) => {
@@ -57,11 +60,8 @@ export const Hero: React.FC<HeroProps> = ({
       >
         <section className={'container grid w-full'}>
           <div
-            className={classNames(
-              'flex flex-col py-6 max-h-screen h-7',
-              theme.foregroundMaxWidth,
-              theme.foregroundWrapper,
-              [
+            className={twMerge(
+              classNames('flex flex-col py-6 max-h-screen h-7', theme.foregroundMaxWidth, theme.foregroundWrapper, [
                 position === 'top-left' && 'justify-start items-start text-left',
                 position === 'top-center' && 'justify-start items-center text-center justify-self-center',
                 position === 'top-right' && 'justify-start items-end text-right justify-self-end',
@@ -70,12 +70,14 @@ export const Hero: React.FC<HeroProps> = ({
                 position === 'center-right' && 'justify-center items-end text-right justify-self-end',
                 position === 'bottom-left' && 'justify-end items-start text-left',
                 position === 'bottom-center' && 'justify-end items-center text-center justify-self-center',
-                position === 'bottom-right' && 'justify-end items-end text-right justify-self-end'
-              ]
+                position === 'bottom-right' && 'justify-end items-end text-right justify-self-end',
+                centerPositionOnMobile &&
+                  'mobile-only:justify-center mobile-only:items-center mobile-only:text-center mobile-only:justify-self-center'
+              ])
             )}
             style={{
               height: height,
-              maxWidth: foregroundMaxWidth
+              maxWidth: centerPositionOnMobile ? undefined : foregroundMaxWidth
             }}
           >
             {children}
