@@ -1,3 +1,10 @@
+## [0.9.5](https://github.com/snowpact/snowpact-ui/compare/v0.9.4...v0.9.5) (2023-04-01)
+
+
+### Bug Fixes
+
+* **navbar:** close navbar on mobile for brand ([12b9939](https://github.com/snowpact/snowpact-ui/commit/12b9939443b7df3e64af3e5e658b97d1e283cea2))
+
 ## [0.9.4](https://github.com/snowpact/snowpact-ui/compare/v0.9.3...v0.9.4) (2023-04-01)
 
 
