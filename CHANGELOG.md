@@ -1,3 +1,10 @@
+## [0.9.3](https://github.com/snowpact/snowpact-ui/compare/v0.9.2...v0.9.3) (2023-04-01)
+
+
+### Bug Fixes
+
+* **navbar:** fix navbar sticky and mobile mode ([7bc18e1](https://github.com/snowpact/snowpact-ui/commit/7bc18e137273bf5f9223ca6ab255ca5a5ae638ce))
+
 ## [0.9.2](https://github.com/snowpact/snowpact-ui/compare/v0.9.1...v0.9.2) (2023-03-29)
 
 
