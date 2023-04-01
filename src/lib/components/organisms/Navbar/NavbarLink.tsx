@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
+import { useNavbarContext } from './NavbarContext';
 
 export interface NavbarLinkProps extends Omit<PropsWithChildren<ComponentProps<'a'>>, 'className'> {
   active?: boolean;
@@ -16,6 +17,18 @@ export const NavbarLink: FC<NavbarLinkProps> = ({ active, disabled, href, childr
 
   const LinkComponent = as || 'a';
 
+  const { setIsOpen } = useNavbarContext();
+
+  const onClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    if (disabled) {
+      e.preventDefault();
+    }
+    if (props.onClick) {
+      props.onClick(e);
+    }
+    setIsOpen(false);
+  };
+
   return (
     <li>
       <LinkComponent
@@ -29,6 +42,7 @@ export const NavbarLink: FC<NavbarLinkProps> = ({ active, disabled, href, childr
           theme.disabled[disabled ? 'on' : 'off']
         )}
         {...theirProps}
+        onClick={onClick}
       >
         {children}
       </LinkComponent>
