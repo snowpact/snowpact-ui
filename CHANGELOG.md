@@ -1,3 +1,11 @@
+## [0.9.4](https://github.com/snowpact/snowpact-ui/compare/v0.9.3...v0.9.4) (2023-04-01)
+
+
+### Bug Fixes
+
+* **navbar:** close navbar on mobile on link change ([d3475fc](https://github.com/snowpact/snowpact-ui/commit/d3475fc61c239154d44467b9b43dbe507fc0e4fe))
+* **navbar:** fix navbar sticky theme apply ([1c4169b](https://github.com/snowpact/snowpact-ui/commit/1c4169bb084f936c5e4ba7f890da8566f64c716d))
+
 ## [0.9.3](https://github.com/snowpact/snowpact-ui/compare/v0.9.2...v0.9.3) (2023-04-01)
 
 
