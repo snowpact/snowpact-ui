@@ -32,10 +32,10 @@ export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = f
       <nav
         className={twMerge(
           classNames(theme.base, theme.background, [
-            sticky === 'transparent' && 'fixed top-0 left-0 right-0 transition linear delay-150',
-            sticky === 'transparent' && fixedEffect === NavbarSticky.STICKY_TOP && !isOpen && 'bg-transparent',
-            sticky === 'transparent' && fixedEffect === NavbarSticky.STICKY_TOP && theme.fixedTransparentStyle,
-            sticky === 'transparent' && fixedEffect === NavbarSticky.STICKY_STICKED,
+            sticky === 'transparent' && [
+              'fixed top-0 left-0 right-0 transition linear delay-150',
+              fixedEffect === NavbarSticky.STICKY_TOP && !isOpen && `bg-transparent ${theme.fixedTransparentStyle}`
+            ],
             sticky === 'solid' && 'sticky top-0',
             isOpen && 'h-screen'
           ])
