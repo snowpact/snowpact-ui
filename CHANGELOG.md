@@ -1,3 +1,10 @@
+## [0.9.6](https://github.com/snowpact/snowpact-ui/compare/v0.9.5...v0.9.6) (2023-04-03)
+
+
+### Bug Fixes
+
+* **hero:** fix hero ([859b524](https://github.com/snowpact/snowpact-ui/commit/859b524e2a4f980f78ece39593c010e1fffe41e5))
+
 ## [0.9.5](https://github.com/snowpact/snowpact-ui/compare/v0.9.4...v0.9.5) (2023-04-01)
 
 
