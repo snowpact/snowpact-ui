@@ -77,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({
             )}
             style={{
               height: height,
-              maxWidth: centerPositionOnMobile ? undefined : foregroundMaxWidth
+              maxWidth: centerPositionOnMobile ? '100%' : foregroundMaxWidth
             }}
           >
             {children}
