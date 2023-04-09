@@ -37,10 +37,10 @@ export const NAV_BAR_THEME: NavBarTheme = {
     }
   },
   link: {
-    base: 'block py-2 pr-4 pl-3 md:p-0',
+    base: 'block md:py-2 pr-4 pl-3 md:p-0 py-6',
     active: {
       on: 'bg-primary-700 text-white md:bg-transparent md:text-primary-700',
-      off: 'border-b border-gray-100  text-gray-700 hover:bg-gray-50:bg-gray-700:text-white md:border-0 md:hover:bg-transparent md:hover:text-primary-700'
+      off: 'border-b border-gray-100 text-gray-700 hover:bg-gray-50:bg-gray-700:text-white md:border-0 md:hover:bg-transparent md:hover:text-primary-700'
     },
     disabled: {
       on: 'text-gray-400 hover:cursor-not-allowed',

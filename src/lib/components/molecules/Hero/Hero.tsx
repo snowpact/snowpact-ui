@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({
                 position === 'bottom-center' && 'justify-end items-center text-center justify-self-center',
                 position === 'bottom-right' && 'justify-end items-end text-right justify-self-end',
                 centerPositionOnMobile &&
-                  'mobile-only:justify-center mobile-only:items-center mobile-only:text-center mobile-only:justify-self-center'
+                  'mobile-only:justify-center mobile-only:items-center mobile-only:text-center mobile-only:justify-self-center mobile-only:w-full'
               ])
             )}
             style={{

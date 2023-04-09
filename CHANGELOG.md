@@ -1,3 +1,17 @@
+## [0.9.7](https://github.com/snowpact/snowpact-ui/compare/v0.9.6...v0.9.7) (2023-04-04)
+
+
+### Bug Fixes
+
+* **hero:** width full as hero on mobile ([ac66e12](https://github.com/snowpact/snowpact-ui/commit/ac66e12d317bd12ccd35460bc49592eb38525f64))
+
+## [0.9.6](https://github.com/snowpact/snowpact-ui/compare/v0.9.5...v0.9.6) (2023-04-03)
+
+
+### Bug Fixes
+
+* **hero:** fix hero ([859b524](https://github.com/snowpact/snowpact-ui/commit/859b524e2a4f980f78ece39593c010e1fffe41e5))
+
 ## [0.9.5](https://github.com/snowpact/snowpact-ui/compare/v0.9.4...v0.9.5) (2023-04-01)
 
 
