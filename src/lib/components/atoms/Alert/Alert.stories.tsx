@@ -70,7 +70,7 @@ AlertWithAdditionalContent.args = {
   withBorderAccent: true,
   additionalContent: (
     <>
-      <div className="mt-2 mb-4 text-sm text-blue-700">
+      <div className="mb-4 mt-2 text-sm text-blue-700">
         More info about this info alert goes here. This example text is going to run a bit longer so that you can see
         how spacing within an alert works with this kind of content.
       </div>
@@ -108,7 +108,7 @@ AlertWithAllOptions.args = {
   icon: HiInformationCircle,
   additionalContent: (
     <>
-      <div className="mt-2 mb-4 text-sm text-green-700">
+      <div className="mb-4 mt-2 text-sm text-green-700">
         More info about this info alert goes here. This example text is going to run a bit longer so that you can see
         how spacing within an alert works with this kind of content.
       </div>

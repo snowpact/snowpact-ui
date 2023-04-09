@@ -25,7 +25,7 @@ const DashboardPage: FC = () => {
               className="h-64 rounded-xl border border-gray-100 bg-white shadow transition hover:border-white hover:shadow-lg dark:border-gray-700 dark:bg-gray-900 dark:shadow-gray-800 dark:hover:border-gray-600"
               to={href}
             >
-              <div className="flex items-center justify-between rounded-t-lg border-b border-gray-200 bg-gray-50 py-2.5 px-5 dark:border-gray-700 dark:bg-gray-700">
+              <div className="flex items-center justify-between rounded-t-lg border-b border-gray-200 bg-gray-50 px-5 py-2.5 dark:border-gray-700 dark:bg-gray-700">
                 <span className="text-lg font-medium text-gray-500 dark:text-gray-400">{title}</span>
                 <HiExternalLink className="h-5 w-5 text-gray-900 dark:text-white" />
               </div>

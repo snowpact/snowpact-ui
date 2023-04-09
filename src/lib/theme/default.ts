@@ -15,6 +15,7 @@ import { ACCORDION_THEME } from '../components/molecules/Accordion/Accordion.the
 import { BUTTON_GROUP_THEME } from '../components/molecules/ButtonGroup/ButtonGroup.theme';
 import { CAMERA_ROLL_THEME } from '../components/molecules/CameraRoll/CameraRoll.theme';
 import { CARD_THEME } from '../components/molecules/Card/Card.theme';
+import { CODEBLOCK_THEME } from '../components/molecules/Codeblock/Codeblock.theme';
 import { DROPDOWN_THEME } from '../components/molecules/Dropdown/Dropdown.theme';
 import { HERO_THEME } from '../components/molecules/Hero/Hero.theme';
 import { LIST_GROUP_THEME } from '../components/molecules/ListGroup/ListGroup.theme';
@@ -39,6 +40,7 @@ const theme: HelloInternetTheme = {
   cameraRoll: CAMERA_ROLL_THEME,
   card: CARD_THEME,
   carousel: CAROUSEL_THEME,
+  codeblock: CODEBLOCK_THEME,
   dropdown: DROPDOWN_THEME,
   footer: FOOTER_THEME,
   formControls: FORM_CONTROLS_THEME,
