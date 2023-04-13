@@ -10,14 +10,15 @@ export interface StackItemProps
 
 export const StackItem: FC<StackItemProps> = ({ link, children, title }): JSX.Element => {
   const theme = useTheme().theme.stacks.stackItem;
+
+  const Component = typeof link === 'undefined' ? 'div' : 'a';
+
   return (
-    <a href={link}>
-      <div className={classNames(theme.link.base, [link && theme.link.withLink])}>
-        {children}
-        <p className={theme.text}>
-          <strong>{title}</strong>
-        </p>
-      </div>
-    </a>
+    <Component className={classNames(theme.link.base, [link && theme.link.withLink])} href={link}>
+      {children}
+      <p className={theme.text}>
+        <strong>{title}</strong>
+      </p>
+    </Component>
   );
 };

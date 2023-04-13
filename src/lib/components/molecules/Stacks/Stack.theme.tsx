@@ -58,7 +58,7 @@ export const STACKS_THEME: StacksTheme = {
   title: {
     base: 'my-2',
     horizontal: 'sm:rotate-360 w-36 self-center',
-    text: 'text-sm font-semibold text-gray-500'
+    text: 'text-xl text-black'
   },
   stackItem: {
     base: 'mt-2 flex gap-4',
@@ -66,7 +66,7 @@ export const STACKS_THEME: StacksTheme = {
       on: 'flex-row',
       off: 'flex-col'
     },
-    text: 'flex-1 text-sm font-bold text-gray-500',
+    text: 'flex-1 text-sm font-[520] text-black',
     link: {
       base: 'inline-block min-w-[120px] rounded-xl px-2 py-6 text-center shadow-lg',
       withLink: 'duration-300 ease-in hover:shadow-xl'
