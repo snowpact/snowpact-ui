@@ -107,9 +107,7 @@ DefaultStack.args = {
         <Stack.ItemGroup key={index}>
           <Stack.Title>{stack.stackTitle}</Stack.Title>
           {stack.items.map((item, index) => (
-            <Stack.Item key={index} title={item.title} link={item.link}>
-              <Stack.Image image={item.image} alt={item.alt} grayscale={item.grayscale} />
-            </Stack.Item>
+            <Stack.Item key={index} {...item} />
           ))}
         </Stack.ItemGroup>
       ))}
@@ -126,9 +124,7 @@ HorizontalStack.args = {
         <Stack.ItemGroup horizontal key={index}>
           <Stack.Title>{stack.stackTitle}</Stack.Title>
           {stack.items.map((item, index) => (
-            <Stack.Item key={index} title={item.title} link={item.link}>
-              <Stack.Image image={item.image} alt={item.alt} grayscale={item.grayscale} />
-            </Stack.Item>
+            <Stack.Item key={index} {...item} />
           ))}
         </Stack.ItemGroup>
       ))}
@@ -145,9 +141,14 @@ WithLinks.args = {
         <Stack.ItemGroup key={index}>
           <Stack.Title>{stack.stackTitle}</Stack.Title>
           {stack.items.map((item, index) => (
-            <Stack.Item key={index} title={item.title} link={item.link}>
-              <Stack.Image image={item.image} alt={item.alt} grayscale={item.grayscale} />
-            </Stack.Item>
+            <Stack.Item
+              key={index}
+              title={item.title}
+              link={item.link}
+              image={item.image}
+              alt={item.alt}
+              grayscale={item.grayscale}
+            />
           ))}
         </Stack.ItemGroup>
       ))}

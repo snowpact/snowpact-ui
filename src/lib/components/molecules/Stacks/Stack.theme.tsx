@@ -31,10 +31,10 @@ export type StacksTheme = {
       base: string;
       withLink: string;
     };
-  };
-  stackImage: {
-    base: string;
-    withGrayscale: string;
+    stackImage: {
+      base: string;
+      withGrayscale: string;
+    };
   };
 };
 
@@ -68,12 +68,12 @@ export const STACKS_THEME: StacksTheme = {
     },
     text: 'flex-1 text-sm font-[520] text-black',
     link: {
-      base: 'inline-block min-w-[120px] rounded-xl px-2 py-6 text-center shadow-lg',
+      base: 'inline-block min-w-[120px] rounded-xl px-2 py-6 text-center shadow-lg margin-auto',
       withLink: 'duration-300 ease-in hover:shadow-xl'
+    },
+    stackImage: {
+      base: 'mb-2 inline-block h-10 w-10 object-contain',
+      withGrayscale: 'opacity-50 grayscale'
     }
-  },
-  stackImage: {
-    base: 'mb-2 inline-block h-10 w-10 object-contain',
-    withGrayscale: 'opacity-50 grayscale'
   }
 };
