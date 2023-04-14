@@ -9,9 +9,11 @@ import type { ProgressTheme } from '../../atoms/Progress/Progress.theme';
 import type { ProgressBarTheme } from '../../atoms/ProgressBar/ProgressBar.theme';
 import type { RatingTheme } from '../../atoms/Rating/Rating.theme';
 import type { SpinnerTheme } from '../../atoms/Spinner/Spinner.theme';
+import type { TagTheme } from '../../atoms/Tag/Tag.theme';
 import type { ToastTheme } from '../../atoms/Toast/Toast.theme';
 import type { TooltipTheme } from '../../atoms/Tooltip/Tooltip.theme';
 import type { AccordionTheme } from '../../molecules/Accordion/Accordion.theme';
+import type { BlogPostTheme } from '../../molecules/BlogPost/BlogPost.theme';
 import type { ButtonGroupTheme } from '../../molecules/ButtonGroup/ButtonGroup.theme';
 import type { CameraRollTheme } from '../../molecules/CameraRoll/CameraRoll.theme';
 import type { CardTheme } from '../../molecules/Card/Card.theme';
@@ -26,6 +28,7 @@ import type { CarouselTheme } from '../../organisms/Carousel/Carousel.theme';
 import type { FooterTheme } from '../../organisms/Footer/Footer.theme';
 import type { FormControlsTheme } from '../../organisms/FormControls/FormControls.theme';
 import type { NavBarTheme } from '../../organisms/Navbar/Navbar.theme';
+import type { PostAuthorTheme } from '../../organisms/PostAuthor/PostAuthor.theme';
 import type { SidebarTheme } from '../../organisms/Sidebar/Sidebar.theme';
 
 export type CustomHelloInternetTheme = DeepPartial<HelloInternetTheme>;
@@ -35,6 +38,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   alert: AlertTheme;
   avatar: AvatarTheme;
   badge: BadgeTheme;
+  blogPost: BlogPostTheme;
   breadcrumb: BreadcrumbTheme;
   button: ButtonTheme;
   buttonGroup: ButtonGroupTheme;
@@ -50,6 +54,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   navbar: NavBarTheme;
   rating: RatingTheme;
   pagination: PaginationTheme;
+  postAuthor: PostAuthorTheme;
   presentational: PresentationTheme;
   progressBar: ProgressBarTheme;
   sidebar: SidebarTheme;
@@ -57,6 +62,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   mainContainer: MainContainerTheme;
   spinner: SpinnerTheme;
   tab: TabsTheme;
+  tag: TagTheme;
   toast: ToastTheme;
   tooltip: TooltipTheme;
 }

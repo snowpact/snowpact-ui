@@ -8,10 +8,12 @@ import { PROGRESS_THEME } from '../components/atoms/Progress/Progress.theme';
 import { PROGRESS_BAR_THEME } from '../components/atoms/ProgressBar/ProgressBar.theme';
 import { RATING_THEME } from '../components/atoms/Rating/Rating.theme';
 import { SPINNER_THEME } from '../components/atoms/Spinner/Spinner.theme';
+import { TAG_THEME } from '../components/atoms/Tag/Tag.theme';
 import { TOAST_THEME } from '../components/atoms/Toast/Toast.theme';
 import { TOOLTIP_THEME } from '../components/atoms/Tooltip/Tooltip.theme';
 import type { HelloInternetTheme } from '../components/bosons';
 import { ACCORDION_THEME } from '../components/molecules/Accordion/Accordion.theme';
+import { BLOG_POST_THEME } from '../components/molecules/BlogPost/BlogPost.theme';
 import { BUTTON_GROUP_THEME } from '../components/molecules/ButtonGroup/ButtonGroup.theme';
 import { CAMERA_ROLL_THEME } from '../components/molecules/CameraRoll/CameraRoll.theme';
 import { CARD_THEME } from '../components/molecules/Card/Card.theme';
@@ -26,6 +28,7 @@ import { CAROUSEL_THEME } from '../components/organisms/Carousel/Carousel.theme'
 import { FOOTER_THEME } from '../components/organisms/Footer/Footer.theme';
 import { FORM_CONTROLS_THEME } from '../components/organisms/FormControls/FormControls.theme';
 import { NAV_BAR_THEME } from '../components/organisms/Navbar/Navbar.theme';
+import { POST_AUTHOR_THEME } from '../components/organisms/PostAuthor/PostAuthor.theme';
 import { SIDEBAR_THEME } from '../components/organisms/Sidebar/Sidebar.theme';
 
 const theme: HelloInternetTheme = {
@@ -33,6 +36,7 @@ const theme: HelloInternetTheme = {
   alert: ALERT_THEME,
   avatar: AVATAR_THEME,
   badge: BADGE_THEME,
+  blogPost: BLOG_POST_THEME,
   breadcrumb: BREADCRUMB_THEME,
   button: BUTTON_THEME,
   buttonGroup: BUTTON_GROUP_THEME,
@@ -48,6 +52,7 @@ const theme: HelloInternetTheme = {
   navbar: NAV_BAR_THEME,
   rating: RATING_THEME,
   pagination: PAGINATION_THEME,
+  postAuthor: POST_AUTHOR_THEME,
   progressBar: PROGRESS_BAR_THEME,
   sidebar: SIDEBAR_THEME,
   progress: PROGRESS_THEME,
@@ -55,6 +60,7 @@ const theme: HelloInternetTheme = {
   mainContainer: MAIN_CONTAINER_THEME,
   spinner: SPINNER_THEME,
   tab: TABS_THEME,
+  tag: TAG_THEME,
   toast: TOAST_THEME,
   tooltip: TOOLTIP_THEME
 };
