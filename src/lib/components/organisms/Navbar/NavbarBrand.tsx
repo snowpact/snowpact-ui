@@ -22,7 +22,7 @@ export const NavbarBrand: FC<NavbarBrandProps> = ({ children, href, as, ...props
   };
 
   return (
-    <LinkComponent href={href} className={theme.brand} {...theirProps} onClick={onClick}>
+    <LinkComponent href={href} className={theme.brand} {...theirProps} onClick={onClick} as={as}>
       {children}
     </LinkComponent>
   );
