@@ -56,7 +56,7 @@ const AlertsPage: FC = () => {
           color="info"
           additionalContent={
             <>
-              <div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">
+              <div className="mb-4 mt-2 text-sm text-blue-700 dark:text-blue-800">
                 More info about this info alert goes here. This example text is going to run a bit longer so that you
                 can see how spacing within an alert works with this kind of content.
               </div>
@@ -93,7 +93,7 @@ const AlertsPage: FC = () => {
           onDismiss={() => alert('Alert dismissed!')}
           additionalContent={
             <>
-              <div className="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">
+              <div className="mb-4 mt-2 text-sm text-green-700 dark:text-green-800">
                 More info about this info alert goes here. This example text is going to run a bit longer so that you
                 can see how spacing within an alert works with this kind of content.
               </div>

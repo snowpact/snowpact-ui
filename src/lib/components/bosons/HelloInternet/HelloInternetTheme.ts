@@ -21,6 +21,7 @@ import type { ListGroupTheme } from '../../molecules/ListGroup/ListGroup.theme';
 import type { ModalTheme } from '../../molecules/Modal/Modal.theme';
 import type { PaginationTheme } from '../../molecules/Pagination/Pagination.theme';
 import type { PresentationTheme } from '../../molecules/Presentational/Presentational.theme';
+import type { PricingTheme } from '../../molecules/Pricing/Pricing.theme';
 import type { TabsTheme } from '../../molecules/Tab/Tabs.theme';
 import type { CarouselTheme } from '../../organisms/Carousel/Carousel.theme';
 import type { FooterTheme } from '../../organisms/Footer/Footer.theme';
@@ -59,6 +60,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   tab: TabsTheme;
   toast: ToastTheme;
   tooltip: TooltipTheme;
+  pricing: PricingTheme;
 }
 
 export interface FlowbiteBoolean {

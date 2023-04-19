@@ -21,6 +21,7 @@ import { LIST_GROUP_THEME } from '../components/molecules/ListGroup/ListGroup.th
 import { MODAL_THEME } from '../components/molecules/Modal/Modal.theme';
 import { PAGINATION_THEME } from '../components/molecules/Pagination/Pagination.theme';
 import { PRESENTATIONAL_THEME } from '../components/molecules/Presentational/Presentational.theme';
+import { PRICING_THEME } from '../components/molecules/Pricing/Pricing.theme';
 import { TABS_THEME } from '../components/molecules/Tab/Tabs.theme';
 import { CAROUSEL_THEME } from '../components/organisms/Carousel/Carousel.theme';
 import { FOOTER_THEME } from '../components/organisms/Footer/Footer.theme';
@@ -48,6 +49,7 @@ const theme: HelloInternetTheme = {
   navbar: NAV_BAR_THEME,
   rating: RATING_THEME,
   pagination: PAGINATION_THEME,
+  pricing: PRICING_THEME,
   progressBar: PROGRESS_BAR_THEME,
   sidebar: SIDEBAR_THEME,
   progress: PROGRESS_THEME,

@@ -8,6 +8,7 @@ export * from './ListGroup';
 export * from './Modal';
 export * from './Pagination';
 export * from './Presentational';
+export * from './Pricing';
 export * from './Tab';
 export * from './Table';
 export * from './Timeline';
