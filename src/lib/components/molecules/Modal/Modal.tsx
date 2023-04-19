@@ -41,6 +41,7 @@ export const Modal: FC<ModalProps> = ({
   useEffect(() => {
     if (!parent) setParent(document.body);
     if (!container) setContainer(document.createElement('div'));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
