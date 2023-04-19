@@ -17,7 +17,7 @@ export const FooterCopyright: FC<CopyrightProps> = ({ href, by, year, as }) => {
       <span className={theme.base} data-testid="flowbite-footer-copyright">
         © {year}
         {href ? (
-          <LinkComponent href={href} className={theme.href}>
+          <LinkComponent href={href} className={theme.href} as={as}>
             {by}
           </LinkComponent>
         ) : (
