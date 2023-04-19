@@ -1,6 +1,7 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { excludeClassName } from '../../../helpers/exclude';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
+import { LinkComponent } from '../../bosons/LinkComponent/LinkComponent';
 import { useNavbarContext } from './NavbarContext';
 
 export type NavbarBrandProps = Omit<PropsWithChildren<ComponentProps<'a'>>, 'className'> & {
@@ -10,7 +11,6 @@ export type NavbarBrandProps = Omit<PropsWithChildren<ComponentProps<'a'>>, 'cla
 export const NavbarBrand: FC<NavbarBrandProps> = ({ children, href, as, ...props }) => {
   const theme = useTheme().theme.navbar;
   const theirProps = excludeClassName(props);
-  const LinkComponent = as || 'a';
 
   const { setIsOpen } = useNavbarContext();
 

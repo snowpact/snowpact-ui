@@ -25,18 +25,26 @@ module.exports = {
       center: true,
     },
     extend: {
-      primary: {
-        50: '#f2f2fc',
-        100: '#ececfe',
-        200: '#e3e3fd',
-        300: '#cacafb',
-        400: '#8585f6',
-        500: '#6a6af4',
-        600: '#1212ff',
-        700: '#000091',
-        800: '#313178',
-        900: '#1b1b35'
+      colors: {
+        primary: "#686DE4",
+        secondary: "#E2525C",
+        success: "#4CE2A7",
+        error: "#E24C4C",
+        alert: "#F1A153",
+        dark: "#12193D",
       },
+      // primary: {
+      //   50: '#f2f2fc',
+      //   100: '#ececfe',
+      //   200: '#e3e3fd',
+      //   300: '#cacafb',
+      //   400: '#8585f6',
+      //   500: '#6a6af4',
+      //   600: '#1212ff',
+      //   700: '#000091',
+      //   800: '#313178',
+      //   900: '#1b1b35'
+      // },
       // sidebar mobile fix
       maxWidth: {
         '2xs': '16rem',
