@@ -43,15 +43,6 @@ AlertDismissible.args = {
   children: <>Info alert! Change a few things up and try submitting again.</>
 };
 
-export const AlertRounded = Template.bind({});
-AlertRounded.storyName = 'Not rounded';
-AlertRounded.args = {
-  color: 'warning',
-  rounded: false,
-  onDismiss: false,
-  children: <>Info alert! Change a few things up and try submitting again.</>
-};
-
 export const AlertWithBorderAccent = Template.bind({});
 AlertWithBorderAccent.storyName = 'Border accent';
 AlertWithBorderAccent.args = {
@@ -70,7 +61,7 @@ AlertWithAdditionalContent.args = {
   withBorderAccent: true,
   additionalContent: (
     <>
-      <div className="mt-2 mb-4 text-sm text-blue-700">
+      <div className="mb-4 mt-2 text-sm text-blue-700">
         More info about this info alert goes here. This example text is going to run a bit longer so that you can see
         how spacing within an alert works with this kind of content.
       </div>
@@ -102,13 +93,12 @@ export const AlertWithAllOptions = Template.bind({});
 AlertWithAllOptions.storyName = 'All options';
 AlertWithAllOptions.args = {
   color: 'success',
-  rounded: false,
   withBorderAccent: true,
   onDismiss: () => alert('Alert dismissed!'),
   icon: HiInformationCircle,
   additionalContent: (
     <>
-      <div className="mt-2 mb-4 text-sm text-green-700">
+      <div className="mb-4 mt-2 text-sm text-green-700">
         More info about this info alert goes here. This example text is going to run a bit longer so that you can see
         how spacing within an alert works with this kind of content.
       </div>

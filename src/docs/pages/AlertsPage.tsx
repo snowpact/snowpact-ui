@@ -35,11 +35,7 @@ const AlertsPage: FC = () => {
     },
     {
       title: 'Rounded',
-      code: (
-        <Alert color="warning" rounded={false}>
-          {alertText}
-        </Alert>
-      )
+      code: <Alert color="warning">{alertText}</Alert>
     },
     {
       title: 'Border accent',
@@ -88,7 +84,6 @@ const AlertsPage: FC = () => {
       code: (
         <Alert
           color="success"
-          rounded={false}
           withBorderAccent
           onDismiss={() => alert('Alert dismissed!')}
           additionalContent={

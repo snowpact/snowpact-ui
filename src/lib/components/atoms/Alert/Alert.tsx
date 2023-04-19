@@ -9,7 +9,6 @@ export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>
   color?: keyof AlertColors;
   icon?: FC<ComponentProps<'svg'>>;
   onDismiss?: boolean | (() => void);
-  rounded?: boolean;
   withBorderAccent?: boolean;
 }
 
@@ -21,7 +20,6 @@ export const Alert: FC<AlertProps> = ({
   color = 'info',
   icon: Icon,
   onDismiss,
-  rounded = true,
   withBorderAccent
 }) => {
   const theme = useTheme().theme.alert;
@@ -29,9 +27,10 @@ export const Alert: FC<AlertProps> = ({
   return (
     <div
       className={classNames(
-        theme.base,
+        'flex flex-col gap-2 p-4',
+        theme.block,
+        theme.text,
         theme.color[color],
-        rounded && theme.rounded,
         withBorderAccent && theme.borderAccent
       )}
       role="alert"
@@ -42,7 +41,11 @@ export const Alert: FC<AlertProps> = ({
         {typeof onDismiss === 'function' && (
           <button
             aria-label="Dismiss"
-            className={classNames(theme.closeButton.base, theme.closeButton.color[color])}
+            className={classNames(
+              '-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 p-1.5',
+              theme.closingButton,
+              theme.color[color]
+            )}
             onClick={onDismiss}
             type="button"
           >
