@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
+import { LinkComponent } from '../../bosons/LinkComponent/LinkComponent';
 
 export interface PricingCardProps {
   icon?: React.ReactNode;
@@ -26,12 +28,13 @@ export const PricingCard = ({
   const theme = useTheme().theme.pricing;
   return (
     <div
-      className={classNames(
-        'grid h-[495px] w-96 grid-rows-[80px_50px_45px_1fr_50px] p-8 md:px-14 md:pt-14',
-        theme.blockStyle.base,
-        main ? theme.blockStyle.variantTwo : theme.blockStyle.variantOne,
-        theme.textStyle.base,
-        main ? theme.textStyle.variantTwo : theme.textStyle.variantOne
+      className={twMerge(
+        classNames(
+          'grid h-[495px] w-96 grid-rows-[80px_50px_45px_1fr_50px] p-8 md:px-14 md:pt-14',
+          theme.block,
+          theme.text,
+          main && [theme.variant.main.block, theme.variant.main.text]
+        )
       )}
     >
       <div className={classNames('flex justify-self-start', theme.icon)}>{icon}</div>
@@ -42,26 +45,27 @@ export const PricingCard = ({
         <span className={classNames('self-end', theme.priceFrequency)}>{priceFrequency}</span>
       </div>
       <div className="pt-5">
-        <ul className="flex flex-col gap-1">
+        <ul className="flex list-disc flex-col gap-1">
           {details.map((detail, index) => (
             <li key={index} className={classNames(theme.details)}>
-              • {detail}
+              {detail}
             </li>
           ))}
         </ul>
       </div>
-      <a href={link}>
+      <LinkComponent href={link}>
         <div
-          className={classNames(
-            'flex h-full w-full cursor-pointer items-center justify-center',
-            theme.buttonStyle.base,
-            theme.button,
-            main ? theme.buttonStyle.variantTwo : theme.buttonStyle.variantOne
+          className={twMerge(
+            classNames(
+              'flex h-full w-full cursor-pointer items-center justify-center',
+              theme.button,
+              main && theme.variant.main.button
+            )
           )}
         >
           {buttonTitle}
         </div>
-      </a>
+      </LinkComponent>
     </div>
   );
 };
