@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/snowpact/snowpact-ui/compare/v0.9.7...v0.10.0) (2023-04-19)
+
+
+### Features
+
+* **pricing:** component migration ([#58](https://github.com/snowpact/snowpact-ui/issues/58)) ([343f77d](https://github.com/snowpact/snowpact-ui/commit/343f77d7be3e5a56f0365f7b188ae8972a3ac0cc))
+
 ## [0.9.7](https://github.com/snowpact/snowpact-ui/compare/v0.9.6...v0.9.7) (2023-04-04)
 
 
