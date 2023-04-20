@@ -1,3 +1,10 @@
+# [0.11.0](https://github.com/snowpact/snowpact-ui/compare/v0.10.0...v0.11.0) (2023-04-20)
+
+
+### Features
+
+* **fluidsection:** add new fluid section component ([232c157](https://github.com/snowpact/snowpact-ui/commit/232c1579bc526210b4ea3dc200da289656e57545))
+
 # [0.10.0](https://github.com/snowpact/snowpact-ui/compare/v0.9.7...v0.10.0) (2023-04-19)
 
 
