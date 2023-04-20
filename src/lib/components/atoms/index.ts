@@ -3,6 +3,7 @@ export * from './Avatar';
 export * from './Badge';
 export * from './Breadcrumb';
 export * from './Button';
+export * from './FluidSection';
 export * from './MainContainer';
 export * from './Progress';
 export * from './ProgressBar';
