@@ -139,7 +139,7 @@ export const RealCaseExample = () => {
       <main className="container">
         <section>
           <Hero
-            backgroundImage="https://snowpact.com/static/ed537a24f8aeaeaad12559d85dc3baad/a66ad/page-home.jpg"
+            backgroundImage="https://picsum.photos/1920/1080"
             position="center-left"
             backgroundPosition="right center"
             foregroundMaxWidth="45%"
