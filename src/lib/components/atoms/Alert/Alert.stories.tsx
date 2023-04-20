@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import { HiEye, HiInformationCircle } from 'react-icons/hi';
+import { HiEye } from 'react-icons/hi';
 import { Alert } from '.';
 import type { AlertProps } from './Alert';
 
@@ -25,7 +25,6 @@ DefaultAlert.args = {
 export const AlertWithIcons = Template.bind({});
 AlertWithIcons.storyName = 'With icons';
 AlertWithIcons.args = {
-  icon: HiInformationCircle,
   onDismiss: false,
   children: (
     <>
@@ -48,7 +47,6 @@ AlertWithBorderAccent.storyName = 'Border accent';
 AlertWithBorderAccent.args = {
   color: 'warning',
   onDismiss: false,
-  withBorderAccent: true,
   children: <>Info alert! Change a few things up and try submitting again.</>
 };
 
@@ -56,9 +54,7 @@ export const AlertWithAdditionalContent = Template.bind({});
 AlertWithAdditionalContent.storyName = 'Additional content';
 AlertWithAdditionalContent.args = {
   color: 'info',
-  icon: HiInformationCircle,
   onDismiss: false,
-  withBorderAccent: true,
   additionalContent: (
     <>
       <div className="mb-4 mt-2 text-sm text-blue-700">
@@ -93,9 +89,7 @@ export const AlertWithAllOptions = Template.bind({});
 AlertWithAllOptions.storyName = 'All options';
 AlertWithAllOptions.args = {
   color: 'success',
-  withBorderAccent: true,
   onDismiss: () => alert('Alert dismissed!'),
-  icon: HiInformationCircle,
   additionalContent: (
     <>
       <div className="mb-4 mt-2 text-sm text-green-700">

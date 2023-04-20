@@ -2,7 +2,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { FC } from 'react';
 import { useState } from 'react';
-import { HiEye, HiInformationCircle } from 'react-icons/hi';
+import { HiEye } from 'react-icons/hi';
 import { describe, expect, it, vi } from 'vitest';
 import { Alert } from '.';
 
@@ -75,9 +75,7 @@ const TestAlert: FC = () => {
         </>
       }
       color="info"
-      icon={HiInformationCircle}
       onDismiss={() => setDismissed(!isDismissed)}
-      withBorderAccent
     >
       {isDismissed ? 'dismissed' : 'waiting'}
     </Alert>

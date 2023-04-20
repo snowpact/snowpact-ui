@@ -191,7 +191,7 @@ Use the following examples of alert components to show messages as feedback to y
 You can also include a descriptive icon to complement the message inside the alert component with the following example.
 
 {{< example class="flex space-x-4 dark:bg-gray-800" github="docs/components/alerts.md" show_dark=true >}}
-<Alert color="info" icon={HiInformationCircle}>
+<Alert color="info">
   <span class="font-medium">Info alert!</span>
   Change a few things up and try submitting again.
 </div>
@@ -229,7 +229,6 @@ The following alert components can be used if you wish to disclose more informat
 {{< example class="flex space-x-4 dark:bg-gray-800" github="docs/components/alerts.md" show_dark=true >}}
 <Alert
   color="info"
-  icon={HiInformationCircle}
   additionalContent={
     <>
       <div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">

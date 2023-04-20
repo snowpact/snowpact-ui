@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { HiEye, HiInformationCircle } from 'react-icons/hi';
+import { HiEye } from 'react-icons/hi';
 import { Alert } from '../../lib';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
@@ -18,11 +18,7 @@ const AlertsPage: FC = () => {
     },
     {
       title: 'Alerts with icon',
-      code: (
-        <Alert color="failure" icon={HiInformationCircle}>
-          {alertText}
-        </Alert>
-      )
+      code: <Alert color="failure">{alertText}</Alert>
     },
     {
       title: 'Dismissible alerts',
@@ -34,16 +30,8 @@ const AlertsPage: FC = () => {
       codeStringifierOptions: { functionValue: (fn) => fn }
     },
     {
-      title: 'Rounded',
-      code: <Alert color="warning">{alertText}</Alert>
-    },
-    {
       title: 'Border accent',
-      code: (
-        <Alert color="warning" withBorderAccent>
-          {alertText}
-        </Alert>
-      )
+      code: <Alert color="warning">{alertText}</Alert>
     },
     {
       title: 'Additional content',
@@ -73,7 +61,6 @@ const AlertsPage: FC = () => {
               </div>
             </>
           }
-          icon={HiInformationCircle}
         >
           <h3 className="text-lg font-medium text-blue-700 dark:text-blue-800">This is a info alert</h3>
         </Alert>
@@ -84,7 +71,6 @@ const AlertsPage: FC = () => {
       code: (
         <Alert
           color="success"
-          withBorderAccent
           onDismiss={() => alert('Alert dismissed!')}
           additionalContent={
             <>
@@ -109,7 +95,6 @@ const AlertsPage: FC = () => {
               </div>
             </>
           }
-          icon={HiInformationCircle}
         >
           <h3 className="text-lg font-medium text-green-700 dark:text-green-800">This is a info alert</h3>
         </Alert>
