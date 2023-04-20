@@ -5,39 +5,31 @@ import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';
 
 const AlertsPage: FC = () => {
-  const alertText = (
-    <span>
-      <span className="font-medium">Info alert!</span> Change a few things up and try submitting again.
-    </span>
-  );
-
+  const alertText = 'Info alert! Change a few things up and try submitting again.';
   const examples: CodeExample[] = [
     {
       title: 'Default alert',
-      code: <Alert color="info">{alertText}</Alert>
+      code: <Alert color="info" title={alertText} />
     },
     {
       title: 'Alerts with icon',
-      code: <Alert color="failure">{alertText}</Alert>
+      code: <Alert color="failure" title={alertText} />
     },
     {
       title: 'Dismissible alerts',
-      code: (
-        <Alert color="success" onDismiss={() => alert('Alert dismissed!')}>
-          {alertText}
-        </Alert>
-      ),
+      code: <Alert color="success" title={alertText} onDismiss={() => alert('Alert dismissed!')} />,
       codeStringifierOptions: { functionValue: (fn) => fn }
     },
     {
       title: 'Border accent',
-      code: <Alert color="warning">{alertText}</Alert>
+      code: <Alert color="warning" title={alertText} />
     },
     {
       title: 'Additional content',
       code: (
         <Alert
           color="info"
+          title={alertText}
           additionalContent={
             <>
               <div className="mb-4 mt-2 text-sm text-blue-700 dark:text-blue-800">
@@ -61,9 +53,7 @@ const AlertsPage: FC = () => {
               </div>
             </>
           }
-        >
-          <h3 className="text-lg font-medium text-blue-700 dark:text-blue-800">This is a info alert</h3>
-        </Alert>
+        />
       )
     },
     {
@@ -71,6 +61,7 @@ const AlertsPage: FC = () => {
       code: (
         <Alert
           color="success"
+          title={alertText}
           onDismiss={() => alert('Alert dismissed!')}
           additionalContent={
             <>
@@ -95,9 +86,7 @@ const AlertsPage: FC = () => {
               </div>
             </>
           }
-        >
-          <h3 className="text-lg font-medium text-green-700 dark:text-green-800">This is a info alert</h3>
-        </Alert>
+        />
       )
     }
   ];

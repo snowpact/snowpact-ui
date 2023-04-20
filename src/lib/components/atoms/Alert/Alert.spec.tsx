@@ -19,7 +19,7 @@ describe.concurrent('Components / Alert', () => {
     it('should dismiss when `Tab` is pressed to navigate to Dismiss button and `Space` is pressed', async () => {
       const onDismiss = vi.fn();
       const user = userEvent.setup();
-      render(<Alert onDismiss={onDismiss} />);
+      render(<Alert onDismiss={onDismiss} title="Titre" />);
 
       await waitFor(async () => {
         await user.tab();
@@ -37,7 +37,7 @@ describe.concurrent('Components / Alert', () => {
     it('should call `onDismiss` when clicked', async () => {
       const onDismiss = vi.fn();
       const user = userEvent.setup();
-      render(<Alert onDismiss={onDismiss} />);
+      render(<Alert onDismiss={onDismiss} title="Titre" />);
 
       await user.click(dismiss());
 
@@ -51,6 +51,7 @@ const TestAlert: FC = () => {
 
   return (
     <Alert
+      title="Titre"
       additionalContent={
         <>
           <div className="mb-4 mt-2 text-sm text-blue-700">
@@ -76,9 +77,7 @@ const TestAlert: FC = () => {
       }
       color="info"
       onDismiss={() => setDismissed(!isDismissed)}
-    >
-      {isDismissed ? 'dismissed' : 'waiting'}
-    </Alert>
+    />
   );
 };
 

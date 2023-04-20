@@ -1,12 +1,13 @@
 import classNames from 'classnames';
-import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 import { HiX } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import type { HIStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { getIconFromColor } from './Alert.theme';
 
-export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
+export interface AlertProps {
+  title: string;
   additionalContent?: ReactNode;
   color?: keyof AlertColors;
   onDismiss?: boolean | (() => void);
@@ -14,15 +15,15 @@ export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>
 
 export type AlertColors = HIThemeColors & HIStateColors;
 
-export const Alert: FC<AlertProps> = ({ additionalContent, children, color = 'info', onDismiss }) => {
+export const Alert: FC<AlertProps> = ({ title, additionalContent, color = 'info', onDismiss }) => {
   const theme = useTheme().theme.alert;
   const icon = getIconFromColor(color);
 
   return (
     <div className={classNames('flex flex-col gap-1 p-4', theme.block, theme.text, theme.color[color])} role="alert">
       <div className="flex items-center gap-2">
-        {icon && icon}
-        <div>{children}</div>
+        {icon && <div className="place-self-start">{icon}</div>}
+        <span>{title}</span>
         {typeof onDismiss === 'function' && (
           <button
             aria-label="Dismiss"
