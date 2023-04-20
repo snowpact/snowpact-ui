@@ -34,8 +34,11 @@ export const Avatar: FC<AvatarProps> = ({
   const theme = useTheme().theme.avatar;
 
   return (
-    <div className="flex items-center" data-testid="flowbite-avatar" {...theirProps}>
-      <div className={twMerge(classNames('relative flex items-center justify-center', theme.size[size]))}>
+    <div className="flex items-center" data-testid="flowbite-avatar-container" {...theirProps}>
+      <div
+        className={twMerge(classNames('relative flex items-center justify-center', theme.size[size]))}
+        data-testid="flowbite-avatar"
+      >
         <div
           className={twMerge(
             classNames('overflow-hidden', theme.block, rounded && theme.rounded, bordered && theme.bordered)

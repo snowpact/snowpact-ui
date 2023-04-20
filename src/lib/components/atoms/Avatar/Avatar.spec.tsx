@@ -10,7 +10,7 @@ describe('Components / Avatar', () => {
       const theme: CustomHelloInternetTheme = {
         avatar: {
           size: {
-            xl: 'h-40'
+            xl: 'scale-[2.5]'
           }
         }
       };
@@ -20,7 +20,7 @@ describe('Components / Avatar', () => {
         </HelloInternet>
       );
 
-      expect(img()).toHaveClass('h-40');
+      expect(div()).toHaveClass('scale-[2.5]');
     });
   });
   describe('Placeholder', () => {
@@ -36,5 +36,5 @@ describe('Components / Avatar', () => {
   });
 });
 
-const img = () => screen.getByTestId('flowbite-avatar-img');
+const div = () => screen.getByTestId('flowbite-avatar');
 const initialsPlaceholder = () => screen.getByTestId('flowbite-avatar-initials-placeholder');
