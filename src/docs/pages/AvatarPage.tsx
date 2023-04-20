@@ -71,18 +71,18 @@ const AvatarPage: FC = () => {
       title: 'Stacked',
       code: (
         <>
-          <Avatar.Group>
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-1.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-2.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-3.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-4.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded stacked />
+          <Avatar.Group stacked>
+            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-1.jpg" rounded />
+            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-2.jpg" rounded />
+            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-3.jpg" rounded />
+            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-4.jpg" rounded />
+            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
           </Avatar.Group>
-          <Avatar.Group>
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-1.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-2.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-3.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-4.jpg" rounded stacked />
+          <Avatar.Group stacked>
+            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-1.jpg" rounded />
+            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-2.jpg" rounded />
+            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-3.jpg" rounded />
+            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-4.jpg" rounded />
             <Avatar.Counter total={99} href="#" />
           </Avatar.Group>
         </>
