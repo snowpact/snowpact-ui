@@ -3,36 +3,32 @@ import type { PropsWithChildren } from 'react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
+import type { AvatarSizes } from './Avatar';
 
 export type AvatarGroupedCounterProps = PropsWithChildren<{
   total?: number;
   href: string;
-  bordered?: boolean;
-  rounded?: boolean;
+  size?: keyof AvatarSizes;
 }>;
 
-export const AvatarGroupCounter: React.FC<AvatarGroupedCounterProps> = ({
-  total,
-  href,
-  bordered = false,
-  rounded = false
-}) => {
+export const AvatarGroupCounter: React.FC<AvatarGroupedCounterProps> = ({ total, href, size = 'sm' }) => {
   const theme = useTheme().theme.avatar;
   return (
-    <a
-      className={twMerge(
-        classNames(
-          'relative flex items-center justify-center',
-          theme.block,
-          theme.counter,
-          theme.text,
-          bordered && theme.bordered,
-          rounded && theme.rounded
-        )
-      )}
-      href={href}
-    >
-      +{total}
+    <a href={href}>
+      <div
+        className={twMerge(
+          classNames(
+            'relative flex items-center justify-center',
+            theme.block,
+            theme.sizes[size].block,
+            theme.counter,
+            theme.text,
+            theme.sizes[size].text
+          )
+        )}
+      >
+        +{total}
+      </div>
     </a>
   );
 };

@@ -9,8 +9,10 @@ describe('Components / Avatar', () => {
     it('should use custom classes', () => {
       const theme: CustomHelloInternetTheme = {
         avatar: {
-          size: {
-            xl: 'scale-[2.5]'
+          sizes: {
+            xl: {
+              block: 'h-40 w-40'
+            }
           }
         }
       };
@@ -20,7 +22,7 @@ describe('Components / Avatar', () => {
         </HelloInternet>
       );
 
-      expect(div()).toHaveClass('scale-[2.5]');
+      expect(img()).toHaveClass('h-40 w-40');
     });
   });
   describe('Placeholder', () => {
@@ -36,5 +38,5 @@ describe('Components / Avatar', () => {
   });
 });
 
-const div = () => screen.getByTestId('flowbite-avatar');
-const initialsPlaceholder = () => screen.getByTestId('flowbite-avatar-initials-placeholder');
+const img = () => screen.getByTestId('sui-avatar-img');
+const initialsPlaceholder = () => screen.getByTestId('sui-avatar-initials-placeholder');
