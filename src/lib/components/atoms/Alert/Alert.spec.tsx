@@ -2,7 +2,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { FC } from 'react';
 import { useState } from 'react';
-import { HiEye, HiInformationCircle } from 'react-icons/hi';
+import { HiEye } from 'react-icons/hi';
 import { describe, expect, it, vi } from 'vitest';
 import { Alert } from '.';
 
@@ -19,7 +19,7 @@ describe.concurrent('Components / Alert', () => {
     it('should dismiss when `Tab` is pressed to navigate to Dismiss button and `Space` is pressed', async () => {
       const onDismiss = vi.fn();
       const user = userEvent.setup();
-      render(<Alert onDismiss={onDismiss} />);
+      render(<Alert onDismiss={onDismiss} title="Titre" />);
 
       await waitFor(async () => {
         await user.tab();
@@ -37,7 +37,7 @@ describe.concurrent('Components / Alert', () => {
     it('should call `onDismiss` when clicked', async () => {
       const onDismiss = vi.fn();
       const user = userEvent.setup();
-      render(<Alert onDismiss={onDismiss} />);
+      render(<Alert onDismiss={onDismiss} title="Titre" />);
 
       await user.click(dismiss());
 
@@ -51,9 +51,10 @@ const TestAlert: FC = () => {
 
   return (
     <Alert
+      title="Titre"
       additionalContent={
         <>
-          <div className="mt-2 mb-4 text-sm text-blue-700">
+          <div className="mb-4 mt-2 text-sm text-blue-700">
             More info about this info alert goes here. This example text is going to run a bit longer so that you can
             see how spacing within an alert works with this kind of content.
           </div>
@@ -75,13 +76,8 @@ const TestAlert: FC = () => {
         </>
       }
       color="info"
-      icon={HiInformationCircle}
       onDismiss={() => setDismissed(!isDismissed)}
-      rounded
-      withBorderAccent
-    >
-      {isDismissed ? 'dismissed' : 'waiting'}
-    </Alert>
+    />
   );
 };
 

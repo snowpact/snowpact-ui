@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import reactElementToJSXString from 'react-element-to-jsx-string';
-import { HiInformationCircle } from 'react-icons/hi';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Alert, Card } from '../../lib';
@@ -15,9 +14,10 @@ const ThemePage: FC = () => {
       <div className="flex flex-col gap-2">
         <span className="text-2xl font-bold">Theme</span>
         <div className="py-4">
-          <Alert color="warning" icon={HiInformationCircle}>
-            This feature is highly experimental. In the future, it could be deprecated or even suffer several changes.
-          </Alert>
+          <Alert
+            color="warning"
+            title="This feature is highly experimental. In the future, it could be deprecated or even suffer several changes."
+          />
           <p className="mt-4">
             Sometimes you want to give your web application a little more personality and customize some aspects of
             Flowbite. This is possible thanks to the support we offer for themes. To use our theme support, your
