@@ -1,3 +1,10 @@
+## [0.12.1](https://github.com/snowpact/snowpact-ui/compare/v0.12.0...v0.12.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* **link:** linking should be preferably done by children component ([9da68c4](https://github.com/snowpact/snowpact-ui/commit/9da68c4e42b2d3fdd586b193caadd7a0c1788674))
+
 # [0.12.0](https://github.com/snowpact/snowpact-ui/compare/v0.11.0...v0.12.0) (2023-04-24)
 
 
