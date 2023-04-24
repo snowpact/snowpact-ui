@@ -8,7 +8,7 @@ import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 export interface AvatarProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
   alt?: string;
   img?: string;
-  size?: keyof AvatarSizes;
+  size?: string;
   status?: 'away' | 'busy' | 'offline' | 'online';
   statusPosition?: keyof HIPositions;
   placeholderInitials?: string;
@@ -20,7 +20,7 @@ export const Avatar: FC<AvatarProps> = ({
   alt = '',
   children,
   img,
-  size = 'sm',
+  size = '32px',
   status,
   statusPosition = 'top-left',
   placeholderInitials = '',
@@ -34,28 +34,22 @@ export const Avatar: FC<AvatarProps> = ({
       <div className={twMerge(classNames('relative flex items-center justify-center'))} data-testid="sui-avatar">
         <div className={twMerge(classNames('overflow-hidden', theme.block))}>
           {img ? (
-            <img
-              alt={alt}
-              data-testid="sui-avatar-img"
-              src={img}
-              className={twMerge(classNames(theme.sizes[size].block))}
-            />
+            <img alt={alt} data-testid="sui-avatar-img" src={img} style={{ width: size, height: size }} />
           ) : placeholderInitials ? (
             <div
-              className={twMerge(
-                classNames('relative overflow-hidden inline-flex justify-center items-center w-full h-full'),
-                theme.sizes[size].block
-              )}
+              style={{ width: size, height: size }}
+              className={classNames('relative overflow-hidden inline-flex justify-center items-center w-full h-full')}
             >
               <span
-                className={twMerge(classNames(theme.text, theme.sizes[size].text))}
+                className={classNames(theme.text)}
                 data-testid="sui-avatar-initials-placeholder"
+                style={{ fontSize: `calc(${size} / 3)` }}
               >
                 {placeholderInitials}
               </span>
             </div>
           ) : (
-            <div data-testid="sui-avatar-img" className={twMerge(classNames(theme.sizes[size].block))}>
+            <div data-testid="sui-avatar-img" style={{ width: size, height: size }}>
               <svg className={theme.svg} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
               </svg>
@@ -65,14 +59,12 @@ export const Avatar: FC<AvatarProps> = ({
         {status && (
           <div
             className={twMerge(
-              classNames(
-                'absolute',
-                theme.statusBadge,
-                theme.sizes[size].statusBadge,
-                theme.statusColor[status],
-                theme.statusPosition[statusPosition]
-              )
+              classNames('absolute', theme.statusBadge, theme.statusColor[status], theme.statusPosition[statusPosition])
             )}
+            style={{
+              width: `calc(${size} / 4)`,
+              height: `calc(${size} / 4)`
+            }}
           />
         )}
       </div>
