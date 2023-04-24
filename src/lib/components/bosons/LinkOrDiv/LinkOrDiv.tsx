@@ -1,26 +1,30 @@
 import React from 'react';
 
-type LinkComponentProps = {
+type LinkOrDivProps = {
   href?: string;
   children: React.ReactNode;
-  as?: React.ElementType;
+  containerComponent?: React.ElementType;
+  linkComponent?: React.ElementType;
   external?: boolean;
   className?: string;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
-export const LinkComponent: React.FC<LinkComponentProps> = ({
+export const LinkOrDiv: React.FC<LinkOrDivProps> = ({
   href,
   children,
   external = false,
-  as,
+  containerComponent,
+  linkComponent,
   className,
   onClick
 }) => {
-  const ContainerComponent = as || 'div';
+  const ContainerComponent = containerComponent || 'div';
+  const LinkComponent = linkComponent || 'a';
+
   if (href) {
     return (
-      <a
+      <LinkComponent
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
         href={href}
@@ -28,7 +32,7 @@ export const LinkComponent: React.FC<LinkComponentProps> = ({
         onClick={onClick}
       >
         {children}
-      </a>
+      </LinkComponent>
     );
   }
   return <ContainerComponent className={className}>{children}</ContainerComponent>;

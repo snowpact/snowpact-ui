@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import { LinkComponent } from '../../bosons/LinkComponent/LinkComponent';
 
 export interface PricingCardProps {
   icon?: React.ReactNode;
@@ -10,9 +9,8 @@ export interface PricingCardProps {
   priceValue: string;
   priceFrequency?: string;
   details: string[];
-  link: string;
-  buttonTitle: string;
   main?: boolean;
+  children?: React.ReactNode;
 }
 
 export const PricingCard = ({
@@ -21,8 +19,7 @@ export const PricingCard = ({
   priceValue,
   priceFrequency,
   details,
-  link,
-  buttonTitle,
+  children,
   main = false
 }: PricingCardProps) => {
   const theme = useTheme().theme.pricing;
@@ -37,35 +34,21 @@ export const PricingCard = ({
         )
       )}
     >
-      <div className={classNames('flex justify-self-start', theme.icon)}>{icon}</div>
+      <div className={'flex w-full justify-self-start'}>{icon}</div>
 
       <span className={classNames('flex items-end', theme.title)}>{title}</span>
       <div className="flex gap-1">
-        <span className={classNames(theme.priceValue)}>{priceValue}</span>
+        <span className={theme.priceValue}>{priceValue}</span>
         <span className={classNames('self-end', theme.priceFrequency)}>{priceFrequency}</span>
       </div>
-      <div className="pt-5">
-        <ul className="flex list-disc flex-col gap-1">
-          {details.map((detail, index) => (
-            <li key={index} className={classNames(theme.details)}>
-              {detail}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <LinkComponent href={link}>
-        <div
-          className={twMerge(
-            classNames(
-              'flex h-full w-full cursor-pointer items-center justify-center',
-              theme.button,
-              main && theme.variant.main.button
-            )
-          )}
-        >
-          {buttonTitle}
-        </div>
-      </LinkComponent>
+      <ul className="flex list-disc flex-col gap-1 pt-5">
+        {details.map((detail, index) => (
+          <li key={index} className={theme.details}>
+            {detail}
+          </li>
+        ))}
+      </ul>
+      {children}
     </div>
   );
 };

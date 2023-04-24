@@ -1,6 +1,5 @@
 import { MemoryRouter } from 'react-router-dom';
 import Style from './style';
-import '../src/index.css';
 
 
 export const decorators = [
