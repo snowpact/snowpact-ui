@@ -15,6 +15,7 @@ import type { AccordionTheme } from '../../molecules/Accordion/Accordion.theme';
 import type { ButtonGroupTheme } from '../../molecules/ButtonGroup/ButtonGroup.theme';
 import type { CameraRollTheme } from '../../molecules/CameraRoll/CameraRoll.theme';
 import type { CardTheme } from '../../molecules/Card/Card.theme';
+import type { CodeblockTheme } from '../../molecules/Codeblock/Codeblock.theme';
 import type { DropdownTheme } from '../../molecules/Dropdown/Dropdown.theme';
 import type { HeroTheme } from '../../molecules/Hero/Hero.theme';
 import type { ListGroupTheme } from '../../molecules/ListGroup/ListGroup.theme';
@@ -42,6 +43,7 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   cameraRoll: CameraRollTheme;
   card: CardTheme;
   carousel: CarouselTheme;
+  codeblock: CodeblockTheme;
   dropdown: DropdownTheme;
   footer: FooterTheme;
   formControls: FormControlsTheme;

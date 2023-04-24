@@ -2,6 +2,7 @@ export * from './Accordion';
 export * from './ButtonGroup';
 export * from './CameraRoll';
 export * from './Card';
+export * from './Codeblock';
 export * from './Dropdown';
 export * from './Hero';
 export * from './ListGroup';
