@@ -9,18 +9,19 @@ export interface BadgeProps {
   color?: keyof BadgeColors;
   href?: string;
   icon?: React.ReactNode;
+  as?: React.ElementType;
 }
 
 export type BadgeColors = HIThemeColors & HIStateColors;
 
-export const Badge: FC<BadgeProps> = ({ children, color = 'primary', href, icon }): JSX.Element => {
+export const Badge: FC<BadgeProps> = ({ children, color = 'primary', href, icon, as }): JSX.Element => {
   const theme = useTheme().theme.badge;
 
   return (
     <LinkOrDiv
+      linkComponent={as}
       href={href}
       className={classNames('flex items-center gap-1 px-2 py-1', theme.base, theme.text, theme.color[color])}
-      data-testid="sui-badge"
     >
       {icon}
       {children && <span>{children}</span>}

@@ -3,13 +3,6 @@ import { describe, expect, it } from 'vitest';
 import { Badge } from '.';
 import { HelloInternet } from '../../bosons/HelloInternet';
 
-test('renders MyComponent', () => {
-  const { container } = render(<Badge />);
-  console.log('----------------------------------------');
-  console.log(container.innerHTML);
-  console.log('----------------------------------------');
-});
-
 describe('Components / Badge', () => {
   describe('Rendering', () => {
     it('should render an `<a>` given `href=".."`', () => {

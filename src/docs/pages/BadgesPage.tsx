@@ -51,9 +51,6 @@ const BadgesPage: FC = () => {
       code: (
         <div className="flex flex-wrap items-center gap-2">
           <Badge icon={<HiCheck />} />
-          <Badge icon={<HiCheck />} />
-          <Badge icon={<HiCheck />} />
-          <Badge icon={<HiCheck />} />
         </div>
       )
     }
