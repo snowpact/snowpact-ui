@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { excludeClassName } from '../../../helpers/exclude';
 import type { HIPositions } from '../../bosons/HelloInternet/HelloInternetTheme';
@@ -62,10 +63,11 @@ export const Avatar: FC<AvatarProps> = ({
   const theirProps = excludeClassName(props);
   const theme = useTheme().theme.avatar;
   const maxedSize = `max(${size}, ${AVATAR_MINIMUM_SIZE})`;
+  const memoizedStatusPosition = useMemo(() => getStatusPosition(statusPosition, size), [statusPosition, size]);
 
   return (
     <div className="flex items-center" data-testid="sui-avatar-container" {...theirProps}>
-      <div className={twMerge(classNames('relative flex items-center justify-center'))} data-testid="sui-avatar">
+      <div className="relative flex items-center justify-center" data-testid="sui-avatar">
         <div className={twMerge(classNames('overflow-hidden', theme.base))}>
           {img ? (
             <img alt={alt} data-testid="sui-avatar-img" src={img} style={{ width: maxedSize, height: maxedSize }} />
@@ -100,7 +102,7 @@ export const Avatar: FC<AvatarProps> = ({
               width: `max(calc(${size} / 3), calc(${AVATAR_MINIMUM_SIZE}/3))`,
               height: `max(calc(${size} / 3), calc(${AVATAR_MINIMUM_SIZE}/3))`,
               borderWidth: `min(calc(${size} / 30), 2px)`,
-              transform: getStatusPosition(statusPosition, size)
+              transform: memoizedStatusPosition
             }}
           />
         )}

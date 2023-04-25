@@ -40,5 +40,7 @@ export const getIconFromColor = (color: string) => {
       return <HiOutlineCheckCircle className="h-5 w-5" />;
     case 'warning':
       return <HiOutlineExclamationCircle className="h-5 w-5" />;
+    default:
+      return <HiOutlineInformationCircle className="h-5 w-5" />;
   }
 };

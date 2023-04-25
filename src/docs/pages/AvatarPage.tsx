@@ -12,16 +12,6 @@ const AvatarPage: FC = () => {
       code: (
         <div className="flex flex-wrap gap-2">
           <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" />
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" />
-        </div>
-      )
-    },
-    {
-      title: 'Bordered Avatar',
-      code: (
-        <div className="flex flex-wrap gap-2">
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" />
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" />
         </div>
       )
     },
@@ -29,7 +19,6 @@ const AvatarPage: FC = () => {
       title: 'Placeholder',
       code: (
         <div className="flex flex-wrap gap-2">
-          <Avatar />
           <Avatar />
         </div>
       )
@@ -76,7 +65,7 @@ const AvatarPage: FC = () => {
             <Avatar img="https://flowbite.com/docs/images/people/profile-picture-4.jpg" />
             <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" />
           </Avatar.Group>
-          <Avatar.Group stacked>
+          <Avatar.Group>
             <Avatar img="https://flowbite.com/docs/images/people/profile-picture-1.jpg" />
             <Avatar img="https://flowbite.com/docs/images/people/profile-picture-2.jpg" />
             <Avatar img="https://flowbite.com/docs/images/people/profile-picture-3.jpg" />
