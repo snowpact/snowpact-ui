@@ -24,7 +24,7 @@ export const ALERT_THEME: AlertTheme = {
       'bg-secondary-100 text-secondary-500 hover:bg-secondary-200 focus:ring-secondary-400:bg-secondary-800:text-white',
     tertiary:
       'bg-secondary-100 text-secondary-500 hover:bg-secondary-200 focus:ring-secondary-400:bg-secondary-800:text-white',
-    failure: 'bg-error/20 text-error hover:bg-error/50 focus:ring-error:bg-error/20:text-white',
+    failure: 'bg-failure/20 text-failure hover:bg-failure/50 focus:ring-failure:bg-failure/20:text-white',
     success: 'bg-success/20 text-success hover:bg-success/50 focus:ring-success:bg-success/20:text-white',
     warning: 'bg-warning/20 text-warning hover:bg-warning/50 focus:ring-warning:bg-warning/20:text-white'
   }
