@@ -14,7 +14,7 @@ DefaultAvatar.storyName = 'Default';
 DefaultAvatar.args = {
   alt: 'Your avatar',
   img: 'https://flowbite.com/docs/images/people/profile-picture-5.jpg',
-  size: 'sm',
+  size: '32px',
   status: 'away',
   statusPosition: 'top-left',
   placeholderInitials: ''
