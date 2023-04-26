@@ -22,45 +22,35 @@ Default.args = {
 };
 
 export const Sizes = (): JSX.Element => (
-  <>
-    <div className="text-base font-medium">Extra Small</div>
-    <Progress progress={45} size="xs" />
-    <div className="mt-3 text-base font-medium">Small</div>
-    <Progress progress={45} size="sm" />
-    <div className="mt-3 text-base font-medium">Default</div>
-    <Progress progress={45} size="md" />
-    <div className="mt-3 text-lg font-medium">Large</div>
-    <Progress progress={45} size="lg" />
-    <div className="mt-3 text-lg font-medium">Extra Large</div>
-    <Progress progress={45} size="xl" />
-  </>
+  <div className="flex flex-col gap-2">
+    <Progress progress={45} size="xs" label="Extra Small" labelPosition="outside" />
+    <Progress progress={45} size="sm" label="Small" labelPosition="outside" />
+    <Progress progress={45} size="md" label="Default" labelPosition="outside" />
+    <Progress progress={45} size="lg" label="Large" labelPosition="outside" />
+    <Progress progress={45} size="xl" label="Extra Large" labelPosition="outside" />
+  </div>
 );
 
 export const Colors = (): JSX.Element => (
-  <>
-    <div className="text-base font-medium">Primary</div>
-    <Progress progress={45} color="primary" />
-    <div className="mt-3 text-base font-medium text-blue-700">Info</div>
-    <Progress progress={45} color="info" />
-    <div className="mt-3 text-base font-medium text-red-700">Failure</div>
-    <Progress progress={45} color="failure" />
-    <div className="mt-3 text-base font-medium text-green-700">Success</div>
-    <Progress progress={45} color="success" />
-    <div className="mt-3 text-base font-medium text-yellow-700">Warning</div>
-    <Progress progress={45} color="warning" />
-    <div className="mt-3 text-base font-medium text-indigo-700">Secondary</div>
-    <Progress progress={45} color="secondary" />
-    <div className="mt-3 text-base font-medium text-purple-700">Tertiary</div>
-    <Progress progress={45} color="tertiary" />
-  </>
+  <div className="flex flex-col gap-2">
+    <Progress progress={45} color="primary" label="Primary" labelPosition="outside" />
+    <Progress progress={45} color="info" label="Info" labelPosition="outside" />
+    <Progress progress={45} color="failure" label="Failure" labelPosition="outside" />
+    <Progress progress={45} color="success" label="Success" labelPosition="outside" />
+    <Progress progress={45} color="warning" label="Warning" labelPosition="outside" />
+    <Progress progress={45} color="secondary" label="Secondary" labelPosition="outside" />
+    <Progress progress={45} color="tertiary" label="Tertiary" labelPosition="outside" />
+  </div>
 );
 
 export const WithLabelInside = Template.bind({});
 WithLabelInside.storyName = 'With label inside';
 WithLabelInside.args = {
   label: 'Flowbite',
+  labelPosition: 'inside',
+  labelProgress: false,
   progress: 45,
-  size: 'lg'
+  size: 'xl'
 };
 
 export const WithLabelOutside = Template.bind({});
