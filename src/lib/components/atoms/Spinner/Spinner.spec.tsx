@@ -6,16 +6,16 @@ import { HelloInternet } from '../../bosons/HelloInternet';
 
 describe('Components / Spinner', () => {
   describe('A11y', () => {
-    it('should have `role="status"` by default', () => {
-      const spinner = getSpinner(render(<Spinner aria-label="My spinner" />));
+    it('should have an accessible name', () => {
+      const spinner = getSpinner(render(<Spinner />));
 
-      expect(spinner).toHaveAccessibleName('My spinner');
+      expect(spinner).toHaveAccessibleName('Loading');
     });
 
-    it('should be able to set no `role`', () => {
-      const { getByLabelText } = render(<Spinner aria-label="My spinner" role={undefined} />);
+    it('should be able to set `role` to undefined', () => {
+      const { getByLabelText } = render(<Spinner role={false} />);
 
-      const spinner = getByLabelText('My spinner');
+      const spinner = getByLabelText('Loading');
 
       expect(spinner).not.toHaveAttribute('role');
     });
@@ -58,30 +58,6 @@ describe('Components / Spinner', () => {
       );
 
       expect(spinner.firstElementChild).toHaveClass('text-gray-200');
-    });
-
-    it('should use `light` classes', () => {
-      const theme = {
-        spinner: {
-          light: {
-            on: {
-              color: {
-                success: 'text-gray-300'
-              }
-            }
-          }
-        }
-      };
-
-      const spinner = getSpinner(
-        render(
-          <HelloInternet theme={{ theme }}>
-            <Spinner color="success" light />
-          </HelloInternet>
-        )
-      );
-
-      expect(spinner.firstElementChild).toHaveClass('text-gray-300');
     });
   });
 });

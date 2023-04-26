@@ -18,34 +18,35 @@ Default.args = {
 export const Alignment = (): JSX.Element => (
   <div className="flex w-1/3 flex-col gap-3 p-6">
     <div className="text-left">
-      <Spinner aria-label="Left-aligned spinner example" />
+      <Spinner />
     </div>
     <div className="text-center">
-      <Spinner aria-label="Center-aligned spinner example" />
+      <Spinner />
     </div>
     <div className="text-right">
-      <Spinner aria-label="Right-aligned spinner example" />
+      <Spinner />
     </div>
   </div>
 );
 
 export const Colors = (): JSX.Element => (
   <div className="flex flex-row gap-3">
-    <Spinner color="info" aria-label="Info spinner example" />
-    <Spinner color="success" aria-label="Success spinner example" />
-    <Spinner color="failure" aria-label="Failure spinner example" />
-    <Spinner color="warning" aria-label="Warning spinner example" />
-    <Spinner color="pink" aria-label="Pink spinner example" />
-    <Spinner color="purple" aria-label="Purple spinner example" />
+    <Spinner color="info" />
+    <Spinner color="success" />
+    <Spinner color="failure" />
+    <Spinner color="warning" />
+    <Spinner color="primary" />
+    <Spinner color="secondary" />
+    <Spinner color="tertiary" />
   </div>
 );
 
 export const Sizes = (): JSX.Element => (
   <div className="flex flex-row gap-3">
-    <Spinner aria-label="Extra small spinner example" size="xs" />
-    <Spinner aria-label="Small spinner example" size="sm" />
-    <Spinner aria-label="Medium sized spinner example" size="md" />
-    <Spinner aria-label="Large spinner example" size="lg" />
-    <Spinner aria-label="Extra large spinner example" size="xl" />
+    <Spinner size="xs" />
+    <Spinner size="sm" />
+    <Spinner size="md" />
+    <Spinner size="lg" />
+    <Spinner size="xl" />
   </div>
 );
