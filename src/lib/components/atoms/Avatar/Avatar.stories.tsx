@@ -13,5 +13,9 @@ export const DefaultAvatar = Template.bind({});
 DefaultAvatar.storyName = 'Default';
 DefaultAvatar.args = {
   alt: 'Your avatar',
-  img: 'https://flowbite.com/docs/images/people/profile-picture-5.jpg'
+  img: 'https://flowbite.com/docs/images/people/profile-picture-5.jpg',
+  size: '32px',
+  status: 'away',
+  statusPosition: 'top-left',
+  placeholderInitials: ''
 };

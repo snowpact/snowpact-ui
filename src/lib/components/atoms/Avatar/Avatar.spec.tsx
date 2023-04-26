@@ -9,18 +9,18 @@ describe('Components / Avatar', () => {
     it('should use custom classes', () => {
       const theme: CustomHelloInternetTheme = {
         avatar: {
-          size: {
-            xl: 'h-40'
+          statusColor: {
+            away: 'bg-yellow-400'
           }
         }
       };
       render(
         <HelloInternet theme={{ theme }}>
-          <Avatar size="xl" />
+          <Avatar status="away" />
         </HelloInternet>
       );
 
-      expect(img()).toHaveClass('h-40');
+      expect(statusBadge()).toHaveClass('bg-yellow-400');
     });
   });
   describe('Placeholder', () => {
@@ -36,5 +36,5 @@ describe('Components / Avatar', () => {
   });
 });
 
-const img = () => screen.getByTestId('flowbite-avatar-img');
-const initialsPlaceholder = () => screen.getByTestId('flowbite-avatar-initials-placeholder');
+const statusBadge = () => screen.getByTestId('sui-status-badge');
+const initialsPlaceholder = () => screen.getByTestId('sui-avatar-initials-placeholder');
