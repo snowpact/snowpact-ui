@@ -1,39 +1,28 @@
 import classNames from 'classnames';
-import type { ComponentProps, FC } from 'react';
-import { excludeClassName } from '../../../helpers/exclude';
-import type { HIColors, HISizes } from '../../bosons/HelloInternet/HelloInternetTheme';
+import type { FC } from 'react';
+import type { HISizes, HIStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
-export interface SpinnerProps extends Omit<ComponentProps<'span'>, 'color'> {
+export interface SpinnerProps {
   color?: keyof SpinnerColors;
-  light?: boolean;
   size?: keyof SpinnerSizes;
+  role?: boolean;
 }
 
-export interface SpinnerColors
-  extends Pick<HIColors, 'failure' | 'gray' | 'info' | 'pink' | 'purple' | 'success' | 'warning'> {
-  [key: string]: string;
-}
+export type SpinnerColors = HIThemeColors & HIStateColors;
 
 export interface SpinnerSizes extends Pick<HISizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> {
   [key: string]: string;
 }
 
-export const Spinner: FC<SpinnerProps> = ({ color = 'info', light, size = 'md', ...props }): JSX.Element => {
-  const theirProps = excludeClassName(props);
-
+export const Spinner: FC<SpinnerProps> = ({ color = 'info', size = 'md', role = true }): JSX.Element => {
   const theme = useTheme().theme.spinner;
+  const roleValue = role ? 'status' : undefined;
 
   return (
-    <span role="status" {...theirProps}>
+    <span role={roleValue} aria-label="Loading">
       <svg
-        className={classNames(
-          theme.base,
-          theme.color[color],
-          theme.light[light ? 'on' : 'off'].base,
-          theme.light[light ? 'on' : 'off'].color[color],
-          theme.size[size]
-        )}
+        className={classNames('inline animate-spin ', theme.base, theme.color[color], theme.size[size])}
         fill="none"
         viewBox="0 0 100 101"
       >

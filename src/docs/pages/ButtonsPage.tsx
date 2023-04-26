@@ -161,7 +161,7 @@ const ButtonsPage: FC = () => {
           <div>
             <Button>
               <div className="mr-3">
-                <Spinner size="sm" light />
+                <Spinner size="sm" />
               </div>
               Loading ...
             </Button>
@@ -169,7 +169,7 @@ const ButtonsPage: FC = () => {
           <div>
             <Button outline>
               <div className="mr-3">
-                <Spinner size="sm" light />
+                <Spinner size="sm" />
               </div>
               Loading ...
             </Button>
