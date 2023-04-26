@@ -2,24 +2,24 @@ import type { ProgressColors, ProgressSizes } from './Progress';
 
 export type ProgressTheme = {
   base: string;
-  label: string;
+  text: string;
   bar: string;
   color: ProgressColors;
   size: ProgressSizes;
 };
 
 export const PROGRESS_THEME: ProgressTheme = {
-  base: 'w-full overflow-hidden rounded-full bg-gray-200',
-  label: 'mb-1 flex justify-between font-medium',
-  bar: 'flex items-center justify-center rounded-full text-center font-medium leading-none text-blue-100',
+  base: 'rounded-full bg-gray-200',
+  text: 'font-medium text-primary-500',
+  bar: 'rounded-full',
   color: {
-    primary: 'bg-gray-600',
-    secondary: 'bg-indigo-600',
-    tertiary: 'bg-purple-600',
-    failure: 'bg-red-600',
-    info: 'bg-blue-600',
-    success: 'bg-green-600',
-    warning: 'bg-yellow-400'
+    primary: 'bg-primary-500 text-white',
+    secondary: 'bg-secondary-500 text-white',
+    tertiary: 'bg-tertiary-500 text-white',
+    failure: 'bg-failure text-white',
+    info: 'bg-info text-white',
+    success: 'bg-success text-white',
+    warning: 'bg-warning text-white'
   },
   size: {
     xs: 'h-1',

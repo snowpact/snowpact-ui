@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import { useId } from 'react';
-import { excludeClassName } from '../../../helpers/exclude';
+import { twMerge } from 'tailwind-merge';
 import type { HISizes, HIStateColors, HIThemeColors } from '../../bosons/HelloInternet/HelloInternetTheme';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
@@ -17,34 +17,48 @@ export type ProgressColors = HIThemeColors & HIStateColors;
 
 export type ProgressSizes = Pick<HISizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>;
 
+const getInsideText = (label: string, progress: number, labelProgress: boolean) => {
+  if (labelProgress) {
+    if (label && progress) {
+      return `${label} - ${progress}%`;
+    } else {
+      return label ?? `${progress}%`;
+    }
+  } else {
+    return label;
+  }
+};
+
 export const Progress: FC<ProgressProps> = ({
   color = 'primary',
   label = 'progressbar',
   labelPosition = 'none',
   labelProgress = false,
   progress,
-  size = 'md',
-  ...props
+  size = 'md'
 }): JSX.Element => {
   const id = useId();
   const theme = useTheme().theme.progress;
-  const theirProps = excludeClassName(props);
+
+  const insideText = labelPosition === 'inside' && getInsideText(label, progress, labelProgress);
 
   return (
     <>
-      <div id={id} aria-label={label} aria-valuenow={progress} role="progressbar" {...theirProps}>
+      <div className={theme.text} id={id} aria-label={label} aria-valuenow={progress} role="progressbar">
         {label && labelPosition === 'outside' && (
-          <div className={theme.label}>
+          <div className="mb-1 flex justify-between">
             <span>{label}</span>
             {labelProgress && <span>{progress}%</span>}
           </div>
         )}
-        <div className={classNames(theme.base, theme.size[size])}>
+        <div className={twMerge(classNames('w-full overflow-hidden', theme.base, theme.size[size]))}>
           <div
-            className={classNames(theme.bar, theme.color[color], theme.size[size])}
+            className={twMerge(
+              classNames('flex items-center justify-center ', theme.bar, theme.color[color], theme.size[size])
+            )}
             style={{ width: `${progress}%` }}
           >
-            {label && labelPosition === 'inside' && label}
+            {label && labelPosition === 'inside' && insideText}
           </div>
         </div>
       </div>
