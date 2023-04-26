@@ -27,7 +27,7 @@ export const PricingCard = ({
     <div
       className={twMerge(
         classNames(
-          'grid h-[495px] w-96 grid-rows-[80px_50px_45px_1fr_50px] p-8 md:px-14 md:pt-14',
+          'grid min-h-[495px] w-96 grid-rows-[80px_50px_45px_1fr_50px] p-8 md:px-14 md:pt-14',
           theme.block,
           theme.text,
           main && [theme.variant.main.block, theme.variant.main.text]
@@ -48,6 +48,7 @@ export const PricingCard = ({
           </li>
         ))}
       </ul>
+      <br />
       {children}
     </div>
   );
