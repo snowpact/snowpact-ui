@@ -56,6 +56,16 @@ describe('Components / Breadcrumb', () => {
       expect(items()[1]).toHaveClass('text-sm text-primary-500');
     });
   });
+
+  describe('Feature', () => {
+    it('should have href except for last item', () => {
+      render(<TestBreadcrumb />);
+
+      expect(contents()[0]).toHaveAttribute('href');
+      expect(contents()[1]).toHaveAttribute('href');
+      expect(contents()[2]).not.toHaveAttribute('href');
+    });
+  });
 });
 
 const TestBreadcrumb: FC = () => (
@@ -75,3 +85,5 @@ const breadcrumbList = () => screen.getByRole('list');
 const items = () => screen.getAllByRole('listitem');
 
 const links = () => screen.getAllByRole('link');
+
+const contents = () => screen.getAllByTestId('sui-link-or-div-result');

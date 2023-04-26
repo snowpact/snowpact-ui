@@ -30,10 +30,15 @@ export const LinkOrDiv: React.FC<LinkOrDivProps> = ({
         href={href}
         className={className}
         onClick={onClick}
+        data-testid="sui-link-or-div-result"
       >
         {children}
       </LinkComponent>
     );
   }
-  return <ContainerComponent className={className}>{children}</ContainerComponent>;
+  return (
+    <ContainerComponent className={className} data-testid="sui-link-or-div-result">
+      {children}
+    </ContainerComponent>
+  );
 };
