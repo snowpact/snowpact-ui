@@ -10,23 +10,11 @@ const BreadcrumbPage: FC = () => {
       title: 'Default breadcrumb',
       code: (
         <Breadcrumb aria-label="Default breadcrumb example">
-          <Breadcrumb.Item href="#" icon={HiHome}>
+          <Breadcrumb.Item href="#" icon={<HiHome />}>
             Home
           </Breadcrumb.Item>
           <Breadcrumb.Item href="#">Projects</Breadcrumb.Item>
-          <Breadcrumb.Item>Flowbite React</Breadcrumb.Item>
-        </Breadcrumb>
-      )
-    },
-    {
-      title: 'Solid background',
-      code: (
-        <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-50 px-5 py-3 dark:bg-gray-900">
-          <Breadcrumb.Item href="#" icon={HiHome}>
-            Home
-          </Breadcrumb.Item>
-          <Breadcrumb.Item href="#">Projects</Breadcrumb.Item>
-          <Breadcrumb.Item>Flowbite React</Breadcrumb.Item>
+          <Breadcrumb.Item>Snowpact UI React</Breadcrumb.Item>
         </Breadcrumb>
       )
     }

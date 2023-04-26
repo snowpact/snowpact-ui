@@ -24,7 +24,7 @@ describe('Components / Breadcrumb', () => {
 
       expect(items()[0]).toHaveTextContent('Home');
       expect(items()[1]).toHaveTextContent('Projects');
-      expect(items()[2]).toHaveTextContent('Flowbite React');
+      expect(items()[2]).toHaveTextContent('Snowpact UI React');
     });
 
     it('should contain a `role="link"` for each `Breadcrumb.Item href=".."`', () => {
@@ -37,16 +37,14 @@ describe('Components / Breadcrumb', () => {
     it('should use `aria-label` if provided', () => {
       render(<TestBreadcrumb />);
 
-      expect(breadcrumb()).toHaveAccessibleName('test label');
+      expect(breadcrumb()).toHaveAccessibleName('Breadcrumb');
     });
   });
 
   describe('Theme', () => {
-    it('should use custom list classes', () => {
+    it('should use classes', () => {
       const theme = {
-        breadcrumb: {
-          list: 'gap-6'
-        }
+        text: 'text-sm text-primary-500'
       };
       render(
         <HelloInternet theme={{ theme }}>
@@ -54,47 +52,29 @@ describe('Components / Breadcrumb', () => {
         </HelloInternet>
       );
 
-      expect(breadcrumbList()).toHaveClass('gap-6');
+      expect(items()[0]).toHaveClass('text-sm text-primary-500');
+      expect(items()[1]).toHaveClass('text-sm text-primary-500');
     });
+  });
 
-    it('should use custom item classes', () => {
-      const theme = {
-        breadcrumb: {
-          item: {
-            base: 'justify-center',
-            chevron: 'h-9 w-9',
-            href: {
-              off: 'text-md',
-              on: 'text-lg'
-            },
-            icon: 'h-6 w-6'
-          }
-        }
-      };
-      render(
-        <HelloInternet theme={{ theme }}>
-          <TestBreadcrumb />
-        </HelloInternet>
-      );
+  describe('Feature', () => {
+    it('should have href except for last item', () => {
+      render(<TestBreadcrumb />);
 
-      expect(items()[0]).toHaveClass('justify-center');
       expect(contents()[0]).toHaveAttribute('href');
-      expect(contents()[0]).toHaveClass('text-lg');
-
-      expect(items()[2]).toHaveClass('justify-center');
+      expect(contents()[1]).toHaveAttribute('href');
       expect(contents()[2]).not.toHaveAttribute('href');
-      expect(contents()[2]).toHaveClass('text-md');
     });
   });
 });
 
 const TestBreadcrumb: FC = () => (
   <Breadcrumb aria-label="test label">
-    <Breadcrumb.Item href="#" icon={HiHome}>
+    <Breadcrumb.Item href="#" icon={<HiHome />}>
       Home
     </Breadcrumb.Item>
     <Breadcrumb.Item href="#">Projects</Breadcrumb.Item>
-    <Breadcrumb.Item icon={HiHome}>Flowbite React</Breadcrumb.Item>
+    <Breadcrumb.Item icon={<HiHome />}>Snowpact UI React</Breadcrumb.Item>
   </Breadcrumb>
 );
 
@@ -106,4 +86,4 @@ const items = () => screen.getAllByRole('listitem');
 
 const links = () => screen.getAllByRole('link');
 
-const contents = () => screen.getAllByTestId('flowbite-breadcrumb-item');
+const contents = () => screen.getAllByTestId('sui-link-or-div-result');

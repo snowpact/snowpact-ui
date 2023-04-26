@@ -9,20 +9,10 @@ export default {
 
 export const Default = (): JSX.Element => (
   <Breadcrumb>
-    <Breadcrumb.Item href="#" icon={HiHome}>
+    <Breadcrumb.Item href="#" icon={<HiHome />}>
       Home
     </Breadcrumb.Item>
     <Breadcrumb.Item href="#">Projects</Breadcrumb.Item>
-    <Breadcrumb.Item>Flowbite React</Breadcrumb.Item>
-  </Breadcrumb>
-);
-
-export const WithCustomClasses = (): JSX.Element => (
-  <Breadcrumb className="bg-gray-50 py-3 px-5">
-    <Breadcrumb.Item href="#" icon={HiHome}>
-      Home
-    </Breadcrumb.Item>
-    <Breadcrumb.Item href="#">Projects</Breadcrumb.Item>
-    <Breadcrumb.Item>Flowbite React</Breadcrumb.Item>
+    <Breadcrumb.Item>Snowpact UI React</Breadcrumb.Item>
   </Breadcrumb>
 );
