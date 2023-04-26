@@ -328,7 +328,7 @@ const TestSidebar: FC<SidebarProps> = ({ ...props }) => (
     </Sidebar.Logo>
     <Sidebar.Items>
       <Sidebar.ItemGroup>
-        <Sidebar.Item active data-testid="active-item" href="#" icon={HiChartPie} label="3" labelColor="success">
+        <Sidebar.Item active data-testid="active-item" href="#" icon={HiChartPie} label="3">
           Dashboard
         </Sidebar.Item>
         <Sidebar.Collapse aria-label="E-commerce" icon={HiShoppingBag}>

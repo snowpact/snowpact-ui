@@ -17,22 +17,21 @@ const Template: Story<BadgeProps> = (args) => (
 export const DefaultBadge = Template.bind({});
 DefaultBadge.storyName = 'Default';
 DefaultBadge.args = {
+  icon: <HiCheck />,
   children: 'Default'
 };
 
 export const BadgeWithIcon = Template.bind({});
 BadgeWithIcon.storyName = 'With icon';
 BadgeWithIcon.args = {
-  color: 'indigo',
-  icon: HiCheck,
+  icon: <HiCheck />,
   children: '2 minutes ago'
 };
 
 export const BadgeOnlyIcon = Template.bind({});
 BadgeOnlyIcon.storyName = 'Only icon';
 BadgeOnlyIcon.args = {
-  color: 'green',
-  icon: HiCheck
+  icon: <HiCheck />
 };
 
 export const BadgeAsLink = Template.bind({});

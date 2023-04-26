@@ -16,7 +16,7 @@ export interface SidebarItemProps
   href?: string;
   icon?: FC<ComponentProps<'svg'>>;
   label?: string;
-  labelColor?: keyof SidebarItemLabelColors;
+  //labelColor?: keyof SidebarItemLabelColors; //TODO:Use props or remove it
 }
 
 export interface SidebarItemLabelColors extends Pick<HIColors, 'gray'> {
@@ -29,7 +29,7 @@ export const SidebarItem: FC<SidebarItemProps> = ({
   icon: Icon,
   active: isActive,
   label,
-  labelColor = 'info',
+  //labelColor = 'info', //TODO:Use props or remove it
   ...props
 }) => {
   const theirProps = excludeClassName(props);
@@ -85,11 +85,7 @@ export const SidebarItem: FC<SidebarItemProps> = ({
           <span className={theme.collapsed.noIcon}>{(children as string).charAt(0).toLocaleUpperCase() ?? '?'}</span>
         )}
         {!isCollapsed && <Children>{children}</Children>}
-        {!isCollapsed && label && (
-          <Badge color={labelColor} data-testid="flowbite-sidebar-label" hidden={isCollapsed}>
-            {label}
-          </Badge>
-        )}
+        {!isCollapsed && label && <Badge data-testid="flowbite-sidebar-label">{label}</Badge>}
       </Component>
     </ListItem>
   );

@@ -64,7 +64,7 @@ module.exports = {
         },
         info: "#127695",
         success: "#4CE2A7",
-        error: "#E24C4C",
+        failure: "#E24C4C",
         warning: "#F1A153",
       },
       maxWidth: {
