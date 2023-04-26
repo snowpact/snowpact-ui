@@ -1,3 +1,11 @@
+# [0.13.0](https://github.com/snowpact/snowpact-ui/compare/v0.12.1...v0.13.0) (2023-04-26)
+
+
+### Features
+
+* **badge:** component migration done ([#62](https://github.com/snowpact/snowpact-ui/issues/62)) ([19948c4](https://github.com/snowpact/snowpact-ui/commit/19948c44b194cf91291f0f1494266087c6c264a1))
+* **breadcrumb:** component migration done ([#64](https://github.com/snowpact/snowpact-ui/issues/64)) ([2bdf80b](https://github.com/snowpact/snowpact-ui/commit/2bdf80b8ed38f3b9071d4d4ab64590f0918c5de9))
+
 ## [0.12.1](https://github.com/snowpact/snowpact-ui/compare/v0.12.0...v0.12.1) (2023-04-24)
 
 
