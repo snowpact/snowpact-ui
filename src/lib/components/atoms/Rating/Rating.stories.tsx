@@ -55,7 +55,7 @@ RatingCount.args = {
 
 export const Advanced = (): JSX.Element => (
   <div className="flex flex-col gap-4">
-    <Rating className="pt-3">
+    <Rating className="pt-3" size="lg">
       <Rating.Star />
       <Rating.Star />
       <Rating.Star />

@@ -1,7 +1,6 @@
+import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { excludeClassName } from '../../../helpers/exclude';
 import type { HISizes } from '../../bosons/HelloInternet/HelloInternetTheme';
-import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { RatingContext } from './RatingContext';
 
 export interface StarSizes extends Pick<HISizes, 'sm' | 'md' | 'lg'> {
@@ -12,15 +11,10 @@ export interface RatingProps extends PropsWithChildren<ComponentProps<'div'>> {
   size?: keyof StarSizes;
 }
 
-export const Rating: FC<RatingProps> = ({ children, size = 'sm', ...props }) => {
-  const theme = useTheme().theme.rating;
-  const theirProps = excludeClassName(props);
-
+export const Rating: FC<RatingProps> = ({ children, size = 'sm' }) => {
   return (
     <RatingContext.Provider value={{ size }}>
-      <div className={theme.base} {...theirProps}>
-        {children}
-      </div>
+      <div className={classNames('flex items-center')}>{children}</div>
     </RatingContext.Provider>
   );
 };

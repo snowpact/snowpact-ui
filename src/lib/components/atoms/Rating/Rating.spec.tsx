@@ -17,7 +17,7 @@ describe.concurrent('Components / Rating', () => {
     it('should visually distinguish unfilled stars in gray', () => {
       render(<AdvancedRating />);
 
-      expect(stars()[4]).toHaveClass('text-gray-300');
+      expect(stars()[4]).toHaveClass('text-gray-200');
     });
   });
 });
@@ -41,6 +41,6 @@ const AdvancedRating = (): JSX.Element => (
   </div>
 );
 
-const bars = () => screen.getAllByTestId('flowbite-rating-fill');
+const bars = () => screen.getAllByTestId('sui-rating-fill');
 
-const stars = () => screen.getAllByTestId('flowbite-rating-star');
+const stars = () => screen.getAllByTestId('sui-rating-star');
