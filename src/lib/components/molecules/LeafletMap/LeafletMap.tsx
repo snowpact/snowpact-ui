@@ -1,5 +1,5 @@
-import { DivIcon } from 'leaflet';
-import { MapContainer, Marker, TileLayer } from 'react-leaflet';
+import type { FC } from 'react';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
 import 'leaflet/dist/leaflet.css';
@@ -16,13 +16,31 @@ export type LeafletMapProps = {
   defaultZoom: number;
   minZoom?: number;
   maxZoom?: number;
+  overlay?: React.ReactNode;
+  children?: React.ReactNode;
+  mapStyle?: MapStyles;
 };
 
-export const LeafletMap = ({ height, width, initialCenter, defaultZoom, minZoom, maxZoom }: LeafletMapProps) => {
+export enum MapStyles {
+  Light = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+  Classic = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png'
+}
+
+export const LeafletMap: FC<LeafletMapProps> = ({
+  height,
+  width,
+  initialCenter,
+  defaultZoom,
+  minZoom,
+  maxZoom,
+  mapStyle,
+  overlay,
+  children
+}) => {
   const theme = useTheme().theme.leafletMap;
-  const MARKER_ICON = new DivIcon(theme.icon);
+
   return (
-    <div style={{ height: height, width: width }}>
+    <div style={{ height: height, width: width, position: 'relative' }}>
       <MapContainer
         center={[initialCenter.latitude, initialCenter.longitude]}
         zoom={defaultZoom}
@@ -36,12 +54,11 @@ export const LeafletMap = ({ height, width, initialCenter, defaultZoom, minZoom,
           maxZoom={maxZoom}
           maxNativeZoom={maxZoom}
           attribution=""
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png"
+          url={mapStyle ?? MapStyles.Classic}
         />
-        <Marker position={[initialCenter.latitude, initialCenter.longitude]} icon={MARKER_ICON} />
+        {children}
       </MapContainer>
+      {overlay && overlay}
     </div>
   );
 };
-
-export default LeafletMap;
