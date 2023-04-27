@@ -19,7 +19,7 @@ export const LeafletMapOverlay: FC<LeafletMapOverlayProps> = ({
 
   return (
     <div
-      className={classNames('absolute', theme.overlay, [
+      className={classNames('absolute z-40', theme.overlay, [
         position === 'top-left' && 'top-[20px] left-[20px]',
         position === 'top-right' && 'top-[20px] right-[20px]',
         position === 'bottom-left' && 'bottom-[20px] left-[20px]',

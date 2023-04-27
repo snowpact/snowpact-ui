@@ -1,5 +1,3 @@
-// Primary obligatoire pour une story?
-
 import type { Meta, Story } from '@storybook/react';
 
 import type { SkeletonProps } from './Skeleton';
@@ -24,9 +22,3 @@ Default.args = {
   width: '100px',
   height: '100px'
 };
-
-export const Examples = () => (
-  <div>
-    <Skeleton> Ajoute un effet derrière le contenu </Skeleton>
-  </div>
-);

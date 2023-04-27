@@ -5,5 +5,5 @@ export type LeafletMapTheme = {
 
 export const LEAFLETMAP_THEME: LeafletMapTheme = {
   base: 'z-0 rounded-md',
-  overlay: 'z-40 bg-white opacity-80 p-4'
+  overlay: 'bg-white opacity-80 p-4'
 };
