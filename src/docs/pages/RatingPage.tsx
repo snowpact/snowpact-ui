@@ -8,17 +8,17 @@ const RatingPage: FC = () => {
   const examples: CodeExample[] = [
     {
       title: 'Default rating',
-      code: <Rating ratingValue={3.2} />
+      code: <Rating rating={3.2} />
     },
     {
       title: 'Star sizing',
       code: (
         <>
-          <Rating ratingValue={3.2} />
+          <Rating rating={3.2} />
 
-          <Rating ratingValue={3.2} size="md" />
+          <Rating rating={3.2} size="md" />
 
-          <Rating ratingValue={3.2} size="lg" />
+          <Rating rating={3.2} size="lg" />
         </>
       )
     },

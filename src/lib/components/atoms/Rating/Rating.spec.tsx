@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { Rating, RatingAdvanced } from '.';
+import { Rating } from '.';
+import { RatingAdvanced } from './RatingAdvanced';
 
 describe.concurrent('Components / Rating', () => {
   describe.concurrent('Rendering', () => {
@@ -24,7 +25,7 @@ describe.concurrent('Components / Rating', () => {
 
 const AdvancedRating = (): JSX.Element => (
   <div className="flex flex-col gap-4">
-    <Rating ratingValue={3.2} />
+    <Rating rating={3.2} />
     <p className="pb-3 text-sm font-medium text-gray-500">1,745 global ratings</p>
     <RatingAdvanced percentFilled={70}>5 star</RatingAdvanced>
     <RatingAdvanced percentFilled={17}>4 star</RatingAdvanced>

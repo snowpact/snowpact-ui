@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import type { FC } from 'react';
 import type { HISizes } from '../../bosons/HelloInternet/HelloInternetTheme';
-import { RatingContext } from './RatingContext';
 import { RatingStar } from './RatingStar';
 
 export interface StarSizes extends Pick<HISizes, 'sm' | 'md' | 'lg'> {
@@ -10,43 +9,45 @@ export interface StarSizes extends Pick<HISizes, 'sm' | 'md' | 'lg'> {
 
 export interface RatingStarsProps {
   size?: keyof StarSizes;
-  maxRating?: number;
-  ratingValue: number;
+  max?: number;
+  rating: number;
 }
 
-interface RatingStarsCount {
-  full: number;
-  half: number;
-  empty: number;
-}
-
-const getRatingStarsCount = (rating: number, maxRating: number): RatingStarsCount => {
-  let fullStarsNumber = Math.floor(rating);
-  const decimals = rating - fullStarsNumber;
-  let halfStarsNumber = 0;
-  let emptyStarsNumber = 0;
-
+const getFullStars = (integers: number, decimals: number): number => {
   if (decimals > 0.75) {
-    fullStarsNumber++;
-  } else if (decimals >= 0.25 && decimals <= 0.75) {
-    halfStarsNumber = 1;
+    return integers + 1;
+  } else {
+    return integers;
   }
-
-  emptyStarsNumber = maxRating - (fullStarsNumber + halfStarsNumber);
-  return { full: fullStarsNumber, half: halfStarsNumber, empty: emptyStarsNumber };
 };
 
-export const Rating: FC<RatingStarsProps> = ({ size = 'sm', maxRating = 5, ratingValue }) => {
-  const ratingStarsCount = getRatingStarsCount(ratingValue, maxRating);
+const hasHalfStars = (decimals: number): boolean => {
+  if (decimals >= 0.25 && decimals <= 0.75) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const getEmptyStars = (max: number, notEmpty: number): number => {
+  return max - notEmpty;
+};
+
+export const Rating: FC<RatingStarsProps> = ({ size = 'sm', max = 5, rating }) => {
+  const integers = Math.floor(rating);
+  const decimals = rating - integers;
+  const halfStarsCount = hasHalfStars(decimals) ? 1 : 0;
   const ratingStars = [
-    ...Array.from({ length: ratingStarsCount.full }, () => <RatingStar filling="full" />),
-    ...Array.from({ length: ratingStarsCount.half }, () => <RatingStar filling="half" />),
-    ...Array.from({ length: ratingStarsCount.empty }, () => <RatingStar filling="empty" />)
+    ...Array.from({ length: getFullStars(integers, decimals) }, (index) => (
+      <RatingStar key={`full-${index}`} filling="full" size={size} />
+    )),
+    ...Array.from({ length: halfStarsCount }, (index) => (
+      <RatingStar key={`half-${index}`} filling="half" size={size} />
+    )),
+    ...Array.from({ length: getEmptyStars(max, getFullStars(integers, decimals) + halfStarsCount) }, (index) => (
+      <RatingStar key={`empty-${index}`} filling="empty" size={size} />
+    ))
   ];
 
-  return (
-    <RatingContext.Provider value={{ size }}>
-      <div className={classNames('flex items-center text-center')}>{ratingStars}</div>
-    </RatingContext.Provider>
-  );
+  return <div className={classNames('flex items-center text-center')}>{ratingStars}</div>;
 };

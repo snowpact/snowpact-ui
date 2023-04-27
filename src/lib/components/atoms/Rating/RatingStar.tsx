@@ -2,27 +2,34 @@ import classNames from 'classnames';
 import type { FC } from 'react';
 import { useId } from 'react';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import { useRatingContext } from './RatingContext';
+import type { StarSizes } from './Rating';
 
 export interface RatingStarProps {
   filling?: 'full' | 'half' | 'empty';
+  hexFilledColor?: string;
+  hexEmptyColor?: string;
+  size?: keyof StarSizes;
 }
 
-export const RatingStar: FC<RatingStarProps> = ({ filling = 'empty' }) => {
-  const { size = 'sm' } = useRatingContext();
+export const RatingStar: FC<RatingStarProps> = ({
+  filling = 'empty',
+  hexFilledColor = '#FBBC05',
+  hexEmptyColor = '#C4C4C4',
+  size = 'sm'
+}) => {
   const theme = useTheme().theme.rating.star;
   const id = useId();
 
   let leftSide, rightSide;
   if (filling === 'full') {
-    leftSide = '#FBBC05';
-    rightSide = '#FBBC05';
+    leftSide = hexFilledColor;
+    rightSide = hexFilledColor;
   } else if (filling === 'empty') {
-    leftSide = '#C4C4C4';
-    rightSide = '#C4C4C4';
+    leftSide = hexEmptyColor;
+    rightSide = hexEmptyColor;
   } else if (filling === 'half') {
-    leftSide = '#FBBC05';
-    rightSide = '#C4C4C4';
+    leftSide = hexFilledColor;
+    rightSide = hexEmptyColor;
   }
 
   return (
