@@ -1,26 +1,25 @@
-import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { excludeClassName } from '../../../helpers/exclude';
+import classNames from 'classnames';
+import type { FC } from 'react';
+import React from 'react';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
-export interface RatingAdvancedProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
+export interface RatingAdvancedProps {
+  children?: React.ReactNode;
   percentFilled?: number;
 }
 
-export const RatingAdvanced: FC<RatingAdvancedProps> = ({ percentFilled = 0, children, ...props }) => {
+export const RatingAdvanced: FC<RatingAdvancedProps> = ({ percentFilled = 0, children }) => {
   const theme = useTheme().theme.rating.advanced;
-  const theirProps = excludeClassName(props);
 
   return (
-    <div className={theme.base} {...theirProps}>
-      <span className={theme.label}>{children}</span>
-      <div className={theme.progress.base}>
-        <div
-          className={theme.progress.fill}
-          data-testid="flowbite-rating-fill"
-          style={{ width: `${percentFilled}%` }}
-        />
+    <div className={classNames('items-center', theme.text)}>
+      <div className="grid grid-cols-2">
+        <span>{children}</span>
+        <span className="text-right">{`${percentFilled}%`}</span>
       </div>
-      <span className={theme.progress.label}>{`${percentFilled}%`}</span>
+      <div className={classNames('flex items-center w-full', theme.progress.base)}>
+        <div className={theme.progress.fill} data-testid="sui-rating-fill" style={{ width: `${percentFilled}%` }} />
+      </div>
     </div>
   );
 };
