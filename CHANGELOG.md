@@ -1,3 +1,13 @@
+# [0.16.0](https://github.com/snowpact/snowpact-ui/compare/v0.15.0...v0.16.0) (2023-04-27)
+
+
+### Features
+
+* **component:** add lealletMap ([7755e13](https://github.com/snowpact/snowpact-ui/commit/7755e1341ce9818a71dc6b70bd8d2db377abcb2a))
+* **leaflet:** add leaflet map ([469cffa](https://github.com/snowpact/snowpact-ui/commit/469cffa5e154ad444cf76b56d9e39aa00b006b56))
+* **leaflet:** add leaflet map ([99385d4](https://github.com/snowpact/snowpact-ui/commit/99385d43b1adac42ee3cf5cd0db4007d427005e7))
+* **leaflet:** add leaflet map ([881e7cd](https://github.com/snowpact/snowpact-ui/commit/881e7cd6858c85d4c41b46be075c3d803bc71524))
+
 # [0.15.0](https://github.com/snowpact/snowpact-ui/compare/v0.14.0...v0.15.0) (2023-04-26)
 
 
