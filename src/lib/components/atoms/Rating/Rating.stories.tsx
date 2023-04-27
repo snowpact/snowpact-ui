@@ -1,73 +1,36 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import { Rating } from '.';
-import type { RatingProps } from './Rating';
+import { RatingAdvanced } from '.';
+import type { RatingStarsProps } from './Rating';
+import { Rating } from './Rating';
 
 export default {
   title: 'Components/atoms/Rating',
   component: Rating
 } as Meta;
 
-const Template: Story<RatingProps> = (args) => <Rating {...args} />;
+const Template: Story<RatingStarsProps> = (args) => <Rating {...args} />;
 
-export const DefaultRating = Template.bind({});
-DefaultRating.storyName = 'Default';
-DefaultRating.args = {
-  children: (
-    <>
-      <Rating.Star />
-      <Rating.Star />
-      <Rating.Star />
-      <Rating.Star />
-      <Rating.Star filled={false} />
-    </>
-  )
-};
-
-export const WithText = Template.bind({});
-WithText.storyName = 'With text';
-WithText.args = {
-  children: (
-    <>
-      <Rating.Star />
-      <Rating.Star />
-      <Rating.Star />
-      <Rating.Star />
-      <Rating.Star filled={false} />
-      <p className="ml-2 text-sm font-medium text-gray-500">4.95 out of 5</p>
-    </>
-  )
-};
-
-export const RatingCount = Template.bind({});
-RatingCount.storyName = 'With rating count';
-RatingCount.args = {
-  children: (
-    <>
-      <Rating.Star />
-      <p className="ml-2 text-sm font-bold text-gray-900">4.95</p>
-      <span className="mx-1.5 h-1 w-1 rounded-full bg-gray-500" />
-      <a href="#" className="text-sm font-medium text-gray-900 underline hover:no-underline">
-        73 reviews
-      </a>
-    </>
-  )
+export const Default = Template.bind({});
+Default.args = {
+  ratingValue: 4.2,
+  size: 'sm'
 };
 
 export const Advanced = (): JSX.Element => (
   <div className="flex flex-col gap-4">
-    <Rating className="pt-3" size="lg">
-      <Rating.Star />
-      <Rating.Star />
-      <Rating.Star />
-      <Rating.Star />
-      <Rating.Star filled={false} />
-      <p className="ml-2 text-sm font-medium text-gray-500">4.95 out of 5</p>
-    </Rating>
-    <p className="pb-3 text-sm font-medium text-gray-500">1,745 global ratings</p>
-    <Rating.Advanced percentFilled={70}>5 star</Rating.Advanced>
-    <Rating.Advanced percentFilled={17}>4 star</Rating.Advanced>
-    <Rating.Advanced percentFilled={8}>3 star</Rating.Advanced>
-    <Rating.Advanced percentFilled={4}>2 star</Rating.Advanced>
-    <Rating.Advanced percentFilled={1}>1 star</Rating.Advanced>
+    <p className="ml-2 text-lg font-medium text-gray-500">Rating</p>
+    <div className="mb-10 flex">
+      <Rating size="sm" ratingValue={3.3} maxRating={5} />
+      <p className="ml-2 text-sm font-medium text-gray-500">3.3 out of 5</p>
+    </div>
+    <p className="ml-2 text-lg font-medium text-gray-500">RatingAvanced</p>
+    <div>
+      <p className="pb-3 text-sm font-medium text-gray-500">1,745 global ratings</p>
+      <RatingAdvanced percentFilled={70}>5 star</RatingAdvanced>
+      <RatingAdvanced percentFilled={17}>4 star</RatingAdvanced>
+      <RatingAdvanced percentFilled={8}>3 star</RatingAdvanced>
+      <RatingAdvanced percentFilled={4}>2 star</RatingAdvanced>
+      <RatingAdvanced percentFilled={1}>1 star</RatingAdvanced>
+    </div>
   </div>
 );

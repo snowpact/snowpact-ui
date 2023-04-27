@@ -22,8 +22,8 @@ export const RATING_THEME: RatingTheme = {
       md: 'w-7 h-7',
       lg: 'w-10 h-10'
     },
-    empty: 'text-gray-200',
-    filled: 'text-primary-500'
+    empty: 'gray-200',
+    filled: 'yellow-500'
   },
   advanced: {
     text: 'text-sm font-medium text-primary-500',

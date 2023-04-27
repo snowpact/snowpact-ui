@@ -1,8 +1,10 @@
 import classNames from 'classnames';
-import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import type { FC } from 'react';
+import React from 'react';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
-export interface RatingAdvancedProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
+export interface RatingAdvancedProps {
+  children?: React.ReactNode;
   percentFilled?: number;
 }
 
