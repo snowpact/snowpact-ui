@@ -2,8 +2,6 @@ import type { FC } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 
-import './leaflet.css';
-
 export type Coordinates = {
   latitude: number;
   longitude: number;
