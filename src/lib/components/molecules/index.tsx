@@ -4,7 +4,6 @@ export * from './CameraRoll';
 export * from './Card';
 export * from './Dropdown';
 export * from './Hero';
-export * from './LeafletMap';
 export * from './ListGroup';
 export * from './Modal';
 export * from './Pagination';

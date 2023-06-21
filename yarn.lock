@@ -2441,11 +2441,6 @@
   resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.21.tgz"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
-"@react-leaflet/core@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@react-leaflet/core/-/core-2.1.0.tgz#383acd31259d7c9ae8fb1b02d5e18fe613c2a13d"
-  integrity sha512-Qk7Pfu8BSarKGqILj4x7bCSZ1pjuAPZ+qmRwH5S7mDS91VSbVVsJSrW4qA+GPrro8t69gFYVMWb1Zc4yFmPiVg==
-
 "@remix-run/router@1.4.0":
   version "1.4.0"
   resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.4.0.tgz"
@@ -3944,11 +3939,6 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
-"@types/geojson@*":
-  version "7946.0.10"
-  resolved "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.10.tgz"
-  integrity sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==
-
 "@types/glob@*":
   version "8.1.0"
   resolved "https://registry.npmjs.org/@types/glob/-/glob-8.1.0.tgz"
@@ -4037,13 +4027,6 @@
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
-
-"@types/leaflet@^1.9.3":
-  version "1.9.3"
-  resolved "https://registry.npmjs.org/@types/leaflet/-/leaflet-1.9.3.tgz"
-  integrity sha512-Caa1lYOgKVqDkDZVWkto2Z5JtVo09spEaUt2S69LiugbBpoqQu92HYFMGUbYezZbnBkyOxMNPXHSgRrRY5UyIA==
-  dependencies:
-    "@types/geojson" "*"
 
 "@types/lodash@^4.14.167", "@types/lodash@^4.14.175":
   version "4.14.192"
@@ -11497,11 +11480,6 @@ lazy-universal-dotenv@^3.0.1:
     dotenv "^8.0.0"
     dotenv-expand "^5.1.0"
 
-leaflet@^1.9.3:
-  version "1.9.3"
-  resolved "https://registry.npmjs.org/leaflet/-/leaflet-1.9.3.tgz"
-  integrity sha512-iB2cR9vAkDOu5l3HAay2obcUHZ7xwUBBjph8+PGtmW/2lYhbLizWtG7nTeYht36WfOslixQF9D/uSIzhZgGMfQ==
-
 leven@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/leven/-/leven-3.1.0.tgz"
@@ -14856,13 +14834,6 @@ react-is@^18.0.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
-
-react-leaflet@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/react-leaflet/-/react-leaflet-4.2.1.tgz#c300e9eccaf15cb40757552e181200aa10b94780"
-  integrity sha512-p9chkvhcKrWn/H/1FFeVSqLdReGwn2qmiobOQGO3BifX+/vV/39qhY8dGqbdcPh1e6jxh/QHriLXr7a4eLFK4Q==
-  dependencies:
-    "@react-leaflet/core" "^2.1.0"
 
 react-merge-refs@^1.0.0:
   version "1.1.0"

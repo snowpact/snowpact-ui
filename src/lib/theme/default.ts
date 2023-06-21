@@ -17,7 +17,6 @@ import { CAMERA_ROLL_THEME } from '../components/molecules/CameraRoll/CameraRoll
 import { CARD_THEME } from '../components/molecules/Card/Card.theme';
 import { DROPDOWN_THEME } from '../components/molecules/Dropdown/Dropdown.theme';
 import { HERO_THEME } from '../components/molecules/Hero/Hero.theme';
-import { LEAFLETMAP_THEME } from '../components/molecules/LeafletMap/LeafletMap.theme';
 import { LIST_GROUP_THEME } from '../components/molecules/ListGroup/ListGroup.theme';
 import { MODAL_THEME } from '../components/molecules/Modal/Modal.theme';
 import { PAGINATION_THEME } from '../components/molecules/Pagination/Pagination.theme';
@@ -46,7 +45,6 @@ const theme: HelloInternetTheme = {
   formControls: FORM_CONTROLS_THEME,
   hero: HERO_THEME,
   listGroup: LIST_GROUP_THEME,
-  leafletMap: LEAFLETMAP_THEME,
   modal: MODAL_THEME,
   navbar: NAV_BAR_THEME,
   rating: RATING_THEME,

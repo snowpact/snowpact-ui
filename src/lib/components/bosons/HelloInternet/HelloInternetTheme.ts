@@ -17,7 +17,6 @@ import type { CameraRollTheme } from '../../molecules/CameraRoll/CameraRoll.them
 import type { CardTheme } from '../../molecules/Card/Card.theme';
 import type { DropdownTheme } from '../../molecules/Dropdown/Dropdown.theme';
 import type { HeroTheme } from '../../molecules/Hero/Hero.theme';
-import type { LeafletMapTheme } from '../../molecules/LeafletMap/LeafletMap.theme';
 import type { ListGroupTheme } from '../../molecules/ListGroup/ListGroup.theme';
 import type { ModalTheme } from '../../molecules/Modal/Modal.theme';
 import type { PaginationTheme } from '../../molecules/Pagination/Pagination.theme';
@@ -47,7 +46,6 @@ export interface HelloInternetTheme extends Record<string, unknown> {
   footer: FooterTheme;
   formControls: FormControlsTheme;
   hero: HeroTheme;
-  leafletMap: LeafletMapTheme;
   listGroup: ListGroupTheme;
   modal: ModalTheme;
   navbar: NavBarTheme;

@@ -1,5 +1,5 @@
 import { Skeleton as SkeletonComponent } from './Skeleton';
 
-SkeletonComponent.displayName = 'LeafletMap';
+SkeletonComponent.displayName = 'Skeleton';
 
-export const LeafletMap = SkeletonComponent;
+export const Skeleton = SkeletonComponent;
