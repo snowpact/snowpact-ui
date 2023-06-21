@@ -1,3 +1,10 @@
+## [0.16.4](https://github.com/snowpact/snowpact-ui/compare/v0.16.3...v0.16.4) (2023-06-21)
+
+
+### Bug Fixes
+
+* **leaflet:** remove leaflet car not working as a lib ([c62c775](https://github.com/snowpact/snowpact-ui/commit/c62c775c7227f479a55e2d9cdb3ee6593f663e43))
+
 ## [0.16.3](https://github.com/snowpact/snowpact-ui/compare/v0.16.2...v0.16.3) (2023-06-21)
 
 
