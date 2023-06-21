@@ -1,3 +1,10 @@
+## [0.16.1](https://github.com/snowpact/snowpact-ui/compare/v0.16.0...v0.16.1) (2023-06-21)
+
+
+### Bug Fixes
+
+* **avatar:** fix avatar link component ([cf36465](https://github.com/snowpact/snowpact-ui/commit/cf36465c655c619e5ecea8b99d4c13aef872bc58))
+
 # [0.16.0](https://github.com/snowpact/snowpact-ui/compare/v0.15.0...v0.16.0) (2023-04-27)
 
 
