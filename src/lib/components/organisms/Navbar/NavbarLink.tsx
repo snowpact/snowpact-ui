@@ -43,7 +43,6 @@ export const NavbarLink: FC<NavbarLinkProps> = ({ active, disabled, href, childr
         )}
         {...theirProps}
         onClick={onClick}
-        as={as}
       >
         {children}
       </LinkComponent>

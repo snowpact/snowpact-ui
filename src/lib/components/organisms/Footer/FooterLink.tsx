@@ -13,7 +13,7 @@ export const FooterLink: FC<FooterLinkProps> = ({ children, href, as }) => {
 
   return (
     <li className={theme.base}>
-      <LinkComponent href={href} className={theme.href} as={as}>
+      <LinkComponent href={href} className={theme.href}>
         {children}
       </LinkComponent>
     </li>
