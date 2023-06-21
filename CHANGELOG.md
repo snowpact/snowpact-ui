@@ -1,3 +1,10 @@
+## [0.16.2](https://github.com/snowpact/snowpact-ui/compare/v0.16.1...v0.16.2) (2023-06-21)
+
+
+### Bug Fixes
+
+* **leaflet:** import css from local ([d610161](https://github.com/snowpact/snowpact-ui/commit/d6101610ce529d3220c7d590b581c46d36be084a))
+
 ## [0.16.1](https://github.com/snowpact/snowpact-ui/compare/v0.16.0...v0.16.1) (2023-06-21)
 
 
