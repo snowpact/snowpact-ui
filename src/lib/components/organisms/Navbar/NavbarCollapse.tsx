@@ -13,11 +13,7 @@ export const NavbarCollapse: FC<NavbarCollapseProps> = ({ children, ...props }):
   const theirProps = excludeClassName(props);
 
   return (
-    <div
-      className={classNames(theme.base, theme.hidden[!isOpen ? 'on' : 'off'])}
-      data-testid="flowbite-navbar-collapse"
-      {...theirProps}
-    >
+    <div className={classNames(theme.base, !isOpen && 'hidden')} data-testid="flowbite-navbar-collapse" {...theirProps}>
       <ul className={theme.list}>{children}</ul>
     </div>
   );

@@ -1,28 +1,38 @@
 import classNames from 'classnames';
-import type { ComponentProps, FC, PropsWithChildren } from 'react';
-import { excludeClassName } from '../../../helpers/exclude';
+import type { FC } from 'react';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { useNavbarContext } from './NavbarContext';
 
-export interface NavbarLinkProps extends Omit<PropsWithChildren<ComponentProps<'a'>>, 'className'> {
+export interface NavbarLinkProps {
   active?: boolean;
   disabled?: boolean;
   href?: string;
   as?: React.ElementType;
+  children?: React.ReactNode;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+  withUnderlineEffect?: boolean;
 }
 
-export const NavbarLink: FC<NavbarLinkProps> = ({ active, disabled, href, children, as, ...props }) => {
+export const NavbarLink: FC<NavbarLinkProps> = ({
+  active,
+  disabled,
+  href,
+  children,
+  as,
+  onClick,
+  withUnderlineEffect,
+  ...props
+}) => {
   const theme = useTheme().theme.navbar.link;
-  const theirProps = excludeClassName(props);
 
   const { setIsOpen } = useNavbarContext();
 
-  const onClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleOnClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (disabled) {
       e.preventDefault();
     }
-    if (props.onClick) {
-      props.onClick(e);
+    if (onClick) {
+      onClick(e);
     }
     setIsOpen(false);
   };
@@ -30,21 +40,17 @@ export const NavbarLink: FC<NavbarLinkProps> = ({ active, disabled, href, childr
   const LinkComponent = as || 'a';
 
   return (
-    <li>
+    <li className="group relative">
       <LinkComponent
         href={href}
-        className={classNames(
-          theme.base,
-          {
-            [theme.active.on]: active,
-            [theme.active.off]: !active && !disabled
-          },
-          theme.disabled[disabled ? 'on' : 'off']
-        )}
-        {...theirProps}
-        onClick={onClick}
+        className={classNames(theme.base, active && theme.active, disabled && theme.disabled)}
+        {...props}
+        onClick={handleOnClick}
       >
         {children}
+        {withUnderlineEffect && (
+          <span className="absolute bottom-0 left-0 h-[2px] w-0 rounded-lg bg-secondary-200 transition-all duration-500 group-hover:w-full"></span>
+        )}
       </LinkComponent>
     </li>
   );
