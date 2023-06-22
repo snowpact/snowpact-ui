@@ -1,3 +1,10 @@
+## [0.16.6](https://github.com/snowpact/snowpact-ui/compare/v0.16.5...v0.16.6) (2023-06-22)
+
+
+### Bug Fixes
+
+* **navbar:** simplify theme for link in navbar ([8797c1d](https://github.com/snowpact/snowpact-ui/commit/8797c1de03c4551f65d104aa37c6b5a266d74031))
+
 ## [0.16.5](https://github.com/snowpact/snowpact-ui/compare/v0.16.4...v0.16.5) (2023-06-21)
 
 
