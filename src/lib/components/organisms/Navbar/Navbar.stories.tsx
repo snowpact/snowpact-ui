@@ -51,11 +51,21 @@ WithCTA.args = {
         <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold">Flowbite</span>
       </Navbar.Brand>
-
+      <Navbar.Toggle />
       <Navbar.Collapse>
         <Navbar.Link href="/navbars" active>
           Home
         </Navbar.Link>
+        <Navbar.Dropdown label="Services" href="/testus">
+          <Navbar.Link href="/navbars1">Construction</Navbar.Link>
+          <Navbar.Link href="/navbars2">Food</Navbar.Link>
+          <Navbar.Dropdown label="Pets" href="/testus" direction="right">
+            <Navbar.Link href="/navbars3">Dog</Navbar.Link>
+            <Navbar.Link href="/navbars4">Cat</Navbar.Link>
+          </Navbar.Dropdown>
+          <Navbar.Link href="/navbars3">Shopping</Navbar.Link>
+          <Navbar.Link href="/navbars4">Business</Navbar.Link>
+        </Navbar.Dropdown>
         <Navbar.Link href="/navbars">About</Navbar.Link>
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
@@ -63,7 +73,6 @@ WithCTA.args = {
         <Navbar.Link>
           <div className="flex gap-3 md:order-2">
             <Button>Get started</Button>
-            <Navbar.Toggle />
           </div>
         </Navbar.Link>
       </Navbar.Collapse>
@@ -71,9 +80,48 @@ WithCTA.args = {
   )
 };
 
-export const WithDropdown = Template.bind({});
-WithDropdown.storyName = 'With dropdown';
-WithDropdown.args = {
+export const WithNavbarDropdown = Template.bind({});
+WithNavbarDropdown.args = {
+  children: (
+    <>
+      <Navbar.Brand href="https://flowbite.com/">
+        <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold">Flowbite</span>
+      </Navbar.Brand>
+      <Navbar.Toggle />
+      <Navbar.Collapse>
+        <Navbar.Link href="/navbars" active>
+          Home
+        </Navbar.Link>
+        <Navbar.Dropdown
+          label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" />}
+          arrowIcon={false}
+        >
+          <Navbar.Link href="/navbars1">Construction</Navbar.Link>
+          <Navbar.Link href="/navbars2">Food</Navbar.Link>
+          <Navbar.Dropdown label="Pets" href="/testus" direction="right">
+            <Navbar.Link href="/navbars3">Dog</Navbar.Link>
+            <Navbar.Link href="/navbars4">Cat</Navbar.Link>
+          </Navbar.Dropdown>
+          <Navbar.Link href="/navbars3">Shopping</Navbar.Link>
+          <Navbar.Link href="/navbars4">Business</Navbar.Link>
+        </Navbar.Dropdown>
+        <Navbar.Link href="/navbars">About</Navbar.Link>
+        <Navbar.Link href="/navbars">Services</Navbar.Link>
+        <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+        <Navbar.Link href="/navbars">Contact</Navbar.Link>
+        <Navbar.Link>
+          <div className="flex gap-3 md:order-2">
+            <Button>Get started</Button>
+          </div>
+        </Navbar.Link>
+      </Navbar.Collapse>
+    </>
+  )
+};
+
+export const WithClassicDropdown = Template.bind({});
+WithClassicDropdown.args = {
   children: (
     <>
       <Navbar.Brand href="https://flowbite.com/">

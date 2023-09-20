@@ -17,6 +17,19 @@ export type NavBarTheme = {
     base: string;
     icon: string;
   };
+  dropdown: {
+    base: string;
+    iconAnimations: {
+      base: string;
+      opened: string;
+      rightClosed: string;
+      rightOpen: string;
+    };
+    container: {
+      base: string;
+      rightDirection: string;
+    };
+  };
 };
 
 export const NAV_BAR_THEME: NavBarTheme = {
@@ -37,5 +50,18 @@ export const NAV_BAR_THEME: NavBarTheme = {
   toggle: {
     base: 'inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200:bg-gray-700:ring-gray-600 md:hidden',
     icon: 'h-6 w-6 shrink-0'
+  },
+  dropdown: {
+    base: 'cursor-pointer gap-1',
+    iconAnimations: {
+      base: 'transition duration-500 ease-in-out',
+      opened: '-rotate-180 md:rotate-180',
+      rightClosed: 'rotate-90 md:rotate-0',
+      rightOpen: '-rotate-90 md:rotate-180'
+    },
+    container: {
+      base: 'md:px-5 md:py-2.5 md:absolute md:mx-0 z-10 rounded-md bg-slate-100 border border-slate-300 md:items-start items-center flex flex-col mx-2',
+      rightDirection: 'top-0 left-full'
+    }
   }
 };
