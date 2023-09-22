@@ -9,14 +9,13 @@ import type { NavbarComponentProps } from './Navbar';
 
 export default {
   title: 'Components/organisms/Navbar',
-  component: Navbar
+  component: Navbar,
+  parameters: {
+    layout: 'fullscreen'
+  }
 } as Meta;
 
-const Template: Story<NavbarComponentProps> = (args) => (
-  <div className="w-4/5">
-    <Navbar {...args} />
-  </div>
-);
+const Template: Story<NavbarComponentProps> = (args) => <Navbar {...args} />;
 
 export const DefaultNavbar = Template.bind({});
 DefaultNavbar.storyName = 'Default';
@@ -56,16 +55,12 @@ WithCTA.args = {
         <Navbar.Link href="/navbars" active>
           Home
         </Navbar.Link>
-        <Navbar.Dropdown label="Services" href="/testus">
+        <Navbar.Group label="Services" href="/testus" withUnderlineEffect>
           <Navbar.Link href="/navbars1">Construction</Navbar.Link>
           <Navbar.Link href="/navbars2">Food</Navbar.Link>
-          <Navbar.Dropdown label="Pets" href="/testus" direction="right">
-            <Navbar.Link href="/navbars3">Dog</Navbar.Link>
-            <Navbar.Link href="/navbars4">Cat</Navbar.Link>
-          </Navbar.Dropdown>
           <Navbar.Link href="/navbars3">Shopping</Navbar.Link>
           <Navbar.Link href="/navbars4">Business</Navbar.Link>
-        </Navbar.Dropdown>
+        </Navbar.Group>
         <Navbar.Link href="/navbars">About</Navbar.Link>
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
@@ -82,6 +77,7 @@ WithCTA.args = {
 
 export const WithNavbarDropdown = Template.bind({});
 WithNavbarDropdown.args = {
+  height: 200,
   children: (
     <>
       <Navbar.Brand href="https://flowbite.com/">
@@ -93,19 +89,40 @@ WithNavbarDropdown.args = {
         <Navbar.Link href="/navbars" active>
           Home
         </Navbar.Link>
-        <Navbar.Dropdown
-          label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" />}
-          arrowIcon={false}
-        >
-          <Navbar.Link href="/navbars1">Construction</Navbar.Link>
-          <Navbar.Link href="/navbars2">Food</Navbar.Link>
-          <Navbar.Dropdown label="Pets" href="/testus" direction="right">
-            <Navbar.Link href="/navbars3">Dog</Navbar.Link>
-            <Navbar.Link href="/navbars4">Cat</Navbar.Link>
-          </Navbar.Dropdown>
-          <Navbar.Link href="/navbars3">Shopping</Navbar.Link>
-          <Navbar.Link href="/navbars4">Business</Navbar.Link>
-        </Navbar.Dropdown>
+
+        <Navbar.Group label="Services" href="/" withUnderlineEffect>
+          <div className="flex w-full gap-5">
+            <span className="w-1/12 border-r">
+              <Navbar.Link href="/">Services</Navbar.Link>
+            </span>
+            <div className="flex w-full justify-between px-10">
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+            </div>
+          </div>
+        </Navbar.Group>
         <Navbar.Link href="/navbars">About</Navbar.Link>
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>

@@ -3,6 +3,7 @@ import { createContext, useContext } from 'react';
 type NavbarContext = {
   isOpen?: boolean;
   setIsOpen: (isOpen: boolean) => void;
+  height?: number;
 };
 
 export const NavbarContext = createContext<NavbarContext | undefined>(undefined);
