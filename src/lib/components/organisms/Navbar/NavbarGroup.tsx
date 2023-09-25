@@ -12,7 +12,7 @@ export interface NavbarGroupProps {
   children?: React.ReactNode;
   arrowIcon?: boolean;
   withUnderlineEffect?: boolean;
-  topPositionValue?: number;
+  topPositionValue?: string;
 }
 
 export const NavbarGroup: FC<NavbarGroupProps> = ({
@@ -21,7 +21,7 @@ export const NavbarGroup: FC<NavbarGroupProps> = ({
   children,
   arrowIcon = true,
   withUnderlineEffect,
-  topPositionValue = 65
+  topPositionValue = '65px'
 }) => {
   const theme = useTheme().theme.navbar.group;
 
@@ -51,7 +51,7 @@ export const NavbarGroup: FC<NavbarGroupProps> = ({
   };
 
   const style = {
-    top: `${topPositionValue}px`,
+    top: topPositionValue,
     '@media (min-width: 768px)': {
       top: '0'
     }
