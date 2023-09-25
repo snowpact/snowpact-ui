@@ -79,10 +79,14 @@ module.exports = {
       fontSize: {
         '2xs': '0.625rem'
       },
-
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      }
     }
   },
   variants: {
+    display: ['responsive', 'group-hover', 'group-focus'],
     extend: {
       backgroundColor: ['active'],
     },

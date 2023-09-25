@@ -40,7 +40,7 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
   const LinkComponent = as || 'a';
 
   return (
-    <li className="group relative">
+    <li className="group relative w-full text-center md:text-left">
       <LinkComponent
         href={href}
         className={classNames(theme.base, active && theme.active, disabled && theme.disabled)}
@@ -49,7 +49,7 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
       >
         {children}
         {withUnderlineEffect && (
-          <span className="absolute bottom-0 left-0 h-[2px] w-0 rounded-lg bg-secondary-200 transition-all duration-500 group-hover:w-full"></span>
+          <span className={classNames('absolute bottom-0 left-0 w-0 group-hover:w-full', theme.underline)}></span>
         )}
       </LinkComponent>
     </li>

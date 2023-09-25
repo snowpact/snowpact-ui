@@ -33,7 +33,7 @@ export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = f
         className={twMerge(
           classNames(theme.base, theme.background, [
             sticky === 'transparent' && [
-              'fixed top-0 left-0 right-0 transition linear delay-150',
+              'fixed flex top-0 left-0 right-0 transition linear delay-150',
               fixedEffect === NavbarSticky.STICKY_TOP && !isOpen && `bg-transparent ${theme.fixedTransparentStyle}`
             ],
             sticky === 'solid' && 'sticky top-0',
@@ -41,7 +41,14 @@ export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = f
           ])
         )}
       >
-        <div className={classNames(theme.innerBase, [!fluid && 'container', fluid && 'px-2 sm:px-4'])}>{children}</div>
+        <div
+          className={classNames('md:flex-nowrap flex-wrap', theme.innerBase, [
+            !fluid && 'container',
+            fluid && 'px-2 sm:px-4'
+          ])}
+        >
+          {children}
+        </div>
       </nav>
     </NavbarContext.Provider>
   );

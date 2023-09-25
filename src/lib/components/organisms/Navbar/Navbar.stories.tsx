@@ -9,14 +9,13 @@ import type { NavbarComponentProps } from './Navbar';
 
 export default {
   title: 'Components/organisms/Navbar',
-  component: Navbar
+  component: Navbar,
+  parameters: {
+    layout: 'fullscreen'
+  }
 } as Meta;
 
-const Template: Story<NavbarComponentProps> = (args) => (
-  <div className="w-4/5">
-    <Navbar {...args} />
-  </div>
-);
+const Template: Story<NavbarComponentProps> = (args) => <Navbar {...args} />;
 
 export const DefaultNavbar = Template.bind({});
 DefaultNavbar.storyName = 'Default';
@@ -51,11 +50,17 @@ WithCTA.args = {
         <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold">Flowbite</span>
       </Navbar.Brand>
-
+      <Navbar.Toggle />
       <Navbar.Collapse>
         <Navbar.Link href="/navbars" active>
           Home
         </Navbar.Link>
+        <Navbar.Group label="Services" href="/testus" withUnderlineEffect>
+          <Navbar.Link href="/navbars1">Construction</Navbar.Link>
+          <Navbar.Link href="/navbars2">Food</Navbar.Link>
+          <Navbar.Link href="/navbars3">Shopping</Navbar.Link>
+          <Navbar.Link href="/navbars4">Business</Navbar.Link>
+        </Navbar.Group>
         <Navbar.Link href="/navbars">About</Navbar.Link>
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
@@ -63,7 +68,6 @@ WithCTA.args = {
         <Navbar.Link>
           <div className="flex gap-3 md:order-2">
             <Button>Get started</Button>
-            <Navbar.Toggle />
           </div>
         </Navbar.Link>
       </Navbar.Collapse>
@@ -71,9 +75,69 @@ WithCTA.args = {
   )
 };
 
-export const WithDropdown = Template.bind({});
-WithDropdown.storyName = 'With dropdown';
-WithDropdown.args = {
+export const WithNavbarDropdown = Template.bind({});
+WithNavbarDropdown.args = {
+  children: (
+    <>
+      <Navbar.Brand href="https://flowbite.com/">
+        <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold">Flowbite</span>
+      </Navbar.Brand>
+      <Navbar.Toggle />
+      <Navbar.Collapse>
+        <Navbar.Link href="/navbars" active>
+          Home
+        </Navbar.Link>
+
+        <Navbar.Group label="Services" href="/" withUnderlineEffect>
+          <div className="flex w-full gap-5">
+            <span className="w-1/12 border-r">
+              <Navbar.Link href="/">Services</Navbar.Link>
+            </span>
+            <div className="flex w-full justify-between px-10">
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+            </div>
+          </div>
+        </Navbar.Group>
+        <Navbar.Link href="/navbars">About</Navbar.Link>
+        <Navbar.Link href="/navbars">Services</Navbar.Link>
+        <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+        <Navbar.Link href="/navbars">Contact</Navbar.Link>
+        <Navbar.Link>
+          <div className="flex gap-3 md:order-2">
+            <Button>Get started</Button>
+          </div>
+        </Navbar.Link>
+      </Navbar.Collapse>
+    </>
+  )
+};
+
+export const WithClassicDropdown = Template.bind({});
+WithClassicDropdown.args = {
   children: (
     <>
       <Navbar.Brand href="https://flowbite.com/">
