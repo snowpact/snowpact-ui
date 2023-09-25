@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { HiOutlineChevronDown } from 'react-icons/hi';
 import { twMerge } from 'tailwind-merge';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
-import { useNavbarContext } from './NavbarContext';
 import { NavbarLink } from './NavbarLink';
 
 export interface NavbarGroupProps {
@@ -13,9 +12,17 @@ export interface NavbarGroupProps {
   children?: React.ReactNode;
   arrowIcon?: boolean;
   withUnderlineEffect?: boolean;
+  topPositionValue?: number;
 }
 
-export const NavbarGroup: FC<NavbarGroupProps> = ({ label, href, children, arrowIcon = true, withUnderlineEffect }) => {
+export const NavbarGroup: FC<NavbarGroupProps> = ({
+  label,
+  href,
+  children,
+  arrowIcon = true,
+  withUnderlineEffect,
+  topPositionValue = 65
+}) => {
   const theme = useTheme().theme.navbar.group;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -43,10 +50,8 @@ export const NavbarGroup: FC<NavbarGroupProps> = ({ label, href, children, arrow
     );
   };
 
-  const { height } = useNavbarContext();
-
   const style = {
-    top: `${height}px`,
+    top: `${topPositionValue}px`,
     '@media (min-width: 768px)': {
       top: '0'
     }

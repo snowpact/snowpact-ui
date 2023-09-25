@@ -11,15 +11,10 @@ export interface NavbarComponentProps extends Omit<PropsWithChildren<ComponentPr
   menuOpen?: boolean;
   fluid?: boolean;
   sticky?: 'transparent' | 'solid';
-  height?: number;
 }
 
-export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = false, sticky, height = 60 }) => {
+export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = false, sticky }) => {
   const [isOpen, setIsOpen] = useState(menuOpen);
-
-  const style = {
-    minHeight: `${height}px`
-  };
 
   useEffect(() => {
     if (isOpen) {
@@ -33,7 +28,7 @@ export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = f
   const fixedEffect = useStickyNavbar({ handleSticky: !!sticky, handleTop: sticky === 'transparent' });
 
   return (
-    <NavbarContext.Provider value={{ isOpen, setIsOpen, height }}>
+    <NavbarContext.Provider value={{ isOpen, setIsOpen }}>
       <nav
         className={twMerge(
           classNames(theme.base, theme.background, [
@@ -45,9 +40,15 @@ export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = f
             isOpen && 'h-screen'
           ])
         )}
-        style={style}
       >
-        <div className={classNames(theme.innerBase, [!fluid && 'container', fluid && 'px-2 sm:px-4'])}>{children}</div>
+        <div
+          className={classNames('md:flex-nowrap flex-wrap', theme.innerBase, [
+            !fluid && 'container',
+            fluid && 'px-2 sm:px-4'
+          ])}
+        >
+          {children}
+        </div>
       </nav>
     </NavbarContext.Provider>
   );

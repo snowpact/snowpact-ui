@@ -33,7 +33,7 @@ export type NavBarTheme = {
 
 export const NAV_BAR_THEME: NavBarTheme = {
   base: 'border-gray-200 z-[1000] flex min-h-[65px]',
-  innerBase: 'mx-auto flex flex-wrap items-center justify-between',
+  innerBase: 'mx-auto flex items-center justify-between',
   brand: 'flex items-center',
   fixedTransparentStyle: '',
   background: 'bg-primary-500',

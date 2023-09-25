@@ -77,7 +77,6 @@ WithCTA.args = {
 
 export const WithNavbarDropdown = Template.bind({});
 WithNavbarDropdown.args = {
-  height: 200,
   children: (
     <>
       <Navbar.Brand href="https://flowbite.com/">
