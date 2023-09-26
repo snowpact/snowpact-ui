@@ -1,3 +1,10 @@
+# [0.18.0](https://github.com/snowpact/snowpact-ui/compare/v0.17.1...v0.18.0) (2023-09-26)
+
+
+### Features
+
+* **navbar:** add group-list sub-component + minor design fixes ([#72](https://github.com/snowpact/snowpact-ui/issues/72)) ([452030e](https://github.com/snowpact/snowpact-ui/commit/452030ee2eebbeb7215cb364a0d9ea2658f201a2))
+
 ## [0.17.1](https://github.com/snowpact/snowpact-ui/compare/v0.17.0...v0.17.1) (2023-09-26)
 
 
