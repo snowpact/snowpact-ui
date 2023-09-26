@@ -40,7 +40,7 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
   const LinkComponent = as || 'a';
 
   return (
-    <li className="group relative w-full text-center md:text-left">
+    <li className="group relative whitespace-nowrap text-center md:text-left">
       <LinkComponent
         href={href}
         className={classNames(theme.base, active && theme.active, disabled && theme.disabled)}

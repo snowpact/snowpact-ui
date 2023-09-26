@@ -56,13 +56,21 @@ WithCTA.args = {
           Home
         </Navbar.Link>
         <Navbar.Group label="Services" href="/testus" withUnderlineEffect>
-          <Navbar.Link href="/navbars1">Construction</Navbar.Link>
-          <Navbar.Link href="/navbars2">Food</Navbar.Link>
-          <Navbar.Link href="/navbars3">Shopping</Navbar.Link>
-          <Navbar.Link href="/navbars4">Business</Navbar.Link>
+          <Navbar.Link href="/navbars1" withUnderlineEffect>
+            Construction
+          </Navbar.Link>
+          <Navbar.Link href="/navbars2" withUnderlineEffect>
+            Food
+          </Navbar.Link>
+          <Navbar.Link href="/navbars3" withUnderlineEffect>
+            Shopping
+          </Navbar.Link>
+          <Navbar.Link href="/navbars4" withUnderlineEffect>
+            Business
+          </Navbar.Link>
         </Navbar.Group>
         <Navbar.Link href="/navbars">About</Navbar.Link>
-        <Navbar.Link href="/navbars">Services</Navbar.Link>
+        <Navbar.Link href="/navbars">ServicesA Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
         <Navbar.Link href="/navbars">Contact</Navbar.Link>
         <Navbar.Link>
@@ -96,6 +104,84 @@ WithNavbarDropdown.args = {
             </span>
             <div className="flex w-full justify-between px-10">
               <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+            </div>
+          </div>
+        </Navbar.Group>
+        <Navbar.Group label="Services" href="/" withUnderlineEffect>
+          <div className="flex w-full gap-5">
+            <span className="w-1/12 border-r">
+              <Navbar.Link href="/">Services</Navbar.Link>
+            </span>
+            <div className="flex w-full justify-between px-10">
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+              </div>
+            </div>
+          </div>
+        </Navbar.Group>
+        <Navbar.Group label="Services" href="/" withUnderlineEffect>
+          <div className="flex w-full gap-5">
+            <span className="w-1/12 border-r">
+              <Navbar.Link href="/">Services</Navbar.Link>
+            </span>
+            <div className="flex w-full justify-between px-10">
+              <div>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
+                <Navbar.Link href="/navbars">About</Navbar.Link>
+                <Navbar.Link href="/navbars">Services</Navbar.Link>
+                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+                <Navbar.Link href="/navbars">Contact</Navbar.Link>
                 <Navbar.Link href="/navbars">About</Navbar.Link>
                 <Navbar.Link href="/navbars">Services</Navbar.Link>
                 <Navbar.Link href="/navbars">Pricing</Navbar.Link>
