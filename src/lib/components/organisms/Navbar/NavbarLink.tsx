@@ -40,17 +40,19 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
   const LinkComponent = as || 'a';
 
   return (
-    <li className="group relative whitespace-nowrap text-center md:text-left">
+    <li className="group relative w-full whitespace-nowrap text-center md:w-fit md:text-left">
       <LinkComponent
         href={href}
         className={classNames(theme.base, active && theme.active, disabled && theme.disabled)}
         {...props}
         onClick={handleOnClick}
       >
-        {children}
-        {withUnderlineEffect && (
-          <span className={classNames('absolute bottom-0 left-0 w-0 group-hover:w-full', theme.underline)}></span>
-        )}
+        <span className="w-full">
+          {children}
+          {withUnderlineEffect && (
+            <span className={classNames('absolute bottom-0 left-0 w-0 group-hover:w-full', theme.underline)}></span>
+          )}
+        </span>
       </LinkComponent>
     </li>
   );

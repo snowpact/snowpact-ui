@@ -6,6 +6,7 @@ import { Button } from '../../atoms/Button';
 import { Hero } from '../../molecules';
 import { Dropdown } from '../../molecules/Dropdown';
 import type { NavbarComponentProps } from './Navbar';
+import { NavbarGroupList, type NavbarGroupListProps } from './NavbarGroupList';
 
 export default {
   title: 'Components/organisms/Navbar',
@@ -15,6 +16,30 @@ export default {
   }
 } as Meta;
 
+const GROUP_1: NavbarGroupListProps = {
+  groupName: {
+    label: 'Services',
+    href: '/'
+  },
+  items: [
+    {
+      label: 'Construction',
+      href: '/'
+    },
+    {
+      label: 'Food',
+      href: '/'
+    },
+    {
+      label: 'Animals',
+      href: '/'
+    },
+    {
+      label: 'House',
+      href: '/'
+    }
+  ]
+};
 const Template: Story<NavbarComponentProps> = (args) => <Navbar {...args} />;
 
 export const DefaultNavbar = Template.bind({});
@@ -98,122 +123,21 @@ WithNavbarDropdown.args = {
         </Navbar.Link>
 
         <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <div className="flex w-full gap-5">
-            <span className="w-1/12 border-r">
-              <Navbar.Link href="/">Services</Navbar.Link>
-            </span>
-            <div className="flex w-full justify-between px-10">
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-            </div>
-          </div>
+          <NavbarGroupList groupName={GROUP_1.groupName} items={GROUP_1.items} withSidebar withUnderlineEffect />
         </Navbar.Group>
         <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <div className="flex w-full gap-5">
-            <span className="w-1/12 border-r">
-              <Navbar.Link href="/">Services</Navbar.Link>
-            </span>
-            <div className="flex w-full justify-between px-10">
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-            </div>
-          </div>
+          <NavbarGroupList groupName={GROUP_1.groupName} items={GROUP_1.items} withSidebar withUnderlineEffect />
         </Navbar.Group>
         <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <div className="flex w-full gap-5">
-            <span className="w-1/12 border-r">
-              <Navbar.Link href="/">Services</Navbar.Link>
-            </span>
-            <div className="flex w-full justify-between px-10">
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-            </div>
-          </div>
+          <NavbarGroupList groupName={GROUP_1.groupName} items={GROUP_1.items} withSidebar withUnderlineEffect />
         </Navbar.Group>
+
         <Navbar.Link href="/navbars">About</Navbar.Link>
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
         <Navbar.Link href="/navbars">Contact</Navbar.Link>
         <Navbar.Link>
-          <div className="flex gap-3 md:order-2">
+          <div className="flex justify-center gap-3 md:order-2">
             <Button>Get started</Button>
           </div>
         </Navbar.Link>
