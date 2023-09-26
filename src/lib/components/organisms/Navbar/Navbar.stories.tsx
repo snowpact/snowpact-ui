@@ -1,4 +1,5 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
+import { Link } from 'react-router-dom';
 import { Navbar } from '.';
 import { ProgressBar } from '../../atoms';
 import { Avatar } from '../../atoms/Avatar';
@@ -14,6 +15,39 @@ export default {
     layout: 'fullscreen'
   }
 } as Meta;
+
+const EXPANSION_ITEMS = [
+  {
+    label: 'Construction',
+    href: '/'
+  },
+  {
+    label: 'Food',
+    href: '/'
+  },
+  {
+    label: 'Animals',
+    href: '/'
+  },
+  {
+    label: 'House',
+    href: '/'
+  }
+];
+
+const buildExpansionAsChildren = (items: { label: string; href: string }[], withUnderlineEffect?: boolean) => {
+  return (
+    <>
+      {items.map((item, index) => (
+        <span key={index} className="w-full md:w-fit">
+          <Navbar.Link as={Link} href={item.href} withUnderlineEffect={withUnderlineEffect}>
+            {item.label}
+          </Navbar.Link>
+        </span>
+      ))}
+    </>
+  );
+};
 
 const Template: Story<NavbarComponentProps> = (args) => <Navbar {...args} />;
 
@@ -98,122 +132,22 @@ WithNavbarDropdown.args = {
         </Navbar.Link>
 
         <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <div className="flex w-full gap-5">
-            <span className="w-1/12 border-r">
-              <Navbar.Link href="/">Services</Navbar.Link>
-            </span>
-            <div className="flex w-full justify-between px-10">
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-            </div>
-          </div>
+          <Navbar.Expansion groupName="Services" groupLink="/" withUnderlineEffect>
+            {buildExpansionAsChildren(EXPANSION_ITEMS)}
+          </Navbar.Expansion>
         </Navbar.Group>
         <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <div className="flex w-full gap-5">
-            <span className="w-1/12 border-r">
-              <Navbar.Link href="/">Services</Navbar.Link>
-            </span>
-            <div className="flex w-full justify-between px-10">
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-            </div>
-          </div>
+          <Navbar.Expansion>{buildExpansionAsChildren(EXPANSION_ITEMS, true)}</Navbar.Expansion>
         </Navbar.Group>
-        <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <div className="flex w-full gap-5">
-            <span className="w-1/12 border-r">
-              <Navbar.Link href="/">Services</Navbar.Link>
-            </span>
-            <div className="flex w-full justify-between px-10">
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-              <div>
-                <Navbar.Link href="/navbars">About</Navbar.Link>
-                <Navbar.Link href="/navbars">Services</Navbar.Link>
-                <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-                <Navbar.Link href="/navbars">Contact</Navbar.Link>
-              </div>
-            </div>
-          </div>
+        <Navbar.Group label="Services" withUnderlineEffect>
+          <Navbar.Expansion groupName="Services">{buildExpansionAsChildren(EXPANSION_ITEMS)}</Navbar.Expansion>
         </Navbar.Group>
         <Navbar.Link href="/navbars">About</Navbar.Link>
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
         <Navbar.Link href="/navbars">Contact</Navbar.Link>
         <Navbar.Link>
-          <div className="flex gap-3 md:order-2">
+          <div className="flex justify-center gap-3 md:order-2">
             <Button>Get started</Button>
           </div>
         </Navbar.Link>
