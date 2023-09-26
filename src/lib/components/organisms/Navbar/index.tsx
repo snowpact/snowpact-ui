@@ -2,6 +2,7 @@ import { Navbar as NavbarComponent } from './Navbar';
 import { NavbarBrand } from './NavbarBrand';
 import { NavbarCollapse } from './NavbarCollapse';
 import { NavbarGroup } from './NavbarGroup';
+import { NavbarGroupList } from './NavbarGroupList';
 import { NavbarLink } from './NavbarLink';
 import { NavbarToggle } from './NavbarToggle';
 
@@ -11,11 +12,13 @@ NavbarCollapse.displayName = 'Navbar.Collapse';
 NavbarLink.displayName = 'Navbar.Link';
 NavbarToggle.displayName = 'Navbar.Toggle';
 NavbarGroup.displayName = 'Navbar.Group';
+NavbarGroupList.displayName = 'Navbar.Group.List';
 
 export const Navbar = Object.assign(NavbarComponent, {
   Brand: NavbarBrand,
   Collapse: NavbarCollapse,
   Link: NavbarLink,
   Toggle: NavbarToggle,
-  Group: NavbarGroup
+  Group: NavbarGroup,
+  GroupList: NavbarGroupList
 });

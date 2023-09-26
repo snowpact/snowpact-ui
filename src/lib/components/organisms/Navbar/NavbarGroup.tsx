@@ -46,7 +46,7 @@ export const NavbarGroup: FC<NavbarGroupProps> = ({
     setLeaveTimeout(
       setTimeout(() => {
         setIsOpen(false);
-      }, 50)
+      }, 100)
     );
   };
 
@@ -58,26 +58,32 @@ export const NavbarGroup: FC<NavbarGroupProps> = ({
   };
 
   return (
-    <div
+    <li
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="flex h-full w-full cursor-pointer items-center md:w-fit"
+      className="flex w-full cursor-pointer flex-col py-2 md:w-fit md:flex-row"
     >
-      <li className="relative inline-block w-full items-center">
+      <div className="inline-block w-full items-center md:h-full">
         <div className={twMerge(cs(theme.base, 'flex flex-row-reverse md:flex-row'))}>
-          <div className="relative flex items-center">
+          <span className="relative flex items-center gap-1">
             <NavbarLink href={href} withUnderlineEffect={!!href && withUnderlineEffect}>
               {label}
             </NavbarLink>
             {arrowIcon && (
-              <Icon onClick={toggleGroup} className={twMerge(cs(theme.icon.base, isOpen && theme.icon.opened))} />
+              <span className={twMerge(cs(theme.icon.base, isOpen && theme.icon.opened))}>
+                <Icon onClick={toggleGroup} />
+              </span>
             )}
-          </div>
+          </span>
         </div>
-      </li>
-      <div className={twMerge(cs(theme.container.base, !isOpen && theme.container.opened))} style={style}>
+      </div>
+      <div className={twMerge(cs('md:h-0 h-2', !isOpen && 'hidden'))} />
+      <div
+        className={twMerge(cs('cursor-default', theme.container.base, !isOpen && theme.container.opened))}
+        style={style}
+      >
         {children}
       </div>
-    </div>
+    </li>
   );
 };
