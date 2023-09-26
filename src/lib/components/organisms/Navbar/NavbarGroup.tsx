@@ -46,7 +46,7 @@ export const NavbarGroup: FC<NavbarGroupProps> = ({
     setLeaveTimeout(
       setTimeout(() => {
         setIsOpen(false);
-      }, 500)
+      }, 50)
     );
   };
 
@@ -58,7 +58,11 @@ export const NavbarGroup: FC<NavbarGroupProps> = ({
   };
 
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="w-full">
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="flex h-full w-full cursor-pointer items-center md:w-fit"
+    >
       <li className="relative inline-block w-full items-center">
         <div className={twMerge(cs(theme.base, 'flex flex-row-reverse md:flex-row'))}>
           <div className="relative flex items-center">
