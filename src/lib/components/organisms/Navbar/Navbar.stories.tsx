@@ -1,4 +1,5 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
+import { Link } from 'react-router-dom';
 import { Navbar } from '.';
 import { ProgressBar } from '../../atoms';
 import { Avatar } from '../../atoms/Avatar';
@@ -6,7 +7,6 @@ import { Button } from '../../atoms/Button';
 import { Hero } from '../../molecules';
 import { Dropdown } from '../../molecules/Dropdown';
 import type { NavbarComponentProps } from './Navbar';
-import { NavbarGroupList, type NavbarGroupListProps } from './NavbarGroupList';
 
 export default {
   title: 'Components/organisms/Navbar',
@@ -16,30 +16,39 @@ export default {
   }
 } as Meta;
 
-const GROUP_1: NavbarGroupListProps = {
-  groupName: {
-    label: 'Services',
+const EXPANSION_ITEMS = [
+  {
+    label: 'Construction',
     href: '/'
   },
-  items: [
-    {
-      label: 'Construction',
-      href: '/'
-    },
-    {
-      label: 'Food',
-      href: '/'
-    },
-    {
-      label: 'Animals',
-      href: '/'
-    },
-    {
-      label: 'House',
-      href: '/'
-    }
-  ]
+  {
+    label: 'Food',
+    href: '/'
+  },
+  {
+    label: 'Animals',
+    href: '/'
+  },
+  {
+    label: 'House',
+    href: '/'
+  }
+];
+
+const buildExpansionAsChildren = (items: { label: string; href: string }[], withUnderlineEffect?: boolean) => {
+  return (
+    <>
+      {items.map((item, index) => (
+        <span key={index} className="w-full md:w-fit">
+          <Navbar.Link as={Link} href={item.href} withUnderlineEffect={withUnderlineEffect}>
+            {item.label}
+          </Navbar.Link>
+        </span>
+      ))}
+    </>
+  );
 };
+
 const Template: Story<NavbarComponentProps> = (args) => <Navbar {...args} />;
 
 export const DefaultNavbar = Template.bind({});
@@ -123,15 +132,16 @@ WithNavbarDropdown.args = {
         </Navbar.Link>
 
         <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <NavbarGroupList groupName={GROUP_1.groupName} items={GROUP_1.items} withSidebar withUnderlineEffect />
+          <Navbar.Expansion groupName="Services" groupLink="/" withUnderlineEffect>
+            {buildExpansionAsChildren(EXPANSION_ITEMS)}
+          </Navbar.Expansion>
         </Navbar.Group>
         <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <NavbarGroupList groupName={GROUP_1.groupName} items={GROUP_1.items} withSidebar withUnderlineEffect />
+          <Navbar.Expansion>{buildExpansionAsChildren(EXPANSION_ITEMS, true)}</Navbar.Expansion>
         </Navbar.Group>
-        <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <NavbarGroupList groupName={GROUP_1.groupName} items={GROUP_1.items} withSidebar withUnderlineEffect />
+        <Navbar.Group label="Services" withUnderlineEffect>
+          <Navbar.Expansion groupName="Services">{buildExpansionAsChildren(EXPANSION_ITEMS)}</Navbar.Expansion>
         </Navbar.Group>
-
         <Navbar.Link href="/navbars">About</Navbar.Link>
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
