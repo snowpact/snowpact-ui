@@ -1,3 +1,10 @@
+## [0.17.1](https://github.com/snowpact/snowpact-ui/compare/v0.17.0...v0.17.1) (2023-09-26)
+
+
+### Bug Fixes
+
+* **navbar:** minor design fixes ([#71](https://github.com/snowpact/snowpact-ui/issues/71)) ([aa10ef9](https://github.com/snowpact/snowpact-ui/commit/aa10ef94a2b3ee58b5cbeb9dd109bdc734d8f70f))
+
 # [0.17.0](https://github.com/snowpact/snowpact-ui/compare/v0.16.6...v0.17.0) (2023-09-25)
 
 
