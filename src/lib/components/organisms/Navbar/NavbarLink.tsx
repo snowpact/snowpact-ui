@@ -8,6 +8,7 @@ export interface NavbarLinkProps {
   disabled?: boolean;
   href?: string;
   as?: React.ElementType;
+  linkAsTo?: boolean;
   children?: React.ReactNode;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   withUnderlineEffect?: boolean;
@@ -19,6 +20,7 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
   href,
   children,
   as,
+  linkAsTo,
   onClick,
   withUnderlineEffect,
   ...props
@@ -37,11 +39,12 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
     setIsOpen(false);
   };
 
-  const ContainerComponent = href ? as ?? 'a' : 'div';
+  const LinkOrDivComponent = href ? as ?? 'a' : 'div';
   return (
     <li className="group relative w-full whitespace-nowrap text-center md:w-fit md:text-left">
-      <ContainerComponent
-        href={href}
+      <LinkOrDivComponent
+        href={linkAsTo ? undefined : href}
+        to={linkAsTo && href ? href : undefined}
         className={classNames(theme.base, active && theme.active, disabled && theme.disabled)}
         {...props}
         onClick={handleOnClick}
@@ -52,7 +55,7 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
             <span className={classNames('absolute bottom-0 left-0 w-0 group-hover:w-full', theme.underline)}></span>
           )}
         </span>
-      </ContainerComponent>
+      </LinkOrDivComponent>
     </li>
   );
 };
