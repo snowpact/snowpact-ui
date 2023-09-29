@@ -1,5 +1,6 @@
-import classNames from 'classnames';
+import cs from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import { twJoin, twMerge } from 'tailwind-merge';
 import { excludeClassName } from '../../../helpers/exclude';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { useNavbarContext } from './NavbarContext';
@@ -13,8 +14,21 @@ export const NavbarCollapse: FC<NavbarCollapseProps> = ({ children, ...props }):
   const theirProps = excludeClassName(props);
 
   return (
-    <div className={classNames(theme.base, !isOpen && 'hidden')} data-testid="flowbite-navbar-collapse" {...theirProps}>
-      <ul className={theme.list}>{children}</ul>
+    <div
+      className={twMerge(twJoin('w-full md:block h-full', theme.base, !isOpen && 'hidden'))}
+      data-testid="flowbite-navbar-collapse"
+      {...theirProps}
+    >
+      <ul
+        className={twMerge(
+          cs(
+            'mt-4 flex flex-col md:mt-0 md:flex-row items-center w-full md:justify-end md:gap-10 gap-0 h-full',
+            theme.list
+          )
+        )}
+      >
+        {children}
+      </ul>
     </div>
   );
 };

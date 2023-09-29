@@ -1,4 +1,6 @@
+import cs from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { excludeClassName } from '../../../helpers/exclude';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { useNavbarContext } from './NavbarContext';
@@ -17,13 +19,18 @@ export const NavbarBrand: FC<NavbarBrandProps> = ({ children, href, as, ...props
     if (props.onClick) {
       props.onClick(e);
     }
-    setIsOpen(false);
+    setIsOpen && setIsOpen(false);
   };
 
   const LinkComponent = as || 'a';
 
   return (
-    <LinkComponent href={href} className={theme.brand} {...theirProps} onClick={onClick}>
+    <LinkComponent
+      href={href}
+      className={twMerge(cs('flex items-center', theme.brand))}
+      {...theirProps}
+      onClick={onClick}
+    >
       {children}
     </LinkComponent>
   );

@@ -18,7 +18,8 @@ export default {
 
 const EXPANSION_ITEMS = [
   {
-    label: 'Construction',
+    // label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl',
+    label: 'Lorem',
     href: '/'
   },
   {
@@ -89,7 +90,7 @@ WithCTA.args = {
         <Navbar.Link href="/navbars" active>
           Home
         </Navbar.Link>
-        <Navbar.Group label="Services" href="/testus" withUnderlineEffect>
+        <Navbar.ExpandableLink label="Services" href="/testus" withUnderlineEffect>
           <Navbar.Link href="/navbars1" withUnderlineEffect>
             Construction
           </Navbar.Link>
@@ -102,7 +103,7 @@ WithCTA.args = {
           <Navbar.Link href="/navbars4" withUnderlineEffect>
             Business
           </Navbar.Link>
-        </Navbar.Group>
+        </Navbar.ExpandableLink>
         <Navbar.Link href="/navbars">About</Navbar.Link>
         <Navbar.Link href="/navbars">ServicesA Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
@@ -131,17 +132,20 @@ WithNavbarDropdown.args = {
           Home
         </Navbar.Link>
 
-        <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <Navbar.Expansion groupName="Services" groupLink="/" withUnderlineEffect>
-            {buildExpansionAsChildren(EXPANSION_ITEMS)}
-          </Navbar.Expansion>
-        </Navbar.Group>
-        <Navbar.Group label="Services" href="/" withUnderlineEffect>
-          <Navbar.Expansion>{buildExpansionAsChildren(EXPANSION_ITEMS, true)}</Navbar.Expansion>
-        </Navbar.Group>
-        <Navbar.Group label="Services" withUnderlineEffect>
-          <Navbar.Expansion groupName="Services">{buildExpansionAsChildren(EXPANSION_ITEMS)}</Navbar.Expansion>
-        </Navbar.Group>
+        <Navbar.ExpandableLink
+          label="Services 1"
+          href="/"
+          withUnderlineEffect
+          customSideContent={<Navbar.Link href="/navbars">Testos</Navbar.Link>}
+        >
+          {buildExpansionAsChildren(EXPANSION_ITEMS)}
+        </Navbar.ExpandableLink>
+        <Navbar.ExpandableLink label="Services 2" href="/" withUnderlineEffect>
+          {buildExpansionAsChildren(EXPANSION_ITEMS)}
+        </Navbar.ExpandableLink>
+        <Navbar.ExpandableLink label="Services 3" href="/" withUnderlineEffect>
+          {buildExpansionAsChildren(EXPANSION_ITEMS)}
+        </Navbar.ExpandableLink>
         <Navbar.Link href="/navbars">About</Navbar.Link>
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
