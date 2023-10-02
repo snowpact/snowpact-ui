@@ -59,7 +59,7 @@ export const NAV_BAR_THEME: NavBarTheme = {
     },
     container: {
       base: 'md:px-5 md:py-2.5 md:fixed w-full md:rounded-t-none rounded-t-md rounded-b-md bg-slate-100 md:items-start items-center flex flex-col left-0 transition duration-300 ease-in-out overflow-hidden top-0 md:-z-10',
-      opened: 'md:-translate-y-full md:scale-y-0 opacity-0 md:h-fit h-0'
+      opened: 'md:-translate-y-[50%] md:scale-y-0 opacity-0 md:h-fit h-0'
     }
   }
 };
