@@ -96,7 +96,7 @@ export const NavbarGroup: FC<NavbarGroupProps> = ({
           twJoin(
             'cursor-default md:px-5 md:py-2.5 md:fixed w-full md:rounded-t-none rounded-t-md rounded-b-md bg-slate-100 md:items-start items-center flex flex-col left-0 transition duration-300 ease-in-out overflow-hidden top-0 md:-z-10',
             theme.container.base,
-            !isOpen && twMerge('md:-translate-y-full md:scale-y-0 opacity-0 md:h-fit h-0', theme.container.closed)
+            !isOpen && twMerge('md:-translate-y-[50%] md:scale-y-0 opacity-0 md:h-fit h-0', theme.container.closed)
           )
         )}
         style={style}
