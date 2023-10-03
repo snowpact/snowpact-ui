@@ -1,3 +1,10 @@
+## [0.19.1](https://github.com/snowpact/snowpact-ui/compare/v0.19.0...v0.19.1) (2023-10-03)
+
+
+### Bug Fixes
+
+* **navbar:** expansion fix + new theming logic ([#75](https://github.com/snowpact/snowpact-ui/issues/75)) ([8b849b7](https://github.com/snowpact/snowpact-ui/commit/8b849b7d9aa8412996caebcff487380fd0664c4c))
+
 # [0.19.0](https://github.com/snowpact/snowpact-ui/compare/v0.18.0...v0.19.0) (2023-09-27)
 
 
