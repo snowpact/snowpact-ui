@@ -36,7 +36,9 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
     if (onClick) {
       onClick(e);
     }
-    href && setIsOpen(false);
+    if (href) {
+      setIsOpen(false);
+    }
   };
 
   const LinkOrDivComponent = href ? as ?? 'a' : 'div';
