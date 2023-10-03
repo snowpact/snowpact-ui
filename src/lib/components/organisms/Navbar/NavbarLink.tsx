@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import type { FC } from 'react';
+import { twJoin, twMerge } from 'tailwind-merge';
 import { useTheme } from '../../bosons/HelloInternet/ThemeContext';
 import { useNavbarContext } from './NavbarContext';
 
@@ -36,7 +36,9 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
     if (onClick) {
       onClick(e);
     }
-    setIsOpen(false);
+    if (href) {
+      setIsOpen(false);
+    }
   };
 
   const LinkOrDivComponent = href ? as ?? 'a' : 'div';
@@ -45,14 +47,25 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
       <LinkOrDivComponent
         href={linkAsTo ? undefined : href}
         to={linkAsTo && href ? href : undefined}
-        className={classNames(theme.base, active && theme.active, disabled && theme.disabled)}
+        className={twMerge(
+          twMerge('block pr-4 pl-3 md:p-0 md:py-0 py-2 mx-auto', theme.base),
+          twJoin(
+            active && twMerge('bg-primary-700 text-white md:bg-transparent md:text-primary-700', theme.active),
+            disabled && twMerge('text-gray-400 hover:cursor-not-allowed', theme.disabled)
+          )
+        )}
         {...props}
         onClick={handleOnClick}
       >
         <span className="w-full">
           {children}
           {withUnderlineEffect && (
-            <span className={classNames('absolute bottom-0 left-0 w-0 group-hover:w-full', theme.underline)}></span>
+            <span
+              className={twMerge(
+                'absolute bottom-0 left-0 w-0 group-hover:w-full h-[2px] rounded-lg bg-secondary-200 transition-all duration-500',
+                theme.underline
+              )}
+            ></span>
           )}
         </span>
       </LinkOrDivComponent>
