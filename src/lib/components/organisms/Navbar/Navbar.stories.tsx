@@ -89,7 +89,7 @@ WithCTA.args = {
         <Navbar.Link href="/navbars" active>
           Home
         </Navbar.Link>
-        <Navbar.Group label="Services" href="/testus" withUnderlineEffect>
+        <Navbar.Group label="Services" withUnderlineEffect>
           <Navbar.Link href="/navbars1" withUnderlineEffect>
             Construction
           </Navbar.Link>
@@ -131,12 +131,12 @@ WithNavbarDropdown.args = {
           Home
         </Navbar.Link>
 
-        <Navbar.Group label="Services" href="/" withUnderlineEffect>
+        <Navbar.Group label="Services" withUnderlineEffect>
           <Navbar.Expansion groupName="Services" groupLink="/" withUnderlineEffect>
             {buildExpansionAsChildren(EXPANSION_ITEMS)}
           </Navbar.Expansion>
         </Navbar.Group>
-        <Navbar.Group label="Services" href="/" withUnderlineEffect>
+        <Navbar.Group label="Services" withUnderlineEffect>
           <Navbar.Expansion>{buildExpansionAsChildren(EXPANSION_ITEMS, true)}</Navbar.Expansion>
         </Navbar.Group>
         <Navbar.Group label="Services" withUnderlineEffect>
