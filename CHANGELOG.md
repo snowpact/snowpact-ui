@@ -1,3 +1,10 @@
+## [0.19.2](https://github.com/snowpact/snowpact-ui/compare/v0.19.1...v0.19.2) (2023-10-05)
+
+
+### Bug Fixes
+
+* **navbar:** burger icon fix ([#76](https://github.com/snowpact/snowpact-ui/issues/76)) ([a23969e](https://github.com/snowpact/snowpact-ui/commit/a23969ea8db9e3a41e81f8273de00354b9de4ff1))
+
 ## [0.19.1](https://github.com/snowpact/snowpact-ui/compare/v0.19.0...v0.19.1) (2023-10-03)
 
 
