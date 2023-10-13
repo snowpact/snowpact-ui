@@ -1,9 +1,13 @@
 export type NavBarTheme = {
   base: string;
+  opened: string;
   innerBase: string;
   brand: string;
   background: string;
   fixedTransparentStyle: string;
+  scrolledTransparentStyle: string;
+  fixedSolidStyle: string;
+  scrolledSolidStyle: string;
   collapse: {
     base: string;
     list: string;
@@ -33,9 +37,13 @@ export type NavBarTheme = {
 
 export const NAV_BAR_THEME: NavBarTheme = {
   base: '',
+  opened: '',
   innerBase: '',
   brand: '',
   fixedTransparentStyle: '',
+  scrolledTransparentStyle: '',
+  fixedSolidStyle: '',
+  scrolledSolidStyle: '',
   background: '',
   collapse: {
     base: '',

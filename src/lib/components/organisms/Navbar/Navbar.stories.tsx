@@ -1,4 +1,5 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
+import { FaAccusoft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Navbar } from '.';
 import { ProgressBar } from '../../atoms';
@@ -204,7 +205,7 @@ export const RealCaseExample = () => {
           <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
           <span className="self-center whitespace-nowrap text-xl font-semibold">Flowbite</span>
         </Navbar.Brand>
-        <Navbar.Toggle />
+        <Navbar.Toggle closeIcon={FaAccusoft} />
         <Navbar.Collapse>
           <Navbar.Link href="/navbars" active>
             Home
@@ -243,6 +244,51 @@ export const RealCaseExample = () => {
             A responsive navigation bar that can be used for navigation, search, or anything else.
           </p>
           <hr />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl
+            tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod,
+          </p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia aliquam, nisl nisl
             tincidunt nunc, eget aliquam massa nisl eget dolor. Sed euismod, nisl nec lacinia aliquam, nisl nisl

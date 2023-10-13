@@ -7,9 +7,14 @@ import { useNavbarContext } from './NavbarContext';
 
 export interface NavbarToggleProps extends Omit<ComponentProps<'button'>, 'className'> {
   barIcon?: FC<ComponentProps<'svg'>>;
+  closeIcon?: FC<ComponentProps<'svg'>>;
 }
 
-export const NavbarToggle: FC<NavbarToggleProps> = ({ barIcon: BarIcon = FaBars, ...props }) => {
+export const NavbarToggle: FC<NavbarToggleProps> = ({
+  barIcon: BarIcon = FaBars,
+  closeIcon: CloseIcon = FaBars,
+  ...props
+}) => {
   const { isOpen, setIsOpen } = useNavbarContext();
 
   const handleClick = () => {
@@ -30,7 +35,8 @@ export const NavbarToggle: FC<NavbarToggleProps> = ({ barIcon: BarIcon = FaBars,
       {...theirProps}
     >
       <span className="sr-only">Open main menu</span>
-      <BarIcon className={twMerge('h-6 w-6 shrink-0', theme.icon)} />
+      {!isOpen && <BarIcon className={twMerge('h-6 w-6 shrink-0', theme.icon)} />}
+      {isOpen && <CloseIcon className={twMerge('h-6 w-6 shrink-0', theme.icon)} />}
     </button>
   );
 };
