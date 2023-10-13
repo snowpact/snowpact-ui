@@ -1,3 +1,10 @@
+# [0.20.0](https://github.com/snowpact/snowpact-ui/compare/v0.19.2...v0.20.0) (2023-10-13)
+
+
+### Features
+
+* **navbar:** add scrolling theming and closing icon options ([#77](https://github.com/snowpact/snowpact-ui/issues/77)) ([ec08a6f](https://github.com/snowpact/snowpact-ui/commit/ec08a6f41cea60b4fdc7ed6268baca1e38109020))
+
 ## [0.19.2](https://github.com/snowpact/snowpact-ui/compare/v0.19.1...v0.19.2) (2023-10-05)
 
 
