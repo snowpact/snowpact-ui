@@ -26,8 +26,6 @@ export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = f
   const theme = useTheme().theme.navbar;
   const fixedEffect = useStickyNavbar({ handleSticky: !!sticky, handleTop: sticky === 'transparent' });
 
-  console.log(fixedEffect);
-
   return (
     <NavbarContext.Provider value={{ isOpen, setIsOpen }}>
       <nav
