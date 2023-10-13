@@ -41,10 +41,16 @@ export const Navbar: FC<NavbarComponentProps> = ({ children, menuOpen, fluid = f
             sticky === 'transparent' &&
               twJoin(
                 'fixed flex top-0 left-0 right-0 transition linear delay-150',
-                fixedEffect === NavbarSticky.STICKY_TOP && !isOpen && `bg-transparent ${theme.fixedTransparentStyle}`
+                fixedEffect === NavbarSticky.STICKY_TOP && !isOpen && `bg-transparent ${theme.fixedTransparentStyle}`,
+                fixedEffect !== NavbarSticky.STICKY_TOP && !isOpen && `${theme.scrolledTransparentStyle}`
               ),
-            sticky === 'solid' && 'sticky top-0',
-            isOpen && 'h-screen'
+            sticky === 'solid' &&
+              twJoin(
+                'sticky top-0',
+                fixedEffect === NavbarSticky.STICKY_STICKED && !isOpen && `${theme.fixedSolidStyle}`,
+                fixedEffect !== NavbarSticky.STICKY_STICKED && !isOpen && `${theme.scrolledSolidStyle}`
+              ),
+            isOpen && twMerge('h-screen', theme.opened)
           )
         )}
       >
