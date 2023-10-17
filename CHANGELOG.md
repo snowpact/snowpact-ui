@@ -1,3 +1,10 @@
+# [0.21.0](https://github.com/snowpact/snowpact-ui/compare/v0.20.0...v0.21.0) (2023-10-17)
+
+
+### Features
+
+* **hero:** image classname ([af3cd8c](https://github.com/snowpact/snowpact-ui/commit/af3cd8cd62c95170c6686fd04bbf6c0350eaedef))
+
 # [0.20.0](https://github.com/snowpact/snowpact-ui/compare/v0.19.2...v0.20.0) (2023-10-13)
 
 
