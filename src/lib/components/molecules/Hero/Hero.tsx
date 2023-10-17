@@ -20,6 +20,7 @@ export interface HeroProps {
   backgroundSize?: 'auto' | 'cover' | 'contain' | string;
   backgroundRepeat?: 'repeat' | 'repeat-x' | 'repeat-y' | 'no-repeat' | string;
   backgroundClassName?: string;
+  imageClassName?: string;
   position?: ForeGroundPosition;
   centerPositionOnMobile?: boolean;
   height?: string;
@@ -34,6 +35,7 @@ export const Hero: React.FC<HeroProps> = ({
   backgroundSize,
   backgroundRepeat,
   backgroundClassName,
+  imageClassName,
   position,
   centerPositionOnMobile,
   height = '600px',
@@ -53,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({
         }}
       />
       <div
-        className={classNames('relative overflow-hidden')}
+        className={classNames('relative overflow-hidden', imageClassName)}
         style={{
           height: height
         }}
